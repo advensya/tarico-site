@@ -28,90 +28,6 @@
         </div>
       </v-container>
     </div>
-
-    <v-container class="bg-re">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi qui eum quas
-      iusto? Sequi, sunt. Repellendus odit alias ab inventore, omnis dolore,
-      veritatis sunt fugit dignissimos, eveniet blanditiis aliquam provident?
-    </v-container>
   </v-app>
 </template>
 
@@ -138,7 +54,7 @@
     position: absolute;
     content: "";
     inset: 0;
-    top: -64px;
+    top: -80px;
     // background: linear-gradient(
     //   165deg,
     //   rgba(var(--v-theme-secondary), 0.3) 0%,

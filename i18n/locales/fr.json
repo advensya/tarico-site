@@ -1,0 +1,20 @@
+{
+  "words": {
+    "welcome": "bienvenue"
+  },
+
+  "pages": {},
+
+  "components": {
+    "header": {
+      "items": {
+        "home": "Accueil",
+        "products": "Solutions",
+        "whytarico": "Pourquoi Tarico ?",
+        "blog": "Articles",
+        "company": "Entreprise"
+      },
+      "cta": "Contactez-nous"
+    }
+  }
+}

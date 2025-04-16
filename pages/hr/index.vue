@@ -5,7 +5,7 @@
         <nuxt-link
           v-if="!$slots.brand"
           class="d-flex align-center text-black overflow-hidden pa-1"
-          :to="{ name: 'hr' }"
+          :to="$localePath({ name: 'hr' })"
           style="
             width: max-content;
             display: flex;
@@ -48,25 +48,9 @@
       </template>
     </ui-header>
 
-    <div class="text-center pg-home--section-one" style="">
+    <div class="text-center" style="">
       <v-container style="max-width: 992px">
-        <v-btn
-          color="black"
-          variant="flat"
-          size="x-large"
-          class="mb-5"
-          rounded="pill"
-          style="border-radius: 0.6em"
-        >
-          <template #prepend>
-            <i class="fi fi-rr-comment-alt"></i>
-          </template>
-          call to actions
-        </v-btn>
-        <h1 class="pg-home__title font-weight-bold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-        </h1>
-        <div style="font-size: 18px" class="mt-3">
+        <div style="font-size: 18px" class="mt-16">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
           necessitatibus minima blanditiis labore dolores velit accusantium
           nulla dignissimos ratione reprehenderit ullam quia consequuntur

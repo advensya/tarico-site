@@ -1,23 +1,50 @@
 <script lang="ts" setup>
+const localePath = useLocalePath();
+const i18n = useI18n();
+const isScrolled = ref(false);
+
 const items = ref([
-  { code: "home", title: "Home", to: { name: "index" } },
-  { code: "products", title: "products", to: { name: "hr" } },
-  { code: "whytarico", title: "Why Tarico ?" },
-  { code: "blog", title: "Blog" },
-  { code: "enterprise", title: "Enterprise" },
+  {
+    code: "home",
+    title: i18n.t("components.header.items.home"),
+    to: localePath({ name: "index" }),
+  },
+  {
+    code: "products",
+    title: i18n.t("components.header.items.products"),
+    to: localePath({ name: "products" }),
+  },
+  { code: "whytarico", title: i18n.t("components.header.items.whytarico") },
+  { code: "blog", title: i18n.t("components.header.items.blog") },
+  {
+    code: "company",
+    title: i18n.t("components.header.items.company"),
+    to: localePath({ name: "company" }),
+  },
 ]);
+
+onMounted(() => {
+  addEventListener("scroll", onScroll);
+});
+
+function onScroll() {
+  isScrolled.value = window.scrollY > 0;
+}
+
+onDeactivated(destroy);
+onBeforeUnmount(destroy);
+function destroy() {
+  removeEventListener("scroll", onScroll);
+}
 </script>
 
 <template>
   <v-toolbar
-    height="64"
+    height="80"
     flat
     class="ui-header"
-    style="
-      border-color: rgba(var(--v-theme-on-background), 0.06) !important;
-      height: 64px;
-    "
-    :elevation="0"
+    :class="{ isScrolled }"
+    style="border-color: rgba(var(--v-theme-on-background), 0.06) !important"
     color="transparent"
   >
     <div class="mr-5"></div>
@@ -25,7 +52,7 @@ const items = ref([
     <nuxt-link
       v-if="!$slots.brand"
       class="d-flex align-center text-black overflow-hidden pa-1"
-      :to="{ name: 'index' }"
+      :to="$localePath({ name: 'index' })"
       style="width: max-content; display: flex; align-items: center; gap: 5px"
     >
       <div
@@ -53,8 +80,15 @@ const items = ref([
         <template v-if="item.code === 'products'">
           <ui-header-product>
             <template #activator="{ props }">
-              <v-btn v-bind="props" color="dark" variant="text" size="small">
-                produits
+              <v-btn
+                v-bind="props"
+                color="dark"
+                variant="text"
+                size="small"
+                :to="item.to"
+                rounded
+              >
+                {{ item.title }}
                 <template #append>
                   <i class="fi fi-rr-angle-small-down"></i>
                 </template>
@@ -62,15 +96,23 @@ const items = ref([
             </template>
           </ui-header-product>
         </template>
-        <template v-else>
+        <template v-else-if="item.code === 'home'">
           <v-btn
-            v-if="item.code !== 'home' || $route.name !== 'index'"
+            v-if="$localePath({ name: 'index' }) !== $route.path"
             color="dark"
             variant="text"
             size="small"
             :to="item.to"
             rounded
           >
+            <template #prepend>
+              <i class="fi fi-sr-house-blank"></i>
+            </template>
+            {{ item.title }}
+          </v-btn>
+        </template>
+        <template v-else>
+          <v-btn color="dark" variant="text" size="small" :to="item.to" rounded>
             {{ item.title }}
           </v-btn>
         </template>
@@ -86,11 +128,11 @@ const items = ref([
         variant="flat"
         size="large"
         color="dark"
-        :to="{ name: 'contact' }"
+        :to="$localePath({ name: 'contact' })"
         rounded
       >
         <template #prepend><i class="fi fi-rr-comment"></i></template>
-        Contactez-nous
+        {{ $t("components.header.cta") }}
       </v-btn>
     </div>
 
@@ -137,7 +179,10 @@ const items = ref([
 
               <template v-for="(item, i) in items" :key="i">
                 <v-list-item
-                  v-if="item.code !== 'home' || $route.name !== 'index'"
+                  v-if="
+                    item.code !== 'home' ||
+                    $localePath({ name: 'index' }) !== $route.path
+                  "
                   :to="item.to"
                   @click="isActive.value = false"
                 >
@@ -160,7 +205,16 @@ const items = ref([
 .ui-header {
   position: sticky !important;
   top: 0;
-  backdrop-filter: blur(0.9rem);
   z-index: 100;
+
+  .v-toolbar__content {
+    backdrop-filter: blur(0.9rem);
+  }
+
+  &.isScrolled {
+    .v-toolbar__content {
+      border-bottom: 3px solid rgba(var(--v-theme-on-background), 0.02);
+    }
+  }
 }
 </style>

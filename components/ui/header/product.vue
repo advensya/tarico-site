@@ -3,7 +3,13 @@ const emit = defineEmits<{ (e: "close"): void }>();
 </script>
 
 <template>
-  <v-menu :close-on-content-click="false" offset="5" location="bottom center">
+  <v-menu
+    offset="5"
+    location="bottom center"
+    :close-on-content-click="false"
+    :open-on-click="false"
+    open-on-hover
+  >
     <template #activator="{ props }">
       <slot name="activator" :props="props" />
     </template>
@@ -21,7 +27,7 @@ const emit = defineEmits<{ (e: "close"): void }>();
             <div style="width: 332px">
               <v-list class="pa-0" bg-color="transparent">
                 <v-list-item
-                  :to="{ name: 'hr' }"
+                  :to="$localePath({ name: 'hr' })"
                   @click="
                     isActive.value = false;
                     emit('close');
@@ -77,7 +83,7 @@ const emit = defineEmits<{ (e: "close"): void }>();
                 <v-btn
                   color="dark"
                   variant="flat"
-                  :to="{ name: 'products' }"
+                  :to="$localePath({ name: 'products' })"
                   rounded
                 >
                   Tous nos services

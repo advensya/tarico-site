@@ -1,14 +1,16 @@
 <script lang="ts" setup>
 defineI18nRoute({
   paths: {
-    en: "/products",
-    fr: "/solutions",
+    en: "/company",
+    fr: "/entreprise",
   },
 });
 </script>
 
 <template>
   <v-app>
-    <ui-header />
+    <ui-header>
+      <template #cta></template>
+    </ui-header>
   </v-app>
 </template>

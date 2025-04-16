@@ -1,5 +1,16 @@
+<script lang="ts" setup>
+defineI18nRoute({
+  paths: {
+    en: "/contact-us",
+    fr: "/nous-contacter",
+  },
+});
+</script>
+
 <template>
   <v-app>
-    <ui-header />
+    <ui-header>
+      <template #cta></template>
+    </ui-header>
   </v-app>
 </template>
