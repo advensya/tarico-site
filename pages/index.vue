@@ -30,11 +30,6 @@
 
 <style lang="scss">
 .pg-home--section-one {
-  // background: linear-gradient(
-  //   165deg,
-  //   rgba(var(--v-theme-secondary), 0.3) 0%,
-  //   rgba(var(--v-theme-secondary), 0) 100%
-  // );
   min-height: calc(100lvh);
   display: flex;
   align-items: center;
@@ -78,7 +73,7 @@
 }
 
 .pg-home__title {
-  font-size: clamp(2rem, 8.2352941176vw, 3.8rem);
+  font-size: clamp(2rem, 8.2352941176vw, 4rem);
   line-height: 1.1;
   background: linear-gradient(
     90deg,
