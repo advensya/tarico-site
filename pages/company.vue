@@ -9,8 +9,6 @@ defineI18nRoute({
 
 <template>
   <v-app>
-    <ui-header>
-      <template #cta></template>
-    </ui-header>
+    <ui-header> </ui-header>
   </v-app>
 </template>
