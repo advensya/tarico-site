@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const emit = defineEmits<{ (e: "close"): void }>();
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -26,45 +27,32 @@ const emit = defineEmits<{ (e: "close"): void }>();
           <div class="ui-header--product__nav">
             <div style="width: 332px">
               <v-list class="pa-0" bg-color="transparent">
-                <v-list-item
-                  :to="$localePath({ name: 'hr' })"
-                  @click="
-                    isActive.value = false;
-                    emit('close');
-                  "
-                >
-                  <template #prepend>
-                    <img
-                      src="/logo/tarico-hr.png"
-                      alt="Tarico HR"
-                      style="width: 32px"
-                    />
-                  </template>
-                  <template #title>
-                    <div class="ml-2">Tarico <b>HR</b></div>
-                  </template>
-                  <template #append>
-                    <i
-                      class="fi fi-rr-angle-small-right text-primary d-md-block d-none"
-                    ></i>
-                  </template>
-                </v-list-item>
-                <v-list-item>
-                  <template #prepend>
-                    <ui-svg name="logo-square" size="32" />
-                  </template>
-                  <template #title>
-                    <div class="ml-2">Tarico <b>Formulaire</b></div>
-                  </template>
-                </v-list-item>
-                <v-list-item>
-                  <template #prepend>
-                    <ui-svg name="logo-square" size="32" />
-                  </template>
-                  <template #title>
-                    <div class="ml-2">Tarico <b>Transfert</b></div>
-                  </template>
-                </v-list-item>
+                <template v-for="(product, p) in Products" :key="p">
+                  <v-list-item
+                    :to="product.to ? localePath(product.to) : undefined"
+                    @click="
+                      isActive.value = false;
+                      emit('close');
+                    "
+                  >
+                    <template #prepend>
+                      <img
+                        :src="product.logo"
+                        :alt="product.title"
+                        style="width: 32px"
+                      />
+                    </template>
+                    <template #title>
+                      <div class="ml-2" v-html="product.title"></div>
+                    </template>
+                    <template #append>
+                      <i
+                        class="fi fi-rr-angle-small-right text-primary d-md-block d-none"
+                      ></i>
+                    </template>
+                  </v-list-item>
+                </template>
+
                 <v-list-item>
                   <template #prepend>
                     <ui-svg name="logo-square" size="32" />
@@ -86,7 +74,7 @@ const emit = defineEmits<{ (e: "close"): void }>();
                   :to="$localePath({ name: 'products' })"
                   rounded
                 >
-                  Tous nos services
+                  {{ $t("components.header.products.items.allProducts") }}
                   <template #append>
                     <i class="fi fi-br-grid"></i>
                   </template>

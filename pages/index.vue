@@ -18,13 +18,10 @@
           call to actions
         </v-btn>
         <h1 class="pg-home__title font-weight-bold">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          {{ $t("pages.index.sections.one.title") }}
         </h1>
         <div style="font-size: 18px" class="mt-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum
-          necessitatibus minima blanditiis labore dolores velit accusantium
-          nulla dignissimos ratione reprehenderit ullam quia consequuntur
-          pariatur sunt ducimus, voluptas officiis nihil. Ea.
+          {{ $t("pages.index.sections.one.text") }}
         </div>
       </v-container>
     </div>

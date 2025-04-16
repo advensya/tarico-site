@@ -40,4 +40,5 @@ const hideOffer = ref(false);
     </div>
   </v-toolbar>
   <nuxt-page />
+  <ui-footer />
 </template>

@@ -3,7 +3,16 @@
     "welcome": "bienvenue"
   },
 
-  "pages": {},
+  "pages": {
+    "index": {
+      "sections": {
+        "one": {
+          "title": "Connecter entreprises et clients par l'innovation digitale",
+          "text": "Tarico révolutionne votre quotidien en automatisant vos taches et en simplifiant votre gestion d'entreprise. Des outils sur mesure et une intégration fluide pour booster votre éfficacité en un clin d'oeil."
+        }
+      }
+    }
+  },
 
   "components": {
     "header": {
@@ -14,7 +23,31 @@
         "blog": "Articles",
         "company": "Entreprise"
       },
-      "cta": "Contactez-nous"
+      "cta": "Contactez-nous",
+      "products": {
+        "items": {
+          "allProducts": "Tous nos services"
+        }
+      }
+    },
+    "footer": {
+      "items": {
+        "allProducts": "Tous nos services",
+        "company": {
+          "title": "Entreprise",
+          "aboutUs": "À propos de nous",
+          "contactUs": "Nous connecter",
+          "career": "Carière"
+        },
+        "ressources": {
+          "title": "Ressources",
+          "tou": "condition d'utilisation",
+          "privacy": "Politique de confidentialité"
+        },
+        "products": {
+          "title": "Solutions"
+        }
+      }
     }
   }
 }
