@@ -42,7 +42,8 @@
         "ressources": {
           "title": "Ressources",
           "tou": "condition d'utilisation",
-          "privacy": "Politique de confidentialité"
+          "privacy": "Politique de confidentialité",
+          "support": "Contactez le support"
         },
         "products": {
           "title": "Solutions"

@@ -67,16 +67,6 @@
               {{ $t("components.footer.items.allProducts") }}
             </v-btn>
           </div>
-          <!-- <template
-            v-for="(model, m) in $tm('model.optionsModels.models')"
-            :key="m"
-          >
-            <div v-if="model.code !== 'more'">
-              <v-btn :to="model.to" variant="text" color="dark" rounded="0">
-                {{ model.name }}
-              </v-btn>
-            </div>
-          </template> -->
         </v-col>
 
         <v-col cols="12" md="3" sm="6">
@@ -123,24 +113,21 @@
           <div class="text-h5 font-weight-bold font-mackinac ml-1">
             {{ $t("components.footer.items.ressources.title") }}
           </div>
-          <!-- <div>
-              <v-btn variant="text" color="dark" :to="{ name: 'about' }">
-                {{ $t("ressources.support") }}
-              </v-btn>
-            </div> -->
           <div>
             <v-btn variant="text" color="dark">
               {{ $t("components.footer.items.ressources.tou") }}
             </v-btn>
+          </div>
+          <div>
             <v-btn variant="text" color="dark">
               {{ $t("components.footer.items.ressources.privacy") }}
             </v-btn>
           </div>
-          <!-- <div>
-              <v-btn variant="text" color="dark" :to="{ name: 'about' }">
-                {{ $t("ressources.terms") }}
-              </v-btn>
-            </div> -->
+          <div>
+            <v-btn variant="text" color="dark">
+              {{ $t("components.footer.items.ressources.support") }}
+            </v-btn>
+          </div>
         </v-col>
         <!-- <ui-app-lang>
   <template #activator="{ props }">
