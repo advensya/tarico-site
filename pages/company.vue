@@ -105,10 +105,7 @@ useSeoMeta({ title: i18n.t("pages.company.description") });
         <v-row justify="center">
           <v-col cols="10">
             <div class="">
-              <p
-                style="font-size: 24px"
-                v-html="$t('pages.company.summary.text')"
-              ></p>
+              <p v-html="$t('pages.company.summary.text')"></p>
             </div>
           </v-col>
         </v-row>
@@ -203,85 +200,13 @@ useSeoMeta({ title: i18n.t("pages.company.description") });
   }
 }
 
-.section-2 {
-  .container {
-    margin: auto;
-    width: 90%;
-    max-width: 882px;
-    font-size: 22px;
-  }
-}
-
-.section-4 {
-  background: linear-gradient(
-    180deg,
-    rgba(227, 219, 73, 0.298) 0%,
-    rgba(252, 151, 69, 0) 100%
-  );
-
-  .desc {
-    margin: auto;
-    text-align: center;
-    font-size: 36px;
-  }
-  .container {
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 90%;
-    max-width: 772px;
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: minmax(100px, auto);
-    gap: 10px;
-
-    @media (max-width: 992px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
+#company {
+  p {
+    font-size: 24px;
 
     @media (max-width: 662px) {
-      grid-template-columns: repeat(1, 1fr);
+      font-size: 18px;
     }
-
-    .one {
-      padding: 20px;
-      transition: all 0.5s ease;
-      text-decoration: none;
-      background-color: rgb(0, 0, 0);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      border-radius: 0.6em;
-
-      p,
-      h1 {
-        padding: 0;
-        margin: 0;
-      }
-
-      h1 {
-        font-size: 36px;
-        margin-bottom: 20px;
-      }
-
-      p {
-        font-size: 18px;
-        // margin-top: auto;
-      }
-    }
-  }
-}
-
-.section-5 {
-  margin-top: 100px;
-  margin-bottom: 160px;
-
-  .desc {
-    margin: auto;
-    text-align: center;
-    font-size: 36px;
-    max-width: 500px;
   }
 }
 </style>

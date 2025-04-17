@@ -14,7 +14,11 @@ const items = ref([
     title: i18n.t("components.header.items.products"),
     to: localePath({ name: "products" }),
   },
-  { code: "whytarico", title: i18n.t("components.header.items.whytarico") },
+  {
+    code: "whytarico",
+    title: i18n.t("components.header.items.whytarico"),
+    to: localePath({ name: "why" }),
+  },
   { code: "blog", title: i18n.t("components.header.items.blog") },
   {
     code: "company",
@@ -104,7 +108,7 @@ function destroy() {
             rounded
           >
             <template #prepend>
-              <i class="fi fi-sr-house-blank"></i>
+              <i class="fi fi-br-house-blank"></i>
             </template>
             {{ item.title }}
           </v-btn>

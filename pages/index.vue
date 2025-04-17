@@ -238,10 +238,12 @@
 
   img {
     height: calc(100% + 150px);
+    max-width: calc(100% - 50px);
     position: absolute;
     bottom: 0;
     right: 150px;
     object-fit: contain;
+    object-position: bottom center;
 
     @media (max-width: 992px) {
       right: 50%;
