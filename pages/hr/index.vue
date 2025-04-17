@@ -58,5 +58,7 @@
         </div>
       </v-container>
     </div>
+
+    <ui-footer />
   </v-app>
 </template>

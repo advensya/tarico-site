@@ -12,5 +12,7 @@ defineI18nRoute({
     <ui-header>
       <template #cta></template>
     </ui-header>
+
+    <ui-footer />
   </v-app>
 </template>

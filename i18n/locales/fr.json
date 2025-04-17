@@ -11,6 +11,16 @@
           "text": "Tarico révolutionne votre quotidien en automatisant vos taches et en simplifiant votre gestion d'entreprise. Des outils sur mesure et une intégration fluide pour booster votre éfficacité en un clin d'oeil."
         }
       }
+    },
+    "company": {
+      "header": {
+        "title": "L’ambition de transformer l’Afrique par la digitalisation",
+        "description": "Chez Codia, nous simplifions la gestion des données pour les entreprises, en leur offrant des solutions digitales innovantes qui facilitent l'accès, l'analyse et l'utilisation efficace de leurs informations."
+      },
+      "summary": {
+        "text": "Codia est une entreprise spécialisée dans la création de solutions digitales innovantes visant à connecter les entreprises à leurs clients. En repensant les processus traditionnels, nous développons des outils numériques sur mesure qui facilitent les interactions et renforcent les relations entre les entreprises et leur clientèle.<br /><br />Notre mission est de simplifier et d'optimiser ces connexions grâce à des technologies modernes, tout en garantissant une expérience utilisateur fluide et efficace."
+      },
+      "contactUs": "Nous connecter"
     }
   },
 

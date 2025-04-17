@@ -10,5 +10,7 @@ defineI18nRoute({
 <template>
   <v-app>
     <ui-header />
+
+    <ui-footer />
   </v-app>
 </template>

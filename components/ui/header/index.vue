@@ -82,7 +82,6 @@ function destroy() {
             <template #activator="{ props }">
               <v-btn
                 v-bind="props"
-                color="dark"
                 variant="text"
                 size="small"
                 :to="item.to"
@@ -99,7 +98,6 @@ function destroy() {
         <template v-else-if="item.code === 'home'">
           <v-btn
             v-if="$localePath({ name: 'index' }) !== $route.path"
-            color="dark"
             variant="text"
             size="small"
             :to="item.to"
@@ -112,7 +110,7 @@ function destroy() {
           </v-btn>
         </template>
         <template v-else>
-          <v-btn color="dark" variant="text" size="small" :to="item.to" rounded>
+          <v-btn variant="text" size="small" :to="item.to" rounded>
             {{ item.title }}
           </v-btn>
         </template>

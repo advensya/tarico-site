@@ -24,6 +24,15 @@ export default {
           dark: colors.grey.darken4,
         },
       },
+      dark: {
+        dark: false,
+        colors: {
+          primary: primaryColor,
+          secondary: secondaryColor,
+          dark: colors.grey.lighten5,
+          background: "#0e0e0e",
+        },
+      },
     },
   },
 } satisfies ExternalVuetifyOptions;
