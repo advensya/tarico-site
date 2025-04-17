@@ -9,6 +9,22 @@
         "one": {
           "title": "Connecter entreprises et clients par l'innovation digitale",
           "text": "Tarico révolutionne votre quotidien en automatisant vos taches et en simplifiant votre gestion d'entreprise. Des outils sur mesure et une intégration fluide pour booster votre éfficacité en un clin d'oeil."
+        },
+        "two": {
+          "items": {
+            "rethink": {
+              "title": "Repenser",
+              "text": "Nous réévaluons continuellement les méthodes traditionnelles pour les adapter aux exigences contemporaines. En remettant en question les normes établies, nous identifions des opportunités d'amélioration et de transformation, garantissant que nos solutions restent pertinentes et efficaces."
+            },
+            "innovate": {
+              "title": "Innover",
+              "text": "Intégrer les dernières avancées technologiques pour développer des solutions digitales sur mesure, répondant aux besoins spécifiques de nos clients."
+            },
+            "reconcile": {
+              "title": "Rapprocher",
+              "text": "Nous facilitons la connexion entre les entreprises et leurs clients en créant des plateformes intuitives et accessibles. Notre objectif est de renforcer les relations professionnelles en simplifiant les interactions et en améliorant l'expérience utilisateur."
+            }
+          }
         }
       }
     },

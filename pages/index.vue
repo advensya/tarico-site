@@ -26,6 +26,82 @@
       </v-container>
     </div>
 
+    <section class="pb-16 pg-home--section-two">
+      <v-container fluid>
+        <div style="width: 90%" class="mx-auto">
+          <v-row>
+            <v-col cols="12" sm="6" md="4">
+              <div
+                class="b pa-10 h-100 rounded-lg"
+                style="
+                  background-color: rgba(var(--v-theme-on-background), 0.05);
+                "
+              >
+                <div
+                  class="d-flex align-center justify-center rounded-lg"
+                  style="width: 64px; height: 64px"
+                >
+                  <ui-svg name="other/041" size="64" class="text-primary" />
+                </div>
+                <div class="font-weight-bold mt-3 text-h4">
+                  {{ $t("pages.index.sections.two.items.rethink.title") }}
+                </div>
+
+                <div class="mt-3 text-body-2">
+                  {{ $t("pages.index.sections.two.items.rethink.text") }}
+                </div>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="6" md="4">
+              <div
+                class="b pa-10 h-100 rounded-lg"
+                style="
+                  background-color: rgba(var(--v-theme-on-background), 0.05);
+                "
+              >
+                <div
+                  class="d-flex align-center justify-center rounded-lg"
+                  style="width: 64px; height: 64px"
+                >
+                  <i class="fi fi-sr-rocket-lunch text-h2 text-primary"></i>
+                </div>
+                <div class="font-weight-bold mt-3 text-h4">
+                  {{ $t("pages.index.sections.two.items.innovate.title") }}
+                </div>
+
+                <div class="mt-3 text-body-2">
+                  {{ $t("pages.index.sections.two.items.innovate.text") }}
+                </div>
+              </div>
+            </v-col>
+            <v-col cols="12" sm="6" md="4">
+              <div
+                class="b pa-10 h-100 rounded-lg"
+                style="
+                  background-color: rgba(var(--v-theme-on-background), 0.05);
+                "
+              >
+                <div
+                  class="d-flex align-center justify-center rounded-lg"
+                  style="width: 64px; height: 64px"
+                >
+                  <!-- <ui-svg name="other/022" size="32" class="text-white" /> -->
+                  <ui-svg name="other/033" size="64" class="text-primary" />
+                </div>
+                <div class="font-weight-bold mt-3 text-h4">
+                  {{ $t("pages.index.sections.two.items.reconcile.title") }}
+                </div>
+
+                <div class="mt-3 text-body-2">
+                  {{ $t("pages.index.sections.two.items.reconcile.text") }}
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+        </div>
+      </v-container>
+    </section>
+
     <ui-footer />
   </v-app>
 </template>

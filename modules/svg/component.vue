@@ -23,7 +23,7 @@ const _style = computed(() => {
 
 <template>
   <component
-    :is="`${($svgOptions as any).component}-${name}`"
+    :is="`${($svgOptions as any).component}-${name.replaceAll('/', '-')}`"
     :style="_style"
   />
 </template>
