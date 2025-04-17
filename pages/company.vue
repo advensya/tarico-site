@@ -144,7 +144,7 @@ useSeoMeta({ title: i18n.t("pages.company.description") });
     content: "";
     inset: 0;
     top: -80px;
-    background-image: url(https://i.pinimg.com/736x/ae/48/b5/ae48b5fa773e4fd537c708ce1e1c5375.jpg);
+    background-image: url(/images/u_002.jpg);
     background-size: cover;
     background-position: center bottom;
     // background: linear-gradient(
