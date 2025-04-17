@@ -1,126 +1,80 @@
-<script lang="ts">
-import { defineComponent, ref } from "vue";
-
-export default defineComponent({
-  setup() {
-    const direction = ref([
+<script lang="ts" setup>
+const { $i18n } = useNuxtApp();
+const direction = ref([
+  {
+    name: "La direction",
+    persons: [
       {
-        name: "La direction",
-        persons: [
-          {
-            photo: "/images/mamadou-dia.png",
-            name: "Mamadou DIA, CEO et Chef de produit",
-            text: "Fondateur et CEO de Codia, expert en SIRH, Mamadou apporte une véritable valeur ajoutée aux clients grâce à son expertise dans le développement de solutions adaptées aux besoins spécifiques des entreprises. Il s'assure que chaque solution réponde aux exigences de performance et d'innovation.",
-            contacts: {
-              github: "https://www.github.com/domutala/",
-              linkedin: "https://www.linkedin.com/in/domutala/",
-            },
-          },
-          {
-            photo: "/images/saliou-diop.png",
-            name: "Saliou DIOP, Directeur marketing et commercial, cofondateur",
-            text: "Saliou dirige l'équipe marketing de Codia, notamment le marketing produit, le marketing d'entreprise, la génération de demande et la croissance. Il a été Directeur Exécutif de African Management Service.",
-            contacts: { linkedin: "https://www.linkedin.com/in/saliou-diop/" },
-          },
-          {
-            photo: "/images/serigne-saer-dia.png",
-            name: "Saër, Directeur de la production et cofondateur",
-            text: "Saër dirige la recherche et le développement, notamment avec les équipes produit, ingénierie et conception. Il a travaillé chez Attijari Bank au Maroc et Acep Sénégal.",
-            contacts: {
-              linkedin: "https://www.linkedin.com/in/saer-dia-13a02a16a/",
-            },
-          },
-          // {
-          //   photo: '/images/abdoulaye-bar.png',
-          //   name: 'Abdoulaye BAR, Directeur de la technologie',
-          //   text: 'Au sein de Codia, Abdoulaye supervise le service ingénierie. Auparavant, il a dirigé le service étude et développement de Sapco Sénégal.',
-          // },
-        ],
-      },
-    ]);
-
-    const values = [
-      {
-        title: "Innovation",
-        text: "L'innovation est importante pour nous. Nous cherchons à répondre aux besoins actuels pour créer une valeur durable.",
+        code: "domutala",
+        photo: "/images/mamadou-dia.png",
+        contacts: {
+          github: "https://www.github.com/domutala/",
+          linkedin: "https://www.linkedin.com/in/domutala/",
+        },
       },
       {
-        title: "Qualité",
-        text: "Nous nous engageons à offrir des solutions efficaces et fiables, en maintenant des standards élevés dans nos activités.",
+        code: "speedy",
+        photo: "/images/saliou-diop.png",
+        contacts: { linkedin: "https://www.linkedin.com/in/saliou-diop/" },
       },
       {
-        title: "Conformité",
-        text: "Nous croyons qu'un bon travail repose sur des principes d'éthique. Nous respectons les normes de protection des données pour assurer la sécurité des informations de nos clients.",
+        code: "saer",
+        photo: "/images/serigne-saer-dia.png",
+        contacts: {
+          linkedin: "https://www.linkedin.com/in/saer-dia-13a02a16a/",
+        },
       },
-    ];
-
-    const teams = [
-      {
-        name: "Ingénierie",
-        icon: "022",
-        text: "Nous construisons des outils qui permettent aux entreprise de se connecter facilement avec leurs clients 24h/24.",
-      },
-      {
-        name: "Marketing et stratégie commerciales",
-        icon: "021",
-        text: "Nous nous concentrons sur le renforcement de la notoriété de la marque et la génération de la demande de nos clients.",
-      },
-      {
-        name: "Recherche et conception de produits",
-        icon: "024",
-        text: "Nous travaillons pour mieux comprendre les besoins actuels et conceptualiser des produits en réponse à  ces besoins",
-      },
-      {
-        name: "Juridique",
-        icon: "026",
-        text: "Nous assurons la conformité de nos produits aux lois et règlements en vigueures.",
-      },
-      {
-        name: "Finances ",
-        icon: "023",
-        text: "Nous sommes un groupe multidisciplinaire qui aide Codia à se développer pour répondre à nos ambitions.",
-      },
-
-      {
-        name: "Support clientèle",
-        icon: "025",
-        text: "Nous sommes le lien entre les équipes de production et les clients.",
-      },
-    ];
-
-    return { teams, values, direction };
+    ],
   },
-});
+]);
+
+const values = ["innovate", "quality", "conformity"];
 </script>
 
 <template>
   <div>
-    <section class="section-valuables">
-      <h1 class="desc">
-        <!-- <img
-              src="https://cdn-icons-png.flaticon.com/256/8143/8143776.png"
-              style="width: 88px; text-align: center"
-            />
-            <br /> -->
-        <span class="">Nos valeurs</span>
-      </h1>
-      <div class="container">
-        <div v-for="value in values" class="one">
-          <h1>{{ (value as any).title }}</h1>
-          <p>
-            {{ (value as any).text }}
-          </p>
-        </div>
-      </div>
+    <section>
+      <v-container>
+        <h2 class="text-h3 text-center mb-10">
+          <img
+            src="https://cdn-icons-png.flaticon.com/256/8143/8143776.png"
+            style="width: 88px; text-align: center"
+          />
+          <br />
+          <span class="">
+            {{ $t("components.about.values.title") }}
+          </span>
+        </h2>
+        <v-row>
+          <v-col
+            v-for="(value, v) in values"
+            cols="12"
+            :sm="v === values.length - 1 ? 12 : 6"
+            md="4"
+          >
+            <div class="bg-grey-darken-4 rounded pa-5 h-100 d-flex flex-column">
+              <h3 class="mb-7 text-h4 font-weight-bold">
+                {{ $t(`components.about.values.items.${value}.title`) }}
+              </h3>
+              <p class="mt-auto" style="font-size: 18px">
+                {{ $t(`components.about.values.items.${value}.text`) }}
+              </p>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
     </section>
 
     <section v-for="(team, t) in direction" :key="t" class="section-3">
       <h1 class="desc">
         <span>{{ team.name }}</span>
       </h1>
-      <div class="container">
+      <div class="container" style="max-width: 992px">
         <div v-for="(person, p) in team.persons" :key="p" class="one">
-          <img :src="person.photo" :alt="person.name" />
+          <img
+            :src="person.photo"
+            :alt="$t(`components.about.staff.persons.${person.code}.name`)"
+          />
           <div class="contact ga-2 d-flex align-center">
             <nuxt-link
               v-for="(contact, c) in person.contacts"
@@ -133,10 +87,10 @@ export default defineComponent({
             </nuxt-link>
           </div>
           <div class="text-h6 px-2" style="line-height: 1">
-            {{ person.name }}
+            {{ $t(`components.about.staff.persons.${person.code}.name`) }}
           </div>
-          <p class="text-body-2 px-2">
-            {{ person.text }}
+          <p class="px-2" style="font-size: 16px">
+            {{ $t(`components.about.staff.persons.${person.code}.text`) }}
           </p>
         </div>
       </div>
@@ -147,10 +101,7 @@ export default defineComponent({
     <section class="section-ceo-text pt-10">
       <div class="container">
         <p class="text">
-          Chez Codia, nous construisons des outils qui facilitent l'intégration
-          numérique sur tout le continent. Et cela commence par la compréhension
-          des nouvelles exigences utilisateurs. Nous produisons les meilleurs
-          outils qui soient pour une meilleure expérience utilisateur.
+          {{ $t("components.about.ceo.text") }}
         </p>
 
         <div class="ceo mt-2">
@@ -352,59 +303,6 @@ export default defineComponent({
         //   color: #fff;
         // }
       }
-    }
-  }
-}
-
-.team {
-  margin: auto;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  width: 90%;
-  max-width: 992px;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
-  row-gap: 50px;
-  column-gap: 30px;
-
-  @media (max-width: 992px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 662px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .one {
-    padding: 40px;
-    transition: all 0.5s ease;
-    text-decoration: none;
-    background-color: rgb(var(--v-theme-on-background), 0.05);
-    display: flex;
-    flex-direction: column;
-
-    .icon {
-      margin-bottom: 10px;
-    }
-
-    p,
-    h1 {
-      padding: 0;
-      margin: 0;
-      line-height: 1;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 18px;
-      margin-top: auto;
-      line-height: 1.5;
     }
   }
 }

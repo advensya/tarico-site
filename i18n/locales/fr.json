@@ -37,7 +37,7 @@
         "description": "Chez Codia, nous simplifions la gestion des données pour les entreprises, en leur offrant des solutions digitales innovantes qui facilitent l'accès, l'analyse et l'utilisation efficace de leurs informations."
       },
       "summary": {
-        "text": "Codia est une entreprise spécialisée dans la création de solutions digitales innovantes visant à connecter les entreprises à leurs clients. En repensant les processus traditionnels, nous développons des outils numériques sur mesure qui facilitent les interactions et renforcent les relations entre les entreprises et leur clientèle.<br /><br />Notre mission est de simplifier et d'optimiser ces connexions grâce à des technologies modernes, tout en garantissant une expérience utilisateur fluide et efficace."
+        "text": "<b>Chez Codia, nous transformons la manière dont les entreprises interagissent avec leurs clients.</b> Spécialistes des solutions digitales sur mesure, nous réinventons les processus traditionnels pour créer des outils puissants, intuitifs et efficaces.<br><br> Notre objectif est clair : <b>connecter plus intelligemment les entreprises à leur clientèle</b>, en misant sur des technologies modernes et une expérience utilisateur sans faille. <b>Codia, c’est l’alliance de l’innovation et de la simplicité au service de la performance.</b>"
       },
       "contactUs": "Nous connecter"
     }
@@ -77,6 +77,45 @@
         "products": {
           "title": "Solutions"
         }
+      }
+    },
+    "about": {
+      "values": {
+        "title": "Nos valeurs",
+        "items": {
+          "innovate": {
+            "title": "Innovation",
+            "text": "L'innovation est importante pour nous. Nous cherchons à répondre aux besoins actuels pour créer une valeur durable."
+          },
+          "quality": {
+            "title": "Qualité",
+            "text": "Nous nous engageons à offrir des solutions efficaces et fiables, en maintenant des standards élevés dans nos activités."
+          },
+          "conformity": {
+            "title": "Conformité",
+            "text": "Nous croyons qu'un bon travail repose sur des principes d'éthique. Nous respectons les normes de protection des données pour assurer la sécurité des informations de nos clients."
+          }
+        }
+      },
+      "staff": {
+        "title": "La direction",
+        "persons": {
+          "domutala": {
+            "name": "Mamadou DIA, CEO et Chef de produit",
+            "text": "Fondateur et CEO de Codia, expert en SIRH, Mamadou apporte une véritable valeur ajoutée aux clients grâce à son expertise dans le développement de solutions adaptées aux besoins spécifiques des entreprises. Il s'assure que chaque solution réponde aux exigences de performance et d'innovation."
+          },
+          "speedy": {
+            "name": "Saliou DIOP, Directeur marketing et commercial, cofondateur",
+            "text": "Saliou dirige l'équipe marketing de Codia, notamment le marketing produit, le marketing d'entreprise, la génération de demande et la croissance. Il a été Directeur Exécutif de African Management Service."
+          },
+          "saer": {
+            "name": "Saër, Directeur de la production et cofondateur",
+            "text": "Saër dirige la recherche et le développement, notamment avec les équipes produit, ingénierie et conception. Il a travaillé chez Attijari Bank au Maroc et Acep Sénégal."
+          }
+        }
+      },
+      "ceo": {
+        "text": "Chez Codia, nous construisons des outils qui facilitent l'intégration numérique sur tout le continent. Et cela commence par la compréhension des nouvelles exigences utilisateurs. Nous produisons les meilleurs outils qui soient pour une meilleure expérience utilisateur."
       }
     }
   }

@@ -11,7 +11,7 @@
           {{ $t("pages.index.sections.one.text") }}
         </div>
         <v-btn
-          color="black"
+          color="primary"
           variant="flat"
           size="x-large"
           class="mt-5"
@@ -74,7 +74,7 @@
                 </p>
               </div>
             </v-col>
-            <v-col cols="12" sm="6" md="4">
+            <v-col cols="12" sm="12" md="4">
               <div
                 class="d-flex flex-column pa-10 h-100 rounded-lg"
                 style="
@@ -181,8 +181,8 @@
   justify-content: center;
   flex-direction: column;
   position: relative;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 
   > * {
     position: relative;
@@ -217,19 +217,19 @@
       rgba(var(--v-theme-primary), 0) 100%
     );
   }
-}
 
-.pg-home__title {
-  font-size: clamp(2rem, 8.2352941176vw, 4rem);
-  line-height: 1.1;
-  background: linear-gradient(
-    90deg,
-    rgba(var(--v-theme-primary)),
-    rgba(var(--v-theme-secondary))
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; /* pour Firefox */
+  .pg-home__title {
+    font-size: clamp(2rem, 8.2352941176vw, 4rem);
+    line-height: 1.1;
+    background: linear-gradient(
+      90deg,
+      rgba(var(--v-theme-primary)),
+      rgba(var(--v-theme-secondary))
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text; /* pour Firefox */
+  }
 }
 
 .pg-home--section-three {
