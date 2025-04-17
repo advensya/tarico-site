@@ -100,6 +100,9 @@ const values = ["innovate", "quality", "conformity"];
 
     <section class="section-ceo-text pt-10">
       <div class="container">
+        <div class="text-center w-100 d-flex justify-center mb-5">
+          <i class="fi fi-br-quote-right text-h3 text-orange"></i>
+        </div>
         <p class="text">
           {{ $t("components.about.ceo.text") }}
         </p>
