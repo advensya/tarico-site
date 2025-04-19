@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 const emit = defineEmits<{ (e: "close"): void }>();
 const localePath = useLocalePath();
+
+const currentProduct = ref(0);
 </script>
 
 <template>
@@ -27,13 +29,14 @@ const localePath = useLocalePath();
           <div class="ui-header--product__nav">
             <div style="width: 332px">
               <v-list class="pa-0" bg-color="transparent">
-                <template v-for="(product, p) in Products" :key="p">
+                <template v-for="(product, p) in Products.slice(0, 5)" :key="p">
                   <v-list-item
                     :to="product.to ? localePath(product.to) : undefined"
                     @click="
                       isActive.value = false;
                       emit('close');
                     "
+                    @mouseenter="currentProduct = p"
                   >
                     <template #prepend>
                       <img
@@ -47,35 +50,23 @@ const localePath = useLocalePath();
                     </template>
                     <template #append>
                       <i
+                        v-if="currentProduct === p"
                         class="fi fi-rr-angle-small-right text-primary d-md-block d-none"
                       ></i>
                     </template>
                   </v-list-item>
                 </template>
-
-                <v-list-item>
-                  <template #prepend>
-                    <ui-svg name="logo-square" size="32" />
-                  </template>
-                  <template #title>
-                    <div class="ml-2">Tarico <b>Design</b></div>
-                  </template>
-                </v-list-item>
               </v-list>
-              <div class="pa-5">
-                <p class="mb-3">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
-                  suscipit rem omnis! Cum quo ab ullam doloremque.
-                </p>
 
+              <div class="pa-5 mt-auto">
                 <v-btn
                   color="dark"
-                  variant="flat"
+                  variant="tonal"
                   :to="$localePath({ name: 'products' })"
                   rounded
                 >
                   {{ $t("components.header.products.items.allProducts") }}
-                  <template #append>
+                  <template #prepend>
                     <i class="fi fi-br-grid"></i>
                   </template>
                 </v-btn>
@@ -86,38 +77,18 @@ const localePath = useLocalePath();
             <v-container>
               <div class="d-flex ga-2">
                 <img
-                  src="/logo/tarico-hr.png"
-                  alt="Tarico HR"
+                  :src="Products[currentProduct].logo"
+                  :alt="Products[currentProduct].title"
                   style="width: 42px"
                 />
 
                 <div class="ml-auto"></div>
-                <v-btn color="primary" size="small" variant="flat" rounded>
-                  En savoir plus
-                  <template #append>
-                    <i class="fi fi-rr-arrow-up-right-from-square"></i>
-                  </template>
-                </v-btn>
               </div>
 
-              <p class="mt-5 font-weight-bold">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Aperiam esse consequuntur suscipit eligendi repudiandae quo
-                voluptatibus voluptatem vero? Quae ipsum voluptatibus asperiores
-                reprehenderit beatae odio? Dolorem at vitae voluptatibus
-                pariatur.
-              </p>
-
-              <p class="mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Recusandae nulla, pariatur nostrum id modi maiores velit
-                asperiores, exercitationem quasi dolor iure. Facere ducimus
-                adipisci numquam vero ex voluptates nisi minima? Lorem ipsum
-                dolor sit amet, consectetur adipisicing elit. Recusandae nulla,
-                pariatur nostrum id modi maiores velit asperiores,
-                exercitationem quasi dolor iure. Facere ducimus adipisci numquam
-                vero ex voluptates nisi minima?
-              </p>
+              <div
+                class="mt-5"
+                v-html="Products[currentProduct].description.fr"
+              ></div>
             </v-container>
           </div>
         </div>
@@ -129,6 +100,12 @@ const localePath = useLocalePath();
 <style lang="scss">
 .ui-header--product {
   .ui-header--product__nav {
+    > div {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
     @media (min-width: 960px) {
       background-color: rgba(var(--v-theme-on-background), 0.04);
     }

@@ -19,9 +19,9 @@
           style="border-radius: 0.6em"
         >
           <template #prepend>
-            <i class="fi fi-rr-comment-alt"></i>
+            <i class="fi fi-rr-daily-calendar"></i>
           </template>
-          call to actions
+          Demandez un rendez-vous
         </v-btn>
       </v-container>
     </div>
@@ -63,7 +63,7 @@
                   class="d-flex align-center justify-center rounded-lg"
                   style="width: 64px; height: 64px"
                 >
-                  <i class="fi fi-sr-rocket-lunch text-h2 text-primary"></i>
+                  <ui-svg name="rocket" size="64" class="text-primary" />
                 </div>
                 <div class="font-weight-bold my-3 text-h4">
                   {{ $t("pages.index.sections.two.items.innovate.title") }}

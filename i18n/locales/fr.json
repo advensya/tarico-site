@@ -40,6 +40,13 @@
         "text": "<b>Chez Codia, nous transformons la manière dont les entreprises interagissent avec leurs clients.</b> Spécialistes des solutions digitales sur mesure, nous réinventons les processus traditionnels pour créer des outils puissants, intuitifs et efficaces.<br><br> Notre objectif est clair : <b>connecter plus intelligemment les entreprises à leur clientèle</b>, en misant sur des technologies modernes et une expérience utilisateur sans faille. <b>Codia, c’est l’alliance de l’innovation et de la simplicité au service de la performance.</b>"
       },
       "contactUs": "Nous connecter"
+    },
+    "products": {
+      "cover": {
+        "title": "Une suite logicielle pensée pour l’efficacité",
+        "text": "Chez Tarico, chaque logiciel est né d’un besoin identifié sur le terrain. Nous avons écouté nos utilisateurs, compris leurs blocages, et développé des outils qui répondent avec précision à leurs enjeux. Notre suite logicielle est le fruit d’une vision pratique, conçue pour être rapidement opérationnelle et réellement utile au quotidien."
+      },
+      "cta": "Contacter l'équipe commerciale"
     }
   },
 
@@ -50,7 +57,7 @@
         "products": "Solutions",
         "whytarico": "Pourquoi Tarico ?",
         "blog": "Articles",
-        "company": "Entreprise"
+        "company": "L'entreprise"
       },
       "cta": "Contactez-nous",
       "products": {
