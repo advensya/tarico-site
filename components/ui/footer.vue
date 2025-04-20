@@ -113,6 +113,22 @@
           <div class="text-h5 font-weight-bold font-mackinac ml-1">
             {{ $t("components.footer.items.ressources.title") }}
           </div>
+
+          <div>
+            <v-btn variant="text" color="dark">
+              {{ $t("components.footer.items.ressources.support") }}
+            </v-btn>
+          </div>
+          <div>
+            <v-btn
+              variant="text"
+              color="dark"
+              href="mailto:commercial@tarico.io"
+            >
+              {{ $t("components.footer.items.ressources.sales") }}
+            </v-btn>
+          </div>
+
           <div>
             <v-btn variant="text" color="dark">
               {{ $t("components.footer.items.ressources.tou") }}
@@ -121,11 +137,6 @@
           <div>
             <v-btn variant="text" color="dark">
               {{ $t("components.footer.items.ressources.privacy") }}
-            </v-btn>
-          </div>
-          <div>
-            <v-btn variant="text" color="dark">
-              {{ $t("components.footer.items.ressources.support") }}
             </v-btn>
           </div>
         </v-col>

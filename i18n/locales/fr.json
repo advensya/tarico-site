@@ -8,7 +8,8 @@
       "sections": {
         "one": {
           "title": "Connecter entreprises et clients par l'innovation digitale",
-          "text": "Tarico révolutionne votre quotidien en automatisant vos taches et en simplifiant votre gestion d'entreprise. Des outils sur mesure et une intégration fluide pour booster votre éfficacité en un clin d'oeil."
+          "text": "Tarico révolutionne votre quotidien en automatisant vos taches et en simplifiant votre gestion d'entreprise. Des outils sur mesure et une intégration fluide pour booster votre éfficacité en un clin d'oeil.",
+          "cta": "Tous nos services"
         },
         "two": {
           "items": {
@@ -27,7 +28,8 @@
           }
         },
         "three": {
-          "cta": "Pour les entreprises"
+          "text": "Chez Tarico, l’expérience utilisateur n’est pas un simple critère : c’est un fondement. Chaque fonctionnalité, chaque interface, chaque ligne de code est pensée pour une chose : rendre l’usage de nos logiciels fluide, naturel, efficace. Nous croyons fermement qu’un bon logiciel est invisible — il disparaît derrière la simplicité d’usage et l’efficacité qu’il apporte.",
+          "cta": "Lire l'article"
         }
       }
     },
@@ -46,7 +48,8 @@
         "title": "Une suite logicielle pensée pour l’efficacité",
         "text": "Chez Tarico, chaque logiciel est né d’un besoin identifié sur le terrain. Nous avons écouté nos utilisateurs, compris leurs blocages, et développé des outils qui répondent avec précision à leurs enjeux. Notre suite logicielle est le fruit d’une vision pratique, conçue pour être rapidement opérationnelle et réellement utile au quotidien."
       },
-      "cta": "Contacter l'équipe commerciale"
+      "cta": "Contacter l'équipe commerciale",
+      "seeMore": "En savoir plus"
     }
   },
 
@@ -77,9 +80,10 @@
         },
         "ressources": {
           "title": "Ressources",
-          "tou": "condition d'utilisation",
+          "tou": "Conditions d'utilisation",
           "privacy": "Politique de confidentialité",
-          "support": "Contactez le support"
+          "support": "Contactez le support",
+          "sales": "Contactez l'équipe commerciale"
         },
         "products": {
           "title": "Solutions"

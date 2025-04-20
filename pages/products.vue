@@ -35,12 +35,12 @@ defineI18nRoute({
             <img
               :src="product.logo"
               :alt="product.title"
-              width="24"
-              height="24"
+              width="42"
+              height="42"
             />
             <div v-html="product.title"></div>
           </div>
-          <div v-html="product.description.fr"></div>
+          <div v-html="product.description[$i18n.locale]"></div>
 
           <template v-if="product.to">
             <v-btn
@@ -50,7 +50,7 @@ defineI18nRoute({
               class="mt-5"
               rounded
             >
-              En savoir plus
+              {{ $t("pages.products.seeMore") }}
               <template #append>
                 <i class="fi fi-rr-arrow-small-right"></i>
               </template>

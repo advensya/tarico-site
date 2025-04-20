@@ -17,11 +17,13 @@
           class="mt-5"
           rounded="pill"
           style="border-radius: 0.6em"
+          :to="$localePath({ name: 'products' })"
         >
           <template #prepend>
-            <i class="fi fi-rr-daily-calendar"></i>
+            <i class="fi fi-br-grid"></i>
           </template>
-          Demandez un rendez-vous
+          {{ $t("pages.index.sections.one.cta") }}
+          <template #append> </template>
         </v-btn>
       </v-container>
     </div>
@@ -103,7 +105,7 @@
     </section>
 
     <div
-      class="pg-home--section-three"
+      class="pg-home--section-three mb-16"
       style="position: relative; padding-top: 150px"
     >
       <div
@@ -124,8 +126,19 @@
           class="h-100 d-flex align-center position-relative"
         >
           <div>
-            <div style="width: 90%; max-width: 442px; font-size: 28px">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+            <div style="width: 90%; max-width: 442px; font-size: 18px">
+              <div
+                style="
+                  display: -webkit-box;
+                  -webkit-line-clamp: 4; /* Limite le texte à 5 lignes */
+                  line-clamp: 4; /* Limite le texte à 5 lignes */
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                "
+              >
+                {{ $t("pages.index.sections.three.text") }}
+              </div>
             </div>
             <v-btn
               color="black"
@@ -133,9 +146,10 @@
               size="x-large"
               class="mt-5"
               style="border-radius: 0.6em"
+              rounded
             >
-              <template #prepend>
-                <i class="fi fi-sr-building" style="font-size: 22px"></i>
+              <template #append>
+                <i class="fi fi-rr-arrow-small-right"></i>
               </template>
               {{ $t("pages.index.sections.three.cta") }}
             </v-btn>
@@ -144,8 +158,8 @@
       </div>
       <v-container v-if="$vuetify.display.smAndDown">
         <div>
-          <p style="font-size: 28px">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+          <p style="font-size: 18px">
+            {{ $t("pages.index.sections.three.text") }}
           </p>
           <v-btn
             color="black"
@@ -153,21 +167,16 @@
             size="x-large"
             class="mt-5"
             style="border-radius: 0.6em"
+            rounded
           >
-            <template #prepend>
-              <i class="fi fi-sr-building" style="font-size: 22px"></i>
+            <template #append>
+              <i class="fi fi-rr-arrow-small-right"></i>
             </template>
             {{ $t("pages.index.sections.three.cta") }}
           </v-btn>
         </div>
       </v-container>
     </div>
-
-    <v-container class="py-16">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum numquam id,
-      inventore ex voluptatibus aperiam dignissimos illo? Cumque ab id optio rem
-      odit nesciunt consequuntur, sapiente labore debitis consectetur ut?
-    </v-container>
 
     <ui-footer />
   </v-app>
