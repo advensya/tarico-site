@@ -1,0 +1,141 @@
+.ui-content {
+  font-family: var(--v-font-family);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(var(--v-theme-on-surface), 0.87);
+  padding-bottom: 50px;
+
+  > * {
+    width: 90%;
+    max-width: 882px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Titres
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-weight: 900;
+    line-height: 1.2;
+
+    a {
+      color: inherit;
+      font-weight: inherit;
+      text-decoration: inherit;
+    }
+  }
+
+  h1 {
+    font-size: 6rem; // text-h1
+    letter-spacing: -0.01562em;
+    padding-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 3.75rem; // text-h2
+    letter-spacing: -0.00833em;
+    border-left: 4px solid rgb(var(--v-theme-primary));
+    padding-left: 0.75rem;
+  }
+
+  h3 {
+    font-size: 3rem; // text-h3
+  }
+
+  h4 {
+    font-size: 2.125rem; // text-h4
+    letter-spacing: 0.00735em;
+  }
+
+  h5 {
+    font-size: 1.5rem; // text-h5
+  }
+
+  h6 {
+    font-size: 1.25rem; // text-h6
+  }
+
+  // Paragraphes
+  p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  // Liens (hors titres)
+  a {
+    color: rgb(var(--v-theme-primary));
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+
+    &:hover {
+      color: rgb(var(--v-theme-secondary));
+    }
+  }
+
+  // Listes
+  ul,
+  ol {
+    padding-left: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: disc;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+
+  // Blockquote
+  blockquote {
+    border-left: 4px solid rgb(var(--v-theme-primary));
+    padding-left: 1rem;
+    color: rgba(var(--v-theme-on-surface), 0.7);
+    background-color: rgba(var(--v-theme-surface), 0.05);
+    margin: 1.5rem 0;
+    font-style: italic;
+  }
+
+  // Inline code
+  code {
+    font-family: "Fira Code", monospace;
+    background-color: rgba(var(--v-theme-surface), 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+  }
+
+  // Code blocks
+  pre {
+    background-color: rgba(var(--v-theme-surface), 0.15);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+
+    code {
+      display: block;
+      color: rgb(var(--v-theme-on-surface));
+    }
+  }
+
+  // Images responsive
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+}

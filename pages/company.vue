@@ -7,7 +7,13 @@ defineI18nRoute({
 });
 
 const i18n = useI18n();
-useSeoMeta({ title: i18n.t("pages.company.description") });
+
+useHead({
+  templateParams: {
+    siteDescription: i18n.t("pages.company.meta.description"),
+    siteName: "Codia",
+  },
+});
 </script>
 
 <template>
@@ -38,7 +44,6 @@ useSeoMeta({ title: i18n.t("pages.company.description") });
 
       <template #cta>
         <v-btn
-          v-if="!$slots.cta"
           variant="flat"
           size="large"
           color="orange"

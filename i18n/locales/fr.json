@@ -1,4 +1,7 @@
 {
+  "site": {
+    "description": "Connecter entreprises et clients par l'innovation digitale."
+  },
   "words": {
     "welcome": "bienvenue"
   },
@@ -34,6 +37,9 @@
       }
     },
     "company": {
+      "meta": {
+        "description": "L’ambition de transformer l’Afrique par la digitalisation"
+      },
       "header": {
         "title": "L’ambition de transformer l’Afrique par la digitalisation",
         "description": "Chez Codia, nous simplifions la gestion des données pour les entreprises, en leur offrant des solutions digitales innovantes qui facilitent l'accès, l'analyse et l'utilisation efficace de leurs informations."

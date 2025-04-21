@@ -7,6 +7,7 @@ export default defineNuxtConfig({
     "vuetify-nuxt-module",
     "nuxt-icons",
     "@nuxtjs/i18n",
+    "@nuxtjs/mdc",
     "@nuxt/content",
   ],
 

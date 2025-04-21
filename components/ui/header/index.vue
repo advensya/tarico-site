@@ -19,7 +19,11 @@ const items = ref([
     title: i18n.t("components.header.items.whytarico"),
     to: localePath({ name: "why" }),
   },
-  { code: "blog", title: i18n.t("components.header.items.blog") },
+  {
+    code: "blog",
+    title: i18n.t("components.header.items.blog"),
+    to: localePath({ name: "blog" }),
+  },
   {
     code: "company",
     title: i18n.t("components.header.items.company"),

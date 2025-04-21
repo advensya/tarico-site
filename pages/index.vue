@@ -146,6 +146,14 @@
               size="x-large"
               class="mt-5"
               style="border-radius: 0.6em"
+              :to="
+                $localePath({
+                  name: 'blog-slug',
+                  params: {
+                    slug: 'comment-tarico-révolutionne-l-expérience-utilisateur',
+                  },
+                })
+              "
               rounded
             >
               <template #append>
@@ -168,6 +176,14 @@
             class="mt-5"
             style="border-radius: 0.6em"
             rounded
+            :to="
+              $localePath({
+                name: 'blog-slug',
+                params: {
+                  slug: 'comment-tarico-révolutionne-l-expérience-utilisateur',
+                },
+              })
+            "
           >
             <template #append>
               <i class="fi fi-rr-arrow-small-right"></i>

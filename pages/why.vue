@@ -42,9 +42,7 @@ onUnmounted(() => {
 
 <template>
   <v-app class="pg-why">
-    <ui-header>
-      <template #cta></template>
-    </ui-header>
+    <ui-header> </ui-header>
 
     <v-container style="padding-top: 150px">
       <div ref="grid" class="grid">

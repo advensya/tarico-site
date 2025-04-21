@@ -3,10 +3,11 @@ const hideOffer = ref(false);
 </script>
 
 <template>
-  <v-toolbar v-if="!hideOffer" color="primary" height="unset">
-    <!-- style="background: linear-gradient(-135deg, #fab2ff 10%, #1904e5 100%)" -->
+  <NuxtLayout>
+    <!-- <v-toolbar v-if="!hideOffer" color="primary" height="unset">
+      style="background: linear-gradient(-135deg, #fab2ff 10%, #1904e5 100%)" 
 
-    <!-- <div class="w-100">
+    <div class="w-100">
       <div
         style="position: absolute; top: 0; right: 0"
         class="pa-2 d-flex justify-end"
@@ -37,7 +38,8 @@ const hideOffer = ref(false);
           </v-btn>
         </div>
       </v-container>
-    </div> -->
-  </v-toolbar>
-  <nuxt-page />
+    </div>
+  </v-toolbar> -->
+    <nuxt-page />
+  </NuxtLayout>
 </template>

@@ -130,12 +130,20 @@
           </div>
 
           <div>
-            <v-btn variant="text" color="dark">
+            <v-btn
+              :to="$localePath({ name: 'cgu' })"
+              variant="text"
+              color="dark"
+            >
               {{ $t("components.footer.items.ressources.tou") }}
             </v-btn>
           </div>
           <div>
-            <v-btn variant="text" color="dark">
+            <v-btn
+              :to="$localePath({ name: 'privacy' })"
+              variant="text"
+              color="dark"
+            >
               {{ $t("components.footer.items.ressources.privacy") }}
             </v-btn>
           </div>
