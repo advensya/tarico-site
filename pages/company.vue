@@ -47,12 +47,11 @@ useHead({
           variant="flat"
           size="large"
           color="orange"
-          href="mailto:contact@codia.sn"
-          target="__blank"
+          :to="$localePath({ name: 'contact' })"
           rounded
         >
           <template #prepend>
-            <ui-svg name="mail" size="24" />
+            <i class="fi fi-br-comment" style="font-size: 18px"></i>
           </template>
           Contactez-nous
         </v-btn>

@@ -59,7 +59,7 @@ function destroy() {
 
     <nuxt-link
       v-if="!$slots.brand"
-      class="d-flex align-center text-black overflow-hidden pa-1"
+      class="d-flex align-center text-dark overflow-hidden pa-1"
       :to="$localePath({ name: 'index' })"
       style="width: max-content; display: flex; align-items: center; gap: 5px"
     >
@@ -137,7 +137,9 @@ function destroy() {
         :to="$localePath({ name: 'contact' })"
         rounded
       >
-        <template #prepend><i class="fi fi-rr-comment"></i></template>
+        <template #prepend>
+          <i class="fi fi-rr-comment"></i>
+        </template>
         {{ $t("components.header.cta") }}
       </v-btn>
     </div>

@@ -24,7 +24,6 @@ defineProps({
 
 <style lang="scss">
 .ui-content-hero--cover {
-  min-height: 420px;
   width: 100%;
   max-width: unset;
   position: relative;
@@ -43,7 +42,7 @@ defineProps({
 }
 
 .ui-content-hero--title {
-  font-size: clamp(2rem, 8.2352941176vw, 4.8rem);
+  font-size: clamp(2rem, 8.2352941176vw, 4.8rem) !important;
   line-height: 1.1;
   margin-bottom: 50px !important;
 }

@@ -100,8 +100,7 @@
             <v-btn
               variant="text"
               color="dark"
-              href="https://codia.sn/careers"
-              target="_blank"
+              :to="$localePath({ name: 'career' })"
             >
               <!-- <i class="fi fi-br-arrow-up-right-from-square text-body-2"></i> -->
               {{ $t("components.footer.items.company.career") }}
@@ -110,12 +109,12 @@
         </v-col>
 
         <v-col cols="12" md="3" sm="6">
-          <div class="text-h5 font-weight-bold font-mackinac ml-1">
+          <div class="text-h5 font-weight-bold ml-1">
             {{ $t("components.footer.items.ressources.title") }}
           </div>
 
           <div>
-            <v-btn variant="text" color="dark">
+            <v-btn variant="text" color="dark" href="mailto:support@tarico.io">
               {{ $t("components.footer.items.ressources.support") }}
             </v-btn>
           </div>

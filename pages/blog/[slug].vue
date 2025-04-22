@@ -5,15 +5,7 @@ const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection("blog").where("id", "=", path).first();
 });
 
-useHead({
-  title: page.value?.seo?.title ?? page.value?.title,
-  meta: [
-    {
-      name: "description",
-      content: page.value?.seo?.description ?? page.value?.description,
-    },
-  ],
-});
+useSeoMeta({ title: page.value?.seo?.title ?? page.value?.title });
 </script>
 
 <template>

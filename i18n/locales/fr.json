@@ -56,6 +56,82 @@
       },
       "cta": "Contacter l'équipe commerciale",
       "seeMore": "En savoir plus"
+    },
+    "blog": {
+      "index": {
+        "readMore": "Lire la suite"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+
+      "form": {
+        "firstName": "Prénom",
+        "lastName": "Nom",
+        "email": "E-mail",
+        "message": "Message",
+        "submit": "Envoyer",
+
+        "errors": {
+          "required": "Ce champ est requis",
+          "invalidEmail": "Adresse email invalide"
+        }
+      },
+      "messages": {
+        "success": "Votre message a bien été transmis à notre équipe, qui reviendra vers vous dès que possible.",
+        "error": "Oups… une erreur est survenue lors de l’envoi de votre message. Veuillez réessayer dans quelques instants ou nous contacter directement par email."
+      }
+    },
+    "career": {
+      "title": "Rejoignez-nous",
+      "header": {
+        "title": "Votre prochain grand changement de carrière",
+        "summary": "Chez Codia, nous ne créons pas, nous innovons. <br/> Nous ne travaillons pas, nous collaborons. <br/> Nous n’avons pas de bureaux, nous avons un terrain de jeu.",
+        "spontaneousApplication": "Candaidature spontanée",
+        "SeeOurOffers": "Voir nos offres"
+      },
+
+      "object": {
+        "text": "Chez Codia, notre ambition est claire : devenir le leader incontesté de la digitalisation en Afrique. Nous croyons fermement au potentiel immense du continent et nous engageons à transformer les entreprises africaines grâce à des solutions digitales innovantes, adaptées et accessibles. En repensant les processus traditionnels, en innovant sans relâche, et en rapprochant entreprises et clients, nous visons à établir de nouveaux standards pour un avenir numérique prospère en Afrique. Codia n'est pas seulement un acteur de la digitalisation, nous sommes un moteur de changement et de croissance pour tout un continent.",
+        "subtext": "Nous voulons nous entourer des meilleurs pour atteindre nos objectifs. Prêt pour un défi (et prêt pour une aventure)? Rejoignez-nous."
+      },
+
+      "whyWorkWithUs": {
+        "title": "Beaucoup de raisons d’aimer travailler avec nous",
+        "valuables": [
+          {
+            "icon": "other/030",
+            "title": "Nous sommes optimistes",
+            "text": "Nous croyons que tout est possible et que nous pouvons faire des choses incroyables. Nous croyons que nous avons un avenir passionnant devant nous. Nous apprécions ce voyage que nous faisons ensemble et nous recherchons le plaisir dans ce que nous faisons. Nous assumons toujours de bonnes intentions, et nous apprécions profondément la gentillesse et l’empathie."
+          },
+          {
+            "icon": "other/029",
+            "title": "Nous sommes confiants, mais humbles",
+            "text": "Nous croyons en nous-mêmes et aimons vraiment apprendre en tant qu’individus et en tant qu’équipe. Nous sommes curieux de nature et nous posons beaucoup de questions – nous ne supposons jamais que nous avons toutes les réponses. Nous donnons et recevons des commentaires ouvertement et honnêtement. Nous adoptons un état d’esprit de croissance et nous cherchons constamment des moyens d’être meilleurs."
+          },
+          {
+            "icon": "other/032",
+            "title": "Nous sommes obsédés par le succès de nos clients",
+            "text": "Nous aimons résoudre les problèmes les plus importants, les plus urgents et les plus précieux de nos clients. Nous mesurons et sommes obsédés par l’obtention de résultats significatifs et de valeur pour nos clients et par l’amélioration continue de nos capacités pour le faire encore plus à l’avenir."
+          },
+          {
+            "icon": "other/035",
+            "title": "Nous pensons grand et commençons petit",
+            "text": "Nous aimons nous attaquer aux gros problèmes, et nous aimons les décomposer en morceaux solubles. Notre ambition nous pousse à aller au-delà de ce que l’on pense possible. Nous commençons par le problème à résoudre dans tout ce que nous faisons. Nous investissons dans la construction à long terme et nous apprenons en expérimentant à court terme."
+          },
+          {
+            "icon": "other/033",
+            "title": "Nous allons plus loin ensemble",
+            "text": "Nous travaillons comme une seule équipe, nous gagnons comme une seule équipe. Nous avons placé la barre très haut pour nous-mêmes et pour les autres. Nous nous respectons les uns les autres et nous recherchons différents points de vue pour trouver la meilleure voie à suivre. Nous veillons les uns sur les autres, nous nous élevons les uns les autres et nous veillons à ce qu’il y ait des opportunités équitables pour que tous réussissent."
+          },
+
+          {
+            "icon": "other/031",
+            "title": "Pour nous, chaque jour compte",
+            "text": "Nous commençons chaque journée avec un objectif clair, une intention d’avoir un impact. Nous n’attendons pas le bon moment, nous le créons. Nous nous battons pour nous débloquer, nous poussons pour faire des progrès et nous travaillons dur avec un sentiment d’urgence et de concentration."
+          }
+        ]
+      }
     }
   },
 

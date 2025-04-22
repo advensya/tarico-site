@@ -88,7 +88,8 @@
                   style="width: 64px; height: 64px"
                 >
                   <!-- <ui-svg name="other/022" size="32" class="text-white" /> -->
-                  <ui-svg name="other/033" size="64" class="text-primary" />
+                  <!-- <ui-svg name="other/033" size="64" class="text-primary" /> -->
+                  <ui-svg name="heart" size="64" class="text-primary" />
                 </div>
                 <div class="font-weight-bold my-3 text-h4">
                   {{ $t("pages.index.sections.two.items.reconcile.title") }}

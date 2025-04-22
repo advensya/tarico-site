@@ -75,7 +75,7 @@ const { data: pages } = await useAsyncData(Math.random().toString(), () => {
                   "
                   color="dark"
                   variant="flat"
-                  text="Lire l'article"
+                  :text="$t('pages.blog.index.readMore')"
                   rounded
                 ></v-btn>
               </div>
