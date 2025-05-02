@@ -132,6 +132,16 @@
           }
         ]
       }
+    },
+    "hr": {
+      "index": {
+        "hero": {
+          "title": "La solution intelligente pour une gestion RH performante et conforme."
+        },
+        "description": {
+          "text": "Tarico HR est une plateforme intelligente et intuitive, pensée pour accompagner les entreprises africaines et internationales dans la digitalisation, la structuration et l’optimisation de leurs processus RH.<br><br>Que vous soyez une PME, une grande entreprise ou une organisation multisites, TARICO HR s’adapte à votre réalité terrain, avec des outils puissants et modulables, intégrés dans un écosystème numérique sécurisé."
+        }
+      }
     }
   },
 
@@ -209,6 +219,35 @@
       },
       "ceo": {
         "text": "Chez Codia, nous construisons des outils qui facilitent l'intégration numérique sur tout le continent. Et cela commence par la compréhension des nouvelles exigences utilisateurs. Nous produisons les meilleurs outils qui soient pour une meilleure expérience utilisateur."
+      }
+    }
+  },
+
+  "taricohr": {
+    "services": {
+      "01": {
+        "title": "Gestion des Congés & Absences",
+        "description": "Grâce à la gestion automatisée des congés et absences, TARICO HR simplifie les processus liés aux demandes de congés. Les collaborateurs peuvent facilement soumettre leurs demandes de congés, tandis que les managers valident en un seul clic."
+      },
+      "02": {
+        "title": "Bilan Social & Tableaux de Bord RH",
+        "description": "Le bilan social est généré automatiquement, vous fournissant ainsi un rapport détaillé sur la situation RH de l’entreprise, ce qui facilite les audits internes ou externes et la préparation des rapports légaux"
+      },
+      "03": {
+        "title": "Dossiers Médicaux & Suivi Santé-Travail",
+        "description": "La centralisation des données de santé des collaborateurs est essentielle pour garantir leur bien-être et respecter les obligations légales. TARICO HR vous permet de suivre les visites médicales, les certificats médicaux, et les dossiers de santé de manière sécurisée."
+      },
+      "04": {
+        "title": "GTA (Gestion du Temps & Activités)",
+        "description": "TARICO HR simplifie la gestion des heures de travail, la planification des tâches, et le suivi de la productivité des employés. Grâce au pointage digital qui sera disponible trés bientot, les collaborateurs enregistrent facilement leurs heures de travail."
+      },
+      "05": {
+        "title": "Gain de temps significatif",
+        "description": "En automatisant les processus RH répétitifs et chronophages, vos équipes peuvent réallouer leur temps à des missions à plus forte valeur ajoutée, comme le développement des talents ou la stratégie RH de votre entreprise."
+      },
+      "06": {
+        "title": "Décisions RH statégiques et éclairées",
+        "description": "L’accès en temps réel à des données stratégiques vous permet de prendre des décisions plus informées et plus réactives. Cela améliore la gestion de vos talents et optimise votre stratégie RH à long terme."
       }
     }
   }

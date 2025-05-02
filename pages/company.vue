@@ -126,7 +126,7 @@ useHead({
 .header {
   margin: auto;
   margin-bottom: 50px;
-  height: 100lvh;
+  height: 70lvh;
   width: 100%;
   display: flex;
   align-items: center;
@@ -147,7 +147,7 @@ useHead({
     top: -80px;
     background-image: url(/images/u_002.jpg);
     background-size: cover;
-    background-position: center bottom;
+    background-position: top center;
     // background: linear-gradient(
     //   165deg,
     //   rgba(var(--v-theme-secondary), 0.3) 0%,
