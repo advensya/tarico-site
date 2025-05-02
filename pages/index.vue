@@ -247,14 +247,14 @@
   .pg-home__title {
     font-size: clamp(2rem, 8.2352941176vw, 4rem);
     line-height: 1.1;
-    background: linear-gradient(
-      90deg,
-      rgba(var(--v-theme-primary)),
-      rgba(var(--v-theme-secondary))
-    );
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text; /* pour Firefox */
+    // background: linear-gradient(
+    //   90deg,
+    //   rgba(var(--v-theme-primary)),
+    //   rgba(var(--v-theme-secondary))
+    // );
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // background-clip: text;
   }
 }
 
