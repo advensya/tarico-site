@@ -9,6 +9,7 @@ defineI18nRoute({
 });
 
 const i18n = useI18n();
+const route = useRoute();
 
 const emailRegex =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -28,6 +29,7 @@ async function submit() {
     `firstName: ${data.value.firstName}` +
     `\nlastName: ${data.value.lastName}` +
     `\nemail: ${data.value.email}` +
+    `\nfor: ${route.query.for}` +
     `\nmessage: ${data.value.message}`;
 
   try {
