@@ -35,7 +35,11 @@ useHead({
               border-radius: 0.12em;
             "
           >
-            <ui-svg name="logo" style="width: 100%" />
+            <img
+              src="/logo/tarico-hr.png"
+              alt="tarico hr logo"
+              style="width: 100%"
+            />
           </div>
 
           <div style="font-size: 26px">TARICO</div>
