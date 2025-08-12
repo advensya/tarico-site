@@ -1,7 +1,7 @@
 <template>
   <v-footer
     style="background-color: rgba(var(--v-theme-on-background), 0.03)"
-    class="ui-footer d-block pa-0 pt-5"
+    class="ui-footer d-block pa-0 pt-5 bg-primary"
   >
     <v-container class="my-5">
       <v-row>
@@ -16,12 +16,12 @@
             >
               <ui-svg name="logo" width="24" height="24" class="text-white" />
             </div>
-            <div class="font-mackinac text-dark">Tarico</div>
+            <div class="font-mackinac text-white">Tarico</div>
           </nuxt-link>
 
-          <div class="mt-5 d-flex align-center ga-3">
+          <div class="mt-5 ml-3 d-flex align-center ga-3">
             <nuxt-link
-              class="text-dark"
+              class="text-white"
               href="mailto:contact@tarico.io"
               target="_blank"
             >
@@ -29,7 +29,7 @@
             </nuxt-link>
 
             <nuxt-link
-              class="text-dark"
+              class="text-white"
               href="https://www.linkedin.com/company/tarico"
               target="_blank"
             >
@@ -45,7 +45,7 @@
           <template v-for="(product, p) in Products.slice(0, 4)" :key="p">
             <div>
               <v-btn
-                color="dark"
+                color="white"
                 rounded="0"
                 variant="text"
                 :to="product.to ? $localePath(product.to) : undefined"
@@ -54,11 +54,12 @@
               </v-btn>
             </div>
           </template>
-          <div>
+          <!-- <div>
             <v-btn
-              color="dark"
-              rounded="0"
-              variant="text"
+              color="white"
+              variant="outlined"
+              class="px-4 border"
+              rounded
               :to="$localePath({ name: 'products' })"
             >
               <template #prepend>
@@ -66,7 +67,7 @@
               </template>
               {{ $t("components.footer.items.allProducts") }}
             </v-btn>
-          </div>
+          </div> -->
         </v-col>
 
         <v-col cols="12" md="3" sm="6">
@@ -79,7 +80,7 @@
           <div>
             <v-btn
               variant="text"
-              color="dark"
+              color="white"
               :to="$localePath({ name: 'company' })"
             >
               {{ $t("components.footer.items.company.aboutUs") }}
@@ -89,7 +90,7 @@
           <div>
             <v-btn
               variant="text"
-              color="dark"
+              color="white"
               :to="$localePath({ name: 'contact' })"
             >
               {{ $t("components.footer.items.company.contactUs") }}
@@ -99,7 +100,7 @@
           <div>
             <v-btn
               variant="text"
-              color="dark"
+              color="white"
               :to="$localePath({ name: 'career' })"
             >
               <!-- <i class="fi fi-br-arrow-up-right-from-square text-body-2"></i> -->
@@ -114,14 +115,14 @@
           </div>
 
           <div>
-            <v-btn variant="text" color="dark" href="mailto:support@tarico.io">
+            <v-btn variant="text" color="white" href="mailto:support@tarico.io">
               {{ $t("components.footer.items.ressources.support") }}
             </v-btn>
           </div>
           <div>
             <v-btn
               variant="text"
-              color="dark"
+              color="white"
               href="mailto:commercial@tarico.io"
             >
               {{ $t("components.footer.items.ressources.sales") }}
@@ -132,7 +133,7 @@
             <v-btn
               :to="$localePath({ name: 'cgu' })"
               variant="text"
-              color="dark"
+              color="white"
             >
               {{ $t("components.footer.items.ressources.tou") }}
             </v-btn>
@@ -141,7 +142,7 @@
             <v-btn
               :to="$localePath({ name: 'privacy' })"
               variant="text"
-              color="dark"
+              color="white"
             >
               {{ $t("components.footer.items.ressources.privacy") }}
             </v-btn>
@@ -157,17 +158,37 @@
       </v-row>
     </v-container>
     <div
-      class="text-center py-3 px-10"
-      style="border-top: 1px solid rgba(var(--v-theme-on-background), 0.04)"
+      class="text-center py-3 px-10 bg-primary"
+      style="
+        border-top: 1px solid rgba(var(--v-theme-on-background), 0.04);
+        position: relative;
+        display: flex;
+        align-items: center;
+      "
     >
-      <div>
+      <div
+        style="
+          background-color: rgba(var(--v-theme-on-background), 0.1);
+          position: absolute;
+          inset: 0;
+        "
+      ></div>
+      <div style="position: relative">
         ©
         {{ new Date().getFullYear() }}
-        <b>Codia SUARL</b>. All rights reserved.
+        <b>Codia SUARL</b>
+      </div>
+
+      <div
+        class="d-flex align-center text-right ga-2 ml-auto"
+        style="line-height: 1"
+      >
+        développé au Sénégal
+        <ui-svg name="flag/sn" size="28" />
       </div>
     </div>
 
-    <div class="border-t py-3 px-10 d-none ga-5">
+    <div class="border-t py-3 px-10 d-none ga-5 bg-dark">
       <div>
         ©
         {{ new Date().getFullYear() }}

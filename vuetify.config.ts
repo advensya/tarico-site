@@ -2,7 +2,8 @@ import type { ExternalVuetifyOptions } from "vuetify-nuxt-module";
 import colors from "vuetify/util/colors";
 
 const primaryColor = "#1e13f8";
-const secondaryColor = "#fc5ace";
+const secondaryColor = "#ffdf51";
+// const secondaryColor = "#fc5ace";
 
 export default {
   labComponents: [

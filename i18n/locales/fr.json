@@ -10,7 +10,7 @@
     "index": {
       "sections": {
         "one": {
-          "title": "Innover, connecter, transformer",
+          "title": "Innover, connecter, transformer.",
           "text": "Tarico simplifie la gestion d'entreprise en Afrique avec des outils digitaux puissants, accessibles et sécurisés.",
           "cta": "Tous nos services"
         },
@@ -140,6 +140,38 @@
         },
         "description": {
           "text": "Tarico HR est une plateforme intelligente et intuitive, pensée pour accompagner les entreprises africaines et internationales dans la digitalisation, la structuration et l’optimisation de leurs processus RH.<br><br>Que vous soyez une PME, une grande entreprise ou une organisation multisites, TARICO HR s’adapte à votre réalité terrain, avec des outils puissants et modulables, intégrés dans un écosystème numérique sécurisé."
+        }
+      }
+    },
+
+    "form": {
+      "createForm": "Commencer, c'est gratuit",
+      "noIdNeed": "Aucune identification requise",
+      "realyFree": "C'est réellement gratuit",
+
+      "home": {
+        "wedo": "Constructeur de formulaires",
+        "title": "Automatisez vos taches, <br /> Simplifiez votre Gestion",
+        "subtitle": "Tarico révolutionne votre quotidien en automatisant vos  taches et en simplifiant votre gestion d'entreprise. Des outils sur mesure et une intégration fluide pour booster votre éfficacité en un clin d'oeil.",
+
+        "foot": {
+          "title": "Commencer à construire avec Tarico FORM",
+          "text": ""
+        }
+      },
+
+      "tiers": {
+        "text": "Connectez facilement vos outils existants tels que la comptabilité, les ressources humaines ou les CRM, afin de centraliser les flux de travail et les données."
+      },
+
+      "plan": {
+        "safe": {
+          "tosafe": "économisez",
+          "sub": "avec un abonnement annuel"
+        },
+        "btn": {
+          "start": "Commencer",
+          "contactSales": "Contacter le service commercial"
         }
       }
     }

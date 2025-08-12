@@ -32,13 +32,13 @@ defineI18nRoute({
           class="mb-10"
         >
           <div class="d-flex align-end ga-2 mb-5">
-            <img
+            <!-- <img
               :src="product.logo"
               :alt="product.title"
               width="42"
               height="42"
-            />
-            <div v-html="product.title"></div>
+            /> -->
+            <div class="text-h4" v-html="product.title"></div>
           </div>
           <div v-html="product.description[$i18n.locale]"></div>
 

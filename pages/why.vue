@@ -106,29 +106,23 @@ onUnmounted(() => {
 
             <ul class="my-5">
               <li>
-                <b class="text-primary">Tarico Formulaire</b> : notre outil
-                historique, repensé pour rendre la collecte de données plus
-                rapide, plus agréable et surtout plus intelligente.
-              </li>
-              <li>
-                <b class="text-primary">Tarico HR</b> : une plateforme de
-                gestion des ressources humaines moderne qui simplifie vos
-                processus RH tout en mettant l’humain au centre.
+                <nuxt-link :to="$localePath({ name: 'hr' })">
+                  <b class="text-primary">Tarico HR</b>
+                </nuxt-link>
+                : une plateforme de gestion des ressources humaines moderne qui
+                simplifie vos processus RH tout en mettant l’humain au centre.
               </li>
 
               <li>
-                <b class="text-primary">Tarico Heavy</b>: transférez vos
-                fichiers lourds en toute sécurité et sans limite, avec une
-                fluidité impressionnante.
-              </li>
-              <li>
-                <b class="text-primary">Tarico Onboarding</b> : optimisez vos
-                recrutements et intégrez vos nouveaux talents avec une
-                expérience soignée et professionnelle.
+                <nuxt-link :to="$localePath({ name: 'form' })">
+                  <b class="text-primary">Tarico Formulaire</b>
+                </nuxt-link>
+                : notre outil historique, repensé pour rendre la collecte de
+                données plus rapide, plus agréable et surtout plus intelligente.
               </li>
             </ul>
 
-            <v-btn
+            <!-- <v-btn
               color="dark"
               variant="tonal"
               :to="$localePath({ name: 'products' })"
@@ -138,7 +132,7 @@ onUnmounted(() => {
                 <i class="fi fi-br-grid"></i>
               </template>
               Voir tous nos services
-            </v-btn>
+            </v-btn> -->
           </div>
         </div>
 
