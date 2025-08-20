@@ -1,7 +1,7 @@
 <template>
   <v-footer
     style="background-color: rgba(var(--v-theme-on-background), 0.03)"
-    class="ui-footer d-block pa-0 pt-5 bg-primary"
+    class="ui-footer d-block pa-0 pt-5"
   >
     <v-container class="my-5">
       <v-row>
@@ -11,25 +11,19 @@
             :to="$localePath({ name: 'index' })"
           >
             <div
-              class="bg-primary d-flex align-center justify-center"
-              style="width: 36px; height: 36px"
+              class="bg-black d-flex align-center justify-center"
+              style="width: 54px; height: 54px"
             >
-              <ui-svg name="logo" width="24" height="24" class="text-white" />
+              <ui-svg name="logo-v2" size="42" class="text-white" />
             </div>
-            <div class="font-mackinac text-white">Tarico</div>
           </nuxt-link>
 
-          <div class="mt-5 ml-3 d-flex align-center ga-3">
-            <nuxt-link
-              class="text-white"
-              href="mailto:contact@tarico.io"
-              target="_blank"
-            >
+          <div class="mt-5 d-flex align-center ga-3">
+            <nuxt-link href="mailto:contact@tarico.io" target="_blank">
               <ui-svg name="mail" width="22" height="22" />
             </nuxt-link>
 
             <nuxt-link
-              class="text-white"
               href="https://www.linkedin.com/company/tarico"
               target="_blank"
             >
@@ -39,24 +33,9 @@
         </v-col>
 
         <v-col cols="12" md="3" sm="6">
-          <div class="text-h5 font-weight-bold font-mackinac ml-1">
-            {{ $t("components.footer.items.products.title") }}
-          </div>
-          <template v-for="(product, p) in Products.slice(0, 4)" :key="p">
-            <div>
-              <v-btn
-                color="white"
-                rounded="0"
-                variant="text"
-                :to="product.to ? $localePath(product.to) : undefined"
-              >
-                <div v-html="product.title"></div>
-              </v-btn>
-            </div>
-          </template>
           <!-- <div>
             <v-btn
-              color="white"
+              class="text-light mb-2 d-block"
               variant="outlined"
               class="px-4 border"
               rounded
@@ -73,79 +52,83 @@
         <v-col cols="12" md="3" sm="6">
           <!-- <v-spacer></v-spacer> -->
 
-          <div class="text-h5 font-weight-bold font-mackinac ml-1">
+          <div class="text-h5 font-weight-bold font-mackinac mb-3">
             {{ $t("components.footer.items.company.title") }}
           </div>
 
           <div>
-            <v-btn
+            <nuxt-link
               variant="text"
-              color="white"
+              class="text-light mb-2 d-block"
               :to="$localePath({ name: 'company' })"
             >
               {{ $t("components.footer.items.company.aboutUs") }}
-            </v-btn>
+            </nuxt-link>
           </div>
 
           <div>
-            <v-btn
+            <nuxt-link
               variant="text"
-              color="white"
+              class="text-light mb-2 d-block"
               :to="$localePath({ name: 'contact' })"
             >
               {{ $t("components.footer.items.company.contactUs") }}
-            </v-btn>
+            </nuxt-link>
           </div>
 
           <div>
-            <v-btn
+            <nuxt-link
               variant="text"
-              color="white"
+              class="text-light mb-2 d-block"
               :to="$localePath({ name: 'career' })"
             >
               <!-- <i class="fi fi-br-arrow-up-right-from-square text-body-2"></i> -->
               {{ $t("components.footer.items.company.career") }}
-            </v-btn>
+            </nuxt-link>
           </div>
         </v-col>
 
         <v-col cols="12" md="3" sm="6">
-          <div class="text-h5 font-weight-bold ml-1">
+          <div class="text-h5 font-weight-bold mb-3">
             {{ $t("components.footer.items.ressources.title") }}
           </div>
 
           <div>
-            <v-btn variant="text" color="white" href="mailto:support@tarico.io">
+            <nuxt-link
+              variant="text"
+              class="text-light mb-2 d-block"
+              href="mailto:support@tarico.io"
+            >
               {{ $t("components.footer.items.ressources.support") }}
-            </v-btn>
+            </nuxt-link>
           </div>
           <div>
-            <v-btn
+            <nuxt-link
               variant="text"
-              color="white"
+              class="text-light mb-2 d-block"
               href="mailto:commercial@tarico.io"
             >
               {{ $t("components.footer.items.ressources.sales") }}
-            </v-btn>
+            </nuxt-link>
           </div>
 
           <div>
-            <v-btn
+            <nuxt-link
               :to="$localePath({ name: 'cgu' })"
               variant="text"
-              color="white"
+              class="text-light mb-2 d-block"
             >
               {{ $t("components.footer.items.ressources.tou") }}
-            </v-btn>
+            </nuxt-link>
           </div>
           <div>
-            <v-btn
+            <nuxt-link
               :to="$localePath({ name: 'privacy' })"
               variant="text"
-              color="white"
+              class="text-light mb-2 d-block"
             >
               {{ $t("components.footer.items.ressources.privacy") }}
-            </v-btn>
+            </nuxt-link>
           </div>
         </v-col>
         <!-- <ui-app-lang>
@@ -158,7 +141,7 @@
       </v-row>
     </v-container>
     <div
-      class="text-center py-3 px-10 bg-primary"
+      class="text-center py-3 px-10"
       style="
         border-top: 1px solid rgba(var(--v-theme-on-background), 0.04);
         position: relative;
@@ -168,7 +151,7 @@
     >
       <div
         style="
-          background-color: rgba(var(--v-theme-on-background), 0.1);
+          background-color: rgba(var(--v-theme-on-background), 0.01);
           position: absolute;
           inset: 0;
         "
@@ -179,38 +162,11 @@
         <b>Codia SUARL</b>
       </div>
 
-      <div
-        class="d-flex align-center text-right ga-2 ml-auto"
-        style="line-height: 1"
-      >
+      <v-spacer />
+
+      <div class="d-none align-center text-right ga-2" style="line-height: 1">
         développé au Sénégal
         <ui-svg name="flag/sn" size="28" />
-      </div>
-    </div>
-
-    <div class="border-t py-3 px-10 d-none ga-5 bg-dark">
-      <div>
-        ©
-        {{ new Date().getFullYear() }}
-        <b>Codia SUARL</b>. All rights reserved.
-      </div>
-
-      <div class="ml-auto d-flex align-center ga-3">
-        <nuxt-link
-          class="text-dark"
-          href="mailto:contact@tarico.io"
-          target="_blank"
-        >
-          <ui-svg name="mail" width="22" height="22" />
-        </nuxt-link>
-
-        <nuxt-link
-          class="text-dark"
-          href="https://www.linkedin.com/company/tarico"
-          target="_blank"
-        >
-          <ui-svg name="linkedin" width="22" height="22" />
-        </nuxt-link>
       </div>
     </div>
   </v-footer>

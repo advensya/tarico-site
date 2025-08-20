@@ -3,7 +3,25 @@
     "description": "Connecter entreprises et clients par l'innovation digitale."
   },
   "words": {
-    "welcome": "bienvenue"
+    "welcome": "bienvenue",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email",
+    "phone": "Numéro téléphone",
+    "workEmail": "Email professionelle",
+    "companyName": "Nome de l'entreprise",
+    "companySize": "Taille de l'entreprise",
+    "persons": "Personnes"
+  },
+
+  "tou": "Conditions d'utilisation",
+  "privacy": "Politique de confidentialité",
+
+  "bookDemo": {
+    "title": "Réserver une démo",
+    "label": "Réservez une démonstration gratuite de 30 minutes",
+    "submit": "Choisir une date et une heure",
+    "privacy": "Nous respectons vos données. En soumettant ce formulaire, vous acceptez que nous vous contactions au sujet de nos produits et services, conformément à notre {0}."
   },
 
   "pages": {
@@ -63,14 +81,15 @@
       }
     },
     "contact": {
-      "title": "Contact",
+      "title": "Contactez-nous",
 
       "form": {
         "firstName": "Prénom",
         "lastName": "Nom",
-        "email": "E-mail",
+
         "message": "Message",
         "submit": "Envoyer",
+        "email": "E-mail",
 
         "errors": {
           "required": "Ce champ est requis",
@@ -136,10 +155,249 @@
     "hr": {
       "index": {
         "hero": {
-          "title": "La solution intelligente pour une gestion RH performante et conforme."
+          "title0": "La solution intelligente pour une gestion RH performante et conforme.",
+          "title": "Moins d’administratif, plus de croissance : c’est ça Tarico HR",
+          "description": "la plupart des entreprises gèrent encore leurs ressources humaines sur papier ou via des processus manuels lourds. Résultat : des archives qui s’empilent, des données difficiles à retrouver et des erreurs qui coûtent cher. <br /> <br /> Avec Tarico HR, tout change. <br /> Nous transformons la gestion RH en un processus <b>fluide, digital et stratégique</b>. <br/> De la gestion des contrats aux congés, en passant par la conformité et le reporting, vous centralisez tout dans une seule plateforme sécurisée et intuitive. <br /> <br /> Vous gagnez du temps, réduisez les coûts liés aux tâches répétitives et dites enfin adieu aux blocages administratifs. Que vous soyez une startup en croissance ou une multinationale, Tarico HR s’adapte à vos besoins et vous accompagne dans votre transition vers une gestion moderne et efficace."
+        },
+
+        "advantage": {
+          "title": "Simplifiez vos processus,<br/>sécurisez vos données,<br/>engagez vos équipes.",
+          "description": "Avec Tarico HR, vous disposez d’une solution unique qui transforme la gestion RH en un véritable levier stratégique.",
+
+          "items": [
+            {
+              "icon": "/images/8589425.png",
+              "title": "Gagnez du temps au quotidien",
+              "text": "Automatisez les tâches répétitives (contrats, congés, reporting) et concentrez-vous sur ce qui compte vraiment : vos collaborateurs."
+            },
+            {
+              "icon": "/images/1376321.png",
+              "title": "Sécurisez vos données RH",
+              "text": "Bénéficiez d’un système conforme aux normes internationales, avec cryptage avancé et contrôle rigoureux des accès."
+            },
+            {
+              "icon": "/images/3039343.png",
+              "title": "Facile à utiliser, rapide à adopter",
+              "text": "Une interface intuitive et une intégration fluide avec vos outils existants favorisent une adoption immédiate par toute l’organisation."
+            }
+          ]
+        },
+
+        "funcs": {
+          "title": "Ce que Tarico HR fait pour vous, en 4 points essentiels",
+          "description": "Découvrez les modules essentiels qui transforment votre gestion RH en un processus fluide et performant.",
+          "features": [
+            {
+              "code": "People",
+              "icon": "fi fi-sr-users-alt",
+              "title": "Une vision claire de vos équipes",
+              "text": "Centralisez toutes les informations collaborateurs avec une organisation hiérarchique et par unités opérationnelles, pour une gestion structurée et efficace."
+            },
+            {
+              "code": "Deals",
+              "icon": "fi fi-sr-resume",
+              "title": "Simplifiez la gestion contractuelle",
+              "text": "Créez et suivez facilement tous vos contrats (CDI, CDD, stage, journalier) avec modèles prêts à l’emploi et alertes automatiques."
+            },
+            {
+              "code": "Congé",
+              "icon": "fi fi-br-house-user",
+              "title": "Gagnez en fluidité avec la gestion des congés",
+              "text": "Soumettez, validez et suivez les congés et absences en temps réel, sans paperasse ni retard."
+            },
+            {
+              "code": "Insights",
+              "icon": "fi fi-sc-document-signed",
+              "title": "Prenez des décisions éclairées",
+              "text": "Génération automatique de rapports légaux et tableaux de bord interactifs pour un suivi dynamique et conforme aux normes."
+            }
+          ]
+        },
+
+        "benefits": {
+          "intro": {
+            "title": "Tarico HR, c’est du concret : du temps gagné, des coûts réduits et plus de visibilité.",
+            "text": "Des bénéfices mesurables qui transforment votre gestion RH au quotidien."
+          },
+          "items": [
+            {
+              "code": "Cost",
+              "icon": "/images/2108633.png",
+              "title": "30% d’économies",
+              "text": "Réduisez les coûts liés aux erreurs et à la gestion papier."
+            },
+            {
+              "code": "Time",
+              "icon": "/images/8589425.png",
+              "title": "+40% de temps gagné",
+              "text": "Automatisez vos processus RH et concentrez-vous sur l’essentiel."
+            },
+            {
+              "code": "Insights",
+              "icon": "/images/10473656.png",
+              "title": "100% de visibilité",
+              "text": "Des données fiables et en temps réel pour décider plus vite."
+            }
+          ]
+        },
+
+        "services": {
+          "title": "Encore plus de valeur pour vos équipes RH",
+          "text": "Au-delà des modules essentiels, Tarico HR intègre des fonctionnalités avancées et une roadmap ambitieuse qui enrichissent votre gestion.",
+          "features": [
+            {
+              "code": "Leave",
+              "icon": "/images/1379901.png",
+              "title": "Congés & absences",
+              "text": "Les collaborateurs soumettent facilement leurs demandes et les managers valident en un clic, pour une gestion des absences simple, rapide et traçable.",
+              "bg": "#4CAF50",
+              "color": "#FFFFFF"
+            },
+            {
+              "code": "Dashboard",
+              "icon": "/images/2659379.png",
+              "title": "Bilan social & reporting",
+              "text": "Générez automatiquement vos rapports sociaux et RH, facilitez vos audits et prenez des décisions éclairées grâce à des tableaux de bord interactifs.",
+              "bg": "#2196F3",
+              "color": "#FFFFFF"
+            },
+            {
+              "code": "Health",
+              "icon": "/images/14365132.png",
+              "title": "Santé & dossiers médicaux",
+              "text": "Centralisez et sécurisez les certificats et visites médicales afin de garantir le bien-être des collaborateurs et le respect des obligations légales.",
+              "bg": "#E91E63",
+              "color": "#FFFFFF"
+            },
+            {
+              "code": "GTA",
+              "icon": "/images/7933336.png",
+              "title": "Temps & activités",
+              "text": "Planifiez les tâches, suivez la productivité des équipes et préparez-vous au pointage digital pour un suivi précis et moderne du temps de travail.",
+              "bg": "#FF9800",
+              "color": "#000000"
+            },
+            {
+              "code": "Workgroup",
+              "icon": "/images/2779825.png",
+              "title": "Workgroup",
+              "text": "Permettez une structuration souple et hiérarchisée de l’organisation interne avec Tarico HR.",
+              "bg": "#9C27B0",
+              "color": "#FFFFFF"
+            },
+            {
+              "code": "exchange",
+              "icon": "/images/2779823.png",
+              "title": "Exchange",
+              "text": "Partagez et échangez facilement des fichiers entre collaborateurs de manière sécurisée.",
+              "bg": "#00BCD4",
+              "color": "#000000"
+            },
+            {
+              "code": "Report",
+              "icon": "/images/9329869.png",
+              "title": "Rapports d’activité",
+              "text": "Offrez aux employés la possibilité de rédiger et soumettre leurs rapports d’activité pour un meilleur suivi de la performance.",
+              "bg": "#795548",
+              "color": "#FFFFFF"
+            },
+            {
+              "code": "Evaluation",
+              "icon": "/images/5002811.png",
+              "title": "Évaluation du personnel",
+              "text": "Évaluations 360° et suivi des objectifs pour développer les compétences et accompagner vos collaborateurs.",
+              "bg": "#673AB7",
+              "color": "#FFFFFF"
+            },
+            {
+              "code": "Hiring",
+              "icon": "/images/7875460.png",
+              "title": "Hiring & recrutement",
+              "text": "De la publication d’offres au suivi des candidatures, gérez tout votre recrutement directement dans Tarico HR.",
+              "bg": "#F44336",
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+
+        "access": {
+          "title": "Un parcours simple pour adopter Tarico HR",
+          "text": "Trois étapes suffisent pour mettre en place votre plateforme et commencer à en tirer parti.",
+          "steps": [
+            {
+              "num": "1",
+              "code": "Meeting",
+              "icon": "📅",
+              "title": "Planifier un rendez-vous avec notre équipe commerciale",
+              "text": "Organisez un entretien avec notre équipe commerciale. En seulement un échange, nous déployons votre environnement complet dans les 30 minutes suivant la fin de la rencontre."
+            },
+            {
+              "num": "2",
+              "code": "Access",
+              "icon": "📧",
+              "title": "Recevoir vos accès par e-mail",
+              "text": "À la suite du déploiement, vous recevez directement par e-mail toutes les informations nécessaires pour accéder à votre plateforme."
+            },
+            {
+              "num": "3",
+              "code": "Team",
+              "icon": "👥",
+              "title": "Ajouter vos collaborateurs et profiter pleinement de Tarico HR",
+              "text": "Ajoutez vos nouvelles recrues ainsi que vos employés actuels, et exploitez toutes les fonctionnalités de Tarico HR pour optimiser la gestion de vos effectifs."
+            }
+          ]
+        },
+
+        "cata": {
+          "intro": {
+            "title": "Prêt à transformer votre gestion RH ?",
+            "text": "Digitalisez vos processus, gagnez du temps et concentrez-vous sur l’essentiel : la croissance de votre entreprise."
+          },
+          "action": {
+            "button": "Demander une démo",
+            "subtext": "Gratuit et sans engagement"
+          }
+        },
+
+        "contract": {
+          "title": "Créez, gérez et suivez vos contrats de travail en toute simplicité.",
+          "text": "Gérez l’intégralité du cycle de vie de vos contrats de travail depuis une interface simple et intuitive. Créez vos documents en quelques clics, suivez leur statut en temps réel et assurez-vous qu’ils respectent la législation locale. Avec Tarico HR, gagnez du temps, réduisez les erreurs et centralisez toutes vos données contractuelles au même endroit.",
+
+          "features": [
+            {
+              "id": 1,
+              "title": "Création de contrat rapide et simple",
+              "text": "Créez vos contrats de travail en quelques clics grâce à des modèles prêts à l’emploi.",
+              "u": "/images/03.png"
+            },
+            {
+              "id": 2,
+              "title": "Personnaliser vos modèles",
+              "text": "Adaptez facilement vos modèles de contrat aux besoins spécifiques de votre entreprise.",
+              "u": "/images/02.png"
+            },
+            {
+              "id": 3,
+              "title": "Recevoir des alertes sur l'état des contrats",
+              "text": "Soyez informé en temps réel de l’avancement et des changements de statut de vos contrats.",
+              "u": "/images/04.png"
+            }
+          ]
+        },
+
+        "contact": {
+          "title": "Un support réactif 24/7 pour que vos RH ne s’arrêtent jamais",
+          "text": "Notre équipe est disponible à tout moment pour répondre à vos questions, résoudre vos problèmes et vous accompagner dans la gestion de vos ressources humaines."
         },
         "description": {
           "text": "Tarico HR est une plateforme intelligente et intuitive, pensée pour accompagner les entreprises africaines et internationales dans la digitalisation, la structuration et l’optimisation de leurs processus RH.<br><br>Que vous soyez une PME, une grande entreprise ou une organisation multisites, TARICO HR s’adapte à votre réalité terrain, avec des outils puissants et modulables, intégrés dans un écosystème numérique sécurisé."
+        }
+      },
+
+      "quote": {
+        "getQuote": "Obtenir un devis",
+        "sentencties": {
+          "one": "Une grille tarifaire modulable et compétitive, parfaitement adaptée à vos objectifs."
         }
       }
     },
@@ -199,7 +457,7 @@
         "company": {
           "title": "Entreprise",
           "aboutUs": "À propos de nous",
-          "contactUs": "Nous connecter",
+          "contactUs": "Nous contacter",
           "career": "Carière"
         },
         "ressources": {

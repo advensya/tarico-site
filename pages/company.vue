@@ -23,7 +23,7 @@ useHead({
         <nuxt-link
           v-if="!$slots.brand"
           class="d-flex align-center toverflow-hidden pa-1"
-          :to="$localePath({ name: 'company' })"
+          :to="$localePath({ name: 'index' })"
           style="
             width: max-content;
             display: flex;

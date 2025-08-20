@@ -1,9 +1,9 @@
-import { createTransport } from "nodemailer";
+import nodemailer from "nodemailer";
 
 export default defineEventHandler(async (event) => {
   const body = await readBody(event);
 
-  const transporter = createTransport({
+  const transporter = nodemailer.createTransport({
     host: process.env.MAILER_HOST,
     port: parseInt(process.env.MAILER_PORT!),
     secure: process.env.MAILER_SECURE ? true : false,
@@ -15,8 +15,8 @@ export default defineEventHandler(async (event) => {
 
   const mailOptions = {
     from: process.env.MAILER_USER,
-    subject: "Nouveau message via le formulaire",
     to: "contact@tarico.io",
+    subject: "Demande démo emit via le site",
     text: body.content,
   };
 

@@ -1,17 +1,7 @@
 <script lang="ts" setup>
-import { VForm } from "vuetify/components";
 import type { Options } from "@tarico/form";
 
-defineI18nRoute({
-  paths: {
-    en: "/contact-us",
-    fr: "/nous-contacter",
-  },
-});
-
 const { $i18n } = useNuxtApp();
-const i18n = useI18n();
-const submiting = ref(false);
 
 const options: Options = {
   title: "Modifier",
@@ -46,11 +36,7 @@ const options: Options = {
         label: $i18n.t("words.phone"),
       },
       key: "phone",
-      validators: {},
-    },
-    {
-      interface: { type: "spacing", size: 20 },
-      key: "145856",
+      validators: { required: true },
     },
     {
       interface: {
@@ -58,7 +44,7 @@ const options: Options = {
         label: $i18n.t("words.companyName"),
       },
       key: "companyName",
-      validators: {},
+      validators: { required: true },
     },
     {
       interface: {
@@ -91,25 +77,23 @@ const options: Options = {
             },
           ],
         },
+        required: true,
       },
-    },
-    {
-      interface: { type: "spacing", size: 20 },
-      key: "145856",
-    },
-    {
-      key: "message",
-      interface: {
-        type: "longtext",
-        label: $i18n.t("pages.contact.form.message"),
-      },
-      validators: { required: true },
     },
   ],
   interfaces: {},
 };
-
+const show = ref(false);
+const openCal = ref<HTMLButtonElement>();
 const messages = ref<Array<{ text: string; color: string }>>([]);
+const submiting = ref(false);
+
+onMounted(() => {
+  setTimeout(() => {
+    show.value = true;
+    useCal();
+  }, 50);
+});
 
 async function submit(value: { values: Record<string, any> }) {
   submiting.value = false;
@@ -129,10 +113,7 @@ async function submit(value: { values: Record<string, any> }) {
     });
 
     if (res.value?.success) {
-      messages.value.push({
-        text: i18n.t("pages.contact.messages.success"),
-        color: "success",
-      });
+      openCal.value?.click();
     } else {
       messages.value.push({
         text: $i18n.t("pages.contact.messages.error"),
@@ -148,59 +129,52 @@ async function submit(value: { values: Record<string, any> }) {
     submiting.value = false;
   }
 }
+
+function submitdd() {}
 </script>
 
 <template>
-  <v-app>
-    <ui-header>
-      <template #cta></template>
-    </ui-header>
+  <div class="rounded-xl pa-10 bg-background">
+    <v-container>
+      <h5 class="pg-hr-index__title text-center mb-5">
+        {{ $t("bookDemo.label") }}
+      </h5>
 
-    <v-container class="py-16">
-      <v-row>
-        <v-col cols="12" sm="10" md="8">
-          <h1 class="text-h3 font-weight-bold mb-5">
-            {{ $t("pages.contact.title") }}
-          </h1>
+      <form-model v-if="show" :options="options" @submit="submit">
+        <template #submit-btn>
+          <div class="w-100">
+            <i18n-t keypath="bookDemo.privacy" tag="p" class="text-body-2">
+              <NuxtLink :to="$localePath({ name: 'privacy' })">
+                {{ $t("privacy") }}
+              </NuxtLink>
+            </i18n-t>
 
-          <form-model :options="options" @submit="submit">
-            <template #submit-btn>
-              <div class="w-100">
-                <i18n-t
-                  keypath="bookDemo.privacy"
-                  tag="p"
-                  class="text-body-2 my-4"
-                  style="max-width: 350px"
-                >
-                  <NuxtLink :to="$localePath({ name: 'privacy' })">
-                    {{ $t("privacy") }}
-                  </NuxtLink>
-                </i18n-t>
-
-                <div>
-                  <v-btn
-                    size="x-large"
-                    color="primary"
-                    class="mt-5"
-                    type="submit"
-                    :loading="submiting"
-                    rounded
-                  >
-                    <template #append>
-                      <i class="fi fi-sr-paper-plane"></i>
-                    </template>
-                    {{ $t("pages.contact.form.submit") }}
-                  </v-btn>
-                </div>
-              </div>
-            </template>
-          </form-model>
-        </v-col>
-      </v-row>
+            <v-btn
+              size="x-large"
+              color="primary"
+              class="mt-5"
+              type="submit"
+              :loading="submiting"
+              block
+              rounded
+            >
+              <template #prepend>
+                <i class="fi fi-sc-calendar"></i>
+              </template>
+              {{ $t("bookDemo.submit") }}
+            </v-btn>
+          </div>
+        </template>
+      </form-model>
     </v-container>
 
+    <button
+      ref="openCal"
+      data-cal-link="tarico/30min"
+      data-cal-namespace="30min"
+      data-cal-config='{"layout":"month_view"}'
+      style="width: 0; height: 0; overflow: hidden"
+    ></button>
     <v-snackbar-queue v-model="messages"></v-snackbar-queue>
-
-    <ui-footer />
-  </v-app>
+  </div>
 </template>

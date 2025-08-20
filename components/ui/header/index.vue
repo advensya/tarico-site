@@ -85,7 +85,7 @@ function destroy() {
           border-radius: 0.12em;
         "
       >
-        <ui-svg name="logo" style="width: 100%" />
+        <ui-svg name="logo-v2" style="width: 100%" />
       </div>
 
       <div style="font-weight: bold; font-size: 26px">TARICO</div>
@@ -93,48 +93,6 @@ function destroy() {
     <slot name="brand" />
 
     <v-spacer />
-
-    <div v-if="$vuetify.display.mdAndUp" class="d-flex align-center ga-2">
-      <template v-for="(item, i) in items" :key="i">
-        <template v-if="item.code === 'products'">
-          <ui-header-product>
-            <template #activator="{ props }">
-              <v-btn
-                v-bind="props"
-                variant="text"
-                size="small"
-                :to="item.to"
-                rounded
-              >
-                {{ item.title }}
-                <template #append>
-                  <i class="fi fi-rr-angle-small-down"></i>
-                </template>
-              </v-btn>
-            </template>
-          </ui-header-product>
-        </template>
-        <template v-else-if="item.code === 'home'">
-          <v-btn
-            v-if="$localePath({ name: 'index' }) !== $route.path"
-            variant="text"
-            size="small"
-            :to="item.to"
-            rounded
-          >
-            <template #prepend>
-              <i class="fi fi-br-house-blank"></i>
-            </template>
-            {{ item.title }}
-          </v-btn>
-        </template>
-        <template v-else>
-          <v-btn variant="text" size="small" :to="item.to" rounded>
-            {{ item.title }}
-          </v-btn>
-        </template>
-      </template>
-    </div>
 
     <v-spacer />
 
@@ -154,67 +112,6 @@ function destroy() {
         {{ $t("components.header.cta") }}
       </v-btn>
     </div>
-
-    <template v-if="$vuetify.display.smAndDown">
-      <v-menu :close-on-content-click="false" offset="5" location="bottom end">
-        <template #activator="{ props }">
-          <v-btn
-            v-bind="props"
-            color="dark"
-            variant="text"
-            size="small"
-            class="ml-2"
-            icon
-          >
-            <i class="fi fi-rr-menu-burger" style="font-size: 18px"></i>
-          </v-btn>
-        </template>
-
-        <template #default="{ isActive }">
-          <v-card
-            color="background"
-            width="320"
-            max-width="100%"
-            rounded="lg"
-            class="border"
-            style="box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px"
-          >
-            <v-list bg-color="background" class="pa-0">
-              <!-- <ui-header-product @close="isActive.value = false">
-                <template #activator="{ props }">
-                  <v-list-item v-bind="props">
-                    <template #prepend>
-                      <div style="width: 30px">
-                        <i class="fi fi-br-grid"></i>
-                      </div>
-                    </template>
-                    <template #title> Produits </template>
-                    <template #append>
-                      <i class="fi fi-rr-angle-small-right text-primary"></i>
-                    </template>
-                  </v-list-item>
-                </template>
-              </ui-header-product> -->
-
-              <template v-for="(item, i) in items" :key="i">
-                <v-list-item
-                  v-if="
-                    item.code !== 'home' ||
-                    $localePath({ name: 'index' }) !== $route.path
-                  "
-                  :to="item.to"
-                  @click="isActive.value = false"
-                >
-                  <template #title>
-                    {{ item.title }}
-                  </template>
-                </v-list-item>
-              </template>
-            </v-list>
-          </v-card>
-        </template>
-      </v-menu>
-    </template>
 
     <div class="mr-5"></div>
   </v-toolbar>

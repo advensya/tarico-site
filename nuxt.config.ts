@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "@nuxtjs/mdc",
     "@nuxt/content",
+    "@tarico/form-ui",
   ],
 
   css: ["./styles/main.scss"],
@@ -34,6 +35,7 @@ export default defineNuxtConfig({
   i18n: {
     compilation: { strictMessage: false },
     strategy: "prefix",
+    lazy: true,
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
@@ -52,6 +54,19 @@ export default defineNuxtConfig({
         language: "en",
         name: "English",
         file: "en.json",
+      },
+      {
+        code: "es",
+        language: "es",
+        name: "Español",
+        file: "es.json",
+      },
+      {
+        code: "ar",
+        language: "ar",
+        name: "عربي",
+        file: "ar.json",
+        dir: "rtl",
       },
     ],
   },

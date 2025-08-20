@@ -10,7 +10,7 @@ useHead({
 </script>
 
 <template>
-  <v-app>
+  <!-- <v-app>
     <ui-header>
       <template #branddd>
         <nuxt-link
@@ -69,5 +69,7 @@ useHead({
     <nuxt-page />
 
     <ui-footer />
-  </v-app>
+  </v-app> -->
+
+  <nuxt-page />
 </template>
