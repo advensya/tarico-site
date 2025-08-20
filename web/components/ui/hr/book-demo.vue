@@ -131,12 +131,10 @@ async function submit(value: { values: Record<string, any> }) {
     submiting.value = false;
   }
 }
-
-function submitdd() {}
 </script>
 
 <template>
-  <div class="rounded-xl pa-10 bg-background">
+  <div class="rounded-xl pa-5 pa-md-10 bg-background">
     <v-container>
       <h5 class="pg-hr-index__title text-center mb-5">
         {{ $t("bookDemo.label") }}
