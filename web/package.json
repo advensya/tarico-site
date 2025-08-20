@@ -5,7 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "start:dev": "nuxt dev --host",
-    "start:prod": "nuxt dev",
+    "start:prod": "yarn drizzle-kit generate && yarn drizzle-kit push && node run.dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
