@@ -12,6 +12,7 @@ defineI18nRoute({
 const { $i18n } = useNuxtApp();
 const i18n = useI18n();
 const submiting = ref(false);
+const { $trackEvent } = useNuxtApp();
 
 const options: Options = {
   title: "Modifier",
@@ -129,6 +130,8 @@ async function submit(value: { values: Record<string, any> }) {
     });
 
     if (res.value?.success) {
+      $trackEvent("contact", value.values);
+
       messages.value.push({
         text: i18n.t("pages.contact.messages.success"),
         color: "success",

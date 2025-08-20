@@ -2,6 +2,7 @@
 import type { Options } from "@tarico/form";
 
 const { $i18n } = useNuxtApp();
+const { $trackEvent } = useNuxtApp();
 
 const options: Options = {
   title: "Modifier",
@@ -113,6 +114,7 @@ async function submit(value: { values: Record<string, any> }) {
     });
 
     if (res.value?.success) {
+      $trackEvent("hr-book-demo", value.values);
       openCal.value?.click();
     } else {
       messages.value.push({

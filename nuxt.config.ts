@@ -3,6 +3,19 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    databaseUrl: process.env.DATABASE_URL,
+    trackingSalt: process.env.TRACKING_SALT,
+    database: {
+      name: process.env.DB_NAME,
+      user: process.env.DB_USER,
+      password: process.env.DB_PASSWORD,
+      port: process.env.DB_PORT,
+      host: process.env.DB_HOST,
+    },
+    // public si besoin côté client: public: {}
+  },
+
   modules: [
     "vuetify-nuxt-module",
     "nuxt-icons",
