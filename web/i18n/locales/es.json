@@ -1,0 +1,16 @@
+{
+  "site": {
+    "description": "Conectar empresas y clientes a través de la innovación digital."
+  },
+  "words": {
+    "welcome": "bienvenido",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo electrónico",
+    "phone": "Número de teléfono",
+    "workEmail": "Correo profesional",
+    "companyName": "Nombre de la empresa",
+    "companySize": "Tamaño de la empresa",
+    "persons": "Personas"
+  }
+}

@@ -1,0 +1,56 @@
+.v-dialog,
+.v-menu {
+  .v-overlay__scrim {
+    opacity: 0.05;
+  }
+
+  .v-overlay__content,
+  .v-overlay__content.v-select__content {
+    background-color: rgba(var(--v-theme-background));
+    color: rgba(var(--v-theme-on-background));
+    border: thin solid rgba(var(--v-border-color), var(--v-border-opacity));
+    box-shadow: rgba(var(--v-shadow-color), var(--v-shadow-opacity)) 0px 3px
+      12px;
+    border-radius: 12px !important;
+    overflow: hidden;
+  }
+}
+
+.v-dialog {
+  .v-overlay__content {
+    border-width: 4px;
+  }
+}
+
+.v-list {
+  padding: 0;
+}
+
+.v-input {
+  position: relative;
+
+  .v-field__clearable i {
+    font-size: 16px;
+  }
+}
+
+.v-input__details {
+  padding-top: 4px !important;
+  min-height: unset !important;
+  padding-bottom: 6px !important;
+
+  .v-messages {
+    min-height: unset !important;
+  }
+}
+
+.v-overlay__scrim {
+  background: rgba(0, 0, 0, 0.461) !important;
+}
+
+.v-field--variant-filled {
+  .v-field__outline::before,
+  .v-field__outline::after {
+    border-bottom: 0 !important;
+  }
+}
