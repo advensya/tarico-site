@@ -4,15 +4,26 @@ const i18n = useI18n();
 const isScrolled = ref(false);
 
 const items = ref([
+  // {
+  //   code: "home",
+  //   title: i18n.t("components.header.items.home"),
+  //   to: localePath({ name: "index" }),
+  // },
+  // {
+  //   code: "products",
+  //   title: i18n.t("components.header.items.products"),
+  //   to: localePath({ name: "products" }),
+  // },
+
   {
-    code: "home",
-    title: i18n.t("components.header.items.home"),
-    to: localePath({ name: "index" }),
+    code: "hr",
+    title: "HR",
+    to: localePath({ name: "hr" }),
   },
   {
-    code: "products",
-    title: i18n.t("components.header.items.products"),
-    to: localePath({ name: "products" }),
+    code: "form",
+    title: "Formulaire",
+    to: localePath({ name: "form" }),
   },
   {
     code: "whytarico",
