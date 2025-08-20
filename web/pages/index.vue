@@ -379,10 +379,9 @@ function gotoBookDemo() {
             </div>
           </v-col>
 
-          <v-col cols="12" md="6">
+          <v-col cols="12" md="6" v-if="$vuetify.display.mdAndUp">
             <img
               :src="'/images/support.png'"
-              srco="https://website-media.deel.com/media_plp_support_930ff95d22.jpg"
               class="mx-auto d-block"
               style="
                 max-width: 100%;
