@@ -94,21 +94,13 @@
       class="text-center py-3 px-10"
       style="
         border-top: 1px solid rgba(var(--v-theme-on-background), 0.04);
-        background-color: rgba(var(--v-theme-on-background), 0.02);
+        background-color: rgba(var(--v-theme-on-background), 0.03);
         position: relative;
         display: flex;
         align-items: center;
         gap: 10px;
       "
     >
-      <div
-        style="
-          background-color: rgba(var(--v-theme-on-background), 0.01);
-          position: absolute;
-          inset: 0;
-        "
-      ></div>
-
       <div style="position: relative">
         ©
         {{ new Date().getFullYear() }}
@@ -132,11 +124,6 @@
       >
         <ui-svg name="linkedin" width="22" height="22" />
       </nuxt-link>
-
-      <div class="d-none align-center text-right ga-2" style="line-height: 1">
-        développé au Sénégal
-        <ui-svg name="flag/sn" size="28" />
-      </div>
     </div>
   </v-footer>
 </template>

@@ -120,12 +120,9 @@ function destroy() {
   top: 0;
   z-index: 100;
 
-  .v-toolbar__content {
-    backdrop-filter: blur(0.9rem);
-  }
-
   &.isScrolled {
     .v-toolbar__content {
+      backdrop-filter: blur(0.9rem);
       border-bottom: 3px solid rgba(var(--v-theme-on-background), 0.02);
     }
   }

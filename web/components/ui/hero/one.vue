@@ -10,9 +10,7 @@ import "swiper/css/pagination";
 
 <template>
   <section class="tarico-hero-one">
-    <div class="back">
-      <img src="/images/grid.svg" />
-    </div>
+    <div class="back"></div>
 
     <div class="mb-auto"></div>
 
@@ -28,17 +26,19 @@ import "swiper/css/pagination";
 
             <div class="d-flex align-center ga-2 flex-wrap mt-5">
               <v-btn
-                size="large"
-                color="dark"
+                size="x-large"
+                color="primary"
                 variant="tonal"
+                rounded="lg"
                 :to="$localePath({ name: 'products' })"
                 :block="$vuetify.display.smAndDown"
               >
                 {{ $t("hero.one.all") }}
               </v-btn>
               <v-btn
-                size="large"
+                size="x-large"
                 color="primary"
+                rounded="lg"
                 :to="$localePath({ name: 'hr' })"
                 :block="$vuetify.display.smAndDown"
               >
@@ -122,13 +122,6 @@ import "swiper/css/pagination";
     -webkit-mask: url("/images/grid.svg") center/cover no-repeat;
     mask: url("/images/grid.svg") center/cover no-repeat;
 
-    img {
-      position: absolute;
-      inset: 0;
-      object-position: center;
-      object-fit: cover;
-      display: none;
-    }
     &::before {
       display: none;
       content: "";

@@ -17,12 +17,13 @@ useHead({
 </script>
 
 <template>
-  <v-app theme="dark">
-    <ui-header>
-      <template #brand>
-        <nuxt-link
-          v-if="!$slots.brand"
-          class="d-flex align-center toverflow-hidden pa-1"
+  <v-app theme="light">
+    <div class="header position-relative">
+      <div class="back"></div>
+
+      <v-container class="position-relative">
+        <div
+          class="d-flex align-center toverflow-hidden pa-1 mb-5 mt-16"
           :to="$localePath({ name: 'index' })"
           style="
             width: max-content;
@@ -39,42 +40,8 @@ useHead({
           >
             Codia
           </div>
-        </nuxt-link>
-      </template>
+        </div>
 
-      <template #cta>
-        <v-btn
-          variant="flat"
-          size="large"
-          color="orange"
-          :to="$localePath({ name: 'contact' })"
-          rounded
-        >
-          <template #prepend>
-            <i class="fi fi-br-comment" style="font-size: 18px"></i>
-          </template>
-          Contactez-nous
-        </v-btn>
-      </template>
-    </ui-header>
-
-    <div class="header position-relative">
-      <div
-        style="
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          background: linear-gradient(
-            0deg,
-            rgba(var(--v-theme-background), 1) 0%,
-            rgba(var(--v-theme-background), 0) 100%
-          );
-        "
-      ></div>
-
-      <v-container class="position-relative">
         <h1
           style="
             font-size: clamp(2rem, 8.2352941176vw, 4.8rem);
@@ -117,8 +84,6 @@ useHead({
     </section>
 
     <ui-about class="position-relative" />
-
-    <ui-footer />
   </v-app>
 </template>
 
@@ -132,6 +97,17 @@ useHead({
   align-items: center;
   position: relative;
 
+  .back {
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background: rgb(var(--v-theme-secondary), 0.4);
+    -webkit-mask: url("/images/grid.svg") center/cover no-repeat;
+    mask: url("/images/grid.svg") center/cover no-repeat;
+  }
+
   // &.blue {
   //   background: linear-gradient(
   //     180deg,
@@ -140,26 +116,12 @@ useHead({
   //   );
   // }
 
-  &::before {
-    position: absolute;
-    content: "";
-    inset: 0;
-    top: -80px;
-    background-image: url(/images/u_002.jpg);
-    background-size: cover;
-    background-position: top center;
-    // background: linear-gradient(
-    //   165deg,
-    //   rgba(var(--v-theme-secondary), 0.3) 0%,
-    //   rgba(var(--v-theme-secondary), 0) 100%
-    // );
-  }
-
   .container {
     width: 80%;
     max-width: 772px;
     margin: auto;
     position: relative;
+    z-index: 1;
 
     .desc {
       font-size: 48px;
