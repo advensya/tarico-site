@@ -25,11 +25,11 @@ export default {
         },
       },
       dark: {
-        dark: false,
+        dark: true,
         colors: {
           primary: primaryColor,
           secondary: secondaryColor,
-          dark: colors.grey.lighten5,
+          dark: "#fff",
           background: "#0e0e0e",
         },
       },

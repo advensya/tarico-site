@@ -155,11 +155,7 @@ async function submit(value: { values: Record<string, any> }) {
 
 <template>
   <v-app>
-    <ui-header>
-      <template #cta></template>
-    </ui-header>
-
-    <v-container class="py-16">
+    <v-container class="py-16" style="margin-top: 80px">
       <v-row>
         <v-col cols="12" sm="10" md="8">
           <h1 class="text-h3 font-weight-bold mb-5">
@@ -203,7 +199,5 @@ async function submit(value: { values: Record<string, any> }) {
     </v-container>
 
     <v-snackbar-queue v-model="messages"></v-snackbar-queue>
-
-    <ui-footer />
   </v-app>
 </template>

@@ -40,6 +40,9 @@ const hideOffer = ref(false);
       </v-container>
     </div>
   </v-toolbar> -->
+
+    <ui-header />
     <nuxt-page />
+    <ui-footer />
   </NuxtLayout>
 </template>

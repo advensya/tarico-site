@@ -9,77 +9,9 @@ defineI18nRoute({
 
 <template>
   <v-app>
-    <ui-header />
     <div class="text- pg-products--cover" style="">
-      <v-container style="max-width: 992px">
-        <h1 class="pg-home__title font-weight-bold">
-          {{ $t("pages.products.cover.title") }}
-        </h1>
-
-        <div style="font-size: 18px" class="mt-3">
-          {{ $t("pages.products.cover.text") }}
-        </div>
-      </v-container>
+      <v-container style="max-width: 992px"> </v-container>
     </div>
-
-    <v-container class="py-16">
-      <v-row>
-        <v-col
-          cols="12"
-          sm="6"
-          v-for="(product, p) in Products"
-          :key="p"
-          class="mb-10"
-        >
-          <div class="d-flex align-end ga-2 mb-5">
-            <!-- <img
-              :src="product.logo"
-              :alt="product.title"
-              width="42"
-              height="42"
-            /> -->
-            <div class="text-h4" v-html="product.title"></div>
-          </div>
-          <div v-html="product.description[$i18n.locale]"></div>
-
-          <template v-if="product.to">
-            <v-btn
-              :to="$localePath(product.to)"
-              variant="tonal"
-              color="primary"
-              class="mt-5"
-              rounded
-            >
-              {{ $t("pages.products.seeMore") }}
-              <template #append>
-                <i class="fi fi-rr-arrow-small-right"></i>
-              </template>
-            </v-btn>
-          </template>
-        </v-col>
-      </v-row>
-    </v-container>
-
-    <v-container>
-      <div class="d-flex justify-center mb-16">
-        <v-btn
-          color="dark"
-          variant="flat"
-          size="x-large"
-          class="mt-5"
-          rounded="pill"
-          style="border-radius: 0.6em"
-          href="mailto:commercial@tarico.io"
-        >
-          <template #prepend>
-            <i class="fi fi-rr-marketplace"></i>
-          </template>
-          {{ $t("pages.products.cta") }}
-        </v-btn>
-      </div>
-    </v-container>
-
-    <ui-footer />
   </v-app>
 </template>
 

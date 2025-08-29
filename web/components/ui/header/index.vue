@@ -103,13 +103,10 @@ function destroy() {
         variant="flat"
         size="large"
         color="dark"
-        :to="$localePath({ name: 'contact' })"
-        rounded
+        :active="false"
+        :to="$localePath({ name: 'hr' })"
       >
-        <template #prepend>
-          <i class="fi fi-rr-comment"></i>
-        </template>
-        {{ $t("components.header.cta") }}
+        {{ $t("hero.one.cta") }}
       </v-btn>
     </div>
 
@@ -119,16 +116,13 @@ function destroy() {
 
 <style lang="scss">
 .ui-header {
-  position: sticky !important;
+  position: fixed !important;
   top: 0;
   z-index: 100;
 
-  .v-toolbar__content {
-    backdrop-filter: blur(0.9rem);
-  }
-
   &.isScrolled {
     .v-toolbar__content {
+      backdrop-filter: blur(0.9rem);
       border-bottom: 3px solid rgba(var(--v-theme-on-background), 0.02);
     }
   }
