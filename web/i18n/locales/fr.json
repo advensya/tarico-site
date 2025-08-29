@@ -24,6 +24,15 @@
     "privacy": "Nous respectons vos données. En soumettant ce formulaire, vous acceptez que nous vous contactions au sujet de nos produits et services, conformément à notre {0}."
   },
 
+  "hero": {
+    "one": {
+      "title": "Lorem ipsum, dolor <span class='text-'>sit amet consectetur</span> adipisicing elit.",
+      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa repudiandae sit quos ipsam dolores iusto, quo dignissi",
+      "cta": "Découvrir Tarico HR",
+      "all": "Tous nos services"
+    }
+  },
+
   "pages": {
     "index": {
       "sections": {
