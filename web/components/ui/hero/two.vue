@@ -7,11 +7,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const localePath = useLocalePath();
+
 const products = ref([
-  { name: "Tarico <b>FORM</b>", props: { to: { name: "hr" } } },
-  { name: "Tarico <b>ID</b>", props: { to: { name: "hr" } } },
-  { name: "Tarico <b>Hiring", props: { to: { name: "hr" } } },
-  { name: "Tarico <b>HR</b>", props: { to: { name: "hr" } } },
+  { name: "Tarico <b>FORM</b>", props: { to: localePath({ name: "form" }) } },
+  { name: "Tarico <b>ID</b>", props: { to: localePath({ name: "id" }) } },
+  {
+    name: "Tarico <b>Hiring",
+    props: { to: localePath({ name: "hr-hiring" }) },
+  },
+  { name: "Tarico <b>HR</b>", props: { to: localePath({ name: "hr" }) } },
 ]);
 </script>
 
@@ -96,7 +101,11 @@ const products = ref([
           v-for="(product, p) in products"
           :key="p"
         >
-          <div class="d-flex align-center ga-2" v-html="product.name"></div>
+          <nuxt-link
+            v-bind="product.props"
+            v-html="product.name"
+            class="d-flex align-center ga-2 text-dark"
+          ></nuxt-link>
         </div>
       </div>
     </div>
