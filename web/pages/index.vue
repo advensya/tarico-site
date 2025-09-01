@@ -1,5 +1,5 @@
 <template>
-  <ui-hero-one class="pg-index-hero" />
+  <ui-hero-two class="pg-index-hero" />
 
   <v-container class="py-16">
     <div class="mb-16 text-center">

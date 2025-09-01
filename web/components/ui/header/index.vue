@@ -88,7 +88,7 @@ function destroy() {
         <ui-svg name="logo-v2" style="width: 100%" />
       </div>
 
-      <div style="font-weight: bold; font-size: 26px">TARICO</div>
+      <div style="font-weight: bold; font-size: 26px">Tarico</div>
     </nuxt-link>
     <slot name="brand" />
 
@@ -96,7 +96,7 @@ function destroy() {
 
     <v-spacer />
 
-    <div v-if="$vuetify.display.name !== 'xs'" class="d-none d-sm-block">
+    <div>
       <slot name="cta" />
       <v-btn
         v-if="!$slots.cta"
