@@ -88,7 +88,7 @@ function destroy() {
         <ui-svg name="logo-v2" style="width: 100%" />
       </div>
 
-      <div style="font-weight: bold; font-size: 26px">Tarico</div>
+      <div v-if="!$vuetify.display.xs" style="font-size: 26px">Tarico</div>
     </nuxt-link>
     <slot name="brand" />
 
@@ -102,11 +102,16 @@ function destroy() {
         v-if="!$slots.cta"
         variant="flat"
         size="large"
-        color="dark"
+        color="secondary"
         :active="false"
         :to="$localePath({ name: 'hr' })"
+        rounded
       >
         {{ $t("hero.one.cta") }}
+
+        <template #append>
+          <i class="fi fi-rr-angle-small-right"></i>
+        </template>
       </v-btn>
     </div>
 

@@ -35,34 +35,13 @@
 
   "pages": {
     "index": {
-      "sections": {
-        "one": {
-          "title": "Innover, connecter, transformer.",
-          "text": "Tarico simplifie la gestion d'entreprise en Afrique avec des outils digitaux puissants, accessibles et sécurisés.",
-          "cta": "Tous nos services"
-        },
-        "two": {
-          "items": {
-            "rethink": {
-              "title": "Innover",
-              "text": "Chez Tarico, l'innovation est au cœur de nos solutions. Nous repensons la manière dont les entreprises africaines gèrent leurs données et leurs processus, en introduisant des outils digitaux simples, efficaces et adaptés aux défis locaux. L'innovation permet de relever les défis uniques de chaque marché, offrant ainsi une véritable valeur ajoutée."
-            },
-            "innovate": {
-              "title": "Connecter",
-              "text": "Tarico facilite la connexion entre les acteurs économiques, les employés et les systèmes d’information grâce à ses solutions numériques. En connectant les différents services et utilisateurs au sein d’une entreprise, nous améliorons la collaboration et la fluidité des échanges, essentiels pour une gestion optimale."
-            },
-            "reconcile": {
-              "title": "Transformer",
-              "text": "Nous croyons que la transformation numérique est la clé pour propulser les entreprises africaines dans l’avenir. Grâce à nos outils puissants, les entreprises peuvent passer d'une gestion traditionnelle à une gestion moderne, automatisée et plus performante, tout en favorisant une croissance durable et inclusive."
-            }
-          }
-        },
-        "three": {
-          "text": "Chez Tarico, l’expérience utilisateur n’est pas un simple critère : c’est un fondement. Chaque fonctionnalité, chaque interface, chaque ligne de code est pensée pour une chose : rendre l’usage de nos logiciels fluide, naturel, efficace. Nous croyons fermement qu’un bon logiciel est invisible — il disparaît derrière la simplicité d’usage et l’efficacité qu’il apporte.",
-          "cta": "Lire l'article"
-        }
+      "products": {
+        "title": "Nos Solutions",
+        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate debitis temporibus animi dolore rerum consequuntur porro aliquid, nemo commodi numquam quo in officiis molestias eos deserunt sapiente nisi officia illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
+        "seeAll": "Tous nos produits"
       }
     },
+
     "company": {
       "meta": {
         "description": "L’ambition de transformer l’Afrique par la digitalisation"
@@ -76,6 +55,7 @@
       },
       "contactUs": "Nous connecter"
     },
+
     "products": {
       "cover": {
         "title": "Une suite logicielle pensée pour l’efficacité",
@@ -548,6 +528,21 @@
         "title": "Décisions RH statégiques et éclairées",
         "description": "L’accès en temps réel à des données stratégiques vous permet de prendre des décisions plus informées et plus réactives. Cela améliore la gestion de vos talents et optimise votre stratégie RH à long terme."
       }
+    }
+  },
+
+  "products": {
+    "hr": {
+      "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quod adipisci accusantium veritatis a! Doloribus beatae aliquam, neque, veritatis nostrum optio dolore repellendus iusto, temporibus odio itaque laboriosam perspiciatis libero! Doloribus beatae aliquam, neque, veritatis nostrum optio dolore repellendus iusto, temporibus odio itaque laboriosam perspiciatis libero!"
+    },
+    "id": {
+      "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quod adipisci accusantium veritatis a! <br /><br /> Doloribus beatae aliquam, neque, veritatis nostrum optio dolore repellendus iusto, temporibus odio itaque laboriosam perspiciatis libero!"
+    },
+    "form": {
+      "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt adipisci dignissimos non officia illo vero tenetur, amet, laboriosam sunt earum dolorum, consequuntur numquam hic reprehenderit sint tempora asperiores. Iste, maxime!"
+    },
+    "hiring": {
+      "intro": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt adipisci dignissimos non officia illo vero tenetur, amet, laboriosam sunt earum dolorum, consequuntur numquam hic reprehenderit sint tempora asperiores. Iste, maxime!"
     }
   }
 }
