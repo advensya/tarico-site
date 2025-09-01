@@ -183,7 +183,6 @@ async function submit(value: { values: Record<string, any> }) {
                     class="mt-5"
                     type="submit"
                     :loading="submiting"
-                    rounded
                   >
                     <template #append>
                       <i class="fi fi-sr-paper-plane"></i>
