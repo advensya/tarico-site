@@ -1,15 +1,37 @@
 <template>
   <v-footer
-    theme="light"
-    class="ui-footer d-block pa-0 pt-5 bg-background border-t"
+    class="ui-footer d-block pa-0 p"
+    style="background-color: rgba(var(--v-theme-on-background), 0.03)"
   >
     <!-- style="background-color: #17100e !important" -->
-    <v-container fluid class="px-10 my-5">
-      <v-row justify="start">
-        <v-col cols="12" md="4" sm="6">
-          <!-- <v-spacer></v-spacer> -->
 
-          <div class="text-h5 font-weight-bold mb-3">
+    <ui-frame class="my-0">
+      <v-col cols="12" sm="6" md="3" class="frame">
+        <div class="d-flex justify-center align-center flex-column h-100 py-5">
+          <ui-svg name="logo-text" size="124" class="text-surface" />
+        </div>
+      </v-col>
+
+      <v-col cols="12" sm="6" md="3" class="frame">
+        <div class="pa-5">
+          <div
+            v-for="code in ['hr', 'id', 'onboarding', 'form', 'heavy']"
+            :key="code"
+          >
+            <nuxt-link
+              variant="text"
+              class="text-light mb-2 d-block"
+              :to="$localePath(Products[code].to)"
+              v-html="Products[code].name"
+            >
+            </nuxt-link>
+          </div>
+        </div>
+      </v-col>
+
+      <v-col cols="12" sm="6" md="3" class="frame">
+        <div class="pa-5">
+          <div class="text-h6 mb-3">
             {{ $t("components.footer.items.company.title") }}
           </div>
 
@@ -43,10 +65,11 @@
               {{ $t("components.footer.items.company.career") }}
             </nuxt-link>
           </div>
-        </v-col>
-
-        <v-col cols="12" md="4" sm="6">
-          <div class="text-h5 font-weight-bold mb-3">
+        </div>
+      </v-col>
+      <v-col cols="12" sm="6" md="3" class="frame">
+        <div class="pa-5">
+          <div class="text-h6 mb-3">
             {{ $t("components.footer.items.ressources.title") }}
           </div>
 
@@ -87,58 +110,60 @@
               {{ $t("components.footer.items.ressources.privacy") }}
             </nuxt-link>
           </div>
-        </v-col>
-      </v-row>
-    </v-container>
-    <div
-      class="text-center py-3 px-10"
-      style="
-        border-top: 1px solid rgba(var(--v-theme-on-background), 0.04);
-        background-color: rgba(var(--v-theme-on-background), 0.03);
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-      "
-    >
-      <div style="position: relative">
-        ©
-        {{ new Date().getFullYear() }}
-        <b>Codia SUARL</b>
-      </div>
+        </div>
+      </v-col>
 
-      <v-spacer />
+      <template #append>
+        <div
+          class="text-center py-3 px-10"
+          style="
+            border-top: 1px solid rgba(var(--v-theme-on-background), 0.04);
+            background-color: rgba(var(--v-theme-on-background), 0.03);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+          "
+        >
+          <div style="position: relative">
+            ©
+            {{ new Date().getFullYear() }}
+            <b>Codia SUARL</b>
+          </div>
 
-      <nuxt-link
-        href="mailto:contact@tarico.io"
-        target="_blank"
-        class="text-light"
-      >
-        <ui-svg name="mail" width="22" height="22" />
-      </nuxt-link>
+          <v-spacer />
 
-      <nuxt-link
-        href="https://www.linkedin.com/company/tarico"
-        target="_blank"
-        class="text-light"
-      >
-        <ui-svg name="linkedin" width="22" height="22" />
-      </nuxt-link>
-    </div>
+          <v-btn size="32" color="dark" rounded="0" variant="text" icon>
+            <ui-svg name="language" size="18" />
+          </v-btn>
+
+          <ui-theme />
+
+          <!-- <v-btn
+            href="mailto:contact@tarico.io"
+            target="_blank"
+            size="32"
+            color="dark"
+            rounded="0"
+            variant="text"
+            icon
+          >
+            <ui-svg name="mail" size="18" />
+          </v-btn> -->
+
+          <v-btn
+            href="https://www.linkedin.com/company/tarico"
+            target="_blank"
+            size="32"
+            color="dark"
+            rounded="0"
+            variant="text"
+            icon
+          >
+            <ui-svg name="linkedin" size="16" />
+          </v-btn>
+        </div>
+      </template>
+    </ui-frame>
   </v-footer>
 </template>
-
-<style lang="scss">
-.ui-footer {
-  .v-btn {
-    justify-content: flex-start;
-    padding: 0;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    .v-btn__overlay {
-      background-color: transparent !important;
-    }
-  }
-}
-</style>
