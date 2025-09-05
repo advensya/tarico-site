@@ -74,9 +74,13 @@
         "description": "Chez Codia, nous simplifions la gestion des données pour les entreprises, en leur offrant des solutions digitales innovantes qui facilitent l'accès, l'analyse et l'utilisation efficace de leurs informations."
       },
       "summary": {
-        "text": "<b>Chez Codia, nous transformons la manière dont les entreprises interagissent avec leurs clients.</b> Spécialistes des solutions digitales sur mesure, nous réinventons les processus traditionnels pour créer des outils puissants, intuitifs et efficaces.<br><br> Notre objectif est clair : <b>connecter plus intelligemment les entreprises à leur clientèle</b>, en misant sur des technologies modernes et une expérience utilisateur sans faille. <b>Codia, c’est l’alliance de l’innovation et de la simplicité au service de la performance.</b>"
+        "text": "Chez Codia, nous transformons la manière dont les entreprises interagissent avec leurs clients.</b> Spécialistes des solutions digitales sur mesure, nous réinventons les processus traditionnels pour créer des outils puissants, intuitifs et efficaces.<br><br> Notre objectif est clair : <b>connecter plus intelligemment les entreprises à leur clientèle</b>, en misant sur des technologies modernes et une expérience utilisateur sans faille. <b>Codia, c’est l’alliance de l’innovation et de la simplicité au service de la performance."
       },
-      "contactUs": "Nous contacter"
+      "contactUs": "Nous contacter",
+
+      "leadership": {
+        "title": "Notre leadership"
+      }
     },
 
     "products": {
@@ -311,5 +315,23 @@
       "title": "Transformer",
       "text": "La Transformation numérique est un levier essentiel pour la croissance durable des entreprises africaines. Tarico accompagne cette transition en proposant des outils modernes, automatisés et performants, qui permettent de passer d’une gestion traditionnelle à une gestion agile et innovante, favorisant ainsi une compétitivité accrue et une inclusion économique renforcée."
     }
-  ]
+  ],
+
+  "leadership": {
+    "domutala": {
+      "name": "Mamadou DIA",
+      "function": "CEO, CTO",
+      "text": "Fondateur et CEO de Codia, expert en SIRH, Mamadou apporte une véritable valeur ajoutée aux clients grâce à son expertise dans le développement de solutions adaptées aux besoins spécifiques des entreprises. Il s'assure que chaque solution réponde aux exigences de performance et d'innovation."
+    },
+    "speedy": {
+      "name": "Saliou DIOP",
+      "function": "cofondateur, Directeur marketing et commercial",
+      "text": "Saliou dirige l'équipe marketing de Codia, notamment le marketing produit, le marketing d'entreprise, la génération de demande et la croissance. Il a été Directeur Exécutif de African Management Service."
+    },
+    "saer": {
+      "name": "Saër",
+      "function": "Cofondateur",
+      "text": "Saër dirige la recherche et le développement, notamment avec les équipes produit, ingénierie et conception. Il a travaillé chez Attijari Bank au Maroc et Acep Sénégal."
+    }
+  }
 }
