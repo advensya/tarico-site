@@ -1,0 +1,98 @@
+table.frame {
+  --ui-frame-border: 1px dashed rgba(var(--v-border-color), 0.2);
+  --ui-frame-unlimit-size: 35px;
+
+  width: 100%;
+  border-collapse: collapse;
+
+  tbody {
+    tr {
+      position: relative;
+      box-sizing: border-box;
+
+      // dépassement horizontal
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0 calc(-1 * var(--ui-frame-unlimit-size));
+        border-top: var(--ui-frame-border);
+        pointer-events: none;
+        box-sizing: border-box;
+
+        // ✅ fondu uniquement sur les parties qui dépassent
+        -webkit-mask-image: linear-gradient(
+          to right,
+          transparent 0,
+          black var(-ui-frame-unlimit-size),
+          black calc(100% - var(--ui-frame-unlimit-size)),
+          transparent 100%
+        );
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-image: linear-gradient(
+          to right,
+          transparent 0,
+          black var(--ui-frame-unlimit-size),
+          black calc(100% - var(--ui-frame-unlimit-size)),
+          transparent 100%
+        );
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+      }
+
+      &:last-child::after {
+        border-bottom: var(--ui-frame-border);
+      }
+
+      // dépassement vertical
+      &:first-child::before,
+      &:last-child::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 1px);
+        border-left: var(--ui-frame-border);
+        border-right: var(--ui-frame-border);
+        box-sizing: border-box;
+
+        // ✅ fondu uniquement sur la partie qui dépasse
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          transparent 0,
+          black 20%,
+          black 80%,
+          transparent 100%
+        );
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 100% 100%;
+        mask-image: linear-gradient(
+          to bottom,
+          transparent 0,
+          black 20%,
+          black 80%,
+          transparent 100%
+        );
+        mask-repeat: no-repeat;
+        mask-size: 100% 100%;
+      }
+
+      &:first-child::before {
+        bottom: 100%;
+        height: var(--ui-frame-unlimit-size);
+      }
+
+      &:last-child::before {
+        top: 100%;
+        height: var(--ui-frame-unlimit-size);
+      }
+
+      th,
+      td {
+        border: var(--ui-frame-border);
+        border-top: 0;
+        border-bottom: 0;
+        position: relative;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

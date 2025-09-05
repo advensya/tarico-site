@@ -17,45 +17,36 @@ useHead({
 </script>
 
 <template>
-  <v-app theme="light">
-    <div class="header position-relative">
-      <div class="back"></div>
+  <div class="header position-relative">
+    <div class="back"></div>
 
-      <v-container class="position-relative">
-        <div
-          class="d-flex align-center toverflow-hidden pa-1 mb-5 mt-16"
-          :to="$localePath({ name: 'index' })"
-          style="
-            width: max-content;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-          "
-        >
-          <img src="/logo/codia.png" alt="codia logo" width="42" />
+    <v-container class="position-relative">
+      <div
+        class="d-flex align-center toverflow-hidden pa-1 mb-5 mt-16"
+        :to="$localePath({ name: 'index' })"
+        style="width: max-content; display: flex; align-items: center; gap: 5px"
+      >
+        <img src="/logo/codia.png" alt="codia logo" width="42" />
 
-          <div
-            class="text-light ml-2"
-            style="font-weight: bold; font-size: 26px"
-          >
-            Codia
-          </div>
+        <div class="text-light ml-2" style="font-weight: bold; font-size: 26px">
+          Codia
         </div>
+      </div>
 
-        <h1
-          style="
-            font-size: clamp(2rem, 8.2352941176vw, 4.8rem);
-            line-height: 1.1;
-            font-weight: bold;
-          "
-        >
-          {{ $t("pages.company.header.title") }}
-        </h1>
-        <p class="mt-3" style="max-width: 700px">
-          {{ $t("pages.company.header.description") }}
-        </p>
+      <h1
+        style="
+          font-size: clamp(2rem, 8.2352941176vw, 4.8rem);
+          line-height: 1.1;
+          font-weight: bold;
+        "
+      >
+        {{ $t("pages.company.header.title") }}
+      </h1>
+      <p class="mt-3" style="max-width: 700px">
+        {{ $t("pages.company.header.description") }}
+      </p>
 
-        <!-- <div class="d-flex align-center flex-wrap ga-2 mt-10">
+      <!-- <div class="d-flex align-center flex-wrap ga-2 mt-10">
           <v-btn
             color="primary"
             size="large"
@@ -68,23 +59,22 @@ useHead({
             {{ $t("pages.company.contactUs") }}
           </v-btn>
         </div> -->
-      </v-container>
-    </div>
+    </v-container>
+  </div>
 
-    <section class="py-16" id="company">
-      <v-container>
-        <v-row justify="center">
-          <v-col cols="10">
-            <div class="">
-              <p v-html="$t('pages.company.summary.text')"></p>
-            </div>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
+  <section class="py-16" id="company">
+    <v-container>
+      <v-row justify="center">
+        <v-col cols="10">
+          <div class="">
+            <p v-html="$t('pages.company.summary.text')"></p>
+          </div>
+        </v-col>
+      </v-row>
+    </v-container>
+  </section>
 
-    <ui-about class="position-relative" />
-  </v-app>
+  <ui-about class="position-relative" />
 </template>
 
 <style lang="scss" scoped>

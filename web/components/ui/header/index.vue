@@ -58,65 +58,66 @@ function destroy() {
 </script>
 
 <template>
-  <v-toolbar
-    height="80"
-    flat
-    class="ui-header"
-    :class="{ isScrolled }"
-    style="border-color: rgba(var(--v-theme-on-background), 0.06) !important"
-    color="transparent"
-  >
-    <div class="mr-5"></div>
+  <div class="ui-header" style="position: absolute; top: 0; width: 100%">
+    <ui-frame class="my-0 py-0">
+      <v-col class="frame border-t-0">
+        <div class="d-flex align-center h-100">
+          <nuxt-link
+            class="d-flex align-center text-dark overflow-hidden pa-1 mx-3"
+            :to="$localePath({ name: 'index' })"
+            style="
+              width: max-content;
+              display: flex;
+              align-items: center;
+              gap: 5px;
+            "
+          >
+            <div
+              class="bg- text-primary"
+              style="
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 0.12em;
+              "
+            >
+              <ui-svg name="logo-v2" style="width: 100%" />
+            </div>
 
-    <nuxt-link
-      v-if="!$slots.brand"
-      class="d-flex align-center text-dark overflow-hidden pa-1"
-      :to="$localePath({ name: 'index' })"
-      style="width: max-content; display: flex; align-items: center; gap: 5px"
-    >
-      <div
-        class="bg- text-primary"
-        style="
-          width: 32px;
-          height: 32px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border-radius: 0.12em;
-        "
-      >
-        <ui-svg name="logo-v2" style="width: 100%" />
-      </div>
+            <div v-if="!$vuetify.display.xs" style="font-size: 26px">
+              Tarico
+            </div>
+          </nuxt-link>
 
-      <div v-if="!$vuetify.display.xs" style="font-size: 26px">Tarico</div>
-    </nuxt-link>
-    <slot name="brand" />
+          <v-spacer />
+          <!-- <nuxt-link
+                v-if="$vuetify.display.smAndUp"
+                :to="$localePath({ name: 'company' })"
+                class="pa-3 text-no-wrap d-block text-dark"
+              >
+                A propose de nous
+              </nuxt-link> -->
 
-    <v-spacer />
+          <v-btn
+            variant="flat"
+            color="primary"
+            class="mr-3 ml-auto"
+            rounded="0"
+            :active="false"
+            :to="$localePath({ name: 'hr' })"
+          >
+            {{ $t("hero.one.cta") }}
 
-    <v-spacer />
-
-    <div>
-      <slot name="cta" />
-      <v-btn
-        v-if="!$slots.cta"
-        variant="flat"
-        size="large"
-        color="secondary"
-        :active="false"
-        :to="$localePath({ name: 'hr' })"
-        rounded
-      >
-        {{ $t("hero.one.cta") }}
-
-        <template #append>
-          <i class="fi fi-rr-angle-small-right"></i>
-        </template>
-      </v-btn>
-    </div>
-
-    <div class="mr-5"></div>
-  </v-toolbar>
+            <template #append>
+              <i class="fi fi-rr-angle-small-right"></i>
+            </template>
+          </v-btn>
+        </div>
+      </v-col>
+    </ui-frame>
+  </div>
 </template>
 
 <style lang="scss">
@@ -124,6 +125,8 @@ function destroy() {
   position: fixed !important;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(0.9rem);
+  background-color: rgba(var(--v-theme-background), 0.2);
 
   &.isScrolled {
     .v-toolbar__content {

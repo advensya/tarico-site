@@ -8,27 +8,33 @@ export interface IProduct {
 const products: { [key: string]: IProduct } = {
   hr: {
     code: "hr",
-    name: "TARICO <b>HR<b>",
+    name: "Tarico <b>HR<b>",
     logo: "/logo/tarico-hr.png",
     to: { name: "hr" },
   },
   form: {
     code: "form",
-    name: "TARICO <b>FORM<b>",
+    name: "Tarico <b>FORM<b>",
     logo: "/logo/tarico-form.png",
     to: { name: "form" },
   },
   id: {
     code: "id",
-    name: "TARICO <b>ID<b>",
+    name: "Tarico <b>ID<b>",
     logo: "/logo/tarico-hr.png",
     to: { name: "id" },
   },
-  hiring: {
-    code: "hiring",
-    name: "TARICO <b>Hiring<b>",
+  onboarding: {
+    code: "onboarding",
+    name: "Tarico <b>Onboarding<b>",
     logo: "/logo/tarico-form.png",
-    to: { name: "hr-hiring" },
+    to: { name: "onboarding" },
+  },
+  heavy: {
+    code: "onboarding",
+    name: "Tarico <b>Heavy<b>",
+    logo: "/logo/tarico-form.png",
+    to: { name: "heavy" },
   },
 };
 

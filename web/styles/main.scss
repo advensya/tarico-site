@@ -2,6 +2,7 @@
 @use "./content";
 @use "./vuetify";
 @use "./font";
+@use "./frame";
 
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
 
@@ -35,4 +36,8 @@ a {
 
 .text-light {
   color: rgba(var(--v-theme-on-background));
+}
+
+.w-max-content {
+  width: max-content;
 }

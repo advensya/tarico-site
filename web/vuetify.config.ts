@@ -12,7 +12,7 @@ export default {
   ],
 
   theme: {
-    defaultTheme: "light",
+    defaultTheme: "system",
 
     themes: {
       light: {
@@ -51,6 +51,7 @@ export default {
       style: { "text-transform": "none" },
       variant: "flat",
       color: "primary",
+      rounded: 0,
     },
     VTextField: {
       flat: true,

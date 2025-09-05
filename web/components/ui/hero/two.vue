@@ -31,23 +31,23 @@ const products = ref([
         <v-col cols="12" md="8">
           <div style="position: relative" class="px-5">
             <h1 class="title" v-html="$t('hero.one.title')"></h1>
-            <p class="mt-5" v-html="$t('hero.one.text')"></p>
+            <!-- <p class="mt-5" v-html="$t('hero.one.text')"></p> -->
 
             <div class="d-flex align-center ga-2 flex-wrap mt-5">
               <v-btn
-                size="x-large"
-                color="primary"
-                variant="tonal"
-                rounded="lg"
+                size="large"
+                color="background"
+                rounded="0"
+                class="border"
                 :to="$localePath({ name: 'products' })"
                 :block="$vuetify.display.smAndDown"
               >
                 {{ $t("hero.one.all") }}
               </v-btn>
               <v-btn
-                size="x-large"
+                size="large"
                 color="primary"
-                rounded="lg"
+                rounded="0"
                 :to="$localePath({ name: 'hr' })"
                 :block="$vuetify.display.smAndDown"
               >
@@ -62,52 +62,56 @@ const products = ref([
 
     <div class="mt-auto"></div>
 
-    <div class="bottom w-100 border-b">
-      <swiper
-        v-if="$vuetify.display.smAndDown"
-        :spaceBetween="30"
-        :slidesPerView="'auto'"
-        :grabCursor="true"
-        :autoplay="{
-          delay: 1000,
-          pauseOnMouseEnter: true,
-        }"
-        :allow-touch-move="false"
-        :pagination="false"
-        :navigation="false"
-        :loop="true"
-        :center-insufficient-slides="true"
-        :modules="[Autoplay, Navigation, Pagination]"
-        class="w-100"
-        style="height: 60px"
-      >
-        <swiper-slide
-          v-for="(product, p) in products"
-          :key="p"
-          style="width: max-content"
-        >
-          <div class="h-100 d-flex align-center px-3">
-            <div class="d-flex align-center ga-2" v-html="product.name"></div>
-          </div>
-        </swiper-slide>
-      </swiper>
-      <div
-        v-else
-        style="height: 60px; position: relative; z-index: 2"
-        class="d-flex align-center w-100 justify-center"
-      >
-        <div
-          class="h-100 d-flex align-center px-3"
-          v-for="(product, p) in products"
-          :key="p"
-        >
-          <nuxt-link
-            v-bind="product.props"
-            v-html="product.name"
-            class="d-flex align-center ga-2 text-dark"
-          ></nuxt-link>
-        </div>
-      </div>
+    <div class="bottom w-100">
+      <ui-frame class="mt-0">
+        <template v-if="$vuetify.display.smAndDown">
+          <v-col class="frame">
+            <swiper
+              :spaceBetween="0"
+              :slidesPerView="'auto'"
+              :grabCursor="true"
+              :autoplay="{
+                delay: 1000,
+                pauseOnMouseEnter: true,
+              }"
+              :allow-touch-move="false"
+              :pagination="false"
+              :navigation="false"
+              :loop="true"
+              :center-insufficient-slides="true"
+              :modules="[Autoplay, Navigation, Pagination]"
+              class="w-100"
+              style="height: 60px"
+            >
+              <swiper-slide
+                v-for="(product, p) in products"
+                :key="p"
+                style="width: max-content"
+              >
+                <div class="h-100 d-flex align-center px-3">
+                  <div
+                    class="d-flex align-center ga-2"
+                    v-html="product.name"
+                  ></div>
+                </div>
+              </swiper-slide>
+            </swiper>
+          </v-col>
+        </template>
+        <template v-else>
+          <v-col
+            v-for="code in ['hr', 'id', 'onboarding', 'form', 'heavy']"
+            :key="code"
+            class="frame"
+          >
+            <nuxt-link
+              :to="$localePath(Products[code].to)"
+              v-html="Products[code].name"
+              class="pa-3 text-center d-block text-dark"
+            ></nuxt-link>
+          </v-col>
+        </template>
+      </ui-frame>
     </div>
   </section>
 </template>
@@ -125,7 +129,7 @@ const products = ref([
     inset: 0;
     z-index: 0;
 
-    background: rgb(var(--v-theme-primary), 0.04);
+    background: rgb(var(--v-theme-dark), 0.04);
     -webkit-mask: url("/images/grid.svg") center/cover no-repeat;
     mask: url("/images/grid.svg") center/cover no-repeat;
 
@@ -171,14 +175,6 @@ const products = ref([
       inset: 0;
       background-color: rgba(var(--v-theme-background), 1);
       z-index: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      // background-color: rgba(var(--v-theme-primary), 1);
     }
   }
 }
