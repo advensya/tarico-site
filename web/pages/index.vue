@@ -34,8 +34,8 @@ const readMoreAboutTarico = ref(false);
 
         <template v-if="readMoreAboutTarico">
           <div class="mt-10">
-            <div class="d-flex ga-3">
-              <ui-svg name="lamp-2" size="48" />
+            <div class="d-flex flex-column ga-3">
+              <ui-svg name="growth" size="48" />
               <h3 class="text-h4 font-weight-bold" style="line-height: 1">
                 Des solutions logicielles <br />
                 vraiment utiles
@@ -61,8 +61,9 @@ const readMoreAboutTarico = ref(false);
           </div>
 
           <div class="mt-10">
-            <div class="d-flex ga-3">
-              <i class="fi fi-sr-building-user text-h4 mt-1"></i>
+            <div class="d-flex flex-column ga-3">
+              <ui-svg name="company-people" size="48" />
+              <!-- <i class="fi fi-sr-building-user text-h4 mt-1"></i> -->
               <h3 class="text-h4 font-weight-bold" style="line-height: 1">
                 Parce que nous comprenons que <br />
                 chaque entreprise est unique
@@ -82,8 +83,8 @@ const readMoreAboutTarico = ref(false);
           </div>
 
           <div class="mt-10">
-            <div class="d-flex ga-3">
-              <ui-svg name="other/028" size="48" />
+            <div class="d-flex flex-column ga-3">
+              <ui-svg name="helping-hang" size="48" />
               <h3 class="text-h4 font-weight-bold" style="line-height: 1">
                 Un accompagnement qui <br />
                 fait toute la différence
@@ -220,7 +221,7 @@ const readMoreAboutTarico = ref(false);
   <ui-frame>
     <template #prepend>
       <div class="pa-5 position-relative">
-        <ui-svg name="growth" size="54" />
+        <ui-svg name="lamp-2" size="54" />
         <h2
           style="
             max-width: 662px;
@@ -252,8 +253,6 @@ const readMoreAboutTarico = ref(false);
 
   <v-container style="z-index: 1; position: relative" class="pb-16">
     <div class="d-flex justify-center align-center flex-column">
-      <!-- <ui-svg name="logo-v2" size="192" class="text-surface" /> -->
-
       <div class="d-flex align-center ga-2 flex-wrap mt-10">
         <v-btn
           color="background"
