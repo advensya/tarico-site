@@ -38,15 +38,19 @@
   "pages": {
     "index": {
       "about": {
-        "title": "Une suite logicielle <br> pensée pour l’efficacité",
-        "text": "Chez Tarico, chaque logiciel est né d’un besoin identifié sur le terrain. Nous avons écouté nos utilisateurs, compris leurs blocages, et développé des outils qui répondent avec précision à leurs enjeux. Notre suite logicielle est le fruit d’une vision pratique, conçue pour être rapidement opérationnelle et réellement utile au quotidien.",
-        "readMore": "Lire la suite"
+        "title": "Avec Tarico, transformez vos opérations et accélérez votre croissance.",
+        "text": "Face aux défis uniques des entreprises, Tarico propose une approche nouvelle. Nos solutions digitales sont conçues pour simplifier, sécuriser, et dynamiser la gestion d'entreprise.  Tarico simplifie la gestion d’entreprise en Afrique grâce à des outils digitaux puissants, accessibles et sécurisés."
       },
 
       "products": {
-        "title": "Nos Solutions",
-        "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate debitis temporibus animi dolore rerum consequuntur porro aliquid, nemo commodi numquam quo in officiis molestias eos deserunt sapiente nisi officia illum. Lorem ipsum dolor sit, amet consectetur adipisicing elit.",
-        "seeAll": "Tous nos produits"
+        "title": "Une suite logicielle <br /> pensée pour l’efficacité",
+        "text": "Chez Tarico, chaque logiciel est né d’un besoin identifié sur le terrain. Nous avons écouté nos utilisateurs, compris leurs blocages, et développé des outils qui répondent avec précision à leurs enjeux. Notre suite logicielle est le fruit d’une vision pratique, conçue pour être rapidement opérationnelle et réellement utile au quotidien.",
+        "seeAll": "Tous nos produits",
+        "readMore": "Lire la suite"
+      },
+
+      "values": {
+        "title": "Nos valeurs"
       },
 
       "benefits": {
@@ -289,5 +293,22 @@
       "intro": "Digitalisation des documents administratifs (certificats, extraits, attestations)."
     },
     "heavy": { "intro": "Transfert fluide et sécurisé de fichiers volumineux." }
-  }
+  },
+
+  "values": [
+    {
+      "title": "Innover",
+      "text": "L’Innovation est au cœur des solutions Tarico. Les outils digitaux sont conçus pour répondre aux défis spécifiques des marchés africains, en simplifiant la gestion des données et des processus. Cette approche permet d’apporter une valeur ajoutée concrète, en adaptant les technologies aux réalités locales et en facilitant l’adoption par les utilisateurs."
+    },
+
+    {
+      "title": "Connecter",
+      "text": "Tarico facilite l’Interconnexion entre les acteurs économiques, les collaborateurs et les systèmes d’information. En intégrant les différents services et utilisateurs au sein des entreprises, les solutions améliorent la collaboration, fluidifient les échanges et renforcent l’efficacité opérationnelle, même dans des environnements où les infrastructures sont parfois limitées."
+    },
+
+    {
+      "title": "Transformer",
+      "text": "La Transformation numérique est un levier essentiel pour la croissance durable des entreprises africaines. Tarico accompagne cette transition en proposant des outils modernes, automatisés et performants, qui permettent de passer d’une gestion traditionnelle à une gestion agile et innovante, favorisant ainsi une compétitivité accrue et une inclusion économique renforcée."
+    }
+  ]
 }
