@@ -13,7 +13,7 @@
     "companySize": "Taille de l'entreprise",
     "persons": "Personnes",
     "contactUs": "Nous contacter",
-    "assDemo": "Demander un démo"
+    "bookDemo": "Demander un démo"
   },
 
   "tou": "Conditions d'utilisation",
@@ -22,7 +22,8 @@
   "bookDemo": {
     "title": "Réserver une démo",
     "label": "Réservez une démonstration gratuite de 30 minutes",
-    "submit": "Choisir une date et une heure",
+    "submit": "Demander un démo",
+    "bookDate": "Choisir une date et une heure",
     "privacy": "Nous respectons vos données. En soumettant ce formulaire, vous acceptez que nous vous contactions au sujet de nos produits et services, conformément à notre {0}."
   },
 
