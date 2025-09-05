@@ -53,7 +53,7 @@ const readMoreAboutTarico = ref(false);
         <h2
           style="
             line-height: 1;
-            font-size: clamp(2rem, 8.2352941176vw, 4rem);
+            font-size: clamp(2rem, 3.2352941176vw, 4rem);
             line-height: 1;
             font-weight: bold;
           "
@@ -71,59 +71,48 @@ const readMoreAboutTarico = ref(false);
         <template v-if="readMoreAboutTarico">
           <div class="mt-10">
             <div class="d-flex flex-column ga-3">
-              <ui-svg name="growth" size="48" />
+              <!-- <ui-svg name="growth" size="48" /> -->
               <h3 class="text-h4 font-weight-bold" style="line-height: 1">
-                Des solutions logicielles <br />
-                vraiment utiles
+                Une suite logicielle pour <br />
+                l’efficacité et la croissance
               </h3>
             </div>
 
             <p class="mt-5">
-              Tout est parti d’un constat simple : les outils numériques censés
-              simplifier la vie des entreprises sont souvent complexes, rigides,
-              et déconnectés de leurs besoins réels. Chez Tarico, nous avons
-              voulu changer la donne. Nous avons créé une entreprise à taille
-              humaine, avec une vision claire : proposer des logiciels utiles,
-              faciles à prendre en main, et centrés sur l'utilisateur.
-            </p>
-            <p class="mt-5">
-              Notre première mission fut de réinventer le formulaire en ligne —
-              un outil quotidien, mais trop souvent sous-estimé. Forts de ce
-              succès, nous avons élargi notre champ d’action pour répondre à
-              d’autres besoins cruciaux de l’entreprise moderne, toujours avec
-              la même philosophie :
-              <b>Repenser</b>, <b>innover</b>, <b>rapprocher</b>.
+              Chaque solution Tarico est issue d'une écoute attentive des
+              réalités du terrain, permettant de concevoir des outils
+              opérationnels. Tarico offre une transformation digitale adaptée au
+              contexte africain, en fournissant des outils conçus pour anticiper
+              les besoins et soutenir une croissance durable.
             </p>
           </div>
 
           <div class="mt-10">
             <div class="d-flex flex-column ga-3">
-              <ui-svg name="company-people" size="48" />
-              <!-- <i class="fi fi-sr-building-user text-h4 mt-1"></i> -->
+              <!-- <ui-svg name="company-people" size="48" /> -->
               <h3 class="text-h4 font-weight-bold" style="line-height: 1">
-                Parce que nous comprenons que <br />
-                chaque entreprise est unique
+                Flexibilité et adaptation <br />
+                aux besoins uniques
               </h3>
             </div>
 
             <p class="mt-5">
-              Nos solutions sont conçues pour s’adapter, évoluer et se connecter
-              à vos outils existants. Notre force, c’est la flexibilité, notre
-              moteur, c’est l’ambition de vous simplifier la vie.
-            </p>
-            <p class="mt-5">
-              Nous ne vendons pas des logiciels. Nous bâtissons des partenariats
-              technologiques. Avec Tarico, vous avez un interlocuteur réactif,
-              une équipe qui écoute et qui évolue avec vous.
+              Les logiciels Tarico sont conçus pour s’adapter et évoluer avec
+              vos outils existants. Cette flexibilité, associée à une volonté de
+              simplifier, soutient la croissance des entreprises partenaires.
+              <br />
+              Tarico ne se limite pas à la vente de logiciels, mais établit des
+              partenariats technologiques durables, avec un interlocuteur dédié
+              et une équipe à l'écoute.
             </p>
           </div>
 
           <div class="mt-10">
             <div class="d-flex flex-column ga-3">
-              <ui-svg name="helping-hang" size="48" />
+              <!-- <ui-svg name="helping-hang" size="48" /> -->
               <h3 class="text-h4 font-weight-bold" style="line-height: 1">
-                Un accompagnement qui <br />
-                fait toute la différence
+                Accompagnement client : <br />
+                un facteur clé de succès
               </h3>
             </div>
 
@@ -133,15 +122,9 @@ const readMoreAboutTarico = ref(false);
             ></h3>
 
             <p class="mt-5">
-              Nous plaçons l’accompagnement client au cœur de notre démarche.
-              Notre
-              <strong
-                >support est ultra-réactif, disponible et réellement à l’écoute
-                de vos besoins</strong
-              >. Vous n’êtes jamais seuls : une équipe humaine, compétente et
-              impliquée vous accompagne à chaque étape. Nous répondons vite,
-              nous comprenons vos enjeux, et nous trouvons des solutions
-              concrètes.
+              Un support réactif et attentif est au cœur de Tarico. Une équipe
+              compétente accompagne chaque client à chaque étape, garantissant
+              des solutions concrètes et adaptées aux défis rencontrés.
             </p>
           </div>
         </template>
