@@ -5,7 +5,43 @@ const readMoreAboutTarico = ref(false);
 <template>
   <ui-hero-two class="pg-index-hero" />
 
-  <v-container class="mt-0">
+  <v-container class="my-0">
+    <v-row class="pa-5" justify="start">
+      <v-col cols="12" sm="8" order="1">
+        <h2
+          class="text-h4"
+          style="line-height: 1; line-height: 1; font-weight: bold"
+          v-html="$t('pages.index.about.title')"
+        ></h2>
+      </v-col>
+
+      <v-col cols="12" order="2">
+        <p style="max-width: 882px" v-html="$t('pages.index.about.text')"></p>
+      </v-col>
+    </v-row>
+  </v-container>
+
+  <ui-frame class="my-0">
+    <template #prepend>
+      <h2
+        class="text-h4 pa-5"
+        style="line-height: 1; line-height: 1; font-weight: bold"
+        v-html="$t('pages.index.values.title')"
+      ></h2>
+    </template>
+    <v-col v-for="i in 3" :key="i" cols="12" sm="6" md="4" class="frame">
+      <h3
+        class="text-h5 pa-5"
+        style="background-color: rgba(var(--v-theme-surface), 0.3)"
+        v-html="$t(`values.${i - 1}.title`)"
+      ></h3>
+      <div class="pa-5">
+        <p class="mt-3" v-html="$t(`values.${i - 1}.text`)"></p>
+      </div>
+    </v-col>
+  </ui-frame>
+
+  <v-container class="mt-16">
     <v-row class="pa-5">
       <v-col cols="12" sm="4" order="0" order-sm="2">
         <div class="d-flex">
@@ -21,7 +57,7 @@ const readMoreAboutTarico = ref(false);
             line-height: 1;
             font-weight: bold;
           "
-          v-html="$t('pages.index.about.title')"
+          v-html="$t('pages.index.products.title')"
         ></h2>
       </v-col>
 
@@ -29,7 +65,7 @@ const readMoreAboutTarico = ref(false);
         <p
           class="mt-5"
           style="max-width: 882px"
-          v-html="$t('pages.index.about.text')"
+          v-html="$t('pages.index.products.text')"
         ></p>
 
         <template v-if="readMoreAboutTarico">
@@ -118,7 +154,7 @@ const readMoreAboutTarico = ref(false);
           size="small"
           @click="readMoreAboutTarico = true"
         >
-          {{ $t("pages.index.about.readMore") }}
+          {{ $t("pages.index.products.readMore") }}
 
           <template #append>
             <i class="fi fi-rr-angle-small-down"></i>
@@ -128,7 +164,7 @@ const readMoreAboutTarico = ref(false);
     </v-row>
   </v-container>
 
-  <ui-frame>
+  <ui-frame class="mt-0">
     <!-- <template #prepend>
       <div class="mb-5 text-center px-5">
         <h2 class="text-hh mx-auto" style="font-weight: normal">
