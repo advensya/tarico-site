@@ -148,18 +148,6 @@ const readMoreAboutTarico = ref(false);
   </v-container>
 
   <ui-frame class="mt-0">
-    <!-- <template #prepend>
-      <div class="mb-5 text-center px-5">
-        <h2 class="text-hh mx-auto" style="font-weight: normal">
-          {{ $t("pages.index.products.title") }}
-        </h2>
-
-        <p class="mt-5 mx-auto" style="max-width: 762px">
-          {{ $t("pages.index.products.text") }}
-        </p>
-      </div>
-    </template> -->
-
     <v-col cols="12" class="frame">
       <v-row>
         <v-col cols="12" md="6">
@@ -179,17 +167,11 @@ const readMoreAboutTarico = ref(false);
                 color="background"
                 rounded="0"
                 class="border"
-                :block="$vuetify.display.smAndDown"
+                :to="$localePath(Products.hr.to)"
               >
                 {{ $t("hero.one.cta") }}
               </v-btn>
-              <v-btn
-                color="primary"
-                rounded="0"
-                :block="$vuetify.display.smAndDown"
-              >
-                Demander un démo
-              </v-btn>
+              <ui-book-demo product="hr" />
             </div>
           </div>
         </v-col>
@@ -277,19 +259,18 @@ const readMoreAboutTarico = ref(false);
           color="background"
           rounded="0"
           class="border"
-          :block="$vuetify.display.smAndDown"
           :to="$localePath({ name: 'contact' })"
         >
           {{ $t("words.contactUs") }}
         </v-btn>
-        <v-btn
-          color="background"
-          rounded="0"
-          class="border"
-          :block="$vuetify.display.smAndDown"
-        >
-          {{ $t("words.assDemo") }}
-        </v-btn>
+
+        <ui-book-demo>
+          <template #activator="{ props }">
+            <v-btn v-bind="props" color="background" rounded="0" class="border">
+              {{ $t("words.bookDemo") }}
+            </v-btn>
+          </template>
+        </ui-book-demo>
       </div>
     </div>
   </v-container>

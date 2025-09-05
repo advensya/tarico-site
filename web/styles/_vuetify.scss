@@ -1,7 +1,7 @@
 .v-dialog,
 .v-menu {
   .v-overlay__scrim {
-    opacity: 0.05;
+    opacity: 0.1;
   }
 
   .v-overlay__content,
@@ -45,7 +45,7 @@
 }
 
 .v-overlay__scrim {
-  background: rgba(0, 0, 0, 0.461) !important;
+  background: rgba(var(--v-theme-on-background), 1) !important;
 }
 
 .v-field--variant-filled {
