@@ -40,7 +40,7 @@ const products = ref([
                 rounded="0"
                 class="border"
                 :to="$localePath({ name: 'products' })"
-                :block="$vuetify.display.smAndDown"
+                :block="$vuetify.display.xs"
               >
                 {{ $t("hero.one.all") }}
               </v-btn>
@@ -49,7 +49,7 @@ const products = ref([
                 color="primary"
                 rounded="0"
                 :to="$localePath({ name: 'hr' })"
-                :block="$vuetify.display.smAndDown"
+                :block="$vuetify.display.xs"
               >
                 {{ $t("hero.one.cta") }}
               </v-btn>

@@ -9,40 +9,47 @@ import "swiper/css/pagination";
 </script>
 
 <template>
-  <section class="tarico-hero-one">
-    <div class="back"></div>
+  <section class="tarico-hero-one" aria-labelledby="hero-title">
+    <div class="back" aria-hidden="true"></div>
 
-    <div class="mb-auto"></div>
+    <div class="mb-auto" aria-hidden="true"></div>
 
     <v-container :fluid="$vuetify.display.xs">
       <v-row>
         <v-col cols="12" md="8">
-          <div
-            style="position: relative"
-            :class="{ 'text-center': $vuetify.display.smAndDown }"
-          >
-            <h1 class="title" v-html="$t('hero.one.title')"></h1>
-            <p class="mt-5" v-html="$t('hero.one.text')"></p>
+          <div class="px-5 position-relative">
+            <h1
+              id="hero-title"
+              class="title"
+              v-html="$t('hero.one.title')"
+            ></h1>
+            <!-- <p class="mt-5" v-html="$t('hero.one.text')"></p> -->
 
-            <div class="d-flex align-center ga-2 flex-wrap mt-5">
+            <div
+              class="d-flex align-center ga-2 flex-wrap mt-5"
+              role="group"
+              aria-label="call to action"
+            >
               <v-btn
-                size="x-large"
+                size="large"
                 color="primary"
-                variant="tonal"
-                rounded="lg"
-                :to="$localePath({ name: 'products' })"
-                :block="$vuetify.display.smAndDown"
-              >
-                {{ $t("hero.one.all") }}
-              </v-btn>
-              <v-btn
-                size="x-large"
-                color="primary"
-                rounded="lg"
+                rounded="0"
                 :to="$localePath({ name: 'hr' })"
-                :block="$vuetify.display.smAndDown"
+                :block="$vuetify.display.xs"
+                :aria-label="$t('hero.one.cta')"
               >
                 {{ $t("hero.one.cta") }}
+              </v-btn>
+              <v-btn
+                size="large"
+                color="background"
+                rounded="0"
+                class="border"
+                :to="$localePath({ name: 'products' })"
+                :block="$vuetify.display.xs"
+                :aria-label="$t('hero.one.all')"
+              >
+                {{ $t("hero.one.all") }}
               </v-btn>
             </div>
           </div>
@@ -51,56 +58,61 @@ import "swiper/css/pagination";
       </v-row>
     </v-container>
 
-    <div class="mt-auto"></div>
+    <div class="mt-auto" aria-hidden="true"></div>
 
-    <div class="bottom w-100 border-b">
-      <swiper
-        :spaceBetween="30"
-        :slidesPerView="'auto'"
-        :grabCursor="true"
-        :autoplay="{
-          delay: 1000,
-          pauseOnMouseEnter: true,
-        }"
-        :allow-touch-move="false"
-        :pagination="false"
-        :navigation="false"
-        :loop="true"
-        :center-insufficient-slides="true"
-        :modules="[Autoplay, Navigation, Pagination]"
-        class="w-100"
-        style="height: 60px"
-      >
-        <swiper-slide style="width: max-content">
-          <div class="h-100 d-flex align-center">
-            <v-btn color="dark" variant="text" class="ga-2">
-              Tarico <b>FORM</b>
-            </v-btn>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide style="width: max-content">
-          <div class="h-100 d-flex align-center">
-            <v-btn color="dark" variant="text" class="ga-2">
-              Tarico <b>ID</b>
-            </v-btn>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide style="width: max-content">
-          <div class="h-100 d-flex align-center">
-            <v-btn color="dark" variant="text" class="ga-2">
-              Tarico <b>Hiring</b>
-            </v-btn>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide style="width: max-content">
-          <div class="h-100 d-flex align-center">
-            <v-btn color="dark" variant="text"> Tarico <b>HR</b> </v-btn>
-          </div>
-        </swiper-slide>
-      </swiper>
+    <div class="bottom w-100">
+      <ui-frame class="mt-0">
+        <template v-if="$vuetify.display.smAndDown">
+          <v-col class="frame">
+            <swiper
+              :spaceBetween="0"
+              :slidesPerView="'auto'"
+              :grabCursor="true"
+              :autoplay="{
+                delay: 1600,
+                pauseOnMouseEnter: true,
+                disableOnInteraction: false,
+              }"
+              :allow-touch-move="false"
+              :pagination="false"
+              :navigation="false"
+              :loop="true"
+              :center-insufficient-slides="true"
+              :modules="[Autoplay, Navigation, Pagination]"
+              class="w-100"
+              style="height: 60px"
+              aria-label="Produits"
+            >
+              <swiper-slide
+                v-for="(product, p) in Products"
+                :key="p"
+                style="width: max-content"
+              >
+                <div class="h-100 d-flex align-center px-3">
+                  <div
+                    class="d-flex align-center ga-2"
+                    v-html="product.name"
+                  ></div>
+                </div>
+              </swiper-slide>
+            </swiper>
+          </v-col>
+        </template>
+        <template v-else>
+          <v-col
+            v-for="code in ['hr', 'id', 'onboarding', 'form', 'heavy']"
+            :key="code"
+            class="frame"
+          >
+            <nuxt-link
+              :to="$localePath(Products[code].to)"
+              v-html="Products[code].name"
+              class="pa-3 text-center d-block text-dark"
+              :title="Products[code].namePlain"
+            ></nuxt-link>
+          </v-col>
+        </template>
+      </ui-frame>
     </div>
   </section>
 </template>
@@ -118,7 +130,7 @@ import "swiper/css/pagination";
     inset: 0;
     z-index: 0;
 
-    background: rgb(var(--v-theme-primary), 0.04);
+    background: rgb(var(--v-theme-dark), 0.04);
     -webkit-mask: url("/images/grid.svg") center/cover no-repeat;
     mask: url("/images/grid.svg") center/cover no-repeat;
 
@@ -132,17 +144,6 @@ import "swiper/css/pagination";
       background-size: cover;
       opacity: 0.04;
       filter: sepia(100%) saturate(500%) hue-rotate(180deg);
-    }
-
-    &::after {
-      content: "";
-      inset: 0;
-      position: absolute;
-      background: linear-gradient(
-        to left,
-        rgba(var(--v-theme-background), 0) 0%,
-        rgba(var(--v-theme-background), 1) 100%
-      );
     }
   }
 
@@ -167,6 +168,7 @@ import "swiper/css/pagination";
       rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
     --v-border-opacity: 0.05;
+    // color: rgb(var(--v-theme-on-primary));
 
     &::before {
       position: absolute;
@@ -174,14 +176,6 @@ import "swiper/css/pagination";
       inset: 0;
       background-color: rgba(var(--v-theme-background), 1);
       z-index: 0;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-      background-color: rgba(var(--v-theme-secondary), 0.15);
     }
   }
 }

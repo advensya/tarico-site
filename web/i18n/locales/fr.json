@@ -1,6 +1,6 @@
 {
   "site": {
-    "description": "Connecter entreprises et clients par l'innovation digitale."
+    "description": "La technologie au service de vos organisations."
   },
   "words": {
     "welcome": "bienvenue",
@@ -13,7 +13,8 @@
     "companySize": "Taille de l'entreprise",
     "persons": "Personnes",
     "contactUs": "Nous contacter",
-    "bookDemo": "Demander un démo"
+    "bookDemo": "Demander un démo",
+    "readMore": "Lire la suite"
   },
 
   "tou": "Conditions d'utilisation",
@@ -38,6 +39,11 @@
 
   "pages": {
     "index": {
+      "meta": {
+        "title": "La technologie au service de vos organisations.",
+        "description": "Nos solutions digitales sont conçues pour simplifier, sécuriser, et dynamiser la gestion d'entreprise."
+      },
+
       "about": {
         "title": "Avec Tarico, transformez vos opérations et accélérez votre croissance.",
         "text": "Face aux défis uniques des entreprises, Tarico propose une approche nouvelle. Nos solutions digitales sont conçues pour simplifier, sécuriser, et dynamiser la gestion d'entreprise.  Tarico simplifie la gestion d’entreprise en Afrique grâce à des outils digitaux puissants, accessibles et sécurisés."

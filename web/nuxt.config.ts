@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     "@nuxtjs/mdc",
     "@nuxt/content",
     "@tarico/form-ui",
+    "@nuxtjs/seo",
   ],
 
   css: ["./styles/main.scss"],
@@ -43,6 +44,16 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
       meta: [{ property: "og:image", content: "/og-image.png" }],
     },
+  },
+
+  site: {
+    name: "Tarico",
+    url: "https://tarico.io",
+    indexable: process.env.NUXT_PUBLIC_INDEXABLE,
+  },
+
+  seo: {
+    canonicalLowercase: false,
   },
 
   i18n: {

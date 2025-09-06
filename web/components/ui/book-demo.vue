@@ -86,7 +86,6 @@ const options: Options = {
   ],
   interfaces: {},
 };
-const show = ref(false);
 const openCal = ref<HTMLButtonElement>();
 const messages = ref<Array<{ text: string; color: string }>>([]);
 const submiting = ref(false);
@@ -156,7 +155,7 @@ async function submit(value: { values: Record<string, any> }) {
             {{ $t("bookDemo.label") }}
           </h5>
 
-          <form-model v-if="show" :options="options" @submit="submit">
+          <form-model :options="options" @submit="submit">
             <template #submit-btn>
               <div class="w-100">
                 <i18n-t keypath="bookDemo.privacy" tag="p" class="text-body-2">
