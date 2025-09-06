@@ -13,7 +13,7 @@
     "companySize": "Taille de l'entreprise",
     "persons": "Personnes",
     "contactUs": "Nous contacter",
-    "bookDemo": "Demander un démo",
+    "bookDemo": "Demander une démo",
     "readMore": "Lire la suite"
   },
 
@@ -23,9 +23,23 @@
   "bookDemo": {
     "title": "Réserver une démo",
     "label": "Réservez une démonstration gratuite de 30 minutes",
-    "submit": "Demander un démo",
+    "submit": "Demander une démo",
     "bookDate": "Choisir une date et une heure",
     "privacy": "Nous respectons vos données. En soumettant ce formulaire, vous acceptez que nous vous contactions au sujet de nos produits et services, conformément à notre {0}."
+  },
+
+  "callMe": {
+    "title": "Je souhaite être rappeler",
+    "text": "Besoin d’une démo de Tarico HR ou d’informations sur nos solutions ? Laissez vos coordonnées, nous vous rappelons sous 24h.",
+
+    "fields": {
+      "name": "Nom et prénoms",
+      "contact": "Email ou Téléphone",
+      "message": "Message ex.: Je souhaite une démo de Tarico HR"
+    },
+
+    "submit": "Envoyer",
+    "successMessage": " Merci ! Votre demande a bien été envoyée. Notre équipe vous contactera sous 24h."
   },
 
   "hero": {
@@ -33,7 +47,7 @@
       "title": "La technologie au service de vos organisations.",
       "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa repudiandae sit quos ipsam dolores iusto, quo dignissi",
       "cta": "Découvrir Tarico HR",
-      "all": "Tous nos services"
+      "all": "Explorer la suite Tarico"
     }
   },
 
@@ -177,7 +191,7 @@
     "hr": {},
 
     "form": {
-      "createForm": "Commencer, c'est gratuit",
+      "createForm": "Commencer gratuitement",
       "noIdNeed": "Aucune identification requise",
       "realyFree": "C'est réellement gratuit",
 
@@ -187,7 +201,7 @@
         "subtitle": "Tarico révolutionne votre quotidien en automatisant vos  taches et en simplifiant votre gestion d'entreprise. Des outils sur mesure et une intégration fluide pour booster votre éfficacité en un clin d'oeil.",
 
         "foot": {
-          "title": "Commencer à construire avec Tarico FORM",
+          "title": "Commencer à construire <br /> avec Tarico <b>FORM</b>",
           "text": ""
         }
       },
@@ -197,13 +211,17 @@
       },
 
       "plan": {
+        "title": "Plans & pricing",
         "safe": {
-          "tosafe": "économisez",
+          "tosafe": "économisez 20% avec un abonnement annuel",
           "sub": "avec un abonnement annuel"
         },
+        "priceFequency": "XOF<br/>par mois et par formulaire",
+
         "btn": {
           "start": "Commencer",
-          "contactSales": "Contacter le service commercial"
+          "contactSales": "Contacter le service commercial",
+          "contactUs": "Nous contacter"
         }
       }
     }
@@ -295,7 +313,122 @@
       "intro": "L’identité numérique sécurisée pour administrations et institutions."
     },
     "form": {
-      "intro": "Collecte de données simple, rapide et intelligente."
+      "intro": "Collecte de données simple, rapide et intelligente.",
+
+      "plans": {
+        "FREE": {
+          "title": "Free",
+          "price": 0,
+          "ideal": false,
+          "description": "Idéal pour les petites équipes ou projets ponctuels. L'essentiel pour créer, publier et suivre vos formulaires <b>sans frais et sans engagement</b>.",
+
+          "features": [
+            "1 admin",
+            "500 soumissions/mois",
+            "1GB de stockage",
+            "Branding de base",
+            "Modèles de formulaires standards",
+            "Templates disponibles",
+            "Statistiques basiques",
+            "Support instantané",
+            "Mises à jour incluses"
+          ]
+        },
+        "DECLIC": {
+          "title": "Déclic",
+          "price": 1100,
+          "ideal": true,
+          "description": "La solution idéale pour débuter et gagner du temps sur vos processus. Simplifiez la gestion de vos formulaires sans effort.",
+          "features": [
+            "2 admin",
+            "10 000 soumissions/mois",
+            "5GB de stockage",
+            "Branding de base",
+            "Modèles de formulaires standards",
+            "Templates disponibles",
+            "Statistiques basiques",
+            "Support instantané",
+            "Mises à jour incluses"
+          ]
+        },
+        "PREMIUM": {
+          "title": "Premium",
+          "price": 1500,
+          "ideal": false,
+          "description": "L’offre avancée pour optimiser votre activité. Accédez à des fonctionnalités étendues pour un gain de temps et une gestion améliorée.",
+          "features": [
+            "15 admin",
+            "Soumissions illimitées",
+            "100GB de stockage",
+            "Branding personnalisé",
+            "Modèles de formulaires avancés",
+            "Templates premium disponibles",
+            "Statistiques détaillées avec analyses",
+            "Support instantané avec accès prioritaire",
+            "Mises à jour incluses",
+            "Notification après chaque soumission"
+          ]
+        },
+        "ENTERPRISE": {
+          "title": "Entreprise",
+          "price": "$sale",
+          "ideal": false,
+          "description": "La solution complète pour les entreprises ambitieuses. Accédez à des services illimités et à un support dédié pour maximiser votre efficacité.",
+          "features": [
+            "Formulaires illimités",
+            "Soumissions illimitées",
+            "Intégrations personnalisées",
+            "Automatisation avancée",
+            "Templates disponibles",
+            "Sécurité renforcée",
+            "Support instantané",
+            "Flux de travail personnalisés",
+            "Formation dédiée pour l'équipe",
+            "Support personnalisé et gestion de projet",
+            "Ressources pour optimiser l'utilisation",
+            "Design de formulaires sur mesure",
+            "Personnalisation de l'apparence des formulaires",
+            "Conseil stratégique",
+            "Audits de sécurité"
+          ]
+        },
+
+        "features": {
+          "01": "Formulaires illimités",
+          "02": "Soumissions illimitées",
+          "03": "Intégrations personnalisées",
+          "04": "Automatisation avancée",
+          "05": "Templates disponibles",
+          "06": "Sécurité renforcée",
+          "07": "Support instantané",
+          "08": "Flux de travail personnalisés",
+          "09": "Formation dédiée pour l'équipe",
+          "10": "Support personnalisé et gestion de projet",
+          "11": "Ressources pour optimiser l'utilisation",
+          "12": "Design de formulaires sur mesure",
+          "13": "Personnalisation de l'apparence des formulaires",
+          "14": "Conseil stratégique",
+          "15": "Audits de sécurité",
+          "16": "1 admin",
+          "17": "500 soumissions/mois",
+          "18": "1GB de stockage",
+          "19": "Branding de base",
+          "20": "Modèles de formulaires standards",
+          "21": "Statistiques basiques",
+          "22": "Mises à jour incluses",
+          "23": "2 admin",
+          "24": "10 000 soumissions/mois",
+          "25": "5GB de stockage",
+          "26": "15 admin",
+          "27": "100GB de stockage",
+          "28": "Branding personnalisé",
+          "29": "Modèles de formulaires avancés",
+          "30": "Templates premium disponibles",
+          "31": "Statistiques détaillées avec analyses",
+          "32": "Support instantané avec accès prioritaire",
+          "33": "Notification après chaque soumission"
+        }
+      }
     },
     "onboarding": {
       "intro": "Recrutement et intégration optimisés pour vos talents."

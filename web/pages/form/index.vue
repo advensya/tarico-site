@@ -53,87 +53,40 @@ const plans = ref({
     title: "Free",
     price: 0,
     ideal: false,
-    btn: { text: "start", to: "https://form.tarico.space" },
-    description:
-      "Idéal pour les petites équipes ou projets ponctuels. L'essentiel pour créer, publier et suivre vos formulaires <b class='text-primary'>sans frais et sans engagement</b>.",
-
-    features: [
-      "1 admin",
-      "500 soumissions/mois",
-      "1GB de stockage",
-      "Branding de base",
-      "Modèles de formulaires standards",
-      "Templates disponibles",
-      "Statistiques basiques",
-      "Support instantané",
-      "Mises à jour incluses",
-    ],
+    features: ["16", "17", "18", "19", "20", "05", "21", "07", "22"],
   },
   DECLIC: {
     title: "Déclic",
     price: 1100,
     ideal: true,
-    btn: { text: "start", to: "https://form.tarico.space" },
-    description:
-      "La solution idéale pour débuter et gagner du temps sur vos processus. Simplifiez la gestion de vos formulaires sans effort.",
-    features: [
-      "2 admin",
-      "10 000 soumissions/mois",
-      "5GB de stockage",
-      "Branding de base",
-      "Modèles de formulaires standards",
-      "Templates disponibles",
-      "Statistiques basiques",
-      "Support instantané",
-      "Mises à jour incluses",
-    ],
+    features: ["23", "24", "25", "19", "20", "05", "21", "07", "22"],
   },
   PREMIUM: {
     title: "Premium",
     price: 1500,
     ideal: false,
-    btn: { text: "start", to: "https://form.tarico.space" },
-    description:
-      "L’offre avancée pour optimiser votre activité. Accédez à des fonctionnalités étendues pour un gain de temps et une gestion améliorée.",
-    features: [
-      "15 admin",
-      "Soumissions illimitées",
-      "100GB de stockage",
-      "Branding personnalisé",
-      "Modèles de formulaires avancés",
-      "Templates premium disponibles",
-      "Statistiques détaillées avec analyses",
-      "Support instantané avec accès prioritaire",
-      "Mises à jour incluses",
-      "Notification après chaque soumission",
-    ],
+    features: ["26", "02", "27", "28", "29", "30", "31", "32", "22", "33"],
   },
   ENTERPRISE: {
     title: "Entreprise",
     price: "$sale",
     ideal: false,
-    btn: {
-      text: "contactSales",
-      to: localePath({ name: "contact", query: { for: "tarico-form:demo" } }),
-    },
-    description:
-      "La solution complète pour les entreprises ambitieuses. Accédez à des services illimités et à un support dédié pour maximiser votre efficacité.",
     features: [
-      "Formulaires illimités",
-      "Soumissions illimitées",
-      "Intégrations personnalisées",
-      "Automatisation avancée",
-      "Templates disponibles",
-      "Sécurité renforcée",
-      "Support instantané",
-      "Flux de travail personnalisés",
-      "Formation dédiée pour l'équipe",
-      "Support personnalisé et gestion de projet",
-      "Ressources pour optimiser l'utilisation",
-      "Design de formulaires sur mesure",
-      "Personnalisation de l'apparence des formulaires",
-      "Conseil stratégique",
-      "Audits de sécurité",
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07",
+      "08",
+      "09",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
     ],
   },
 });
@@ -194,35 +147,34 @@ const tiers = {
   <div class="pg-form-home--hero">
     <div class="pg-form-home--hero__back"></div>
 
-    <v-container style="position: relative; width: calc(100% - 60px)">
-      <v-row style="position: relative">
-        <v-col cols="12" md="6">
-          <div class="text-">
-            <v-chip
-              color="secondary"
-              variant="flat"
-              size="small"
-              rounded="xl"
-              class="mb-3"
-            >
-              {{ $t("pages.form.home.wedo") }}
-            </v-chip>
-          </div>
-          <h1
-            class="pg-form-home__title font-weight-bold"
-            v-html="$t('pages.form.home.title')"
-          ></h1>
-          <p style="font-size: 18px; max-width: 90%" class="mt-3 pa-0">
-            {{ $t("pages.form.home.subtitle") }}
-          </p>
-        </v-col>
-        <v-col cols="12" md="6">
-          <div class="mt-4 text-md-right">
+    <v-container style="position: relative">
+      <div class="pa-5">
+        <v-row style="position: relative" justify="start">
+          <v-col cols="12" md="8">
+            <div class="text-">
+              <v-chip
+                color="secondary"
+                variant="flat"
+                size="small"
+                rounded="0"
+                class="mb-3"
+              >
+                {{ $t("pages.form.home.wedo") }}
+              </v-chip>
+            </div>
+            <h1
+              class="pg-form-home__title font-weight-bold"
+              v-html="$t('pages.form.home.title')"
+            ></h1>
+            <p style="font-size: 18px; max-width: 90%" class="mt-3 pa-0">
+              {{ $t("pages.form.home.subtitle") }}
+            </p>
+
             <v-btn
               href="https://form.tarico.space"
               color="primary"
-              size="large"
               variant="flat"
+              class="mt-3"
             >
               {{ $t("pages.form.createForm") }}
 
@@ -230,213 +182,189 @@ const tiers = {
                 <i class="fi fi-sr-plus"></i>
               </template>
             </v-btn>
-            <div style="line-height: 1" class="mt-2">
-              <!-- <div class="mt-1 text-h6">
-                {{ $t("pages.form.realyFree") }}
-              </div> -->
-              <div class="mt-">
-                {{ $t("pages.form.noIdNeed") }}
-              </div>
-            </div>
-          </div>
-        </v-col>
-      </v-row>
+          </v-col>
+        </v-row>
+      </div>
     </v-container>
   </div>
 
-  <v-container class="mb-16">
-    <v-row>
-      <v-col
-        cols="12"
-        md="4"
-        sm="6"
-        lg="3"
-        v-for="(functionality, f) in functionalitys.items"
-        :key="f"
-      >
+  <ui-frame
+    class="my-0"
+    style="--ui-frame-border-color: rgba(var(--v-border-color), 1)"
+  >
+    <v-col
+      v-for="(functionality, f) in functionalitys.items"
+      :key="f"
+      cols="12"
+      md="4"
+      sm="6"
+      lg="3"
+      class="frame"
+    >
+      <div class="pa-5 position-relative h-100 bg-secondary">
+        <i :class="functionality.icon"></i>
         <div
-          class="pa-5 position-relative bg-yellow h-100"
-          style="
-            background: rgb(255, 232, 0);
-            background: linear-gradient(
-              193deg,
-              rgba(255, 232, 0, 1) 0%,
-              rgba(255, 138, 34, 1) 100%
-            );
-          "
+          class="font-weight-bold mt-5 mb-3"
+          style="font-size: 22px; line-height: 1"
         >
-          <i :class="functionality.icon"></i>
-          <div
-            class="font-weight-bold mt-5 mb-3"
-            style="font-size: 22px; line-height: 1"
-          >
-            {{ functionality.title }}
-          </div>
-          <div>
-            {{ functionality.description }}
-          </div>
+          {{ functionality.title }}
         </div>
-      </v-col>
-    </v-row>
-  </v-container>
+        <div>
+          {{ functionality.description }}
+        </div>
+      </div>
+    </v-col>
+  </ui-frame>
 
-  <div class="mb-16">
-    <div style="" class="pt-10 pb-10">
-      <p
-        class="mx-auto mt-5"
-        style="max-width: 400px; width: 90%; text-align: center"
-      >
+  <ui-frame>
+    <template #prepend>
+      <p class="pa-5" style="max-width: 440px; width: 90%">
         {{ $t("pages.form.tiers.text") }}
       </p>
-    </div>
-
-    <v-container>
-      <v-row>
-        <v-col
-          cols="12"
-          md="4"
-          sm="6"
-          v-for="(tier, t) in tiers"
-          :key="t"
-          class="pa-2"
-        >
-          <div
-            class="pa-3"
-            style="display: flex; align-items: flex-start; gap: 15px"
-          >
-            <div>
-              <ui-svg :name="`tiers/${t}`" size="42" class="notfill" />
-            </div>
-            <div>
-              <div class="font-weight-bold">
-                {{ tier.title }}
-              </div>
-              <p>
-                {{ tier.text }}
-              </p>
-            </div>
-          </div>
-        </v-col>
-      </v-row>
-    </v-container>
-  </div>
-
-  <div class="pg-form-home--price">
-    <div class="text-h2 text-center font-weight-bold mb-5">Plans & pricing</div>
-
-    <div class="d-flex justify-center flex-column align-center mb-5">
-      <v-switch v-model="yearly" color="success" hide-details inset>
-        <template #label> Annuel </template>
-      </v-switch>
-
-      <div>
-        <v-chip color="success"
-          >{{ $t("pages.form.plan.safe.tosafe") }} 20 %</v-chip
-        >
-        {{ $t("pages.form.plan.safe.sub") }}
-      </div>
-    </div>
-
-    <div class="d-flex align-center">
-      <v-tabs
-        v-if="$vuetify.display.smAndDown"
-        v-model="currentPlan"
-        align-tabs="center"
-        class="bg-success mx-auto w-100"
-      >
-        <v-tab v-for="(plan, p) in plans" :key="p" :value="plan.title">
-          {{ plan.title }}
-        </v-tab>
-      </v-tabs>
-      <div></div>
-    </div>
-
-    <div
-      class="d-flex justify-center ga-3 mx-auto"
-      :style="{ maxWidth: $vuetify.display.smAndDown ? '100%' : '90%' }"
+    </template>
+    <v-col
+      cols="12"
+      md="4"
+      sm="6"
+      v-for="(tier, t) in tiers"
+      :key="t"
+      class="pa-2 frame"
     >
-      <div
-        v-for="(plan, p) in plans"
-        v-show="$vuetify.display.mdAndUp || currentPlan === plan.title"
-        :key="p"
-        style="width: 300px"
-        class="pa-7 rounded-lg price"
-        :class="{
-          ideal: plan.ideal,
-          'w-100 rounded-0': $vuetify.display.smAndDown,
-        }"
-      >
-        <h2>{{ plan.title }}</h2>
+      <div class="pa-3">
+        <div>
+          <ui-svg :name="`tiers/${t}`" size="36" class="notfill" />
+        </div>
+        <div>
+          <div class="font-weight-bold">
+            {{ tier.title }}
+          </div>
+          <p>
+            {{ tier.text }}
+          </p>
+        </div>
+      </div>
+    </v-col>
+
+    <template #append>
+      <div class="pa-5">
+        <v-btn
+          href="https://form.tarico.space"
+          color="primary"
+          variant="flat"
+          class="mt-3"
+        >
+          {{ $t("pages.form.createForm") }}
+
+          <template #prepend>
+            <i class="fi fi-sr-plus"></i>
+          </template>
+        </v-btn>
+      </div>
+    </template>
+  </ui-frame>
+
+  <ui-frame class="my-0">
+    <template #prepend>
+      <div class="pa-5 d-flex align-center ga-2">
+        <div class="text-h3 font-weight-bold">
+          {{ $t("pages.form.plan.title") }}
+        </div>
+
+        <v-spacer />
 
         <div
+          style="
+            line-height: 1.1;
+            max-width: 200px;
+            text-align: right;
+            font-size: 90%;
+          "
+        >
+          {{ $t("pages.form.plan.safe.tosafe") }}
+        </div>
+        <v-switch v-model="yearly" color="success" hide-details inset>
+        </v-switch>
+      </div>
+    </template>
+
+    <v-col
+      v-for="(plan, p) in plans"
+      :key="p"
+      cols="12"
+      sm="6"
+      md="3"
+      class="frame"
+    >
+      <div
+        class="px-5 py-3 d-flex align-center ga-2"
+        style="background-color: rgba(var(--v-theme-surface), 0.4)"
+      >
+        <h3 class="text-h6 lh-1">
+          {{ $t(`products.form.plans.${p}.title`) }}
+        </h3>
+      </div>
+
+      <div class="pa-5">
+        <div
           v-if="typeof plan.price === 'number'"
-          class="d-flex ga-1 align-center my-5"
+          class="d-flex ga-1 align-center mb-5"
         >
           <div class="text-h4">
             {{ plan.price * (yearly ? 0.8 : 1) }}
           </div>
-          <div style="line-height: 1; font-size: 12px">
-            XOF<br />
-            par mois et par formulaire
-          </div>
+          <div
+            style="line-height: 1; font-size: 12px"
+            v-html="$t('pages.form.plan.priceFequency')"
+          ></div>
         </div>
 
-        <p class="mb-3" v-html="plan.description"></p>
+        <p class="mb-3" v-html="$t(`products.form.plans.${p}.description`)"></p>
 
         <v-btn
-          :color="plan.ideal ? 'primary' : 'dark'"
           variant="flat"
-          size="x-large"
-          class="my-10"
-          :href="plan.btn.to"
-          block
+          color="dark"
+          :href="p !== 'ENTERPRISE' ? 'https://form.tarico.space' : undefined"
         >
           <div style="white-space: normal; font-size: 14px">
-            {{ $t(`pages.form.plan.btn.${plan.btn.text}`) }}
+            {{
+              $t(
+                `pages.form.plan.btn.${p !== "ENTERPRISE" ? "start" : "contactUs"}`
+              )
+            }}
           </div>
         </v-btn>
 
-        <div class="mt-5"></div>
-        <div>
+        <div class="mt-8">
           <div
-            v-for="(option, o) in plan.features"
+            v-for="(feature, o) in plan.features"
             :key="o"
             class="d-flex align-center ga-3 mb-2"
           >
-            <i class="fi fi-sr-shield-trust text-primary"></i>
-            {{ option }}
+            <i class="fi fi-ss-check-circle"></i>
+            {{ $t(`products.form.plans.features.${feature}`) }}
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </v-col>
+  </ui-frame>
 
-  <div class="pg-form-home--foot">
-    <div class="pg-form-home--foot__back"></div>
-
-    <v-container style="position: relative; width: calc(100% - 60px)">
+  <div class="py-16">
+    <v-container style="position: relative">
       <v-row style="position: relative">
         <v-col cols="12">
           <div class="text-center">
-            <ui-svg name="logo" size="54" class="text-primary" />
+            <ui-svg name="logo-v2" size="180" class="text-surface" />
           </div>
           <h2
-            class="text-center mx-auto mt-2"
-            style="
-              font-size: 48px;
-              max-width: 552px;
-              line-height: 1;
-              font-weight: normal;
-            "
-          >
-            {{ $t("pages.form.home.foot.title") }}
-          </h2>
+            class="text-center mx-auto mt-2 text-h4"
+            style="max-width: 552px; line-height: 1; font-weight: normal"
+            v-html="$t('pages.form.home.foot.title')"
+          ></h2>
 
-          <div class="mt-10 text-center">
+          <div class="mt-5 text-center">
             <v-btn
               href="https://form.tarico.space"
-              color="dark"
-              size="x-large"
+              color="primary"
               variant="flat"
             >
               {{ $t("pages.form.createForm") }}
@@ -445,9 +373,6 @@ const tiers = {
                 <i class="fi fi-sr-plus"></i>
               </template>
             </v-btn>
-            <div class="text-center mt-1">
-              {{ $t("pages.form.noIdNeed") }}
-            </div>
           </div>
         </v-col>
       </v-row>
@@ -463,7 +388,6 @@ const tiers = {
   padding-bottom: 80px;
   display: flex;
   align-items: center;
-  color: rgb(0, 0, 0);
 
   .pg-form-home--hero__back {
     overflow: hidden;
@@ -488,20 +412,7 @@ const tiers = {
       inset: 0;
       background-position: center;
       background-size: cover;
-      opacity: 0.02;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      z-index: 1;
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(var(--v-theme-background), 0.1) 0%,
-        rgba(var(--v-theme-background), 0.1) 80%,
-        rgba(var(--v-theme-background), 1) 100%
-      );
+      opacity: 0.06;
     }
 
     svg {
@@ -515,111 +426,6 @@ const tiers = {
   .pg-form-home__title {
     font-size: 3.2rem;
     line-height: 1;
-
-    @media (max-width: 812px) {
-      font-size: 3rem;
-    }
-
-    @media (max-width: 662px) {
-      font-size: 2rem;
-    }
-  }
-}
-
-.pg-form-home--price {
-  .price {
-    position: relative;
-
-    &::before {
-      position: absolute;
-      content: "";
-      inset: 0;
-      background: linear-gradient(
-        to bottom,
-        rgba(var(--v-theme-primary), 0.1) 0%,
-        rgba(var(--v-theme-background), 0) 80%,
-        rgba(var(--v-theme-background), 0) 100%
-      );
-    }
-
-    > * {
-      position: relative;
-    }
-
-    &.ideal {
-      &::before {
-        background: linear-gradient(
-          to bottom,
-          rgba(255, 153, 0, 0.678) 0%,
-          rgba(var(--v-theme-background), 0) 80%,
-          rgba(var(--v-theme-background), 0) 100%
-        );
-      }
-    }
-  }
-}
-
-.pg-form-home--foot {
-  padding-top: 250px;
-  padding-bottom: 100px;
-  position: relative;
-  // padding-top: 80px;
-  display: flex;
-  align-items: center;
-  color: rgb(0, 0, 0);
-  background-color: rgba(var(--v-theme-background), 1);
-
-  .pg-form-home--foot__back {
-    overflow: hidden;
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-
-    background: linear-gradient(
-      to bottom right,
-      rgba(var(--v-theme-secondary), 0.1) 0%,
-      rgba(var(--v-theme-secondary), 0) 100%
-    );
-
-    &::before {
-      content: "";
-      background-image: url("/images/grid.svg");
-      position: absolute;
-      inset: 0;
-      background-position: center;
-      background-size: cover;
-      opacity: 0.01;
-      display: none;
-    }
-
-    &::after {
-      position: absolute;
-      content: "";
-      z-index: 1;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(var(--v-theme-primary), 0.1) 0%,
-        rgba(var(--v-theme-primary), 0.1) 50%,
-        rgba(var(--v-theme-background), 1) 100%
-      );
-    }
-
-    svg {
-      display: block;
-      // position: absolute;
-      inset: 0;
-      opacity: 0.05;
-    }
-  }
-
-  .pg-form-home__title {
-    font-size: 5rem;
-    line-height: 1;
-
-    @media (max-width: 1100px) {
-      font-size: 4rem;
-    }
 
     @media (max-width: 812px) {
       font-size: 3rem;

@@ -60,7 +60,73 @@ function destroy() {
 <template>
   <div class="ui-header" style="position: absolute; top: 0; width: 100%">
     <ui-frame class="my-0 py-0">
-      <v-col class="frame border-t-0">
+      <transition
+        enter-active-class="animate__slideInDown"
+        leave-active-class="animate__slideOutUp"
+      >
+        <v-col
+          v-if="!isScrolled"
+          class="frame border-t-0 animate__animated"
+          cols="12"
+          style="--animate-duration: 250ms"
+        >
+          <div class="px-2 d-flex align-center ga-2">
+            <v-spacer />
+
+            <template
+              v-if="$route.name?.toString().split('___')[0] !== 'contact'"
+            >
+              <ui-call-me>
+                <template #activator="{ props }">
+                  <v-btn
+                    v-bind="props"
+                    color="dark"
+                    variant="text"
+                    rounded="0"
+                    data-gtm="cta_book_demo"
+                  >
+                    <template #prepend>
+                      <i
+                        class="fi fi-rr-phone-plus"
+                        style="font-size: 17px"
+                      ></i>
+                    </template>
+                    {{ $t("callMe.title") }}
+                  </v-btn>
+                </template>
+              </ui-call-me>
+
+              <v-btn
+                :to="$localePath({ name: 'contact' })"
+                size="small"
+                color="dark"
+                rounded="0"
+                variant="text"
+                :icon="$vuetify.display.xs"
+              >
+                <template #prepend>
+                  <i class="fi fi-rr-comment-alt" style="font-size: 17px"></i>
+                </template>
+                <span v-if="!$vuetify.display.xs">
+                  {{ $t("words.contactUs") }}
+                </span>
+                <i
+                  v-else
+                  class="fi fi-rr-comment-alt"
+                  style="font-size: 17px"
+                ></i>
+              </v-btn>
+            </template>
+
+            <v-btn size="32" color="dark" rounded="0" variant="text" icon>
+              <ui-svg name="language" size="16" />
+            </v-btn>
+
+            <ui-theme />
+          </div>
+        </v-col>
+      </transition>
+      <v-col :class="{ 'border-t-0': isScrolled }" class="frame" cols="12">
         <div class="d-flex align-center h-100">
           <nuxt-link
             class="d-flex align-center text-dark overflow-hidden pa-1 mx-3"

@@ -124,7 +124,7 @@ async function submit(value: { values: Record<string, any> }) {
   }
 
   try {
-    const { data: res } = await useFetch("/api/hr/book-demo", {
+    const { data: res } = await useFetch("/api/book-demo", {
       method: "POST",
       body: { content: content.join("\n") },
     });
@@ -133,8 +133,8 @@ async function submit(value: { values: Record<string, any> }) {
       $trackEvent("contact", value.values);
 
       messages.value.push({
-        text: i18n.t("pages.contact.messages.success"),
-        color: "success",
+        text: i18n.t("callMe.successMessage"),
+        color: "background",
       });
     } else {
       messages.value.push({
@@ -154,49 +154,204 @@ async function submit(value: { values: Record<string, any> }) {
 </script>
 
 <template>
-  <v-app>
-    <v-container class="py-16" style="margin-top: 80px">
+  <section class="pg-contact-hero" aria-labelledby="hero-title">
+    <div class="back" aria-hidden="true"></div>
+
+    <div class="mb-auto" style="margin-top: 100px" aria-hidden="true"></div>
+
+    <v-container :fluid="$vuetify.display.xs">
       <v-row>
-        <v-col cols="12" sm="10" md="8">
-          <h1 class="text-h3 font-weight-bold mb-5">
-            {{ $t("pages.contact.title") }}
-          </h1>
-
-          <form-model :options="options" @submit="submit">
-            <template #submit-btn>
-              <div class="w-100">
-                <i18n-t
-                  keypath="bookDemo.privacy"
-                  tag="p"
-                  class="text-body-2 my-4"
-                  style="max-width: 350px"
-                >
-                  <NuxtLink :to="$localePath({ name: 'privacy' })">
-                    {{ $t("privacy") }}
-                  </NuxtLink>
-                </i18n-t>
-
-                <div>
-                  <v-btn
-                    size="x-large"
-                    color="primary"
-                    class="mt-5"
-                    type="submit"
-                    :loading="submiting"
-                  >
-                    <template #append>
-                      <i class="fi fi-sr-paper-plane"></i>
-                    </template>
-                    {{ $t("pages.contact.form.submit") }}
-                  </v-btn>
-                </div>
-              </div>
-            </template>
-          </form-model>
+        <v-col cols="12" md="8">
+          <div class="px-5 position-relative">
+            <i class="fi fi-sr-comment-alt text-h3 mb-3"></i>
+            <h1 id="hero-title" class="title">
+              {{ $t("pages.contact.title") }}
+            </h1>
+          </div>
         </v-col>
+        <v-col cols="12" md="4"></v-col>
       </v-row>
     </v-container>
 
-    <v-snackbar-queue v-model="messages"></v-snackbar-queue>
-  </v-app>
+    <div class="mt-auto mb-10" aria-hidden="true"></div>
+  </section>
+
+  <ui-frame class="my-0">
+    <v-col cols="12" sm="6" md="4" class="frame">
+      <ui-call-me>
+        <template #activator="{ props }">
+          <v-btn
+            v-bind="props"
+            size="x-large"
+            variant="text"
+            color="dark"
+            block
+          >
+            <template #prepend>
+              <i class="fi fi-sr-phone-plus"></i>
+            </template>
+            <div
+              style="
+                white-space: normal;
+                text-align: left;
+                line-height: 1.1;
+                font-size: 14px;
+              "
+            >
+              {{ $t("callMe.title") }}
+            </div>
+          </v-btn>
+        </template>
+      </ui-call-me>
+    </v-col>
+    <v-col cols="12" sm="6" md="4" class="frame">
+      <v-btn
+        size="x-large"
+        variant="text"
+        color="dark"
+        href="mailto:commercial@tarico.io"
+        block
+      >
+        <template #prepend>
+          <i class="fi fi-sr-store-buyer"></i>
+        </template>
+        <div
+          style="
+            white-space: normal;
+            text-align: left;
+            line-height: 1.1;
+            font-size: 14px;
+          "
+        >
+          {{ $t("components.footer.items.ressources.sales") }}
+        </div>
+      </v-btn>
+    </v-col>
+    <v-col cols="12" sm="6" md="4" class="frame">
+      <v-btn
+        size="x-large"
+        variant="text"
+        color="dark"
+        href="mailto:support@tarico.io"
+        block
+      >
+        <template #prepend>
+          <i class="fi fi-ss-user-headset"></i>
+        </template>
+        <div
+          style="
+            white-space: normal;
+            text-align: left;
+            line-height: 1.1;
+            font-size: 14px;
+          "
+        >
+          {{ $t("components.footer.items.ressources.support") }}
+        </div>
+      </v-btn>
+    </v-col>
+  </ui-frame>
+
+  <v-container class="pb-16" style="margin-top: 80px">
+    <v-row>
+      <v-col cols="12" sm="10" md="8">
+        <form-model :options="options" @submit="submit">
+          <template #submit-btn>
+            <div class="w-100">
+              <i18n-t
+                keypath="bookDemo.privacy"
+                tag="p"
+                class="text-body-2 my-4"
+                style="max-width: 350px"
+              >
+                <NuxtLink :to="$localePath({ name: 'privacy' })">
+                  {{ $t("privacy") }}
+                </NuxtLink>
+              </i18n-t>
+
+              <div>
+                <v-btn
+                  color="primary"
+                  class="mt-5"
+                  type="submit"
+                  :loading="submiting"
+                >
+                  <template #append>
+                    <i class="fi fi-sr-paper-plane"></i>
+                  </template>
+                  {{ $t("pages.contact.form.submit") }}
+                </v-btn>
+              </div>
+            </div>
+          </template>
+        </form-model>
+      </v-col>
+    </v-row>
+  </v-container>
+
+  <v-snackbar-queue v-model="messages"></v-snackbar-queue>
 </template>
+
+<style lang="scss">
+.pg-contact-hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  .back {
+    overflow: hidden;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    background: rgb(var(--v-theme-dark), 0.04);
+    -webkit-mask: url("/images/grid.svg") center/cover no-repeat;
+    mask: url("/images/grid.svg") center/cover no-repeat;
+
+    &::before {
+      display: none;
+      content: "";
+      background-image: url("/images/grid.svg");
+      position: absolute;
+      inset: 0;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.04;
+      filter: sepia(100%) saturate(500%) hue-rotate(180deg);
+    }
+  }
+
+  .title {
+    font-size: 3.2rem;
+    line-height: 1;
+    font-weight: bold;
+
+    @media (max-width: 812px) {
+      font-size: 3rem;
+    }
+
+    @media (max-width: 662px) {
+      font-size: 2rem;
+    }
+  }
+
+  .bottom {
+    position: relative;
+    box-shadow:
+      rgba(0, 0, 0, 0.3) 0px 19px 38px,
+      rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+    --v-border-opacity: 0.05;
+    // color: rgb(var(--v-theme-on-primary));
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: rgba(var(--v-theme-background), 1);
+      z-index: 0;
+    }
+  }
+}
+</style>

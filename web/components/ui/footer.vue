@@ -115,7 +115,7 @@
 
       <template #append>
         <div
-          class="text-center py-3 px-10"
+          class="text-center py-3 px-5"
           style="
             border-top: 1px solid rgba(var(--v-theme-on-background), 0.04);
             background-color: rgba(var(--v-theme-on-background), 0.03);
@@ -132,12 +132,6 @@
           </div>
 
           <v-spacer />
-
-          <v-btn size="32" color="dark" rounded="0" variant="text" icon>
-            <ui-svg name="language" size="18" />
-          </v-btn>
-
-          <ui-theme />
 
           <!-- <v-btn
             href="mailto:contact@tarico.io"

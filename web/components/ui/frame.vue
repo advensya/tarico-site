@@ -175,117 +175,119 @@ onMounted(() => {
 
 <style lang="scss">
 .ui-frame {
+  --ui-frame-border-color: rgba(var(--v-border-color), 0.2);
+  --ui-frame-border: 1px dashed var(--ui-frame-border-color);
+
   margin-top: 100px;
   margin-bottom: 100px;
-}
 
-.framer {
-  --ui-frame-border: 1px dashed rgba(var(--v-border-color), 0.2);
-  margin-bottom: 80px;
+  .framer {
+    // margin-bottom: 80px;
 
-  .frame {
-    // ex: par défaut pleine largeur en mobile
-    position: relative;
+    .frame {
+      // ex: par défaut pleine largeur en mobile
+      position: relative;
 
-    &[data-border-top] {
-      border-top: var(--ui-frame-border);
-    }
-    &[data-border-right] {
-      border-right: var(--ui-frame-border);
-    }
-    &[data-border-bottom] {
-      border-bottom: var(--ui-frame-border);
-    }
-    &[data-border-left] {
-      border-left: var(--ui-frame-border);
-    }
-
-    [data-unlimit-top],
-    [data-unlimit-start],
-    [data-unlimit-end] {
-      position: absolute;
-      width: 50px;
-      height: 100px;
-      pointer-events: none;
-    }
-
-    [data-unlimit-start],
-    [data-unlimit-end] {
-      top: 100%;
-      transform: translateY(-50%);
-
-      &[data-unlimit-start] {
-        right: 100%;
-      }
-
-      &[data-unlimit-end] {
-        left: 100%;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        width: 100%;
+      &[data-border-top] {
         border-top: var(--ui-frame-border);
       }
+      &[data-border-right] {
+        border-right: var(--ui-frame-border);
+      }
+      &[data-border-bottom] {
+        border-bottom: var(--ui-frame-border);
+      }
+      &[data-border-left] {
+        border-left: var(--ui-frame-border);
+      }
 
-      &[data-unlimit-start-bottom],
-      &[data-unlimit-end-bottom] {
-        &::after {
+      [data-unlimit-top],
+      [data-unlimit-start],
+      [data-unlimit-end] {
+        position: absolute;
+        width: 50px;
+        height: 100px;
+        pointer-events: none;
+      }
+
+      [data-unlimit-start],
+      [data-unlimit-end] {
+        top: 100%;
+        transform: translateY(-50%);
+
+        &[data-unlimit-start] {
+          right: 100%;
+        }
+
+        &[data-unlimit-end] {
+          left: 100%;
+        }
+
+        &::before {
           content: "";
           position: absolute;
           top: 50%;
+          width: 100%;
+          border-top: var(--ui-frame-border);
+        }
+
+        &[data-unlimit-start-bottom],
+        &[data-unlimit-end-bottom] {
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            height: 50%;
+            width: 100%;
+          }
+
+          &[data-unlimit-start-bottom] {
+            &::after {
+              border-right: var(--ui-frame-border);
+            }
+          }
+
+          &[data-unlimit-end-bottom] {
+            &::after {
+              border-left: var(--ui-frame-border);
+            }
+          }
+        }
+      }
+
+      [data-unlimit-top] {
+        bottom: 100%;
+        transform: translateY(50%);
+
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 50%;
+          width: 100%;
+          border-top: var(--ui-frame-border);
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 50%;
           height: 50%;
           width: 100%;
         }
 
-        &[data-unlimit-start-bottom] {
+        &[data-unlimit-top-left] {
+          right: 100%;
+
           &::after {
             border-right: var(--ui-frame-border);
           }
         }
+        &[data-unlimit-top-right] {
+          left: 100%;
 
-        &[data-unlimit-end-bottom] {
           &::after {
             border-left: var(--ui-frame-border);
           }
-        }
-      }
-    }
-
-    [data-unlimit-top] {
-      bottom: 100%;
-      transform: translateY(50%);
-
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 50%;
-        width: 100%;
-        border-top: var(--ui-frame-border);
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: 50%;
-        height: 50%;
-        width: 100%;
-      }
-
-      &[data-unlimit-top-left] {
-        right: 100%;
-
-        &::after {
-          border-right: var(--ui-frame-border);
-        }
-      }
-      &[data-unlimit-top-right] {
-        left: 100%;
-
-        &::after {
-          border-left: var(--ui-frame-border);
         }
       }
     }

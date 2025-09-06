@@ -12,76 +12,25 @@ const options: Options = {
     {
       interface: {
         type: "text",
-        label: $i18n.t("words.firstName"),
+        label: $i18n.t("callMe.fields.name"),
       },
-      key: "firstName",
+      key: "name",
       validators: { required: true },
     },
     {
       interface: {
         type: "text",
-        label: $i18n.t("words.lastName"),
+        label: $i18n.t("callMe.fields.contact"),
       },
-      key: "lastName",
+      key: "contact",
       validators: { required: true },
     },
     {
       interface: {
-        type: "email",
-        label: $i18n.t("words.workEmail"),
+        type: "longtext",
+        label: $i18n.t("callMe.fields.message"),
       },
-      key: "email",
-      validators: { required: true },
-    },
-    {
-      interface: {
-        type: "phone",
-        label: $i18n.t("words.phone"),
-      },
-      key: "phone",
-      validators: { required: true },
-    },
-    {
-      interface: {
-        type: "text",
-        label: $i18n.t("words.companyName"),
-      },
-      key: "companyName",
-      validators: { required: true },
-    },
-    {
-      interface: {
-        type: "select",
-        label: $i18n.t("words.companySize"),
-      },
-      key: "companySize",
-      validators: {
-        options: {
-          args: [
-            {
-              value: "1-20",
-              title: `1-20 ${$i18n.t("words.persons")}`,
-            },
-            {
-              value: "21-200",
-              title: `21-200 ${$i18n.t("words.persons")}`,
-            },
-            {
-              value: "200-500",
-              title: `200-500 ${$i18n.t("words.persons")}`,
-            },
-            {
-              value: "501-2000",
-              title: `501-2000 ${$i18n.t("words.persons")}`,
-            },
-            {
-              value: "+2000",
-              title: `+2000 ${$i18n.t("words.persons")}`,
-            },
-          ],
-        },
-        required: true,
-      },
+      key: "message",
     },
   ],
   interfaces: {},
@@ -90,10 +39,6 @@ const openCal = ref<HTMLButtonElement>();
 const messages = ref<Array<{ text: string; color: string }>>([]);
 const submiting = ref(false);
 const isDialogOpen = defineModel({ default: false });
-
-onMounted(() => {
-  useCal();
-});
 
 async function submit(value: { values: Record<string, any> }) {
   submiting.value = false;
@@ -107,15 +52,14 @@ async function submit(value: { values: Record<string, any> }) {
   }
 
   try {
-    const { data: res } = await useFetch("/api/book-demo", {
+    const { data: res } = await useFetch("/api/call-me", {
       method: "POST",
       body: { content: content.join("\n") },
     });
 
     if (res.value?.success) {
-      $trackEvent("hr-book-demo", value.values);
+      $trackEvent("call-me", value.values);
       isDialogOpen.value = false;
-      // openCal.value?.click();
     } else {
       messages.value.push({
         text: $i18n.t("pages.contact.messages.error"),
@@ -142,7 +86,7 @@ async function submit(value: { values: Record<string, any> }) {
         color="primary"
         rounded="0"
       >
-        {{ $t("words.bookDemo") }}
+        {{ $t("callMe.title") }}
       </v-btn>
 
       <slot name="activator" :props />
@@ -151,9 +95,9 @@ async function submit(value: { values: Record<string, any> }) {
     <v-card>
       <div class="rounded-xl pa-5 pa-md-10 bg-background">
         <v-container>
-          <h5 class="text-h4 mb-5">
-            {{ $t("bookDemo.label") }}
-          </h5>
+          <div class="mb-5">
+            {{ $t("callMe.text") }}
+          </div>
 
           <form-model :options="options" @submit="submit">
             <template #submit-btn>
@@ -170,7 +114,7 @@ async function submit(value: { values: Record<string, any> }) {
                   type="submit"
                   :loading="submiting"
                 >
-                  {{ $t("bookDemo.submit") }}
+                  {{ $t("callMe.submit") }}
                 </v-btn>
               </div>
             </template>

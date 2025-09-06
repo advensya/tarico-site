@@ -13,7 +13,6 @@ const theme = useTheme();
     icon
     @click="theme.cycle(['dark', 'light', 'system'])"
   >
-    <i v-if="theme.current.value.dark" class="fi fi-rr-moon"></i>
-    <i v-else class="fi fi-rr-brightness text-h6"></i>
+    <ui-svg name="brigthness" size="18" />
   </v-btn>
 </template>

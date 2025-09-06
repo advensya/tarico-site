@@ -372,7 +372,7 @@ const readMoreAboutTarico = ref(false);
           {{ $t("words.contactUs") }}
         </v-btn>
 
-        <ui-book-demo>
+        <ui-call-me>
           <template #activator="{ props }">
             <v-btn
               v-bind="props"
@@ -382,10 +382,10 @@ const readMoreAboutTarico = ref(false);
               :aria-label="$t('words.bookDemo')"
               data-gtm="cta_book_demo"
             >
-              {{ $t("words.bookDemo") }}
+              {{ $t("callMe.title") }}
             </v-btn>
           </template>
-        </ui-book-demo>
+        </ui-call-me>
       </div>
     </div>
   </v-container>
