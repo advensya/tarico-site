@@ -346,6 +346,41 @@ const readMoreAboutTarico = ref(false);
     </template>
   </ui-frame>
 
+  <v-container class="py-16">
+    <v-row>
+      <v-col cols="12">
+        <div class="mx-auto" style="max-width: 662px">
+          <div class="d-flex justify-center mb-3">
+            <i class="fi fi-sr-quote-right text-h3 opacity-30"></i>
+          </div>
+          <div class="text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nobis
+            facere autem earum culpa excepturi vero, minima dolorum itaque
+            molestiae accusamus! Non delectus aut vel quis neque quos earum at?
+          </div>
+
+          <div class="d-flex align-center justify-center ga-3 mt-5">
+            <img
+              src="https://i.pinimg.com/736x/eb/ac/4d/ebac4dee2b6fdb727609e5856cac049f.jpg"
+              style="
+                width: 48px;
+                height: 48px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 16em;
+                display: block;
+              "
+            />
+            <div style="line-height: 1">
+              <div>Cheikhna DIALLO</div>
+              <div class="text-h6">DG Scorpion</div>
+            </div>
+          </div>
+        </div>
+      </v-col>
+    </v-row>
+  </v-container>
+
   <v-container class="my-0" aria-labelledby="about-title">
     <v-row class="pa-5" justify="start">
       <v-col cols="12" sm="8" order="1">
