@@ -14,59 +14,7 @@ const readMoreAboutTarico = ref(false);
 <template>
   <ui-hero-one class="pg-index-hero" />
 
-  <v-container class="my-0" aria-labelledby="about-title">
-    <v-row class="pa-5" justify="start">
-      <v-col cols="12" sm="8" order="1">
-        <h2
-          id="about-title"
-          class="text-h4 font-weight-bold mb-4"
-          style="line-height: 1; text-wrap: balance"
-          v-html="$t('pages.index.about.title')"
-        ></h2>
-      </v-col>
-
-      <v-col cols="12" order="2">
-        <p
-          style="max-width: 882px; text-wrap: pretty; hyphens: auto"
-          v-html="$t('pages.index.about.text')"
-        ></p>
-      </v-col>
-    </v-row>
-  </v-container>
-
-  <ui-frame class="my-0" role="region" aria-labelledby="values-title">
-    <template #prepend>
-      <h2
-        id="values-title"
-        class="text-h4 pa-5 font-weight-bold"
-        style="line-height: 1; text-wrap: balance"
-        v-html="$t('pages.index.values.title')"
-      ></h2>
-    </template>
-
-    <v-col v-for="i in 3" :key="i" cols="12" sm="6" md="4" class="frame">
-      <h3
-        class="text-h5 pa-5"
-        style="
-          background-color: rgba(var(--v-theme-surface), 0.3);
-          text-wrap: pretty;
-        "
-        v-html="$t(`values.${i - 1}.title`)"
-        :id="`value-title-${i}`"
-      ></h3>
-      <div class="pa-5">
-        <p
-          class="mt-3"
-          style="hyphens: auto; text-wrap: pretty"
-          v-html="$t(`values.${i - 1}.text`)"
-          :id="`value-text-${i}`"
-          :aria-labelledby="`value-title-${i}`"
-        ></p>
-      </div>
-    </v-col>
-  </ui-frame>
-
-  <v-container class="mt-16" aria-labelledby="products-title">
+  <v-container class="mt-0" aria-labelledby="products-title">
     <v-row class="pa-5">
       <v-col cols="12" sm="4" order="0" order-sm="2">
         <div class="d-flex">
@@ -190,32 +138,51 @@ const readMoreAboutTarico = ref(false);
     </v-row>
   </v-container>
 
-  <ui-frame class="mt-0" role="region" aria-labelledby="products-main-title">
+  <ui-frame class="my-0" role="region" aria-labelledby="products-main-title">
     <v-col cols="12" class="frame">
       <v-row>
         <v-col cols="12" md="6">
           <div class="pa-5">
             <h3
               id="products-main-title"
-              class="text-h6 font-weight-bold"
+              class="text-h6"
               style="text-wrap: balance"
               v-html="Products.hr.name"
             ></h3>
 
-            <!-- intro RH -->
             <p
               id="prod-intro-hr"
               class="mt-2"
               style="text-wrap: pretty; hyphens: auto"
-              v-html="$t(`products.hr.intro`)"
+              v-html="$t(`pages.index.products.hr.title`)"
             ></p>
 
-            <p class="mt-5" style="text-wrap: pretty; hyphens: auto">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
-              tempora ipsum facilis consequuntur minus omnis magni, nobis
-              quaerat magnam ut, molestias, atque aut et accusamus enim nihil
-              incidunt nemo architecto.
-            </p>
+            <p
+              class="mt-5"
+              style="text-wrap: pretty; hyphens: auto"
+              v-html="$t(`products.hr.description`)"
+            ></p>
+
+            <div class="mt-5">
+              <h4 class="text-h6">
+                {{ $t("pages.index.products.hr.subtitle") }}
+              </h4>
+              <div
+                v-for="feature in ['01', '02', '03', '04']"
+                :key="feature"
+                class="d-flex align-center ga-2"
+              >
+                <i class="fi fi-ss-check-circle"></i>
+                <span
+                  v-html="$t(`products.hr.features.${feature}.title`)"
+                ></span>
+              </div>
+
+              <div class="d-flex align-center ga-2 mt-5">
+                <!-- <ui-svg name="lamp-2" size="24" aria-hidden="true" /> Jusqu’à -->
+                {{ $t("pages.index.products.hr.savedTime") }}
+              </div>
+            </div>
 
             <div
               class="d-flex align-center ga-2 flex-wrap mt-5"
@@ -223,6 +190,21 @@ const readMoreAboutTarico = ref(false);
               :aria-label="$t('hero.one.cta')"
               :aria-describedby="'prod-intro-hr'"
             >
+              <ui-book-demo
+                product="hr"
+                :aria-label="$t('pages.index.products.hr.bookDemo')"
+              >
+                <template #activator="{ props }">
+                  <v-btn
+                    v-bind="props"
+                    rounded="0"
+                    :aria-label="$t('pages.index.products.hr.bookDemo')"
+                  >
+                    {{ $t("pages.index.products.hr.bookDemo") }}
+                  </v-btn>
+                </template>
+              </ui-book-demo>
+
               <v-btn
                 color="background"
                 rounded="0"
@@ -232,8 +214,6 @@ const readMoreAboutTarico = ref(false);
               >
                 {{ $t("hero.one.cta") }}
               </v-btn>
-
-              <ui-book-demo product="hr" :aria-label="$t('hero.one.cta')" />
             </div>
           </div>
         </v-col>
@@ -243,24 +223,27 @@ const readMoreAboutTarico = ref(false);
     </v-col>
 
     <v-col
+      v-for="code in ['id', 'onboarding', 'form', 'heavy']"
+      :key="code"
       cols="12"
       sm="6"
       md="3"
-      v-for="code in ['id', 'onboarding', 'form', 'heavy']"
-      :key="code"
       class="frame"
       role="region"
+      style="
+        background-color: rgba(var(--v-theme-surface), 0.3);
+        text-wrap: pretty;
+      "
       :aria-labelledby="`prod-title-${code}`"
     >
       <div class="pa-5">
         <h3
-          class="text-h6 font-weight-bold"
+          class="text-h6"
           style="text-wrap: balance"
           v-html="Products[code].name"
           :id="`prod-title-${code}`"
         ></h3>
 
-        <!-- intro cartes -->
         <p
           :id="`prod-intro-${code}`"
           class="mt-2"
@@ -280,6 +263,67 @@ const readMoreAboutTarico = ref(false);
           {{ $t("words.readMore") }}
         </nuxt-link>
       </div>
+    </v-col>
+
+    <v-col cols="12" class="frame">
+      <v-container class="w-100">
+        <v-row class="bg">
+          <v-col cols="12" sm="6">
+            <div class="pa-5">
+              <h3
+                id="products-main-title"
+                class="text-h6"
+                style="text-wrap: balance"
+                v-html="`${Products.id.name}`"
+              ></h3>
+
+              {{ $t("pages.index.products.id.title") }}
+
+              <p
+                id="prod-intro-id"
+                class="mt-2"
+                style="text-wrap: pretty; hyphens: auto"
+                v-html="$t(`pages.index.products.id.description`)"
+              ></p>
+
+              <div
+                class="d-flex align-center ga-2 flex-wrap mt-5 mb-5"
+                role="group"
+                :aria-label="$t('products.id.cta')"
+                :aria-describedby="'prod-intro-id'"
+              >
+                <v-btn
+                  color="primary"
+                  rounded="0"
+                  class="border"
+                  :to="$localePath(Products.id.to)"
+                  :aria-label="$t('products.id.cta')"
+                >
+                  {{ $t("products.id.cta") }}
+                </v-btn>
+              </div>
+            </div>
+          </v-col>
+
+          <v-col cols="12" sm="6">
+            <div class="pa-5">
+              <h4 class="text-h6 mb-3">
+                {{ $t("pages.index.products.id.subtitle") }}
+              </h4>
+              <div
+                v-for="feature in ['01', '02', '03']"
+                :key="feature"
+                class="d-flex align-center ga-2"
+              >
+                <i class="fi fi-ss-check-circle"></i>
+                <span
+                  v-html="$t(`products.id.features.${feature}.title`)"
+                ></span>
+              </div>
+            </div>
+          </v-col>
+        </v-row>
+      </v-container>
     </v-col>
 
     <template #append>
@@ -302,48 +346,57 @@ const readMoreAboutTarico = ref(false);
     </template>
   </ui-frame>
 
-  <ui-frame role="region" aria-labelledby="benefits-title">
-    <template #prepend>
-      <div class="pa-5 position-relative">
-        <ui-svg name="lamp-2" size="54" aria-hidden="true" />
+  <v-container class="my-0" aria-labelledby="about-title">
+    <v-row class="pa-5" justify="start">
+      <v-col cols="12" sm="8" order="1">
         <h2
-          id="benefits-title"
-          class="mt-2 font-weight-bold"
-          style="
-            max-width: 662px;
-            line-height: 1;
-            font-size: clamp(2rem, 8.2352941176vw, 4rem);
-            text-wrap: balance;
-          "
-        >
-          {{ $t(`pages.index.benefits.title`) }}
-        </h2>
-      </div>
+          id="about-title"
+          class="text-h4 font-weight-bold mb-4"
+          style="line-height: 1; text-wrap: balance"
+          v-html="$t('pages.index.about.title')"
+        ></h2>
+      </v-col>
+
+      <v-col cols="12" order="2">
+        <p
+          style="max-width: 882px; text-wrap: pretty; hyphens: auto"
+          v-html="$t('pages.index.about.text')"
+        ></p>
+      </v-col>
+    </v-row>
+  </v-container>
+
+  <ui-frame class="mt-0" role="region" aria-labelledby="values-title">
+    <template #prepend>
+      <h2
+        id="values-title"
+        class="text-h4 pa-5 font-weight-bold"
+        style="line-height: 1; text-wrap: balance"
+        v-html="$t('pages.index.values.title')"
+      ></h2>
     </template>
 
-    <v-col
-      v-for="i in 4"
-      :key="i"
-      cols="12"
-      sm="6"
-      class="frame"
-      role="region"
-      :aria-labelledby="`benefit-title-${i}`"
-    >
+    <v-col v-for="i in 3" :key="i" cols="12" sm="6" md="4" class="frame">
+      <h3
+        class="text-h5 pa-5"
+        style="
+          background-color: rgba(var(--v-theme-surface), 0.3);
+          text-wrap: pretty;
+        "
+        v-html="$t(`values.${i - 1}.title`)"
+        :id="`value-title-${i}`"
+      ></h3>
       <div class="pa-5">
-        <h3
-          :id="`benefit-title-${i}`"
-          class="text-h6 font-weight-bold"
-          style="text-wrap: balance"
-        >
-          {{ $t(`pages.index.benefits.list.${i - 1}.title`) }}
-        </h3>
-
-        <p class="mt-2" style="text-wrap: pretty; hyphens: auto">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          ipsum enim, fuga illo cumque odit est, dolore sed quisquam voluptate
-          nobis ab nisi soluta accusamus dolorum sunt, nihil rem ut.
-        </p>
+        <b>
+          {{ $t(`values.${i - 1}.intro`) }}
+        </b>
+        <p
+          class="mt-3"
+          style="hyphens: auto; text-wrap: pretty"
+          v-html="$t(`values.${i - 1}.text`)"
+          :id="`value-text-${i}`"
+          :aria-labelledby="`value-title-${i}`"
+        ></p>
       </div>
     </v-col>
   </ui-frame>
@@ -355,24 +408,15 @@ const readMoreAboutTarico = ref(false);
     :aria-label="`${$t('words.contactUs')} / ${$t('words.bookDemo')}`"
   >
     <div class="d-flex justify-center align-center flex-column">
+      <h2>
+        {{ $t("pages.index.cta.title") }}
+      </h2>
       <div
-        class="d-flex align-center ga-2 flex-wrap mt-10"
+        class="d-flex align-center ga-2 flex-wrap mt-5"
         role="group"
         :aria-label="`${$t('words.contactUs')} + ${$t('words.bookDemo')}`"
       >
-        <v-btn
-          color="background"
-          rounded="0"
-          class="border"
-          :to="$localePath({ name: 'contact' })"
-          prefetch
-          :aria-label="$t('words.contactUs')"
-          data-gtm="cta_contact"
-        >
-          {{ $t("words.contactUs") }}
-        </v-btn>
-
-        <ui-call-me>
+        <ui-book-demo product="hr">
           <template #activator="{ props }">
             <v-btn
               v-bind="props"
@@ -382,10 +426,22 @@ const readMoreAboutTarico = ref(false);
               :aria-label="$t('words.bookDemo')"
               data-gtm="cta_book_demo"
             >
-              {{ $t("callMe.title") }}
+              {{ $t("pages.index.cta.actions.hr") }}
             </v-btn>
           </template>
-        </ui-call-me>
+        </ui-book-demo>
+
+        <v-btn
+          color="background"
+          rounded="0"
+          class="border"
+          prefetch
+          :to="$localePath({ name: 'id' })"
+          :aria-label="$t('pages.index.cta.actions.id')"
+          data-gtm="cta_tarico_id"
+        >
+          {{ $t("pages.index.cta.actions.id") }}
+        </v-btn>
       </div>
     </div>
   </v-container>

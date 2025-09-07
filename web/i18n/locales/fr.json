@@ -1,6 +1,6 @@
 {
   "site": {
-    "description": "La technologie au service de vos organisations."
+    "description": "Innover. Connecter. Transformer."
   },
   "words": {
     "welcome": "bienvenue",
@@ -44,8 +44,8 @@
 
   "hero": {
     "one": {
-      "title": "La technologie au service de vos organisations.",
-      "text": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa repudiandae sit quos ipsam dolores iusto, quo dignissi",
+      "title": "Innover. Connecter. Transformer.",
+      "text": "La Tranformation digitale c'est maintenant.",
       "cta": "Découvrir Tarico HR",
       "all": "Explorer la suite Tarico"
     }
@@ -54,7 +54,7 @@
   "pages": {
     "index": {
       "meta": {
-        "title": "La technologie au service de vos organisations.",
+        "title": "Innover. Connecter. Transformer.",
         "description": "Nos solutions digitales sont conçues pour simplifier, sécuriser, et dynamiser la gestion d'entreprise."
       },
 
@@ -67,11 +67,32 @@
         "title": "Des solutions logicielles adaptées aux entreprises africaines",
         "text": "Les outils numériques actuels présentent des complexités, rigidités, et une déconnexion face aux besoins réels des entreprises africaines. Tarico propose une alternative : des logiciels intuitifs, utiles, et centrés sur l'utilisateur, conçus pour simplifier la gestion et accélérer les processus.<br /><br /> Notre démarche a débuté par la réinvention du formulaire en ligne. Forts de ce succès, nous avons élargi notre gamme pour répondre à d’autres besoins essentiels, guidés par une philosophie d'innover, connecter, et transformer.",
         "seeAll": "Tous nos produits",
-        "readMore": "Lire la suite"
+        "readMore": "Lire la suite",
+
+        "hr": {
+          "title": "Transformez la gestion, révélez le potentiel",
+          "subtitle": "Fonctionnalités clés :",
+          "savedTime": "Jusqu’à 40% de temps gagné sur vos tâches administratives.",
+          "bookDemo": "Essayez Tarico HR gratuitement"
+        },
+        "id": {
+          "title": "Votre identité numérique sûre et unique",
+          "description": "Un seul profil digital sécurisé pour accéder à vos services essentiels.",
+          "subtitle": "Services intégrés :"
+        }
       },
 
       "values": {
         "title": "Nos valeurs"
+      },
+
+      "cta": {
+        "title": "La Tranformation digitale c'est maintenant.",
+
+        "actions": {
+          "hr": "Je veux essayer Tarico HR",
+          "id": "Je découvre Tarico ID"
+        }
       },
 
       "benefits": {
@@ -307,10 +328,25 @@
 
   "products": {
     "hr": {
-      "intro": "La gestion RH réinventée : congés, absences, pointage, bilans sociaux → simple, flexible, mobile."
+      "intro": "La gestion RH réinventée : congés, absences, pointage, bilans sociaux → simple, flexible, mobile.",
+      "description": "Tarico HR est une solution digitale conçue pour répondre aux besoins spécifiques des entreprises africaines. Elle simplifie la gestion des congés, des absences, le pointage, et offre des outils complets pour le suivi des talents et la production de bilans sociaux.",
+
+      "features": {
+        "01": { "title": "Gestion simple des congés et absences" },
+        "02": { "title": "Plannings digitaux et pointage mobile" },
+        "03": { "title": "Rapports sociaux clairs et fiables" },
+        "04": { "title": "Recrutement et intégration rapides" }
+      }
     },
     "id": {
-      "intro": "L’identité numérique sécurisée pour administrations et institutions."
+      "intro": "L’identité numérique sécurisée pour administrations et institutions.",
+      "cta": "Découvrez Tarico ID",
+
+      "features": {
+        "01": { "title": "Diplômes et attestations" },
+        "02": { "title": "Dossier médical numérique" },
+        "03": { "title": "Identité bancaire et inclusion financière" }
+      }
     },
     "form": {
       "intro": "Collecte de données simple, rapide et intelligente.",
@@ -442,17 +478,20 @@
   "values": [
     {
       "title": "Innover",
-      "text": "L’Innovation est au cœur des solutions Tarico. Les outils digitaux sont conçus pour répondre aux défis spécifiques des marchés africains, en simplifiant la gestion des données et des processus. Cette approche permet d’apporter une valeur ajoutée concrète, en adaptant les technologies aux réalités locales et en facilitant l’adoption par les utilisateurs."
+      "intro": "Des solutions simples et adaptées",
+      "text": "Nous créons des solutions digitales simples et efficaces, pensées pour les réalités spécifiques de l’Afrique. L’innovation chez Tarico, c’est remettre l’utilisateur au centre, développer des outils intuitifs qui répondent vraiment à vos besoins, et vous permettre de rester à la pointe dans un monde qui change vite."
     },
 
     {
       "title": "Connecter",
-      "text": "Tarico facilite l’Interconnexion entre les acteurs économiques, les collaborateurs et les systèmes d’information. En intégrant les différents services et utilisateurs au sein des entreprises, les solutions améliorent la collaboration, fluidifient les échanges et renforcent l’efficacité opérationnelle, même dans des environnements où les infrastructures sont parfois limitées."
+      "intro": "Relier équipes et services",
+      "text": "Nous croyons que la clé du succès réside dans la collaboration. Tarico facilite la connexion entre vos équipes, vos services et vos partenaires, à travers des plateformes intégrées qui fluidifient les échanges et renforcent la confiance. Plus qu’un logiciel, c’est un pont numérique entre humains et technologies."
     },
 
     {
       "title": "Transformer",
-      "text": "La Transformation numérique est un levier essentiel pour la croissance durable des entreprises africaines. Tarico accompagne cette transition en proposant des outils modernes, automatisés et performants, qui permettent de passer d’une gestion traditionnelle à une gestion agile et innovante, favorisant ainsi une compétitivité accrue et une inclusion économique renforcée."
+      "intro": "Passer au digital en toute confiance",
+      "text": "Passer du mode traditionnel à une gestion digitale agile, c’est accomplir un vrai saut en avant. Notre ambition est de vous accompagner dans cette transformation pour que votre entreprise ou votre administration gagne en réactivité, en transparence et en performance, tout en valorisant vos talents et votre potentiel."
     }
   ],
 

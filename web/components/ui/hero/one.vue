@@ -16,14 +16,14 @@ import "swiper/css/pagination";
 
     <v-container :fluid="$vuetify.display.xs">
       <v-row>
-        <v-col cols="12" md="8">
+        <v-col cols="12">
           <div class="px-5 position-relative">
             <h1
               id="hero-title"
               class="title"
               v-html="$t('hero.one.title')"
             ></h1>
-            <!-- <p class="mt-5" v-html="$t('hero.one.text')"></p> -->
+            <p class="mt-2" v-html="$t('hero.one.text')"></p>
 
             <div
               class="d-flex align-center ga-2 flex-wrap mt-5"
