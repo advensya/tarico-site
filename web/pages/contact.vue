@@ -14,6 +14,11 @@ const i18n = useI18n();
 const submiting = ref(false);
 const { $trackEvent } = useNuxtApp();
 
+useSeoMeta({
+  title: i18n.t("pages.contact.meta.title"),
+  description: i18n.t("pages.contact.meta.description"),
+});
+
 const options: Options = {
   title: "Modifier",
   schemaOptions: [

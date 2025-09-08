@@ -166,10 +166,16 @@ function destroy() {
                 A propose de nous
               </nuxt-link> -->
 
+          <ui-book-demo
+            v-if="$route.name?.toString().split('___')[0] === 'hr'"
+            product="hr"
+          />
+
           <v-btn
+            v-else
             variant="flat"
             color="primary"
-            class="mr-3 ml-auto"
+            class="ml-auto"
             rounded="0"
             :active="false"
             :to="$localePath({ name: 'hr' })"
@@ -180,6 +186,7 @@ function destroy() {
               <i class="fi fi-rr-angle-small-right"></i>
             </template>
           </v-btn>
+          <div class="pr-3"></div>
         </div>
       </v-col>
     </ui-frame>
