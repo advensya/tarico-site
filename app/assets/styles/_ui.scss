@@ -1,0 +1,32 @@
+.ui-link {
+  color: rgb(var(--v-theme-dark));
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-block-end-width: thin;
+  border-block-end-style: dashed;
+  border-block-end-color: transparent;
+
+  &.permanant,
+  &:hover {
+    border-block-end-color: currentColor; //rgba(var(--v-theme-primary));
+  }
+
+  &:hover {
+    color: rgb(var(--v-theme-primary));
+  }
+}
+
+.ui-sticky-bottom,
+.ui-sticky-top {
+  position: sticky;
+  z-index: 10;
+  background-color: rgb(var(--v-theme-background));
+}
+.ui-sticky-bottom {
+  bottom: 0;
+}
+.ui-sticky-top {
+  top: 0;
+}

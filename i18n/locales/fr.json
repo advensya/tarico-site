@@ -1,0 +1,1033 @@
+{
+	"site": {
+		"description": "Innover. Connecter. Transformer."
+	},
+	"words": {
+		"welcome": "bienvenue",
+		"firstName": "Prénom",
+		"lastName": "Nom",
+		"email": "Email",
+		"phone": "Numéro téléphone",
+		"workEmail": "Email professionelle",
+		"companyName": "Nome de l'entreprise",
+		"companySize": "Taille de l'entreprise",
+		"persons": "Personnes",
+		"contactUs": "Nous contacter",
+		"bookDemo": "Demander une démo",
+		"readMore": "Lire la suite",
+		"signin": "Se connecter",
+		"signup": "Créer un compte",
+		"startFree": "Commencer gratuitement",
+		"exploreSuite": "Explorer la suite Tarico",
+		"start": "Commencer",
+		"install": "Installer sur mon environnement",
+		"startWithApp": "Débuter avec ce produit",
+		"sendMail": "Envoyer un email"
+	},
+
+	"tou": "Conditions d'utilisation",
+	"privacy": "Politique de confidentialité",
+
+	"bookDemo": {
+		"title": "Réserver une démo",
+		"label": "Réservez une démonstration gratuite de 30 minutes",
+		"submit": "Demander une démo",
+		"bookDate": "Choisir une date et une heure",
+		"privacy": "Nous respectons vos données. En soumettant ce formulaire, vous acceptez que nous vous contactions au sujet de nos produits et services, conformément à notre {0}."
+	},
+
+	"callMe": {
+		"title": "Je souhaite être rappeler",
+		"text": "Besoin d’une démo de Tarico HR ou d’informations sur nos solutions ? Laissez vos coordonnées, nous vous rappelons sous 24h.",
+
+		"fields": {
+			"name": "Nom et prénoms",
+			"contact": "Email ou Téléphone",
+			"message": "Message ex.: Je souhaite une démo de Tarico HR"
+		},
+
+		"submit": "Envoyer",
+		"successMessage": " Merci ! Votre demande a bien été envoyée. Notre équipe vous contactera sous 24h."
+	},
+
+	"hero": {
+		"one": {
+			"title": "Innover. Connecter. Transformer.",
+			"text": "La Tranformation digitale c'est maintenant.",
+			"cta": "Découvrir Tarico HR",
+			"all": "Explorer la suite Tarico"
+		}
+	},
+
+	"pages": {
+		"index": {
+			"meta": {
+				"title": "Innover. Connecter. Transformer.",
+				"description": "Nos solutions digitales sont conçues pour simplifier, sécuriser, et dynamiser la gestion d'entreprise."
+			},
+
+			"products": {
+				"discoverRhSolutions": "Découvrez nos solutions RH"
+			},
+
+			"about": {
+				"title": "Avec Tarico, transformez vos opérations et accélérez votre croissance.",
+				"text": "Face aux défis uniques des entreprises, Tarico propose une approche nouvelle. Nos solutions digitales sont conçues pour simplifier, sécuriser, et dynamiser la gestion d'entreprise.  Tarico simplifie la gestion d’entreprise en Afrique grâce à des outils digitaux puissants, accessibles et sécurisés."
+			},
+
+			"values": {
+				"title": "Nos valeurs"
+			},
+
+			"cta": {
+				"title": "La Tranformation digitale c'est maintenant.",
+
+				"actions": {
+					"hr": "Je veux essayer Tarico HR",
+					"id": "Je découvre Tarico ID"
+				}
+			}
+		},
+
+		"company": {
+			"meta": {
+				"description": "L’ambition de transformer l’Afrique par la digitalisation"
+			},
+			"header": {
+				"title": "L’ambition de transformer l’Afrique par la digitalisation",
+				"description": "Chez Codia, nous simplifions la gestion des données pour les entreprises, en leur offrant des solutions digitales innovantes qui facilitent l'accès, l'analyse et l'utilisation efficace de leurs informations."
+			},
+			"summary": {
+				"text": "Chez Codia, nous transformons la manière dont les entreprises interagissent avec leurs clients.</b> Spécialistes des solutions digitales sur mesure, nous réinventons les processus traditionnels pour créer des outils puissants, intuitifs et efficaces.<br><br> Notre objectif est clair : <b>connecter plus intelligemment les entreprises à leur clientèle</b>, en misant sur des technologies modernes et une expérience utilisateur sans faille. <b>Codia, c’est l’alliance de l’innovation et de la simplicité au service de la performance."
+			},
+			"contactUs": "Nous contacter",
+
+			"leadership": {
+				"title": "Notre leadership"
+			}
+		},
+
+		"products": {
+			"cover": {
+				"title": "Une suite logicielle pensée pour l’efficacité",
+				"text": "Chez Tarico, chaque logiciel est né d’un besoin identifié sur le terrain. Nous avons écouté nos utilisateurs, compris leurs blocages, et développé des outils qui répondent avec précision à leurs enjeux. Notre suite logicielle est le fruit d’une vision pratique, conçue pour être rapidement opérationnelle et réellement utile au quotidien."
+			},
+			"cta": "Contacter l'équipe commerciale",
+			"seeMore": "En savoir plus",
+
+			"index": {
+				"title": "Des solutions logicielles adaptées aux entreprises africaines",
+				"text": "Les outils numériques actuels présentent des complexités, rigidités, et une déconnexion face aux besoins réels des entreprises africaines. Tarico propose une alternative : des logiciels intuitifs, utiles, et centrés sur l'utilisateur, conçus pour simplifier la gestion et accélérer les processus.<br /><br /> Notre démarche a débuté par la réinvention du formulaire en ligne. Forts de ce succès, nous avons élargi notre gamme pour répondre à d’autres besoins essentiels, guidés par une philosophie d'innover, connecter, et transformer.",
+				"seeAll": "Tous nos produits",
+				"readMore": "Lire la suite",
+
+				"moreTools": "Encore plus d'outils"
+			}
+		},
+		"blog": {
+			"index": {
+				"readMore": "Lire la suite"
+			}
+		},
+		"contact": {
+			"meta": {
+				"title": "Contactez-nous",
+				"description": "Nos solutions digitales sont conçues pour simplifier, sécuriser, et dynamiser la gestion d'entreprise."
+			},
+
+			"title": "Contactez-nous",
+
+			"form": {
+				"firstName": "Prénom",
+				"lastName": "Nom",
+
+				"message": "Message",
+				"submit": "Envoyer",
+				"email": "E-mail",
+
+				"errors": {
+					"required": "Ce champ est requis",
+					"invalidEmail": "Adresse email invalide"
+				}
+			},
+			"messages": {
+				"success": "Votre message a bien été transmis à notre équipe, qui reviendra vers vous dès que possible.",
+				"error": "Oups… une erreur est survenue lors de l’envoi de votre message. Veuillez réessayer dans quelques instants ou nous contacter directement par email."
+			},
+
+			"support": {
+				"title": "Support technique",
+
+				"form": {
+					"name": "Prénoms et nom",
+					"email": "Adresse email",
+					"type": "Type d'incident",
+					"priority": "Priorité",
+					"description": "Description",
+					"files": "Joindre des fichiers (capture d'écran, preuve de test, ...)",
+
+					"priorities": {
+						"urgent": "Urgent",
+						"high": "Haute",
+						"medium": "Moyenne",
+						"low": "Basse",
+						"not_urgent": "Non urgent"
+					},
+
+					"types": {
+						"bug": "Anomalie",
+						"feature": "Amélioration",
+						"question": "Question générale",
+						"feedback": "Retour d'expérience",
+						"security_issue": "Problème de sécurité"
+					}
+				}
+			}
+		},
+		"career": {
+			"title": "Rejoignez-nous",
+			"header": {
+				"title": "Votre prochain grand changement de carrière",
+				"summary": "Chez Codia, nous ne créons pas, nous innovons. <br/> Nous ne travaillons pas, nous collaborons. <br/> Nous n’avons pas de bureaux, nous avons un terrain de jeu.",
+				"spontaneousApplication": "Candaidature spontanée",
+				"SeeOurOffers": "Voir nos offres"
+			},
+
+			"object": {
+				"text": "Chez Codia, notre ambition est claire : devenir le leader incontesté de la digitalisation en Afrique. Nous croyons fermement au potentiel immense du continent et nous engageons à transformer les entreprises africaines grâce à des solutions digitales innovantes, adaptées et accessibles. En repensant les processus traditionnels, en innovant sans relâche, et en rapprochant entreprises et clients, nous visons à établir de nouveaux standards pour un avenir numérique prospère en Afrique. Codia n'est pas seulement un acteur de la digitalisation, nous sommes un moteur de changement et de croissance pour tout un continent.",
+				"subtext": "Nous voulons nous entourer des meilleurs pour atteindre nos objectifs. Prêt pour un défi (et prêt pour une aventure)? Rejoignez-nous."
+			},
+
+			"whyWorkWithUs": {
+				"title": "Beaucoup de raisons d’aimer travailler avec nous",
+				"valuables": [
+					{
+						"icon": "other/030",
+						"title": "Nous sommes optimistes",
+						"text": "Nous croyons que tout est possible et que nous pouvons faire des choses incroyables. Nous croyons que nous avons un avenir passionnant devant nous. Nous apprécions ce voyage que nous faisons ensemble et nous recherchons le plaisir dans ce que nous faisons. Nous assumons toujours de bonnes intentions, et nous apprécions profondément la gentillesse et l’empathie."
+					},
+					{
+						"icon": "other/029",
+						"title": "Nous sommes confiants, mais humbles",
+						"text": "Nous croyons en nous-mêmes et aimons vraiment apprendre en tant qu’individus et en tant qu’équipe. Nous sommes curieux de nature et nous posons beaucoup de questions – nous ne supposons jamais que nous avons toutes les réponses. Nous donnons et recevons des commentaires ouvertement et honnêtement. Nous adoptons un état d’esprit de croissance et nous cherchons constamment des moyens d’être meilleurs."
+					},
+					{
+						"icon": "other/032",
+						"title": "Nous sommes obsédés par le succès de nos clients",
+						"text": "Nous aimons résoudre les problèmes les plus importants, les plus urgents et les plus précieux de nos clients. Nous mesurons et sommes obsédés par l’obtention de résultats significatifs et de valeur pour nos clients et par l’amélioration continue de nos capacités pour le faire encore plus à l’avenir."
+					},
+					{
+						"icon": "other/035",
+						"title": "Nous pensons grand et commençons petit",
+						"text": "Nous aimons nous attaquer aux gros problèmes, et nous aimons les décomposer en morceaux solubles. Notre ambition nous pousse à aller au-delà de ce que l’on pense possible. Nous commençons par le problème à résoudre dans tout ce que nous faisons. Nous investissons dans la construction à long terme et nous apprenons en expérimentant à court terme."
+					},
+					{
+						"icon": "other/033",
+						"title": "Nous allons plus loin ensemble",
+						"text": "Nous travaillons comme une seule équipe, nous gagnons comme une seule équipe. Nous avons placé la barre très haut pour nous-mêmes et pour les autres. Nous nous respectons les uns les autres et nous recherchons différents points de vue pour trouver la meilleure voie à suivre. Nous veillons les uns sur les autres, nous nous élevons les uns les autres et nous veillons à ce qu’il y ait des opportunités équitables pour que tous réussissent."
+					},
+
+					{
+						"icon": "other/031",
+						"title": "Pour nous, chaque jour compte",
+						"text": "Nous commençons chaque journée avec un objectif clair, une intention d’avoir un impact. Nous n’attendons pas le bon moment, nous le créons. Nous nous battons pour nous débloquer, nous poussons pour faire des progrès et nous travaillons dur avec un sentiment d’urgence et de concentration."
+					}
+				]
+			}
+		},
+		"hr": {
+			"index": {
+				"meta": {
+					"title": "HR",
+					"description": "Simplifiez la gestion, valorisez vos équipes"
+				},
+
+				"hero": {
+					"title": "Simplifiez la gestion, valorisez vos équipes.",
+					"subtitle": "La solution digitale RH pensée pour les entreprises africaines.",
+					"cta": "Essayez Tarico HR gratuitement"
+				},
+				"features": {
+					"title": "Ce que Tarico HR fait pour vous",
+					"savedTimes": "Jusqu’à 40% de temps gagné sur vos tâches administratives.",
+					"items": [
+						{
+							"title": "Congés et absences",
+							"list": [
+								"Demandes et validations automatiques",
+								"Historique clair et accessible"
+							]
+						},
+
+						{
+							"title": "Pointage et plannings",
+							"list": [
+								"Suivi en temps réel",
+								"Accessible sur mobile et desktop"
+							]
+						},
+
+						{
+							"title": "Rapports sociaux fiables",
+							"list": [
+								"Bilans sociaux et tableaux de bord prêts à l’emploi",
+								"Décisions basées sur des données fiables"
+							]
+						},
+
+						{
+							"title": "Recrutement et intégration",
+							"list": ["Suivi des candidatures", "Onboarding simplifié"]
+						}
+					]
+				},
+
+				"process": {
+					"title": "Un flux RH fluide, connecté et performant",
+					"text": "Avec Tarico HR, du temps gagné et une vision claire pour vos équipes.",
+
+					"items": [
+						{
+							"title": "Recrutement & intégration",
+							"text": "Accueillez et onboardez rapidement vos nouveaux talents."
+						},
+
+						{
+							"title": "Congés & absences",
+							"text": "Gérez facilement les demandes et validations, sans paperasse."
+						},
+
+						{
+							"title": "Pointage & plannings",
+							"text": "Suivez les présences en temps réel et organisez les plannings en quelques clics."
+						},
+
+						{
+							"title": "Rapports & analyses",
+							"text": "Accédez à des indicateurs fiables pour comprendre vos équipes."
+						},
+
+						{
+							"title": "Décisions stratégiques",
+							"text": "Transformez vos données RH en leviers de performance pour soutenir la croissance."
+						}
+					]
+				},
+
+				"benefits": {
+					"title": "Avantages clés",
+					"list": [
+						{
+							"title": "Gain de temps et simplicité",
+							"text": "Centralisation de toutes les opérations RH"
+						},
+						{
+							"title": "Décisions éclairées",
+							"text": "Accès à des données fiables en temps réel"
+						},
+						{
+							"title": "Expérience collaborateur fluide",
+							"text": "Interface intuitive et responsive"
+						},
+						{
+							"title": "Sécurité et conformité",
+							"text": " cryptage des données et RGPD"
+						}
+					]
+				},
+
+				"foot": {
+					"text": "Vous gagnez du temps, réduisez les coûts liés aux tâches répétitives et dites enfin adieu aux blocages administratifs. Que vous soyez une startup en croissance ou une multinationale, Tarico HR s’adapte à vos besoins et vous accompagne dans votre transition vers une gestion moderne et efficace."
+				},
+
+				"review": [
+					{
+						"name": "Cheikhna DIALLO",
+						"function": "DG Scorpion",
+						"text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate qui incidunt saepe quis repudiandae repellendus quas! Totam nihil dolorum reprehenderit magnam officiis incidunt laudantium similique repellendus, reiciendis, iste, repellat soluta!",
+						"photo": "https://i.pinimg.com/736x/eb/ac/4d/ebac4dee2b6fdb727609e5856cac049f.jpg"
+					}
+				]
+			}
+		},
+
+		"ohr": {
+			"index": {
+				"hero": {
+					"title0": "La solution intelligente pour une gestion RH performante et conforme.",
+					"title": "Moins d’administratif, plus de croissance : c’est ça Tarico HR",
+					"description": "la plupart des entreprises gèrent encore leurs ressources humaines sur papier ou via des processus manuels lourds. Résultat : des archives qui s’empilent, des données difficiles à retrouver et des erreurs qui coûtent cher. <br /> <br /> Avec Tarico HR, tout change. <br /> Nous transformons la gestion RH en un processus <b>fluide, digital et stratégique</b>. <br/> De la gestion des contrats aux congés, en passant par la conformité et le reporting, vous centralisez tout dans une seule plateforme sécurisée et intuitive. <br /> <br /> Vous gagnez du temps, réduisez les coûts liés aux tâches répétitives et dites enfin adieu aux blocages administratifs. Que vous soyez une startup en croissance ou une multinationale, Tarico HR s’adapte à vos besoins et vous accompagne dans votre transition vers une gestion moderne et efficace."
+				},
+
+				"advantage": {
+					"title": "Simplifiez vos processus,<br/>sécurisez vos données,<br/>engagez vos équipes.",
+					"description": "Avec Tarico HR, vous disposez d’une solution unique qui transforme la gestion RH en un véritable levier stratégique.",
+
+					"items": [
+						{
+							"icon": "/images/8589425.png",
+							"title": "Gagnez du temps au quotidien",
+							"text": "Automatisez les tâches répétitives (contrats, congés, reporting) et concentrez-vous sur ce qui compte vraiment : vos collaborateurs."
+						},
+						{
+							"icon": "/images/1376321.png",
+							"title": "Sécurisez vos données RH",
+							"text": "Bénéficiez d’un système conforme aux normes internationales, avec cryptage avancé et contrôle rigoureux des accès."
+						},
+						{
+							"icon": "/images/3039343.png",
+							"title": "Facile à utiliser, rapide à adopter",
+							"text": "Une interface intuitive et une intégration fluide avec vos outils existants favorisent une adoption immédiate par toute l’organisation."
+						}
+					]
+				},
+
+				"funcs": {
+					"title": "Ce que Tarico HR fait pour vous, en 4 points essentiels",
+					"description": "Découvrez les modules essentiels qui transforment votre gestion RH en un processus fluide et performant.",
+					"features": [
+						{
+							"code": "People",
+							"icon": "fi fi-sr-users-alt",
+							"title": "Une vision claire de vos équipes",
+							"text": "Centralisez toutes les informations collaborateurs avec une organisation hiérarchique et par unités opérationnelles, pour une gestion structurée et efficace."
+						},
+						{
+							"code": "Deals",
+							"icon": "fi fi-sr-resume",
+							"title": "Simplifiez la gestion contractuelle",
+							"text": "Créez et suivez facilement tous vos contrats (CDI, CDD, stage, journalier) avec modèles prêts à l’emploi et alertes automatiques."
+						},
+						{
+							"code": "Congé",
+							"icon": "fi fi-br-house-user",
+							"title": "Gagnez en fluidité avec la gestion des congés",
+							"text": "Soumettez, validez et suivez les congés et absences en temps réel, sans paperasse ni retard."
+						},
+						{
+							"code": "Insights",
+							"icon": "fi fi-sc-document-signed",
+							"title": "Prenez des décisions éclairées",
+							"text": "Génération automatique de rapports légaux et tableaux de bord interactifs pour un suivi dynamique et conforme aux normes."
+						}
+					]
+				},
+
+				"benefits": {
+					"intro": {
+						"title": "Tarico HR, c’est du concret : du temps gagné, des coûts réduits et plus de visibilité.",
+						"text": "Des bénéfices mesurables qui transforment votre gestion RH au quotidien."
+					},
+					"items": [
+						{
+							"code": "Cost",
+							"icon": "/images/2108633.png",
+							"title": "30% d’économies",
+							"text": "Réduisez les coûts liés aux erreurs et à la gestion papier."
+						},
+						{
+							"code": "Time",
+							"icon": "/images/8589425.png",
+							"title": "+40% de temps gagné",
+							"text": "Automatisez vos processus RH et concentrez-vous sur l’essentiel."
+						},
+						{
+							"code": "Insights",
+							"icon": "/images/10473656.png",
+							"title": "100% de visibilité",
+							"text": "Des données fiables et en temps réel pour décider plus vite."
+						}
+					]
+				},
+
+				"services": {
+					"title": "Encore plus de valeur pour vos équipes RH",
+					"text": "Au-delà des modules essentiels, Tarico HR intègre des fonctionnalités avancées et une roadmap ambitieuse qui enrichissent votre gestion.",
+					"features": [
+						{
+							"code": "Leave",
+							"icon": "/images/1379901.png",
+							"title": "Congés & absences",
+							"text": "Les collaborateurs soumettent facilement leurs demandes et les managers valident en un clic, pour une gestion des absences simple, rapide et traçable.",
+							"bg": "#4CAF50",
+							"color": "#FFFFFF"
+						},
+						{
+							"code": "Dashboard",
+							"icon": "/images/2659379.png",
+							"title": "Bilan social & reporting",
+							"text": "Générez automatiquement vos rapports sociaux et RH, facilitez vos audits et prenez des décisions éclairées grâce à des tableaux de bord interactifs.",
+							"bg": "#2196F3",
+							"color": "#FFFFFF"
+						},
+						{
+							"code": "Health",
+							"icon": "/images/14365132.png",
+							"title": "Santé & dossiers médicaux",
+							"text": "Centralisez et sécurisez les certificats et visites médicales afin de garantir le bien-être des collaborateurs et le respect des obligations légales.",
+							"bg": "#E91E63",
+							"color": "#FFFFFF"
+						},
+						{
+							"code": "GTA",
+							"icon": "/images/7933336.png",
+							"title": "Temps & activités",
+							"text": "Planifiez les tâches, suivez la productivité des équipes et préparez-vous au pointage digital pour un suivi précis et moderne du temps de travail.",
+							"bg": "#FF9800",
+							"color": "#000000"
+						},
+						{
+							"code": "Workgroup",
+							"icon": "/images/2779825.png",
+							"title": "Workgroup",
+							"text": "Permettez une structuration souple et hiérarchisée de l’organisation interne avec Tarico HR.",
+							"bg": "#9C27B0",
+							"color": "#FFFFFF"
+						},
+						{
+							"code": "exchange",
+							"icon": "/images/2779823.png",
+							"title": "Exchange",
+							"text": "Partagez et échangez facilement des fichiers entre collaborateurs de manière sécurisée.",
+							"bg": "#00BCD4",
+							"color": "#000000"
+						},
+						{
+							"code": "Report",
+							"icon": "/images/9329869.png",
+							"title": "Rapports d’activité",
+							"text": "Offrez aux employés la possibilité de rédiger et soumettre leurs rapports d’activité pour un meilleur suivi de la performance.",
+							"bg": "#795548",
+							"color": "#FFFFFF"
+						},
+						{
+							"code": "Evaluation",
+							"icon": "/images/5002811.png",
+							"title": "Évaluation du personnel",
+							"text": "Évaluations 360° et suivi des objectifs pour développer les compétences et accompagner vos collaborateurs.",
+							"bg": "#673AB7",
+							"color": "#FFFFFF"
+						},
+						{
+							"code": "Hiring",
+							"icon": "/images/7875460.png",
+							"title": "Hiring & recrutement",
+							"text": "De la publication d’offres au suivi des candidatures, gérez tout votre recrutement directement dans Tarico HR.",
+							"bg": "#F44336",
+							"color": "#FFFFFF"
+						}
+					]
+				},
+
+				"access": {
+					"title": "Un parcours simple pour adopter Tarico HR",
+					"text": "Trois étapes suffisent pour mettre en place votre plateforme et commencer à en tirer parti.",
+					"steps": [
+						{
+							"num": "1",
+							"code": "Meeting",
+							"icon": "📅",
+							"title": "Planifier un rendez-vous avec notre équipe commerciale",
+							"text": "Organisez un entretien avec notre équipe commerciale. En seulement un échange, nous déployons votre environnement complet dans les 30 minutes suivant la fin de la rencontre."
+						},
+						{
+							"num": "2",
+							"code": "Access",
+							"icon": "📧",
+							"title": "Recevoir vos accès par e-mail",
+							"text": "À la suite du déploiement, vous recevez directement par e-mail toutes les informations nécessaires pour accéder à votre plateforme."
+						},
+						{
+							"num": "3",
+							"code": "Team",
+							"icon": "👥",
+							"title": "Ajouter vos collaborateurs et profiter pleinement de Tarico HR",
+							"text": "Ajoutez vos nouvelles recrues ainsi que vos employés actuels, et exploitez toutes les fonctionnalités de Tarico HR pour optimiser la gestion de vos effectifs."
+						}
+					]
+				},
+
+				"cata": {
+					"intro": {
+						"title": "Prêt à transformer votre gestion RH ?",
+						"text": "Digitalisez vos processus, gagnez du temps et concentrez-vous sur l’essentiel : la croissance de votre entreprise."
+					},
+					"action": {
+						"button": "Demander une démo",
+						"subtext": "Gratuit et sans engagement"
+					}
+				},
+
+				"contract": {
+					"title": "Créez, gérez et suivez vos contrats de travail en toute simplicité.",
+					"text": "Gérez l’intégralité du cycle de vie de vos contrats de travail depuis une interface simple et intuitive. Créez vos documents en quelques clics, suivez leur statut en temps réel et assurez-vous qu’ils respectent la législation locale. Avec Tarico HR, gagnez du temps, réduisez les erreurs et centralisez toutes vos données contractuelles au même endroit.",
+
+					"features": [
+						{
+							"id": 1,
+							"title": "Création de contrat rapide et simple",
+							"text": "Créez vos contrats de travail en quelques clics grâce à des modèles prêts à l’emploi.",
+							"u": "/images/03.png"
+						},
+						{
+							"id": 2,
+							"title": "Personnaliser vos modèles",
+							"text": "Adaptez facilement vos modèles de contrat aux besoins spécifiques de votre entreprise.",
+							"u": "/images/02.png"
+						},
+						{
+							"id": 3,
+							"title": "Recevoir des alertes sur l'état des contrats",
+							"text": "Soyez informé en temps réel de l’avancement et des changements de statut de vos contrats.",
+							"u": "/images/04.png"
+						}
+					]
+				},
+
+				"contact": {
+					"title": "Un support réactif 24/7 pour que vos RH ne s’arrêtent jamais",
+					"text": "Notre équipe est disponible à tout moment pour répondre à vos questions, résoudre vos problèmes et vous accompagner dans la gestion de vos ressources humaines."
+				},
+				"description": {
+					"text": "Tarico HR est une plateforme intelligente et intuitive, pensée pour accompagner les entreprises africaines et internationales dans la digitalisation, la structuration et l’optimisation de leurs processus RH.<br><br>Que vous soyez une PME, une grande entreprise ou une organisation multisites, TARICO HR s’adapte à votre réalité terrain, avec des outils puissants et modulables, intégrés dans un écosystème numérique sécurisé."
+				}
+			},
+
+			"quote": {
+				"getQuote": "Obtenir un devis",
+				"sentencties": {
+					"one": "Une grille tarifaire modulable et compétitive, parfaitement adaptée à vos objectifs."
+				}
+			}
+		},
+
+		"database": {
+			"createForm": "Commencer gratuitement",
+			"noIdNeed": "Aucune identification requise",
+			"realyFree": "C'est réellement gratuit",
+
+			"home": {
+				"wedo": "Constructeur de formulaires",
+				"title": "Une base de données pensée pour votre performance.",
+				"subtitle": "Tarico révolutionne votre quotidien en automatisant vos  taches et en simplifiant votre gestion d'entreprise. Des outils sur mesure et une intégration fluide pour booster votre éfficacité en un clin d'oeil.",
+
+				"foot": {
+					"title": "Commencer à construire <br /> avec Tarico <b>FORM</b>",
+					"text": ""
+				}
+			},
+
+			"tiers": {
+				"text": "Connectez facilement vos outils existants tels que la comptabilité, les ressources humaines ou les CRM, afin de centraliser les flux de travail et les données."
+			},
+
+			"plan": {
+				"title": "Plans & pricing",
+				"safe": {
+					"tosafe": "économisez 20% avec un abonnement annuel",
+					"sub": "avec un abonnement annuel"
+				},
+				"priceFequency": "XOF<br/>par mois et par formulaire",
+
+				"btn": {
+					"start": "Commencer",
+					"contactSales": "Contacter le service commercial",
+					"contactUs": "Nous contacter"
+				}
+			}
+		},
+
+		"id": {
+			"index": {
+				"meta": {
+					"title": "ID",
+					"description": "L’identité numérique pour chaque citoyen sénégalais"
+				},
+
+				"hero": {
+					"title": "L’identité numérique pour chaque citoyen sénégalais",
+					"text": "Avec Tarico ID, chaque citoyen dispose d’un identifiant numérique unique, fiable et infalsifiable. Une solution qui simplifie l’accès aux services publics et privés, réduit la fraude et instaure une véritable confiance."
+				},
+
+				"why": {
+					"title": "Pourquoi Tarico ID ?",
+
+					"items": [
+						{
+							"title": "Un seul identifiant pour toutes vos démarches (banque, école, santé, administration)."
+						},
+
+						{
+							"title": "Un accès rapide et sécurisé aux services publics et privés."
+						},
+
+						{
+							"title": "Une lutte efficace contre la fraude grâce à la vérification en temps réel."
+						},
+
+						{
+							"title": "Un citoyen maître de ses données, avec un consentement traçable à chaque étape."
+						}
+					]
+				},
+				"operation": {
+					"title": "Comment ça marche ?",
+
+					"steps": [
+						"Le citoyen utilise son identifiant unique lors d’une démarche.",
+						"L’entreprise ou l’institution vérifie instantanément les informations via la plateforme Tarico ID.",
+						"Les données sont validées auprès des bases officielles et transmises en toute sécurité.",
+						"Le citoyen garde toujours le contrôle via son tableau de bord."
+					]
+				},
+				"guarantees": {
+					"items": [
+						{
+							"title": "Sécurité maximale",
+							"text": "chiffrement avancé, authentification forte et IA de surveillance."
+						},
+						{
+							"title": "Transparence totale",
+							"text": "traçabilité et audit consultables par le citoyen."
+						},
+						{
+							"title": "Conformité légale",
+							"text": "respect des lois sénégalaises et normes internationales."
+						}
+					]
+				},
+
+				"is": {
+					"items": [
+						"Plus de simplicité pour les citoyens.",
+						"Plus de fiabilité pour les institutions.",
+						"Plus de confiance pour les entreprises."
+					]
+				}
+			}
+		}
+	},
+
+	"components": {
+		"header": {
+			"items": {
+				"home": "Accueil",
+				"products": "Solutions",
+				"whytarico": "Pourquoi Tarico ?",
+				"blog": "Articles",
+				"company": "L'entreprise"
+			},
+			"cta": "Contactez-nous",
+			"products": {
+				"items": {
+					"allProducts": "Tous nos services"
+				}
+			}
+		},
+		"footer": {
+			"items": {
+				"allProducts": "Tous nos services",
+				"company": {
+					"title": "Entreprise",
+					"aboutUs": "À propos de nous",
+					"contactUs": "Nous contacter",
+					"career": "Carière"
+				},
+				"ressources": {
+					"title": "Ressources",
+					"tou": "Conditions d'utilisation",
+					"privacy": "Politique de confidentialité",
+					"support": "Contactez le support",
+					"sales": "Contactez l'équipe commerciale"
+				},
+				"products": {
+					"title": "Solutions"
+				}
+			}
+		},
+		"about": {
+			"values": {
+				"title": "Nos valeurs",
+				"items": {
+					"innovate": {
+						"title": "Innovation",
+						"text": "L'innovation est importante pour nous. Nous cherchons à répondre aux besoins actuels pour créer une valeur durable."
+					},
+					"quality": {
+						"title": "Qualité",
+						"text": "Nous nous engageons à offrir des solutions efficaces et fiables, en maintenant des standards élevés dans nos activités."
+					},
+					"conformity": {
+						"title": "Conformité",
+						"text": "Nous croyons qu'un bon travail repose sur des principes d'éthique. Nous respectons les normes de protection des données pour assurer la sécurité des informations de nos clients."
+					}
+				}
+			},
+			"staff": {
+				"title": "La direction",
+				"persons": {
+					"domutala": {
+						"name": "Mamadou DIA, CEO et Chef de produit",
+						"text": "Fondateur et CEO de Codia, expert en SIRH, Mamadou apporte une véritable valeur ajoutée aux clients grâce à son expertise dans le développement de solutions adaptées aux besoins spécifiques des entreprises. Il s'assure que chaque solution réponde aux exigences de performance et d'innovation."
+					},
+					"speedy": {
+						"name": "Saliou DIOP, Directeur marketing et commercial, cofondateur",
+						"text": "Saliou dirige l'équipe marketing de Codia, notamment le marketing produit, le marketing d'entreprise, la génération de demande et la croissance. Il a été Directeur Exécutif de African Management Service."
+					},
+					"saer": {
+						"name": "Saër, Directeur de la production et cofondateur",
+						"text": "Saër dirige la recherche et le développement, notamment avec les équipes produit, ingénierie et conception. Il a travaillé chez Attijari Bank au Maroc et Acep Sénégal."
+					}
+				}
+			},
+			"ceo": {
+				"text": "Chez Codia, nous construisons des outils qui facilitent l'intégration numérique sur tout le continent. Et cela commence par la compréhension des nouvelles exigences utilisateurs. Nous produisons les meilleurs outils qui soient pour une meilleure expérience utilisateur."
+			}
+		}
+	},
+
+	"plan": {
+		"title": "Tarifs",
+		"currency": { "xof": "XOF" },
+		"applyTo": {
+			"user": "par utilisateur",
+			"employee": "par employé"
+		},
+		"jointure": " et ",
+		"frequency": {
+			"month": "par mois",
+			"year": "par mois",
+
+			"user": "par mois et par utilisateur"
+		},
+		"tosafe": "économisez {reduction}% avec un abonnement annuel",
+		"btn": { "contactUs": "Nous contacter", "start": "Commencer" }
+	},
+
+	"products": {
+		"hr": {
+			"intro": "La gestion RH réinventée : congés, absences, pointage, bilans sociaux → simple, flexible, mobile.",
+			"description": "Tarico HR est une solution digitale conçue pour répondre aux besoins spécifiques des entreprises africaines. Elle simplifie la gestion des congés, des absences, le pointage, et offre des outils complets pour le suivi des talents et la production de bilans sociaux.",
+
+			"cards": {
+				"one": {
+					"title": "Transformez la gestion, révélez le potentiel",
+					"subtitle": "Fonctionnalités clés :",
+					"savedTime": "Jusqu’à 40% de temps gagné sur vos tâches administratives.",
+					"bookDemo": "Essayez Tarico HR gratuitement"
+				}
+			},
+
+			"features": {
+				"01": { "title": "Gestion simple des congés et absences" },
+				"02": { "title": "Plannings digitaux et pointage mobile" },
+				"03": { "title": "Rapports sociaux clairs et fiables" },
+				"04": { "title": "Recrutement et intégration rapides" }
+			}
+		},
+		"id": {
+			"intro": "L’identité numérique sécurisée pour administrations et institutions.",
+			"cta": "Découvrez Tarico ID",
+
+			"cards": {
+				"one": {
+					"title": "Votre identité numérique sûre et unique",
+					"description": "Un seul profil digital sécurisé pour accéder à vos services essentiels.",
+					"subtitle": "Services intégrés :"
+				}
+			},
+
+			"features": {
+				"01": { "title": "Diplômes et attestations" },
+				"02": { "title": "Dossier médical numérique" },
+				"03": { "title": "Identité bancaire et inclusion financière" }
+			}
+		},
+		"database": {
+			"intro": "Collecte de données simple, rapide et intelligente.",
+
+			"functionalities": [
+				{
+					"icon": "fi fi-rr-big-data-analytics text-h4",
+					"title": "Stockage centralisé et sécurisé",
+					"description": "Conservez toutes vos données dans un espace unique, structuré et hautement sécurisé, garantissant leur intégrité et leur disponibilité."
+				},
+				{
+					"icons": "fi fi-sr-shield-check text-h4",
+					"icon": "fi fi-rr-user-key text-h4",
+					"title": "Gestion des accès et permissions",
+					"description": "Contrôlez précisément qui peut lire, écrire ou administrer vos données grâce à un système avancé de gestion des rôles et permissions."
+				},
+				{
+					"icon": "fi fi-sr-link-alt text-h4",
+					"title": "Connectivité avec vos applications",
+					"description": "Reliez facilement vos logiciels métier, APIs ou CRM à Database pour fluidifier vos processus et centraliser vos informations."
+				},
+				{
+					"icon": "fi fi-rr-analyse text-h4",
+					"title": "Analyse et requêtes avancées",
+					"description": "Exploitez vos données grâce à des outils de requêtage performants et des rapports clairs, facilitant vos prises de décisions stratégiques."
+				}
+			],
+
+			"plans": {
+				"FREE": {
+					"title": "Free",
+					"price": 0,
+					"ideal": false,
+					"description": "Idéal pour les petites équipes ou projets ponctuels. L'essentiel pour créer, publier et suivre vos formulaires <b>sans frais et sans engagement</b>.",
+
+					"features": [
+						"1 admin",
+						"500 soumissions/mois",
+						"1GB de stockage",
+						"Branding de base",
+						"Modèles de formulaires standards",
+						"Templates disponibles",
+						"Statistiques basiques",
+						"Support instantané",
+						"Mises à jour incluses"
+					]
+				},
+				"DECLIC": {
+					"title": "Déclic",
+					"price": 1100,
+					"ideal": true,
+					"description": "La solution idéale pour débuter et gagner du temps sur vos processus. Simplifiez la gestion de vos formulaires sans effort.",
+					"features": [
+						"2 admin",
+						"10 000 soumissions/mois",
+						"5GB de stockage",
+						"Branding de base",
+						"Modèles de formulaires standards",
+						"Templates disponibles",
+						"Statistiques basiques",
+						"Support instantané",
+						"Mises à jour incluses"
+					]
+				},
+				"PREMIUM": {
+					"title": "Premium",
+					"price": 1500,
+					"ideal": false,
+					"description": "L’offre avancée pour optimiser votre activité. Accédez à des fonctionnalités étendues pour un gain de temps et une gestion améliorée.",
+					"features": [
+						"15 admin",
+						"Soumissions illimitées",
+						"100GB de stockage",
+						"Branding personnalisé",
+						"Modèles de formulaires avancés",
+						"Templates premium disponibles",
+						"Statistiques détaillées avec analyses",
+						"Support instantané avec accès prioritaire",
+						"Mises à jour incluses",
+						"Notification après chaque soumission"
+					]
+				},
+				"ENTERPRISE": {
+					"title": "Entreprise",
+					"price": "$sale",
+					"ideal": false,
+					"description": "La solution complète pour les entreprises ambitieuses. Accédez à des services illimités et à un support dédié pour maximiser votre efficacité.",
+					"features": [
+						"Formulaires illimités",
+						"Soumissions illimitées",
+						"Intégrations personnalisées",
+						"Automatisation avancée",
+						"Templates disponibles",
+						"Sécurité renforcée",
+						"Support instantané",
+						"Flux de travail personnalisés",
+						"Formation dédiée pour l'équipe",
+						"Support personnalisé et gestion de projet",
+						"Ressources pour optimiser l'utilisation",
+						"Design de formulaires sur mesure",
+						"Personnalisation de l'apparence des formulaires",
+						"Conseil stratégique",
+						"Audits de sécurité"
+					]
+				},
+
+				"features": {
+					"01": "Formulaires illimités",
+					"02": "Soumissions illimitées",
+					"03": "Intégrations personnalisées",
+					"04": "Automatisation avancée",
+					"05": "Templates disponibles",
+					"06": "Sécurité renforcée",
+					"07": "Support instantané",
+					"08": "Flux de travail personnalisés",
+					"09": "Formation dédiée pour l'équipe",
+					"10": "Support personnalisé et gestion de projet",
+					"11": "Ressources pour optimiser l'utilisation",
+					"12": "Design de formulaires sur mesure",
+					"13": "Personnalisation de l'apparence des formulaires",
+					"14": "Conseil stratégique",
+					"15": "Audits de sécurité",
+					"16": "1 admin",
+					"17": "500 soumissions/mois",
+					"18": "1GB de stockage",
+					"19": "Branding de base",
+					"20": "Modèles de formulaires standards",
+					"21": "Statistiques basiques",
+					"22": "Mises à jour incluses",
+					"23": "2 admin",
+					"24": "10 000 soumissions/mois",
+					"25": "5GB de stockage",
+					"26": "15 admin",
+					"27": "100GB de stockage",
+					"28": "Branding personnalisé",
+					"29": "Modèles de formulaires avancés",
+					"30": "Templates premium disponibles",
+					"31": "Statistiques détaillées avec analyses",
+					"32": "Support instantané avec accès prioritaire",
+					"33": "Notification après chaque soumission"
+				}
+			}
+		},
+		"onboarding": {
+			"intro": "Recrutement et intégration optimisés pour vos talents."
+		},
+		"acte": {
+			"intro": "Digitalisation des documents administratifs (certificats, extraits, attestations)."
+		}
+	},
+
+	"values": [
+		{
+			"title": "Innover",
+			"intro": "Des solutions simples et adaptées",
+			"text": "Nous créons des solutions digitales simples et efficaces, pensées pour les réalités spécifiques de l’Afrique. L’innovation chez Tarico, c’est remettre l’utilisateur au centre, développer des outils intuitifs qui répondent vraiment à vos besoins, et vous permettre de rester à la pointe dans un monde qui change vite."
+		},
+
+		{
+			"title": "Connecter",
+			"intro": "Relier équipes et services",
+			"text": "Nous croyons que la clé du succès réside dans la collaboration. Tarico facilite la connexion entre vos équipes, vos services et vos partenaires, à travers des plateformes intégrées qui fluidifient les échanges et renforcent la confiance. Plus qu’un logiciel, c’est un pont numérique entre humains et technologies."
+		},
+
+		{
+			"title": "Transformer",
+			"intro": "Passer au digital en toute confiance",
+			"text": "Passer du mode traditionnel à une gestion digitale agile, c’est accomplir un vrai saut en avant. Notre ambition est de vous accompagner dans cette transformation pour que votre entreprise ou votre administration gagne en réactivité, en transparence et en performance, tout en valorisant vos talents et votre potentiel."
+		}
+	],
+
+	"leadership": {
+		"domutala": {
+			"name": "Mamadou DIA",
+			"function": "CEO, CTO",
+			"text": "Fondateur et CEO de Codia, expert en SIRH, Mamadou apporte une véritable valeur ajoutée aux clients grâce à son expertise dans le développement de solutions adaptées aux besoins spécifiques des entreprises. Il s'assure que chaque solution réponde aux exigences de performance et d'innovation."
+		},
+		"speedy": {
+			"name": "Saliou DIOP",
+			"function": "cofondateur, Directeur marketing et commercial",
+			"text": "Saliou dirige l'équipe marketing de Codia, notamment le marketing produit, le marketing d'entreprise, la génération de demande et la croissance. Il a été Directeur Exécutif de African Management Service."
+		},
+		"saer": {
+			"name": "Saër",
+			"function": "Cofondateur",
+			"text": "Saër dirige la recherche et le développement, notamment avec les équipes produit, ingénierie et conception. Il a travaillé chez Attijari Bank au Maroc et Acep Sénégal."
+		}
+	}
+}
