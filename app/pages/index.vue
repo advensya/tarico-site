@@ -14,7 +14,7 @@ const readMoreAboutTarico = ref(false);
 <template>
 	<ui-hero-one class="pg-index-hero" />
 
-	<v-container class="mt-0" aria-labelledby="products-title">
+	<v-container class="mt-10" aria-labelledby="products-title">
 		<v-row class="pa-5">
 			<v-col cols="12" sm="4" order="0" order-sm="2">
 				<div class="d-flex">
@@ -300,7 +300,7 @@ const readMoreAboutTarico = ref(false);
 
 <style lang="scss">
 .pg-index-hero {
-	min-height: 662px;
+	min-height: 100vh;
 }
 
 .text-hh {

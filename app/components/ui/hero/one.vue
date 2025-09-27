@@ -12,7 +12,8 @@ const products = ["id", "pay", "database", "heavy", "onboarding", "hiring"];
 
 <template>
 	<section class="tarico-hero-one" aria-labelledby="hero-title">
-		<div class="back" aria-hidden="true"></div>
+		<!-- <div class="back" aria-hidden="true"></div> -->
+		<ui-hero-back-wall :class="{ mask: $vuetify.theme.current.dark }" />
 
 		<div class="mb-auto" aria-hidden="true"></div>
 
@@ -64,7 +65,7 @@ const products = ["id", "pay", "database", "heavy", "onboarding", "hiring"];
 		<div class="mt-auto" aria-hidden="true"></div>
 
 		<div class="bottom w-100">
-			<ui-frame class="mt-0">
+			<ui-frame class="my-0" fluid>
 				<template v-if="$vuetify.display.smAndDown">
 					<v-col class="frame">
 						<swiper
@@ -170,7 +171,6 @@ const products = ["id", "pay", "database", "heavy", "onboarding", "hiring"];
 			rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
 		--v-border-opacity: 0.05;
-		// color: rgb(var(--v-theme-on-primary));
 
 		&::before {
 			position: absolute;

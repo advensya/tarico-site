@@ -18,45 +18,55 @@ const readMoreAboutTarico = ref(false);
 
 <template>
 	<div class="header position-relative">
-		<div class="back"></div>
+		<div class="back">
+			<ui-hero-back-wall />
+		</div>
 
-		<v-container class="position-relative">
-			<div class="pa-5 text-center">
+		<v-container class="position-relative mt-16 py-0">
+			<div class="text-center">
 				<ui-svg name="engine" size="100" aria-hidden="true" />
 				<h1
 					class="font-weight-bold mt-3"
 					style="
 						line-height: 1;
-						font-size: clamp(2rem, 4.2352941176vw, 4rem);
+						font-size: clamp(1.5rem, 4.2352941176vw, 4rem);
 						text-wrap: balance;
 					"
 					v-html="$t('pages.products.index.title')"
 				></h1>
 			</div>
+			<div class="mt-5 d-flex flex-wrap ga-2 justify-center align">
+				<v-btn color="dark" variant="flat" :to="$localePath({ name: 'app' })">
+					{{ $t("words.start") }}
+				</v-btn>
+
+				<ui-book-demo product="hr">
+					<template #activator="{ props }">
+						<v-btn
+							v-bind="props"
+							color="background"
+							class="border"
+							variant="flat"
+						>
+							{{ $t("words.bookDemo") }}
+						</v-btn>
+					</template>
+				</ui-book-demo>
+			</div>
 		</v-container>
 	</div>
 
-	<!-- <v-col cols="12" class="frame">
-			<v-row>
-				<v-col cols="12" md="6">
-					<ui-card-hr />
-				</v-col>
-
-				<v-col cols="12" md="6"></v-col>
-			</v-row>
-		</v-col> -->
-
-	<ui-frame class="mt-0" role="region" aria-labelledby="products-main-title">
+	<ui-frame class="m-0" role="region" aria-labelledby="products-main-title">
 		<v-col
 			cols="12"
 			class="frame"
 			style="
-				background-color: rgba(var(--v-theme-surface), 0.3);
+				background-color: rgba(var(--v-theme-surface), 0.03);
 				text-wrap: pretty;
 			"
 		>
 			<div
-				class="pa-10"
+				class="pa-5"
 				style="
 					background-color: rgba(var(--v-theme-surface), 0.3);
 					text-wrap: pretty;
@@ -75,8 +85,7 @@ const readMoreAboutTarico = ref(false);
 								class="text-h4 font-weight-bold"
 								style="line-height: 1; text-wrap: balance"
 							>
-								Une suite logicielle pour <br />
-								l’efficacité et la croissance
+								Une suite logicielle pour l’efficacité et la croissance
 							</h3>
 						</div>
 
@@ -160,6 +169,128 @@ const readMoreAboutTarico = ref(false);
 				{{ $t("pages.products.index.moreTools") }}
 			</div> -->
 		</v-col>
+	</ui-frame>
+
+	<ui-frame class="my-0" role="region" aria-labelledby="products-main-title">
+		<template #prepend>
+			<div
+				style="width: 772px; max-width: 90%"
+				class="text-center mx-auto mb-10"
+			>
+				<h2
+					class="font-weight-bold mb-5"
+					style="
+						line-height: 1;
+						font-size: clamp(1.5rem, 4.2352941176vw, 4rem);
+						text-wrap: balance;
+					"
+				>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+				</h2>
+
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nobis
+					molestiae laboriosam animi, minima magnam assumenda architecto placeat
+					voluptates cum dolor reprehenderit tempore quisquam, tempora
+					voluptatem praesentium maiores dolore tenetur?
+				</p>
+			</div>
+		</template>
+
+		<v-col cols="12" md="4" class="frame">
+			<div class="pa-7" style="text-wrap: pretty">
+				<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
+					Lorem ipsum dolor sit amet consectetur adipisicing
+				</h3>
+				<p style="max-width: 882px; text-wrap: pretty; hyphens: auto">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+					accusamus dicta voluptate aliquid sed dolores tenetur perspiciatis
+					consequatur, magnam, totam placeat in aliquam aspernatur at impedit
+					reprehenderit neque perferendis atque?
+
+					<br />
+					<br />
+
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+					accusamus, asperiores, harum repellendus dolorem eos aliquid optio
+				</p>
+			</div>
+
+			<!-- <div class="pa-5 text-center">
+				{{ $t("pages.products.index.moreTools") }}
+			</div> -->
+		</v-col>
+		<v-col cols="12" md="4" class="frame">
+			<div class="pa-7" style="text-wrap: pretty">
+				<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi
+				</h3>
+				<p style="max-width: 882px; text-wrap: pretty; hyphens: auto">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+					accusamus, asperiores, harum repellendus dolorem eos aliquid optio
+					<br />
+					<br />
+
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+					accusamus dicta voluptate aliquid sed dolores tenetur perspiciatis
+					reprehenderit neque perferendis atque?
+				</p>
+			</div>
+
+			<!-- <div class="pa-5 text-center">
+				{{ $t("pages.products.index.moreTools") }}
+			</div> -->
+		</v-col>
+		<v-col cols="12" md="4" class="frame">
+			<div class="pa-7" style="text-wrap: pretty">
+				<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
+					Lorem, ipsum dolor sit amet
+				</h3>
+				<p style="max-width: 882px; text-wrap: pretty; hyphens: auto">
+					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+					accusamus, asperiores, harum repellendus dolorem eos aliquid optio
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+					accusamus dicta voluptate aliquid sed dolores tenetur perspiciatis
+					reprehenderit neque perferendis atque?
+
+					<br />
+					<br />
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+					aliquid placeat accusantium omnis iste mollitia officiis minus, porro
+				</p>
+			</div>
+
+			<!-- <div class="pa-5 text-center">
+				{{ $t("pages.products.index.moreTools") }}
+			</div> -->
+		</v-col>
+	</ui-frame>
+
+	<div class="mt-16 d-flex flex-wrap ga-2 justify-center align">
+		<v-btn color="dark" variant="flat" :to="$localePath({ name: 'app' })">
+			{{ $t("words.startFree") }}
+		</v-btn>
+	</div>
+
+	<ui-frame role="region" aria-labelledby="products-main-title">
+		<v-col
+			cols="12"
+			class="frame"
+			style="
+				background-color: rgba(var(--v-theme-surface), 0.03);
+				text-wrap: pretty;
+			"
+		>
+			<div
+				class="pa-5"
+				style="
+					background-color: rgba(var(--v-theme-surface), 0.3);
+					text-wrap: pretty;
+				"
+			>
+				Lorem ipsum dolor sit amet consectetur
+			</div>
+		</v-col>
 
 		<v-col
 			v-for="code in Object.keys(Products).filter((c) => c !== 'hr')"
@@ -221,7 +352,7 @@ const readMoreAboutTarico = ref(false);
 <style lang="scss" scoped>
 .header {
 	margin: auto;
-	height: 70lvh;
+	height: 552px;
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -234,7 +365,7 @@ const readMoreAboutTarico = ref(false);
 		inset: 0;
 		z-index: 0;
 
-		background: rgb(var(--v-theme-dark), 0.03);
+		background: rgb(var(--v-theme-background), 0.2);
 		-webkit-mask: url("/images/grid.svg") center/cover no-repeat;
 		mask: url("/images/grid.svg") center/cover no-repeat;
 
@@ -246,20 +377,9 @@ const readMoreAboutTarico = ref(false);
 			inset: 0;
 			background-position: center;
 			background-size: cover;
-			opacity: 0.04;
+			opacity: 0.03;
 			filter: sepia(100%) saturate(500%) hue-rotate(180deg);
 		}
-	}
-
-	.backdd {
-		overflow: hidden;
-		position: absolute;
-		inset: 0;
-		z-index: 0;
-
-		background: rgb(var(--v-theme-dark), 0.05);
-		-webkit-mask: url("/images/grid.svg") center/cover no-repeat;
-		mask: url("/images/grid.svg") center/cover no-repeat;
 	}
 }
 </style>

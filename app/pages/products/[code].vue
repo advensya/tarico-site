@@ -61,7 +61,7 @@ useSeoMeta({
 				</defs>
 			</svg>
 
-			<v-container style="position: relative" class="px-16">
+			<v-container style="position: relative" class="px-sm-16">
 				<div class="pa-5">
 					<v-row style="position: relative" justify="start">
 						<v-col cols="12" md="8">
