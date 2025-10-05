@@ -7,7 +7,7 @@
 			justify-content: center;
 		"
 	>
-		<ui-hero-back-wall :class="{ mask: $vuetify.theme.current.dark }" />
+		<ui-hero-back-wall />
 
 		<v-container style="position: relative">
 			<v-container :fluid="$vuetify.display.xs">
