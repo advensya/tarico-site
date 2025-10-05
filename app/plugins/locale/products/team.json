@@ -1,0 +1,25 @@
+{
+	"fr": {
+		"intro": "Gardez une vision claire et complète de vos collaborateurs.",
+		"summary": "Team centralise toutes les informations RH : identité, poste, contrats, compétences et historique.",
+		"description": "Véritable base RH, Team regroupe les dossiers employés, facilite les mises à jour et renforce la cohérence des données. C’est le cœur du système Tarico HR, garant de la fiabilité des informations RH.",
+		"functionalities": [
+			{
+				"title": "Fiche employé complète",
+				"description": "Informations, documents et historique."
+			},
+			{
+				"title": "Permissions sécurisées",
+				"description": "Accès restreint selon les rôles."
+			},
+			{
+				"title": "Suivi des évolutions",
+				"description": "Promotions, formations, mobilité interne."
+			},
+			{
+				"title": "Import/Export rapide",
+				"description": "Synchronisation avec d’autres modules."
+			}
+		]
+	}
+}

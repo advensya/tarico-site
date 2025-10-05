@@ -98,6 +98,44 @@ useSeoMeta({
 		<template v-if="page">
 			<ui-markdown :page />
 		</template>
+		<template v-else>
+			<ui-frame
+				class="mt-0"
+				role="region"
+				aria-labelledby="products-main-title"
+			>
+				<v-col v-for="i in 4" :key="i" cols="12" sm="6" md="3" class="frame">
+					<h3
+						class="text-h6 px-5 py-2 border-b"
+						style="background-color: rgba(var(--v-theme-surface), 0.3)"
+						v-html="
+							$t(`products.${product.code}.functionalities.${i - 1}.title`)
+						"
+					></h3>
+
+					<p
+						class="pa-5"
+						style="text-wrap: pretty; hyphens: auto"
+						v-html="
+							$t(
+								`products.${product.code}.functionalities.${i - 1}.description`
+							)
+						"
+					></p>
+				</v-col>
+
+				<template #append>
+					<div class="pa-5 mt-10">
+						<p v-html="$t(`products.${product.code}.summary`)"></p>
+
+						<p
+							class="mt-5"
+							v-html="$t(`products.${product.code}.description`)"
+						></p>
+					</div>
+				</template>
+			</ui-frame>
+		</template>
 
 		<div
 			class="d-flex align-center flex-column justify-center mt-16 ga-2 flex-wrap mt-5"

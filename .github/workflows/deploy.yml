@@ -28,12 +28,17 @@ jobs:
           ENVS_DIR="$HOME/prod/site/$ENV.env"
           echo "ENVS_DIR=$ENVS_DIR" >> $GITHUB_OUTPUT
 
+          DEPLOY_DIR="$HOME/prod/site/$ENV"
+          echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_OUTPUT
+
+          mkdir $DEPLOY_DIR
+
   build:
     runs-on: self-hosted
     needs: set-env
     env:
       ENV: ${{ needs.set-env.outputs.env }}
-      DEPLOY_DIR: $HOME/prod/site/${{ needs.set-env.outputs.env }}
+      DEPLOY_DIR: ${{ needs.set-env.outputs.env }}
 
     steps:
       - name: Checkout repo
@@ -50,7 +55,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Build project (yarn)
-        run: yarn build --mode $ENV
+        run: yarn build --mode production
 
       - name: Install corepack
         run: npm i -g --force corepack@latest && corepack enable pnpm
@@ -68,11 +73,11 @@ jobs:
 
   deploy:
     runs-on: self-hosted
+    needs: build
+
     env:
       ENV: ${{ needs.set-env.outputs.env }}
-      DEPLOY_DIR: $HOME/prod/site/${{ needs.set-env.outputs.env }}
-
-    needs: build
+      DEPLOY_DIR: ${{ needs.set-env.outputs.env }}
 
     steps:
       - name: Create service
@@ -192,7 +197,7 @@ jobs:
               fi
           done < "$ENVS_DIR"
 
-          port="kernel._$PORT"
+          port="_$PORT"
           domain="_$DOMAIN"
 
           restart_nginx() {

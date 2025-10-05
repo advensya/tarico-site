@@ -13,6 +13,7 @@ export interface IProduct {
 	namePlain: string;
 	logo?: string;
 	to: RouteLocationAsRelativeGeneric;
+	sections: string[];
 
 	plans?: {
 		yearlReduction?: number;
@@ -31,11 +32,13 @@ const products: { [key: string]: IProduct } = {
 		name: "HR",
 		namePlain: "HR",
 		to: { name: "hr" },
+		sections: [],
 	},
 	database: {
 		code: "database",
 		name: "Database",
 		namePlain: "Database",
+		sections: [],
 
 		to: { name: "database" },
 
@@ -98,29 +101,33 @@ const products: { [key: string]: IProduct } = {
 			},
 		},
 	},
-	teams: {
-		code: "teams",
-		name: "Teams",
-		namePlain: "Teams",
-		to: { name: "products-code", params: { code: "leave" } },
+	team: {
+		code: "team",
+		name: "Team",
+		namePlain: "Team",
+		to: { name: "products-code", params: { code: "team" } },
+		sections: ["hr"],
 	},
 	id: {
 		code: "id",
 		name: "Tarico <b>ID<b>",
 		namePlain: "Tarico ID",
 		to: { name: "id" },
+		sections: [],
 	},
 	onboarding: {
 		code: "onboarding",
 		name: "Onboarding",
 		namePlain: "Onboarding",
 		to: { name: "products-code", params: { code: "onboarding" } },
+		sections: ["hr"],
 	},
 	heavy: {
 		code: "heavy",
 		name: "Heavy",
 		namePlain: "Heavy",
 		to: { name: "products-code", params: { code: "heavy" } },
+		sections: [],
 
 		plans: {
 			applyTo: "user",
@@ -214,43 +221,48 @@ const products: { [key: string]: IProduct } = {
 		name: "Pay",
 		namePlain: "Pay",
 		to: { name: "products-code", params: { code: "pay" } },
+		sections: ["hr"],
 	},
 	leave: {
 		code: "leave",
 		name: "Leave",
 		namePlain: "Leave",
 		to: { name: "products-code", params: { code: "leave" } },
+		sections: ["hr"],
 	},
-	gta: {
-		code: "gta",
+	activity: {
+		code: "activity",
 		name: "Temps et activité",
 		namePlain: "Temps et activité",
-		to: { name: "products-code", params: { code: "gta" } },
+		to: { name: "products-code", params: { code: "activity" } },
+		sections: ["hr"],
 	},
 	hiring: {
 		code: "hiring",
 		name: "Hiring",
 		namePlain: "Hiring",
 		to: { name: "products-code", params: { code: "hiring" } },
+		sections: ["hr"],
 	},
 	report: {
 		code: "report",
 		name: "Rapport d'activité",
 		namePlain: "Rapport d'activité",
 		to: { name: "products-code", params: { code: "report" } },
+		sections: ["hr"],
 	},
-	contrat: {
-		code: "contrat",
-		name: "Contrat",
-		namePlain: "Contrat",
-		to: { name: "products-code", params: { code: "contrat" } },
-	},
-	organigramme: {
-		code: "organigramme",
-		name: "Organigramme",
-		namePlain: "Organigramme",
-		to: { name: "products-code", params: { code: "organigramme" } },
-	},
+	// contrat: {
+	// 	code: "contrat",
+	// 	name: "Contrat",
+	// 	namePlain: "Contrat",
+	// 	to: { name: "products-code", params: { code: "contrat" } },
+	// },
+	// organigramme: {
+	// 	code: "organigramme",
+	// 	name: "Organigramme",
+	// 	namePlain: "Organigramme",
+	// 	to: { name: "products-code", params: { code: "organigramme" } },
+	// },
 };
 
 export default products;

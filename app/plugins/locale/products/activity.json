@@ -1,0 +1,25 @@
+{
+	"fr": {
+		"intro": "Maîtrisez le temps de travail et la productivité en temps réel.",
+		"summary": "Ce module facilite le suivi des horaires, présences et activités des collaborateurs.",
+		"description": "Temps et Activité permet aux employés d’enregistrer leurs heures de travail, tandis que les managers disposent d’un tableau de bord pour analyser la productivité et planifier efficacement les ressources.",
+		"functionalities": [
+			{
+				"title": "Pointage digital",
+				"description": "Enregistrement automatique des entrées et sorties."
+			},
+			{
+				"title": "Gestion des plannings",
+				"description": "Création et modification en ligne."
+			},
+			{
+				"title": "Analyse de productivité",
+				"description": "Suivi du temps par tâche ou projet."
+			},
+			{
+				"title": "Rapports automatiques",
+				"description": "Statistiques détaillées de présence."
+			}
+		]
+	}
+}

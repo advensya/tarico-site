@@ -83,9 +83,9 @@ function destroy() {
 							</v-btn>
 						</template>
 
-						<v-btn size="32" color="dark" rounded="0" variant="text" icon>
+						<!-- <v-btn size="32" color="dark" rounded="0" variant="text" icon>
 							<ui-svg name="language" size="16" />
-						</v-btn>
+						</v-btn> -->
 
 						<ui-theme />
 					</div>

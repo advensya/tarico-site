@@ -1,0 +1,25 @@
+{
+	"fr": {
+		"intro": "Générez vos bulletins de paie en quelques clics, sans erreur ni stress.",
+		"summary": "Pay automatise le calcul, la génération et la distribution des bulletins de paie en toute sécurité.",
+		"description": "Avec Pay, les RH gèrent la paie plus facilement : calculs automatiques, génération PDF, envoi sécurisé et archivage. Il réduit les erreurs humaines et accélère la clôture mensuelle.",
+		"functionalities": [
+			{
+				"title": "Calcul automatique",
+				"description": "Intègre salaires, primes et retenues."
+			},
+			{
+				"title": "Bulletins numériques",
+				"description": "Génération PDF instantanée."
+			},
+			{
+				"title": "Archivage sécurisé",
+				"description": "Historique accessible par employé."
+			},
+			{
+				"title": "Conformité légale",
+				"description": "Respect des normes locales."
+			}
+		]
+	}
+}

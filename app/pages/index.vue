@@ -59,7 +59,7 @@ const readMoreAboutTarico = ref(false);
 
 	<ui-frame class="my-0" role="region" aria-labelledby="products-main-title">
 		<v-col
-			v-for="code in ['teams', 'heavy', 'pay', 'database']"
+			v-for="code in ['team', 'heavy', 'pay', 'database']"
 			:key="code"
 			cols="12"
 			sm="6"
@@ -118,7 +118,7 @@ const readMoreAboutTarico = ref(false);
 		</v-col>
 
 		<v-col cols="12" class="frame">
-			<ui-card-id />
+			<!-- <ui-card-id /> -->
 		</v-col>
 	</ui-frame>
 

@@ -1,0 +1,25 @@
+{
+	"fr": {
+		"intro": "Suivez et protégez la santé de vos collaborateurs au quotidien.",
+		"summary": "Santé de travail centralise les bilans médicaux et assure le suivi des obligations réglementaires.",
+		"description": "Ce module permet de planifier les visites médicales, d’enregistrer les bilans et de suivre les alertes santé. Il assure la conformité légale tout en renforçant la prévention.",
+		"functionalities": [
+			{
+				"title": "Dossier médical numérique",
+				"description": "Informations et bilans sécurisés pour chaque collaborateur."
+			},
+			{
+				"title": "Rappels automatiques",
+				"description": "Alertes configurées pour les visites médicales à venir."
+			},
+			{
+				"title": "Statistiques santé",
+				"description": "Suivi global de l’état de santé par équipe."
+			},
+			{
+				"title": "Conformité réglementaire",
+				"description": "Gestion et respect des obligations légales."
+			}
+		]
+	}
+}

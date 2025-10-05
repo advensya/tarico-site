@@ -90,7 +90,7 @@ function destroy() {
 		</div>
 	</div>
 
-	<section class="position-relative">
+	<section class="position-relative d-none">
 		<v-container class="my-0 py-0">
 			<div class="border rounded-xl mx-sm-10 mx-0" style="margin-top: -110px">
 				<div
@@ -105,6 +105,21 @@ function destroy() {
 					class="bg- border rounded-xl border ma-2"
 				></div>
 			</div>
+		</v-container>
+	</section>
+
+	<section>
+		<v-container>
+			<p>
+				Tarico HR est une suite d’applications intelligentes, modulaires et
+				totalement autonomes, conçue pour digitaliser, automatiser et simplifier
+				la gestion des ressources humaines. Chaque entreprise choisit librement
+				les modules dont elle a besoin — recrutement, paie, congés, santé,
+				contrats, organigramme, etc. — et les active sans dépendance technique.
+				Pensée pour la performance et l’agilité, Tarico HR transforme la
+				fonction RH en levier de productivité, de transparence et d’engagement
+				collaboratif.
+			</p>
 		</v-container>
 	</section>
 
@@ -170,6 +185,48 @@ function destroy() {
 				</p>
 			</div>
 		</v-col>
+
+		{{}}
+		<v-col
+			v-for="product in Object.values(Products).filter((p) =>
+				p.sections.includes('hr')
+			)"
+			:key="product.code"
+			cols="12"
+			sm="6"
+			md="4"
+			class="frame"
+			role="region"
+			:aria-labelledby="`prod-title-${product.code}`"
+		>
+			<div class="pa-5">
+				<h3
+					class="text-h6"
+					style="text-wrap: balance"
+					v-html="product.name"
+					:id="`prod-title-${product.code}`"
+				></h3>
+
+				<p
+					:id="`prod-intro-${product.code}`"
+					class="mt-2"
+					style="text-wrap: pretty; hyphens: auto"
+					v-html="$t(`products.${product.code}.intro`)"
+				></p>
+
+				<nuxt-link
+					:to="$localePath(product.to)"
+					prefetch
+					variant="text"
+					class="mt-5 ui-link permanant d-block"
+					:title="`${product.namePlain} — ${$t('words.readMore')}`"
+					:aria-label="$t('words.readMore')"
+					:aria-describedby="`prod-intro-${product.code}`"
+				>
+					{{ $t("words.readMore") }}
+				</nuxt-link>
+			</div>
+		</v-col>
 	</ui-frame>
 
 	<ui-frame role="region">
@@ -195,6 +252,7 @@ function destroy() {
 			:aria-labelledby="`hr-feature-${i}`"
 			cols="6"
 			sm="6"
+			md="3"
 			class="frame"
 			role="region"
 		>
@@ -266,7 +324,9 @@ function destroy() {
 		</v-col>
 	</ui-frame>
 
-	<section class="pg-hr-index--foot py-16">
+	<div class="pb-16"></div>
+
+	<section class="pg-hr-index--foot d-none py-16">
 		<div
 			style="
 				max-width: 772px;

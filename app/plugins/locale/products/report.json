@@ -1,0 +1,25 @@
+{
+	"fr": {
+		"intro": "Donnez la parole à vos collaborateurs sur leurs réalisations et performances.",
+		"summary": "Ce module permet à chaque employé de soumettre des rapports réguliers sur son travail, favorisant transparence et évaluation.",
+		"description": "Chaque collaborateur documente ses activités, objectifs et résultats. Les managers valident et archivent les rapports pour un meilleur suivi des performances individuelles.",
+		"functionalities": [
+			{
+				"title": "Soumission simple",
+				"description": "Rapports quotidiens, hebdos ou mensuels."
+			},
+			{
+				"title": "Validation managériale",
+				"description": "Workflow d’approbation intégré."
+			},
+			{
+				"title": "Suivi des performances",
+				"description": "Indicateurs et tableaux de synthèse."
+			},
+			{
+				"title": "Archivage automatique",
+				"description": "Conservation historique des rapports."
+			}
+		]
+	}
+}
