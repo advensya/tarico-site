@@ -172,8 +172,8 @@ jobs:
               fi
           done < "$ENVS_DIR"
 
-          port="_$PORT"
-          domain="_$DOMAIN"
+          port="$_PORT"
+          domain="$_DOMAIN"
 
           restart_nginx() {
               sudo systemctl restart nginx
