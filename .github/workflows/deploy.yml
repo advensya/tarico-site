@@ -40,9 +40,48 @@ jobs:
           DEPLOY_DIR="$HOME/prod/site/$ENV"
           echo "deploy_dir=$DEPLOY_DIR" >> $GITHUB_OUTPUT
 
+  build:
+    runs-on: self-hosted
+    needs: set-env
+    env:
+      ENV: ${{ needs.set-env.outputs.env }}
+      ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
+      DEPLOY_DIR: ${{ needs.set-env.outputs.deploy_dir }}
+
+    if: ${{ needs.set-env.outputs.envs_dir_exists }}
+
+    steps:
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Checkout repo
+        run: |
+          if [[ ! -d "$DEPLOY_DIR" ]]; then
+            git clone --depth 1 --branch ${{ github.ref_name }} git@github.com:${{ github.repository }}.git $DEPLOY_DIR
+          else
+            cd $DEPLOY_DIR
+            git reset --hard ${{ github.ref_name }}
+          fi
+          # git@github.com:actions/checkout.git
+
+      - name: Install corepack
+        run: npm i -g --force corepack@latest && corepack enable pnpm
+
+      - name: Install dependencies
+        run: |
+          cd $DEPLOY_DIR
+          pnpm install --frozen-lockfile
+
+      - name: Build project
+        run: |
+          cd $DEPLOY_DIR
+          pnpm build
+
   service:
     runs-on: self-hosted
-    needs: [set-env]
+    needs: [set-env, build]
 
     env:
       ENV: ${{ needs.set-env.outputs.env }}
@@ -89,7 +128,7 @@ jobs:
 
   nginx:
     runs-on: self-hosted
-    needs: [set-env, service]
+    needs: [set-env, build, service]
 
     env:
       ENV: ${{ needs.set-env.outputs.env }}
