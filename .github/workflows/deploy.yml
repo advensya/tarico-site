@@ -11,6 +11,8 @@ jobs:
     runs-on: self-hosted
     outputs:
       env: ${{ steps.define-env.outputs.env }}
+      envs_dir: ${{ steps.define-env.outputs.envs_dir }}
+      deploy_dir: ${{ steps.define-env.outputs.deploy_dir }}
 
     steps:
       - name: Define environment from branch
@@ -27,18 +29,18 @@ jobs:
           echo "env=$ENV" >> $GITHUB_OUTPUT
 
           ENVS_DIR="$HOME/prod/site/$ENV.env"
-          echo "ENVS_DIR=$ENVS_DIR" >> $GITHUB_OUTPUT
+          echo "envs_dir=$ENVS_DIR" >> $GITHUB_OUTPUT
 
           DEPLOY_DIR="$HOME/prod/site/$ENV"
-          echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_OUTPUT
-          echo "$DEPLOY_DIR"
+          echo "deploy_dir=$DEPLOY_DIR" >> $GITHUB_OUTPUT
 
   build:
     runs-on: self-hosted
     needs: set-env
     env:
       ENV: ${{ needs.set-env.outputs.env }}
-      DEPLOY_DIR: ${{ needs.set-env.outputs.env }}
+      ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
+      DEPLOY_DIR: ${{ needs.set-env.outputs.deploy_dir }}
 
     steps:
       - name: Checkout repo
@@ -83,11 +85,12 @@ jobs:
 
   # deploy:
   #   runs-on: self-hosted
-  #   needs: build
+  #   needs:  needs: [set-env, build]
 
-  #   env:
-  #     ENV: ${{ needs.set-env.outputs.env }}
-  #     DEPLOY_DIR: ${{ needs.set-env.outputs.env }}
+  # env:
+  #   ENV: ${{ needs.set-env.outputs.env }}
+  #   ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
+  #   DEPLOY_DIR: ${{ needs.set-env.outputs.deploy_dir }}
 
   #   steps:
   #     - name: Create service
