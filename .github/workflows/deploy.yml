@@ -31,6 +31,11 @@ jobs:
           ENVS_DIR="$HOME/prod/site/$ENV.env"
           echo "envs_dir=$ENVS_DIR" >> $GITHUB_OUTPUT
 
+          echo "envs_dir_exists=false" >> $GITHUB_OUTPUT
+          if [ -f "$ENVS_DIR" ]; then
+            echo "envs_dir_exists=true" >> $GITHUB_OUTPUT
+          fi
+
           DEPLOY_DIR="$HOME/prod/site/$ENV"
           echo "deploy_dir=$DEPLOY_DIR" >> $GITHUB_OUTPUT
 
@@ -41,6 +46,8 @@ jobs:
       ENV: ${{ needs.set-env.outputs.env }}
       ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
       DEPLOY_DIR: ${{ needs.set-env.outputs.deploy_dir }}
+
+    if: ${{ needs.set-env.outputs.envs_dir_exists }}
 
     steps:
       - name: Checkout repo
@@ -64,203 +71,193 @@ jobs:
       - name: Install dependencies
         run: |
           cd $DEPLOY_DIR
-          rm pnpm-lock.yaml
-          pnpm install
+          pnpm install --frozen-lockfile
 
       - name: Build project
         run: |
           cd $DEPLOY_DIR
           pnpm build
 
-      # - name: Copy files to deploy dir
-      #   run: |
-      #     mkdir -p "$DEPLOY_DIR"
-      #     cp -r ./* "$DEPLOY_DIR"
+  service:
+    runs-on: self-hosted
+    needs: build
 
-      # - name: Copy and install build
-      #   run: |
-      #     mkdir -p $DEPLOY_DIR
+    env:
+      ENV: ${{ needs.set-env.outputs.env }}
+      ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
+      DEPLOY_DIR: ${{ needs.set-env.outputs.deploy_dir }}
 
-      #     cp .pnpmfile.cjs build
-      #     cp build/* $DEPLOY_DIR
+    steps:
+      - name: Create service
+        run: |
+          SERVICE_NAME="$ENV-tarico-site.service"
+          SERVICE_PATH="/etc/systemd/system/$SERVICE_NAME"
 
-      #     cd $DEPLOY_DIR
-      #     pnpm install --prod --frozen-lockfile
+          common_unit_header="[Unit]
+          Type=simple
+          Description=$ENV-tarico-site
+          After=network-online.target
+          Wants=network-online.target
 
-  # deploy:
-  #   runs-on: self-hosted
-  #   needs:  needs: [set-env, build]
+          [Service]
+          WorkingDirectory="$DEPLOY_DIR"
+          ExecStart="$WHICH_NODE" run.js
+          Restart=always
+          RestartSec=5
+          KillMode=process
+          TimeoutStopSec=15s"
 
-  # env:
-  #   ENV: ${{ needs.set-env.outputs.env }}
-  #   ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
-  #   DEPLOY_DIR: ${{ needs.set-env.outputs.deploy_dir }}
+          common_unit_footer="
+          [Install]
+          WantedBy=multi-user.target"
 
-  #   steps:
-  #     - name: Create service
-  #       run: |
-  #         SERVICE_NAME="$ENV-tarico-site.service"
-  #         SERVICE_PATH="/etc/systemd/system/$SERVICE_NAME"
+          env_file_content=""
 
-  #         common_unit_header="[Unit]
-  #         Type=simple
-  #         Description=$ENV-tarico-site
-  #         After=network-online.target
-  #         Wants=network-online.target
+          while IFS= read -r line; do
+            [[ -z "$line" || "$line" =~ ^# ]] && continue
+            env_file_content+="Environment=$line\n"
+          done < "$ENVS_DIR"
 
-  #         [Service]
-  #         WorkingDirectory="$DEPLOY_DIR"
-  #         ExecStart="$WHICH_NODE" run.js
-  #         Restart=always
-  #         RestartSec=5
-  #         KillMode=process
-  #         TimeoutStopSec=15s"
+          service="${common_unit_header}\n${env_file_content}\n${common_unit_footer}"
 
-  #         common_unit_footer="
-  #         [Install]
-  #         WantedBy=multi-user.target"
+          printf "$service" | sudo tee "$SERVICE_PATH" > /dev/null
 
-  #         env_file_content=""
+          sudo systemctl daemon-reload
+          sudo systemctl restart "$SERVICE_NAME"
 
-  #         while IFS= read -r line; do
-  #           [[ -z "$line" || "$line" =~ ^# ]] && continue
-  #           env_file_content+="Environment=$line\n"
-  #         done < "$ENVS_DIR"
+  nginx:
+    runs-on: self-hosted
+    needs: service
 
-  #         CONFIG_FILE="./.config.json"
-  #         port=$(jq -r ".port.${ENV}" "$CONFIG_FILE")
-  #         env_file_content+="Environment=PORT=$port\n"
+    env:
+      ENV: ${{ needs.set-env.outputs.env }}
+      ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
+      DEPLOY_DIR: ${{ needs.set-env.outputs.deploy_dir }}
 
-  #         service="${common_unit_header}\n${env_file_content}\n${common_unit_footer}"
+    steps:
+      - name: Nginx configuration
+        run: |
+          #!/bin/bash
 
-  #         printf "$service" | sudo tee "$SERVICE_PATH" > /dev/null
+          # Templates multilignes
+          TEMPLATE_HTTP=$(cat <<'EOF'
+          server {
+            listen 80;
+            server_name $URL www.$URL;
 
-  #         sudo systemctl daemon-reload
-  #         sudo systemctl restart "$SERVICE_NAME"
+            location /.well-known/acme-challenge/ {
+              root /var/www/letsencrypt;
+            }
 
-  #     - name: Nginx configuration
-  #       run: |
-  #         #!/bin/bash
+            location / {
+              return 301 https://$host$request_uri;
+            }
+          }
+          EOF
+          )
 
-  #         # Templates multilignes
-  #         TEMPLATE_HTTP=$(cat <<'EOF'
-  #         server {
-  #           listen 80;
-  #           server_name $URL www.$URL;
+          TEMPLATE_HTTPS=$(cat <<'EOF'
+          server {
+            listen 443 ssl http2;
+            server_name $URL www.$URL;
 
-  #           location /.well-known/acme-challenge/ {
-  #             root /var/www/letsencrypt;
-  #           }
+            ssl_certificate /etc/letsencrypt/live/$URL/fullchain.pem;
+            ssl_certificate_key /etc/letsencrypt/live/$URL/privkey.pem;
 
-  #           location / {
-  #             return 301 https://$host$request_uri;
-  #           }
-  #         }
-  #         EOF
-  #         )
+            ssl_protocols TLSv1.2 TLSv1.3;
+            ssl_ciphers HIGH:!aNULL:!MD5;
+            ssl_prefer_server_ciphers on;
 
-  #         TEMPLATE_HTTPS=$(cat <<'EOF'
-  #         server {
-  #           listen 443 ssl http2;
-  #           server_name $URL www.$URL;
+            ssl_session_cache shared:SSL:10m;
+            ssl_session_timeout 1h;
+            ssl_session_tickets off;
 
-  #           ssl_certificate /etc/letsencrypt/live/$URL/fullchain.pem;
-  #           ssl_certificate_key /etc/letsencrypt/live/$URL/privkey.pem;
+            location /.well-known/acme-challenge/ {
+              root /var/www/letsencrypt;
+            }
 
-  #           ssl_protocols TLSv1.2 TLSv1.3;
-  #           ssl_ciphers HIGH:!aNULL:!MD5;
-  #           ssl_prefer_server_ciphers on;
+            location / {
+              proxy_pass http://localhost:$PORT;
+              proxy_http_version 1.1;
+              proxy_set_header Host $host;
+              proxy_set_header X-Real-IP $remote_addr;
+              proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+              proxy_set_header X-Forwarded-Proto $scheme;
+              proxy_set_header Upgrade $http_upgrade;
+              proxy_set_header Connection 'upgrade';
+              proxy_cache_bypass $http_upgrade;
+            }
 
-  #           ssl_session_cache shared:SSL:10m;
-  #           ssl_session_timeout 1h;
-  #           ssl_session_tickets off;
+            error_page 502 503 504 /50x.html;
+            location = /50x.html {
+              root /var/www/html/errors;
+              internal;
+            }
+          }
+          EOF
+          )
 
-  #           location /.well-known/acme-challenge/ {
-  #             root /var/www/letsencrypt;
-  #           }
+          # Lire le fichier .env et charger dans des variables locales
+          while IFS='=' read -r key value; do
+              # Ignorer les lignes vides ou les commentaires
+              if [[ -n "$key" && ! "$key" =~ ^# ]]; then
+                  # Supprimer d'éventuels guillemets
+                  value="${value%\"}"
+                  value="${value#\"}"
 
-  #           location / {
-  #             proxy_pass http://localhost:$PORT;
-  #             proxy_http_version 1.1;
-  #             proxy_set_header Host $host;
-  #             proxy_set_header X-Real-IP $remote_addr;
-  #             proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-  #             proxy_set_header X-Forwarded-Proto $scheme;
-  #             proxy_set_header Upgrade $http_upgrade;
-  #             proxy_set_header Connection 'upgrade';
-  #             proxy_cache_bypass $http_upgrade;
-  #           }
+                  # Créer une variable simple
+                  declare "_$key=$value"
+              fi
+          done < "$ENVS_DIR"
 
-  #           error_page 502 503 504 /50x.html;
-  #           location = /50x.html {
-  #             root /var/www/html/errors;
-  #             internal;
-  #           }
-  #         }
-  #         EOF
-  #         )
+          port="_$PORT"
+          domain="_$DOMAIN"
 
-  #         # Lire le fichier .env et charger dans des variables locales
-  #         while IFS='=' read -r key value; do
-  #             # Ignorer les lignes vides ou les commentaires
-  #             if [[ -n "$key" && ! "$key" =~ ^# ]]; then
-  #                 # Supprimer d'éventuels guillemets
-  #                 value="${value%\"}"
-  #                 value="${value#\"}"
+          restart_nginx() {
+              sudo systemctl restart nginx
+              echo "Redémarrage de NGINX..."
 
-  #                 # Créer une variable simple
-  #                 declare "_$key=$value"
-  #             fi
-  #         done < "$ENVS_DIR"
+              # Attendre max 10 secondes
+              for i in {1..20}; do
+                  if systemctl is-active --quiet nginx; then
+                      echo "NGINX est actif ✅"
+                      break
+                  fi
+                  sleep 0.5
+              done
 
-  #         port="_$PORT"
-  #         domain="_$DOMAIN"
+              # Vérification finale
+              if ! systemctl is-active --quiet nginx; then
+                  echo "❌ Échec : NGINX ne redémarre pas."
+                  exit 1
+              fi
+          }
 
-  #         restart_nginx() {
-  #             sudo systemctl restart nginx
-  #             echo "Redémarrage de NGINX..."
+          if [[ "$domain" != null && "$port" != null ]];then
+              EMAIL="contact@tarico.io"
+              CONF_PATH="/etc/nginx/sites-available/${domain}.conf"
+              ENABLED_PATH="/etc/nginx/sites-enabled/${domain}.conf"
 
-  #             # Attendre max 10 secondes
-  #             for i in {1..20}; do
-  #                 if systemctl is-active --quiet nginx; then
-  #                     echo "NGINX est actif ✅"
-  #                     break
-  #                 fi
-  #                 sleep 0.5
-  #             done
+              # Générer le fichier de configuration Nginx
+              echo "$TEMPLATE_HTTP" | URL="$domain" PORT="$port" envsubst '${URL} ${PORT}' | sudo tee "$CONF_PATH" >/dev/null
 
-  #             # Vérification finale
-  #             if ! systemctl is-active --quiet nginx; then
-  #                 echo "❌ Échec : NGINX ne redémarre pas."
-  #                 exit 1
-  #             fi
-  #         }
+              # Créer le lien symbolique s'il n'existe pas
+              if [ ! -f "$ENABLED_PATH" ]; then
+                  sudo ln -s "$CONF_PATH" "$ENABLED_PATH"
+              fi
 
-  #         if [[ "$domain" != null && "$port" != null ]];then
-  #             EMAIL="contact@tarico.io"
-  #             CONF_PATH="/etc/nginx/sites-available/${domain}.conf"
-  #             ENABLED_PATH="/etc/nginx/sites-enabled/${domain}.conf"
+              restart_nginx
 
-  #             # Générer le fichier de configuration Nginx
-  #             echo "$TEMPLATE_HTTP" | URL="$domain" PORT="$port" envsubst '${URL} ${PORT}' | sudo tee "$CONF_PATH" >/dev/null
+              # Générer SSL avec Certbot
+              echo "🔐 Obtention du certificat SSL pour $domain ..."
+              sudo ~/certbot-venv/bin/certbot  certonly \
+                  --webroot -w /var/www/letsencrypt \
+                  -d "$domain" -d "www.$domain" \
+                  --email "$EMAIL" \
+                  --non-interactive --agree-tos -v --expand
 
-  #             # Créer le lien symbolique s'il n'existe pas
-  #             if [ ! -f "$ENABLED_PATH" ]; then
-  #                 sudo ln -s "$CONF_PATH" "$ENABLED_PATH"
-  #             fi
+              echo "$TEMPLATE_HTTPS" | URL="$domain" PORT="$port" envsubst '${URL} ${PORT}' | sudo tee -a "$CONF_PATH" >/dev/null
 
-  #             restart_nginx
-
-  #             # Générer SSL avec Certbot
-  #             echo "🔐 Obtention du certificat SSL pour $domain ..."
-  #             sudo ~/certbot-venv/bin/certbot  certonly \
-  #                 --webroot -w /var/www/letsencrypt \
-  #                 -d "$domain" -d "www.$domain" \
-  #                 --email "$EMAIL" \
-  #                 --non-interactive --agree-tos -v --expand
-
-  #             echo "$TEMPLATE_HTTPS" | URL="$domain" PORT="$port" envsubst '${URL} ${PORT}' | sudo tee -a "$CONF_PATH" >/dev/null
-
-  #             restart_nginx
-  #             echo "✅ nginx configuré pour $domain"
-  #         fi
+              restart_nginx
+              echo "✅ nginx configuré pour $domain"
+          fi
