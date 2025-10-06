@@ -64,7 +64,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          echo pwd
+          pwd
           pnpm install --frozen-lockfile
 
       - name: Build project
