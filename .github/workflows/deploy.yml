@@ -56,26 +56,26 @@ jobs:
         with:
           node-version: 20
 
+      # - name: Checkout repo
+      #   uses: actions/checkout@v4
+      #   with:
+      #     fetch-depth: 0 # nécessaire pour git checkout de branches
+      #     path: "$DEPLOY_DIR"
+      #     clean: true
+
       - name: Checkout repo
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # nécessaire pour git checkout de branches
-          path: "$DEPLOY_DIR"
-          clean: true
+        run: |
+          rm -r $DEPLOY_DIR
+          mkdir -p $DEPLOY_DIR
+          cd $DEPLOY_DIR
 
-      # - name: projet clone
-      #   run: |
-      #     rm -r $DEPLOY_DIR
-      #     mkdir -p $DEPLOY_DIR
-      #     cd $DEPLOY_DIR
+          if [[ ! -d ".git" ]]; then
+            git clone --depth 1 --branch ${{ github.ref_name }} ${{ github.repository }} .
+          else
+            git reset --hard ${{ github.ref_name }}
+          fi
 
-      #     if [[ ! -d ".git" ]]; then
-      #       git clone --depth 1 --branch ${{ github.ref_name }} ${{ github.repository }} .
-      #     else
-      #       git reset --hard ${{ github.ref_name }}
-      #     fi
-
-      #     # rsync -av --exclude='.git' ./ $DEPLOY_DIR
+          # rsync -av --exclude='.git' ./ $DEPLOY_DIR
 
       - name: Install corepack
         run: npm i -g --force corepack@latest && corepack enable pnpm
