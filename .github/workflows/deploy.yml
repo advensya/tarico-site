@@ -64,7 +64,7 @@ jobs:
       - name: Copy project to deploy dir
         run: |
           mkdir -p $DEPLOY_DIR
-          cp -rv ./. $DEPLOY_DIR
+          rsync -av --exclude='.git' ./ $DEPLOY_DIR
 
       - name: Install corepack
         run: npm i -g --force corepack@latest && corepack enable pnpm
