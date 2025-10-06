@@ -52,6 +52,8 @@ jobs:
           node-version: 20
       - name: Copy project to deploy dir
         run: |
+          echo $DEPLOY_DIR
+          mkdir -p $DEPLOY_DIR
           cp ./* $DEPLOY_DIR
           cd $DEPLOY_DIR
 
