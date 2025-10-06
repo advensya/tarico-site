@@ -17,6 +17,7 @@
 		"@nuxtjs/seo": "3.1.0",
 		"@tarico/form-ui": "lib",
 		"@tarico/form": "lib",
+		"@tarico/utils": "lib",
 		"@types/pg": "^8.15.5",
 		"better-sqlite3": "^12.4.1",
 		"dayjs-nuxt": "^2.1.11",
