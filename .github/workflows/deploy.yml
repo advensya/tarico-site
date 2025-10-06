@@ -11,6 +11,7 @@ jobs:
     runs-on: self-hosted
     outputs:
       env: ${{ steps.define-env.outputs.env }}
+
     steps:
       - name: Define environment from branch
         id: define-env
@@ -31,8 +32,6 @@ jobs:
           DEPLOY_DIR="$HOME/prod/site/$ENV"
           echo "DEPLOY_DIR=$DEPLOY_DIR" >> $GITHUB_OUTPUT
 
-          mkdir -p $DEPLOY_DIR
-
   build:
     runs-on: self-hosted
     needs: set-env
@@ -51,25 +50,30 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies (yarn)
-        run: yarn install --frozen-lockfile
-
-      - name: Build project (yarn)
-        run: yarn build --mode production
-
       - name: Install corepack
         run: npm i -g --force corepack@latest && corepack enable pnpm
 
-      - name: Copy files to deploy dir
-        run: |
-          mkdir -p "$DEPLOY_DIR"
-          cp -r ./* "$DEPLOY_DIR"
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build project
+        run: pnpm build
+
+      # - name: Copy files to deploy dir
+      #   run: |
+      #     mkdir -p "$DEPLOY_DIR"
+      #     cp -r ./* "$DEPLOY_DIR"
 
       - name: Install dependencies with pnpm and build
         run: |
-          cd "$DEPLOY_DIR"
-          pnpm install --frozen-lockfile
-          pnpm build
+          echo "$DEPLOY_DIR"
+          mkdir -p $DEPLOY_DIR
+
+          cp .pnpmfile.cjs build
+          cp build/* $DEPLOY_DIR
+
+          cd $DEPLOY_DIR
+          pnpm install --prod --frozen-lockfile
 
   deploy:
     runs-on: self-hosted
