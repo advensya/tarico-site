@@ -70,10 +70,11 @@ jobs:
           cd $DEPLOY_DIR
 
           if [[ ! -d ".git" ]]; then
-            git clone --depth 1 --branch ${{ github.ref_name }} ${{ github.repository }} .
+            git clone --depth 1 --branch ${{ github.ref_name }} git@github.com:${{ github.repository }} .
           else
             git reset --hard ${{ github.ref_name }}
           fi
+          # git@github.com:actions/checkout.git
 
           # rsync -av --exclude='.git' ./ $DEPLOY_DIR
 
