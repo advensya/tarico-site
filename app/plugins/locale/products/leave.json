@@ -1,0 +1,25 @@
+{
+	"fr": {
+		"intro": "Automatisez la gestion des congés et absences en toute simplicité.",
+		"summary": "Le module Congé digitalise les demandes et validations, tout en offrant une visibilité complète sur les absences.",
+		"description": "Chaque employé peut faire ses demandes en ligne, validées selon un circuit hiérarchique configurable. Le solde est automatiquement mis à jour, garantissant une planification fluide et sans erreur.",
+		"functionalities": [
+			{
+				"title": "Demandes en ligne",
+				"description": "Processus simple et rapide."
+			},
+			{
+				"title": "Validation automatique",
+				"description": "Workflow hiérarchique intégré."
+			},
+			{
+				"title": "Calcul des soldes",
+				"description": "Mise à jour instantanée."
+			},
+			{
+				"title": "Calendrier d’équipe",
+				"description": "Vue partagée des absences."
+			}
+		]
+	}
+}

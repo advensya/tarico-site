@@ -1,0 +1,28 @@
+{
+	"fr": {
+		"intro": "Offrez à chaque nouvel employé une intégration fluide, claire et mémorable.",
+
+		"summary": "Onboarding digitalise le parcours d’accueil des nouveaux collaborateurs grâce à une checklist interactive et un suivi automatisé.",
+
+		"description": "Ce module automatise les étapes clés d’intégration : accueil, remise de documents, formation initiale et validation des tâches. Les managers peuvent suivre la progression de chaque nouvel arrivant en temps réel.",
+
+		"functionalities": [
+			{
+				"title": "Parcours personnalisable",
+				"description": "Étapes adaptées selon le poste."
+			},
+			{
+				"title": "Signature électronique ",
+				"description": "Simplifie la remise de documents RH."
+			},
+			{
+				"title": "Suivi de progression",
+				"description": "Indicateurs visuels pour managers et RH."
+			},
+			{
+				"title": "Notifications automatiques",
+				"description": "Rappels et relances programmées."
+			}
+		]
+	}
+}

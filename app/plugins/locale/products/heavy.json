@@ -1,0 +1,73 @@
+{
+	"fr": {
+		"intro": "Transfert fluide et sécurisé de fichiers volumineux.",
+
+		"summary": "Heavy vous offre tout ce dont vous avez besoin pour échanger des fichiers volumineux de manière fluide, rapide et sécurisée",
+
+		"description": "Heavy est la solution professionnelle dédiée au transfert de fichiers volumineux. Pensé pour les entreprises, il garantit une transmission rapide, sécurisée et conforme aux standards les plus exigeants. Que ce soit pour partager des données sensibles, collaborer sur des projets complexes ou fluidifier vos échanges internes et externes, Heavy vous offre la fiabilité et la simplicité nécessaires pour travailler en toute confiance.",
+
+		"functionalities": [
+			{
+				"title": "Transfert haute performance",
+				"description": "Envoyez et recevez des fichiers massifs en un temps record, sans interruption ni limite de taille contraignante."
+			},
+			{
+				"title": "Sécurité renforcée",
+				"description": "Protégez vos données grâce à un chiffrement avancé et des protocoles conformes aux standards de sécurité d’entreprise."
+			},
+			{
+				"title": "Collaboration optimisée",
+				"description": "Partagez vos fichiers avec vos équipes, partenaires ou clients en toute sécurité, tout en gardant un contrôle précis des accès et des autorisations."
+			}
+		],
+
+		"plans": {
+			"features": {
+				"01": "Transferts illimités ou limités selon le plan",
+				"02": "Taille maximale par fichier",
+				"03": "Sécurité avancée avec chiffrement",
+				"04": "Accès web et mobile",
+				"05": "Historique des transferts",
+				"06": "Support",
+				"07": "Gestion des accès et permissions",
+				"08": "Notifications de réception et suivi",
+				"09": "Partage de fichiers avec plusieurs destinataires",
+				"10": "Contrôle des expirations de liens",
+				"11": "Suivi et rapports détaillés des transferts",
+				"12": "Gestion multi-utilisateurs",
+				"13": "Automatisation des transferts récurrents",
+				"14": "Archivage sécurisé des fichiers transférés",
+				"15": "Intégration avec vos outils internes",
+				"16": "Stockage temporaire haute capacité",
+				"17": "Partage sécurisé de dossiers complets",
+				"18": "Limite de vitesse configurable pour gros volumes",
+				"19": "Plan de récupération après incident",
+				"20": "Rapports d’activité pour chaque utilisateur",
+				"21": "Support technique dédié",
+				"22": "Historique de téléchargement détaillé",
+				"23": "Priorisation des transferts critiques",
+				"24": "Mises à jour et maintenance incluses",
+				"25": "SLA avec garantie de disponibilité",
+				"26": "Audits de sécurité réguliers",
+				"27": "Assistance à l’intégration et onboarding"
+			},
+
+			"FREE": {
+				"title": "Free",
+				"description": "Idéal pour tester Heavy et découvrir les bases du transfert de fichiers volumineux."
+			},
+			"DECLIC": {
+				"title": "Déclic",
+				"description": "Pour les petites équipes qui souhaitent fluidifier leurs échanges de fichiers lourds."
+			},
+			"PREMIUM": {
+				"title": "Premium",
+				"description": "Pour les entreprises qui ont besoin de performance, sécurité et suivi avancé."
+			},
+			"ENTERPRISE": {
+				"title": "Enterprise",
+				"description": "Solution complète pour les organisations avec de gros volumes et des exigences de sécurité élevées."
+			}
+		}
+	}
+}

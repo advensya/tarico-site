@@ -1,0 +1,25 @@
+{
+	"fr": {
+		"intro": "Simplifiez le recrutement, de la publication d’offre à l’embauche finale.",
+		"summary": "Hiring centralise tout le processus de recrutement sur une seule plateforme : publication, tri et évaluation des candidatures.",
+		"description": "Le module Hiring facilite la gestion du recrutement de bout en bout : diffusion des offres, suivi des candidatures, évaluation et intégration finale. Il offre une vue globale sur le pipeline de recrutement et accélère la prise de décision.",
+		"functionalities": [
+			{
+				"title": "Publication multicanal",
+				"description": "Offres diffusées sur plusieurs plateformes."
+			},
+			{
+				"title": "Pipeline visuel",
+				"description": "Suivi clair des étapes de recrutement."
+			},
+			{
+				"title": "Évaluations intégrées",
+				"description": "Tests et entretiens notés en ligne."
+			},
+			{
+				"title": "Archivage intelligent",
+				"description": "Conservation des profils pour futurs besoins."
+			}
+		]
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"fr": {
+		"intro": "Simplifiez les échanges administratifs internes avec traçabilité totale.",
+		"summary": "File Exchange digitalise la demande, l’envoi et la validation des documents entre collaborateurs.",
+		"description": "Ce module permet à un utilisateur de demander, envoyer et valider un fichier administratif via un processus clair et suivi. Idéal pour les documents RH, les attestations ou rapports internes.",
+		"functionalities": [
+			{
+				"title": "Demande de fichier",
+				"description": "Workflow clair (demande → envoi → validation)."
+			},
+			{
+				"title": "Notifications automatiques",
+				"description": "Alertes à chaque étape du processus."
+			},
+			{
+				"title": "Historique complet",
+				"description": "Suivi des échanges et statuts des fichiers."
+			},
+			{
+				"title": "Sécurité garantie",
+				"description": "Accès contrôlé et chiffrement des données."
+			}
+		]
+	}
+}

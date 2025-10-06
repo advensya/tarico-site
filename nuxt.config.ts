@@ -1,22 +1,35 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
+
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
 
+  runtimeConfig: {},
+
+  build: { transpile: ["vuetify", "dayjs-nuxt", "better-sqlite3"] },
+
+  alias: {
+    dayjs: "dayjs",
+  },
+
   modules: [
-    "vuetify-nuxt-module",
     "nuxt-icons",
     "@nuxtjs/i18n",
     "@nuxtjs/mdc",
     "@nuxt/content",
+    "@tarico/form-ui",
+    "@nuxtjs/seo",
+    "dayjs-nuxt",
+    "@nuxtjs/color-mode",
+
+    (_options, nuxt) => {
+      nuxt.hooks.hook("vite:extendConfig", (config) => {
+        config.plugins?.push(vuetify({ autoImport: true }));
+      });
+    },
   ],
 
-  css: ["./styles/main.scss"],
-
-  vuetify: {
-    moduleOptions: {},
-    vuetifyOptions: "./vuetify.config.ts",
-  },
+  css: ["~/assets/styles/main.scss"],
 
   app: {
     head: {
@@ -31,9 +44,20 @@ export default defineNuxtConfig({
     },
   },
 
+  site: {
+    name: "Tarico",
+    url: "https://tarico.io",
+    indexable: process.env.NUXT_PUBLIC_INDEXABLE,
+  },
+
+  seo: {
+    canonicalLowercase: false,
+  },
+
   i18n: {
     compilation: { strictMessage: false },
     strategy: "prefix",
+    lazy: true,
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: "i18n_redirected",
@@ -53,6 +77,19 @@ export default defineNuxtConfig({
         name: "English",
         file: "en.json",
       },
+      {
+        code: "es",
+        language: "es",
+        name: "Español",
+        file: "es.json",
+      },
+      {
+        code: "ar",
+        language: "ar",
+        name: "عربي",
+        file: "ar.json",
+        dir: "rtl",
+      },
     ],
   },
 
@@ -60,5 +97,15 @@ export default defineNuxtConfig({
 
   svg: {
     component: "uiSvg",
+  },
+
+  colorMode: { classSuffix: "" },
+
+  vite: {
+    vue: {
+      template: {
+        transformAssetUrls,
+      },
+    },
   },
 });
