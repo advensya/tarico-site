@@ -57,18 +57,19 @@ jobs:
         run: |
           mkdir -p $DEPLOY_DIR
           cp -r ./* $DEPLOY_DIR
-          cd $DEPLOY_DIR
 
       - name: Install corepack
         run: npm i -g --force corepack@latest && corepack enable pnpm
 
       - name: Install dependencies
         run: |
-          pwd
+          cd $DEPLOY_DIR
           pnpm install --frozen-lockfile
 
       - name: Build project
-        run: pnpm build
+        run: |
+          cd $DEPLOY_DIR
+          pnpm build
 
       # - name: Copy files to deploy dir
       #   run: |
