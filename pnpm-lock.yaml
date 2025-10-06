@@ -28,6 +28,9 @@ importers:
       '@tarico/form-ui':
         specifier: git+ssh://git@github.com/advensya/form-ui.git#lib
         version: '@sya/form-ui@git+https://git@github.com:advensya/form-ui.git#9441600460e894aec87a8fdea44947d8a872abb9(magicast@0.3.5)(vue@3.5.22(typescript@5.9.2))'
+      '@tarico/utils':
+        specifier: git+ssh://git@github.com/advensya/utils.git#lib
+        version: '@sya/utils@git+https://git@github.com:advensya/utils.git#8f6a436c59d49eb68a100ca72eca072acfb88592'
       '@types/pg':
         specifier: ^8.15.5
         version: 8.15.5
