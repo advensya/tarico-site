@@ -72,7 +72,8 @@ jobs:
       - name: Install dependencies
         run: |
           cd $DEPLOY_DIR
-          pnpm install --frozen-lockfile
+          rm -rf node_modules
+          pnpm install --prod --frozen-lockfile
 
       - name: Build project
         run: |
