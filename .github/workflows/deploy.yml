@@ -64,7 +64,8 @@ jobs:
       - name: Install dependencies
         run: |
           cd $DEPLOY_DIR
-          pnpm install --no-frozen-lockfile
+          rm pnpm-lock.yaml
+          pnpm install --frozen-lockfile
 
       - name: Build project
         run: |
