@@ -13,6 +13,7 @@ jobs:
       env: ${{ steps.define-env.outputs.env }}
       envs_dir: ${{ steps.define-env.outputs.envs_dir }}
       deploy_dir: ${{ steps.define-env.outputs.deploy_dir }}
+      envs_dir_exists: ${{ steps.define-env.outputs.envs_dir_exists }}
 
     steps:
       - name: Define environment from branch
@@ -80,7 +81,7 @@ jobs:
 
   service:
     runs-on: self-hosted
-    needs: build
+    needs: [set-env, build]
 
     env:
       ENV: ${{ needs.set-env.outputs.env }}
@@ -127,7 +128,7 @@ jobs:
 
   nginx:
     runs-on: self-hosted
-    needs: service
+    needs: [set-env, build, service]
 
     env:
       ENV: ${{ needs.set-env.outputs.env }}
