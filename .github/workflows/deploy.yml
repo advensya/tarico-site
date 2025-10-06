@@ -63,7 +63,7 @@ jobs:
           cd $DEPLOY_DIR
 
           if [[ ! -d ".git" ]]; then
-            git clone --depth 1 --branch ${{ github.ref_name }}
+            git clone --depth 1 --branch ${{ github.ref_name }} .
           else
             git reset --hard ${{ github.ref_name }}
           fi
