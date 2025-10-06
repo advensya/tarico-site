@@ -42,7 +42,7 @@ jobs:
 
   build:
     runs-on: self-hosted
-    needs: set-env
+    needs: [set-env]
     env:
       ENV: ${{ needs.set-env.outputs.env }}
       ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
@@ -76,6 +76,7 @@ jobs:
 
       - name: Build project
         run: |
+          cp $ENVS_DIR $DEPLOY_DIR/.env
           cd $DEPLOY_DIR
           pnpm build
 
