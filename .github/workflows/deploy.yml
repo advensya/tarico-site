@@ -29,7 +29,7 @@ jobs:
           echo "ENV=$ENV" >> $GITHUB_ENV
           echo "env=$ENV" >> $GITHUB_OUTPUT
 
-          ENVS_DIR="$HOME/prod/site/$ENV.env"
+          ENVS_DIR="$HOME/prod/site/.$ENV.env"
           echo "envs_dir=$ENVS_DIR" >> $GITHUB_OUTPUT
 
           echo "envs_dir_exists=false" >> $GITHUB_OUTPUT
