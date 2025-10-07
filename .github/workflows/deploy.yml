@@ -79,6 +79,7 @@ jobs:
         run: |
           cp $ENVS_DIR $DEPLOY_DIR/.env
           cd $DEPLOY_DIR
+          pnpm store prune
           pnpm build
 
   service:

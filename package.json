@@ -5,7 +5,7 @@
 	"scripts": {
 		"build": "nuxt build",
 		"dev": "nuxt dev --host",
-		"start:prod": "yarn drizzle-kit generate && yarn drizzle-kit push && node run.dev",
+		"start:prod": "node run.dev",
 		"generate": "nuxt generate",
 		"preview": "nuxt preview",
 		"postinstall": "nuxt prepare"
@@ -15,8 +15,8 @@
 		"@nuxtjs/color-mode": "^3.5.2",
 		"@nuxtjs/i18n": "^9.5.3",
 		"@nuxtjs/seo": "3.1.0",
-		"@tarico/form-ui": "lib",
 		"@tarico/form": "lib",
+		"@tarico/form-ui": "lib",
 		"@tarico/utils": "lib",
 		"@types/pg": "^8.15.5",
 		"better-sqlite3": "^12.4.1",
@@ -41,7 +41,9 @@
 	"devDependencies": {
 		"@types/masonry-layout": "^4.2.8",
 		"@types/nodemailer": "^7.0.0",
-		"@types/ua-parser-js": "^0.7.39"
+		"@types/ua-parser-js": "^0.7.39",
+		"cross-env": "^10.1.0",
+		"dotenv": "^17.2.3"
 	},
 	"pnpm": {
 		"onlyBuiltDependencies": [
