@@ -107,7 +107,7 @@ jobs:
 
           [Service]
           WorkingDirectory="$DEPLOY_DIR"
-          ExecStart="$WHICH_NODE" run.js
+          ExecStart="$WHICH_NODE" .output/server/index.mjs  
           Restart=always
           RestartSec=5
           KillMode=process
