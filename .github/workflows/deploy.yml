@@ -47,6 +47,8 @@ jobs:
       ENV: ${{ needs.set-env.outputs.env }}
       ENVS_DIR: ${{ needs.set-env.outputs.envs_dir }}
       DEPLOY_DIR: ${{ needs.set-env.outputs.deploy_dir }}
+      NODE_OPTIONS: "--max-old-space-size=4096" # ⬅️ Augmente la mémoire allouée à Node
+      NUXT_TELEMETRY_DISABLED: "1"
 
     if: ${{ needs.set-env.outputs.envs_dir_exists }}
 

@@ -4,7 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"buildd": "nuxt build",
-		"build": "cross-env NODE_OPTIONS=--max-old-space-size=4096 nuxt build",
+		"build": "nuxt build",
 		"dev": "nuxt dev --host",
 		"start:prod": "node run.dev",
 		"generate": "nuxt generate",
