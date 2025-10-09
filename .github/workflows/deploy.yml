@@ -66,7 +66,7 @@ jobs:
             cd $DEPLOY_DIR
             echo ${{ github.ref_name }}
             echo '*******************************'
-            git fetch origin
+            git fetch origin ${{ github.ref_name }}
             git reset --hard origin/${{ github.ref_name }}
           fi
           # git@github.com:actions/checkout.git
