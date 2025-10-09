@@ -1,7 +1,10 @@
 <script lang="ts" setup>
 import { VContainer } from "vuetify/components/VGrid";
 
-defineProps({ hideBorder: { type: Boolean, default: false } });
+defineProps({
+	hideBorder: { type: Boolean, default: false },
+	hideUnlimit: { type: Boolean, default: false },
+});
 
 // frame-borders.ts
 type FrameItem = HTMLElement;
@@ -167,7 +170,7 @@ onMounted(() => {
 	<v-container
 		ref="container"
 		class="ui-frame py-0"
-		:class="{ 'hide-border': hideBorder }"
+		:class="{ 'hide-border': hideBorder, 'hide-unlimit': hideUnlimit }"
 	>
 		<slot name="prepend" />
 
@@ -316,6 +319,18 @@ onMounted(() => {
 				position: relative;
 				border-color: transparent !important;
 
+				[data-unlimit-top],
+				[data-unlimit-start],
+				[data-unlimit-end] {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	&.hide-unlimit {
+		.framer {
+			.frame {
 				[data-unlimit-top],
 				[data-unlimit-start],
 				[data-unlimit-end] {

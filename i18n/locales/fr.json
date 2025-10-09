@@ -22,7 +22,10 @@
 		"start": "Commencer",
 		"install": "Installer sur mon environnement",
 		"startWithApp": "Débuter avec ce produit",
-		"sendMail": "Envoyer un email"
+		"sendMail": "Envoyer un email",
+		"company": "Entreprise",
+		"products": "Solutions",
+		"allProducts": "Tous nos services"
 	},
 
 	"tou": "Conditions d'utilisation",

@@ -23,7 +23,7 @@ function destroy() {
 		class="ui-header"
 		style="position: absolute; top: 0; width: 100%"
 	>
-		<ui-frame :hide-border="!isScrolled" class="my-0 pb-0 pt-3">
+		<ui-frame :hide-border="!isScrolled" class="my-0 pb-0 pt-3" fluid>
 			<!-- <transition
 				enter-active-class="animate__slideInDown"
 				leave-active-class="animate__slideOutUp"
@@ -124,6 +124,81 @@ function destroy() {
 
 					<v-spacer />
 
+					<div v-if="$vuetify.display.mdAndUp" class="d-flex align-center ga-5">
+						<v-menu
+							location="bottom center"
+							max-width="332"
+							offset="15"
+							open-on-hover
+						>
+							<template #activator="{ props }">
+								<div
+									v-bind="props"
+									variant="text"
+									class="ui-link"
+									:to="$localePath({ name: 'products' })"
+								>
+									{{ $t("words.products") }}
+								</div>
+							</template>
+
+							<v-card>
+								<nuxt-link
+									v-for="code in ['team', 'hiring', 'pay', 'heavy', 'database']"
+									:key="code"
+									:to="$localePath(Products[code].to)"
+									style="text-wrap: pretty"
+									class="mx-5 border-b py-3 d-block ui-header-product-item"
+								>
+									<h3
+										class="text-body-1"
+										style="text-wrap: balance"
+										v-html="Products[code].name"
+									></h3>
+
+									<p
+										style="text-wrap: pretty; hyphens: auto; opacity: 0.5"
+										v-html="$t(`products.${code}.intro`)"
+									></p>
+								</nuxt-link>
+
+								<nuxt-link
+									style="background-color: rgba(var(--v-theme-surface), 0.5)"
+									class="w-100 px-5 py-2 d-flex align-center ga-2"
+									:to="$localePath({ name: 'products' })"
+								>
+									{{ $t("words.allProducts") }}
+
+									<v-spacer />
+
+									<i class="fi fi-rr-arrow-right text-dark"></i>
+								</nuxt-link>
+							</v-card>
+						</v-menu>
+
+						<nuxt-link
+							variant="text"
+							class="ui-link"
+							:to="$localePath({ name: 'id' })"
+						>
+							Tarico <b>ID</b>
+						</nuxt-link>
+
+						<nuxt-link class="ui-link" :to="$localePath({ name: 'contact' })">
+							{{ $t("words.contactUs") }}
+						</nuxt-link>
+
+						<nuxt-link
+							variant="text"
+							class="ui-link"
+							:to="$localePath({ name: 'company' })"
+						>
+							{{ $t("words.company") }}
+						</nuxt-link>
+					</div>
+
+					<v-spacer />
+
 					<v-btn
 						v-if="!$vuetify.display.xs"
 						color="background"
@@ -164,6 +239,14 @@ function destroy() {
 	&.isScrolled {
 		background-color: rgba(var(--v-theme-background), 0.2);
 		backdrop-filter: blur(0.9rem);
+	}
+}
+
+.ui-header-product-item {
+	color: rgba(var(--v-theme-on-background));
+
+	&:hover {
+		color: rgba(var(--v-theme-primary));
 	}
 }
 </style>

@@ -110,7 +110,7 @@ const products: { [key: string]: IProduct } = {
 	},
 	id: {
 		code: "id",
-		name: "Tarico <b>ID<b>",
+		name: "Tarico <b>ID</b>",
 		namePlain: "Tarico ID",
 		to: { name: "id" },
 		sections: [],
