@@ -1,12 +1,11 @@
 import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 
 export default defineNuxtConfig({
-	compatibilityDate: "2024-11-01",
 	devtools: { enabled: true },
 
 	runtimeConfig: {},
 
-	build: { transpile: ["vuetify", "dayjs-nuxt", "better-sqlite3"] },
+	build: { transpile: ["vuetify", "dayjs-nuxt"] },
 
 	alias: {
 		dayjs: "dayjs",
@@ -42,6 +41,9 @@ export default defineNuxtConfig({
 			link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 			meta: [{ property: "og:image", content: "/og-image.png" }],
 		},
+
+		baseURL: "/",
+		buildAssetsDir: "/_nuxt",
 	},
 
 	site: {
@@ -56,7 +58,7 @@ export default defineNuxtConfig({
 
 	i18n: {
 		compilation: { strictMessage: false },
-		strategy: "prefix",
+		strategy: "prefix_except_default",
 		lazy: true,
 		detectBrowserLanguage: {
 			useCookie: true,
@@ -71,25 +73,25 @@ export default defineNuxtConfig({
 				name: "Français",
 				file: "fr.json",
 			},
-			{
-				code: "en",
-				language: "en",
-				name: "English",
-				file: "en.json",
-			},
-			{
-				code: "es",
-				language: "es",
-				name: "Español",
-				file: "es.json",
-			},
-			{
-				code: "ar",
-				language: "ar",
-				name: "عربي",
-				file: "ar.json",
-				dir: "rtl",
-			},
+			// {
+			// 	code: "en",
+			// 	language: "en",
+			// 	name: "English",
+			// 	file: "en.json",
+			// },
+			// {
+			// 	code: "es",
+			// 	language: "es",
+			// 	name: "Español",
+			// 	file: "es.json",
+			// },
+			// {
+			// 	code: "ar",
+			// 	language: "ar",
+			// 	name: "عربي",
+			// 	file: "ar.json",
+			// 	dir: "rtl",
+			// },
 		],
 	},
 
@@ -110,9 +112,22 @@ export default defineNuxtConfig({
 	},
 
 	nitro: {
-		preset: "node-server",
-		externals: {
-			inline: ["crypto"],
-		},
+		preset: "node",
+
+		// alias: {
+		// 	crypto: "node:crypto",
+		// },
+
+		// externals: {
+		// 	inline: [
+		// 		"node-forge",
+		// 		"h3",
+		// 		"nanoid",
+		// 		"ws",
+		// 		"engine.io-client",
+		// 		"dotenv",
+		// 		"better-sqlite3",
+		// 	],
+		// },
 	},
 });

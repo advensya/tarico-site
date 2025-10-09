@@ -75,7 +75,7 @@ jobs:
         run: |
           cd $DEPLOY_DIR
           rm -rf node_modules
-          pnpm install --prod --frozen-lockfile
+          pnpm install --frozen-lockfile
 
       - name: Build project
         run: |
@@ -107,7 +107,7 @@ jobs:
 
           [Service]
           WorkingDirectory="$DEPLOY_DIR"
-          ExecStart="$WHICH_NODE" .output/server/index.mjs  
+          ExecStart="$WHICH_NODE" server.mjs  
           Restart=always
           RestartSec=5
           KillMode=process

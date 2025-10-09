@@ -1,5 +1,5 @@
 {
-	"name": "nuxt-app",
+	"name": "tarico-site",
 	"private": true,
 	"type": "module",
 	"scripts": {
@@ -22,6 +22,7 @@
 		"@types/pg": "^8.15.5",
 		"better-sqlite3": "^12.4.1",
 		"dayjs-nuxt": "^2.1.11",
+		"h3": "^1.15.4",
 		"isbot": "^5.1.30",
 		"masonry-layout": "^4.2.2",
 		"nodemailer": "^6.10.1",
