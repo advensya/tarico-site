@@ -23,8 +23,8 @@ function destroy() {
 		class="ui-header"
 		style="position: absolute; top: 0; width: 100%"
 	>
-		<ui-frame class="my-0 py-0">
-			<transition
+		<ui-frame :hide-border="!isScrolled" class="my-0 pb-0 pt-3">
+			<!-- <transition
 				enter-active-class="animate__slideInDown"
 				leave-active-class="animate__slideOutUp"
 			>
@@ -83,15 +83,15 @@ function destroy() {
 							</v-btn>
 						</template>
 
-						<!-- <v-btn size="32" color="dark" rounded="0" variant="text" icon>
+						<v-btn size="32" color="dark" rounded="0" variant="text" icon>
 							<ui-svg name="language" size="16" />
-						</v-btn> -->
+						</v-btn>
 
 						<ui-theme />
 					</div>
 				</v-col>
-			</transition>
-			<v-col :class="{ 'border-t-0': isScrolled }" class="frame" cols="12">
+			</transition> -->
+			<v-col class="frame" cols="12">
 				<div class="d-flex align-center h-100 ga-2">
 					<nuxt-link
 						class="d-flex align-center text-dark overflow-hidden pa-1 mx-3"
@@ -159,9 +159,10 @@ function destroy() {
 	top: 0;
 	z-index: 100;
 	background-color: rgba(var(--v-theme-background), 0.2);
-	backdrop-filter: blur(0.9rem);
+	backdrop-filter: blur(0.3rem);
 
 	&.isScrolled {
+		background-color: rgba(var(--v-theme-background), 0.2);
 		backdrop-filter: blur(0.9rem);
 	}
 }

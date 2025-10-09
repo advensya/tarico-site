@@ -118,7 +118,7 @@ const readMoreAboutTarico = ref(false);
 		</v-col>
 
 		<v-col cols="12" class="frame">
-			<!-- <ui-card-id /> -->
+			<ui-card-id />
 		</v-col>
 	</ui-frame>
 
@@ -300,7 +300,7 @@ const readMoreAboutTarico = ref(false);
 
 <style lang="scss">
 .pg-index-hero {
-	min-height: 100vh;
+	min-height: 662px;
 }
 
 .text-hh {

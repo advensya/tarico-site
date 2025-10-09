@@ -60,16 +60,11 @@ jobs:
 
       - name: Checkout repo
         run: |
-          if [[ ! -d "$DEPLOY_DIR" ]]; then
-            git clone --depth 1 --branch ${{ github.ref_name }} git@github.com:${{ github.repository }}.git $DEPLOY_DIR
-          else
-            cd $DEPLOY_DIR
-            echo ${{ github.ref_name }}
-            echo '*******************************'
-            git fetch origin ${{ github.ref_name }}
-            git reset --hard origin/${{ github.ref_name }}
+          if [[ -d "$DEPLOY_DIR" ]]; then
+            rm -r "$DEPLOY_DIR"
           fi
-          # git@github.com:actions/checkout.git
+
+          git clone --depth 1 --branch ${{ github.ref_name }} git@github.com:${{ github.repository }}.git $DEPLOY_DIR
 
       - name: Install corepack
         run: npm i -g --force corepack@latest && corepack enable pnpm

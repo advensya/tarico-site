@@ -13,23 +13,23 @@ const products = ["id", "pay", "database", "heavy", "onboarding", "hiring"];
 <template>
 	<section class="tarico-hero-one" aria-labelledby="hero-title">
 		<!-- <div class="back" aria-hidden="true"></div> -->
-		<ui-hero-back-wall :class="{ mask: $vuetify.theme.current.dark }" />
+		<ui-hero-back-wall :class="{ masks: $vuetify.theme.current.dark }" />
 
 		<div class="mb-auto" aria-hidden="true"></div>
 
 		<v-container :fluid="$vuetify.display.xs">
 			<v-row>
 				<v-col cols="12">
-					<div class="px-5 position-relative">
+					<div class="px-5 position-relative text-center">
 						<h1
 							id="hero-title"
 							class="title"
 							v-html="$t('hero.one.title')"
 						></h1>
-						<p class="mt-2" v-html="$t('hero.one.text')"></p>
+						<p class="mt-2 mb-10" v-html="$t('hero.one.text')"></p>
 
 						<div
-							class="d-flex align-center ga-2 flex-wrap mt-5"
+							class="d-flex align-center ga-2 flex-wrap mt-5 justify-center"
 							role="group"
 							aria-label="call to action"
 						>
@@ -46,8 +46,7 @@ const products = ["id", "pay", "database", "heavy", "onboarding", "hiring"];
                 {{ $t("hero.one.cta") }}
               </v-btn> -->
 							<v-btn
-								size="large"
-								color="background"
+								color="surface"
 								rounded="0"
 								class="border"
 								:to="$localePath({ name: 'products' })"

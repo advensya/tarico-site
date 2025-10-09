@@ -1,6 +1,8 @@
 <script lang="ts" setup>
 import { VContainer } from "vuetify/components/VGrid";
 
+defineProps({ hideBorder: { type: Boolean, default: false } });
+
 // frame-borders.ts
 type FrameItem = HTMLElement;
 type FrameContainer = HTMLElement;
@@ -162,7 +164,11 @@ onMounted(() => {
 </script>
 
 <template>
-	<v-container ref="container" class="ui-frame py-0">
+	<v-container
+		ref="container"
+		class="ui-frame py-0"
+		:class="{ 'hide-border': hideBorder }"
+	>
 		<slot name="prepend" />
 
 		<v-row class="framer" justify="start" :no-gutters="true">
@@ -292,6 +298,24 @@ onMounted(() => {
 			}
 
 			@media (max-width: 992px) {
+				[data-unlimit-top],
+				[data-unlimit-start],
+				[data-unlimit-end] {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	&.hide-border {
+		.framer {
+			// margin-bottom: 80px;
+
+			.frame {
+				// ex: par défaut pleine largeur en mobile
+				position: relative;
+				border-color: transparent !important;
+
 				[data-unlimit-top],
 				[data-unlimit-start],
 				[data-unlimit-end] {
