@@ -1,11 +1,31 @@
 import type { RouteLocationAsRelativeGeneric } from "vue-router";
 
-export interface IProductPlan {
+export interface IProductPlanFormule {
 	title: string;
 	price: { xof: number } | "$sale";
 	ideal: boolean;
 	features: string[];
 }
+
+export interface IProductPlan {
+	yearlReduction?: number;
+	applyTo: "user" | "employee" | "organization";
+	frequency: "month" | "year";
+
+	formule: {
+		[key: string]: IProductPlanFormule;
+	};
+}
+
+// Team
+
+// Hiring
+
+// Temps et Activité
+
+// File Exchange
+
+// Heavy
 
 export interface IProduct {
 	code: string;
@@ -14,16 +34,8 @@ export interface IProduct {
 	logo?: string;
 	to: RouteLocationAsRelativeGeneric;
 	sections: string[];
-
-	plans?: {
-		yearlReduction?: number;
-		applyTo: "user" | "employee" | "organization";
-		frequency: "month" | "year";
-
-		formule: {
-			[key: string]: IProductPlan;
-		};
-	};
+	plans?: IProductPlan;
+	prices?: { FREE: number; DECLIC: number; PREMIUM: number };
 }
 
 const products: { [key: string]: IProduct } = {
@@ -41,6 +53,8 @@ const products: { [key: string]: IProduct } = {
 		sections: [],
 
 		to: { name: "database" },
+
+		prices: { FREE: 0, DECLIC: 600, PREMIUM: 1200 },
 
 		plans: {
 			yearlReduction: 20,
@@ -107,6 +121,7 @@ const products: { [key: string]: IProduct } = {
 		namePlain: "Team",
 		to: { name: "products-code", params: { code: "team" } },
 		sections: ["hr"],
+		prices: { FREE: 0, DECLIC: 600, PREMIUM: 1200 },
 	},
 	id: {
 		code: "id",
@@ -121,6 +136,7 @@ const products: { [key: string]: IProduct } = {
 		namePlain: "Onboarding",
 		to: { name: "products-code", params: { code: "onboarding" } },
 		sections: ["hr"],
+		prices: { FREE: 600, DECLIC: 600, PREMIUM: 1200 },
 	},
 	heavy: {
 		code: "heavy",
@@ -128,6 +144,7 @@ const products: { [key: string]: IProduct } = {
 		namePlain: "Heavy",
 		to: { name: "products-code", params: { code: "heavy" } },
 		sections: [],
+		prices: { FREE: 0, DECLIC: 600, PREMIUM: 1200 },
 
 		plans: {
 			applyTo: "user",
@@ -222,6 +239,7 @@ const products: { [key: string]: IProduct } = {
 		namePlain: "Pay",
 		to: { name: "products-code", params: { code: "pay" } },
 		sections: ["hr"],
+		prices: { FREE: 1200, DECLIC: 1800, PREMIUM: 2400 },
 	},
 	leave: {
 		code: "leave",
@@ -229,6 +247,7 @@ const products: { [key: string]: IProduct } = {
 		namePlain: "Leave",
 		to: { name: "products-code", params: { code: "leave" } },
 		sections: ["hr"],
+		prices: { FREE: 600, DECLIC: 600, PREMIUM: 1200 },
 	},
 	activity: {
 		code: "activity",
@@ -236,6 +255,7 @@ const products: { [key: string]: IProduct } = {
 		namePlain: "Temps et activité",
 		to: { name: "products-code", params: { code: "activity" } },
 		sections: ["hr"],
+		prices: { FREE: 0, DECLIC: 600, PREMIUM: 1200 },
 	},
 	hiring: {
 		code: "hiring",
@@ -243,6 +263,7 @@ const products: { [key: string]: IProduct } = {
 		namePlain: "Hiring",
 		to: { name: "products-code", params: { code: "hiring" } },
 		sections: ["hr"],
+		prices: { FREE: 600, DECLIC: 600, PREMIUM: 1200 },
 	},
 	report: {
 		code: "report",
@@ -250,6 +271,7 @@ const products: { [key: string]: IProduct } = {
 		namePlain: "Rapport d'activité",
 		to: { name: "products-code", params: { code: "report" } },
 		sections: ["hr"],
+		prices: { FREE: 0, DECLIC: 600, PREMIUM: 1200 },
 	},
 	// contrat: {
 	// 	code: "contrat",

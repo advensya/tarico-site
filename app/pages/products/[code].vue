@@ -135,6 +135,11 @@ useSeoMeta({
 					</div>
 				</template>
 			</ui-frame>
+
+			<ui-plan-formule
+				v-if="product.prices"
+				:modules="[product.code]"
+			></ui-plan-formule>
 		</template>
 
 		<div

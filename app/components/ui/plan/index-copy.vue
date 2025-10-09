@@ -12,7 +12,7 @@ onMounted(() => {
 	if (product.value.plans?.yearlReduction) yearly.value = true;
 });
 
-function reduction(plan: IProductPlan) {
+function reduction(plan: IProductPlanFormule) {
 	if (plan.price === "$sale") return;
 
 	if (yearly.value && product.value.plans.yearlReduction) {
@@ -26,6 +26,16 @@ function reduction(plan: IProductPlan) {
 </script>
 
 <template>
+	<template v-if="product?.prices">
+		<v-container>
+			<div class="text-h3 font-weight-bold">
+				{{ $t(`plan.title`) }}
+			</div>
+		</v-container>
+
+		<ui-plan-formule :modules="[product.code]" />
+	</template>
+
 	<ui-frame v-if="product?.plans">
 		<template #prepend>
 			<div class="pa-5 d-flex align-center ga-2">

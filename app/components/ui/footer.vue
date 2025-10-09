@@ -14,23 +14,21 @@
 
 			<v-col cols="12" sm="6" md="3" class="frame">
 				<div class="pa-5">
-					<div
-						v-for="code in ['hr', 'id', 'onboarding', 'database', 'heavy']"
-						:key="code"
-					>
-						<nuxt-link
-							variant="text"
-							class="text-light mb-2 d-block"
-							:to="$localePath(Products[code].to)"
-							v-html="Products[code].name"
-						>
-						</nuxt-link>
+					<div class="text-h6 mb-3">
+						{{ $t("words.products") }}
 					</div>
 
 					<nuxt-link
-						class="ui-link permanant"
-						:to="$localePath({ name: 'products' })"
+						v-for="code in ['hr', 'id', 'onboarding', 'database', 'heavy']"
+						:key="code"
+						variant="text"
+						class="ui-link mb-2 d-block"
+						:to="$localePath(Products[code].to)"
+						v-html="Products[code].name"
 					>
+					</nuxt-link>
+
+					<nuxt-link class="ui-link" :to="$localePath({ name: 'products' })">
 						{{ $t("hero.one.all") }}
 					</nuxt-link>
 				</div>
@@ -42,81 +40,78 @@
 						{{ $t("components.footer.items.company.title") }}
 					</div>
 
-					<div>
-						<nuxt-link
-							variant="text"
-							class="text-light mb-2 d-block"
-							:to="$localePath({ name: 'company' })"
-						>
-							{{ $t("components.footer.items.company.aboutUs") }}
-						</nuxt-link>
-					</div>
+					<nuxt-link
+						variant="text"
+						class="ui-link mb-2 d-block"
+						:to="$localePath({ name: 'company' })"
+					>
+						{{ $t("components.footer.items.company.aboutUs") }}
+					</nuxt-link>
 
-					<div>
-						<nuxt-link
-							variant="text"
-							class="text-light mb-2 d-block"
-							:to="$localePath({ name: 'contact' })"
-						>
-							{{ $t("components.footer.items.company.contactUs") }}
-						</nuxt-link>
-					</div>
+					<nuxt-link
+						variant="text"
+						class="ui-link mb-2 d-block"
+						:to="$localePath({ name: 'contact' })"
+					>
+						{{ $t("components.footer.items.company.contactUs") }}
+					</nuxt-link>
 
-					<div>
-						<nuxt-link
-							variant="text"
-							class="text-light mb-2 d-block"
-							:to="$localePath({ name: 'career' })"
-						>
-							<!-- <i class="fi fi-br-arrow-up-right-from-square text-body-2"></i> -->
-							{{ $t("components.footer.items.company.career") }}
-						</nuxt-link>
-					</div>
+					<nuxt-link
+						variant="text"
+						class="ui-link mb-2 d-block"
+						:to="$localePath({ name: 'career' })"
+					>
+						<!-- <i class="fi fi-br-arrow-up-right-from-square text-body-2"></i> -->
+						{{ $t("components.footer.items.company.career") }}
+					</nuxt-link>
+
+					<nuxt-link
+						variant="text"
+						class="ui-link mb-2 d-block"
+						:to="$localePath({ name: 'pricing' })"
+					>
+						{{ $t("words.pricing") }}
+					</nuxt-link>
 				</div>
 			</v-col>
+
 			<v-col cols="12" sm="6" md="3" class="frame">
 				<div class="pa-5">
 					<div class="text-h6 mb-3">
 						{{ $t("components.footer.items.ressources.title") }}
 					</div>
 
-					<div>
-						<nuxt-link
-							variant="text"
-							class="text-light mb-2 d-block"
-							href="mailto:support@tarico.io"
-						>
-							{{ $t("components.footer.items.ressources.support") }}
-						</nuxt-link>
-					</div>
-					<div>
-						<nuxt-link
-							variant="text"
-							class="text-light mb-2 d-block"
-							href="mailto:commercial@tarico.io"
-						>
-							{{ $t("components.footer.items.ressources.sales") }}
-						</nuxt-link>
-					</div>
+					<nuxt-link
+						variant="text"
+						class="ui-link mb-2 d-block"
+						href="mailto:support@tarico.io"
+					>
+						{{ $t("components.footer.items.ressources.support") }}
+					</nuxt-link>
 
-					<div>
-						<nuxt-link
-							:to="$localePath({ name: 'cgu' })"
-							variant="text"
-							class="text-light mb-2 d-block"
-						>
-							{{ $t("components.footer.items.ressources.tou") }}
-						</nuxt-link>
-					</div>
-					<div>
-						<nuxt-link
-							:to="$localePath({ name: 'privacy' })"
-							variant="text"
-							class="text-light mb-2 d-block"
-						>
-							{{ $t("components.footer.items.ressources.privacy") }}
-						</nuxt-link>
-					</div>
+					<nuxt-link
+						variant="text"
+						class="ui-link mb-2 d-block"
+						href="mailto:commercial@tarico.io"
+					>
+						{{ $t("components.footer.items.ressources.sales") }}
+					</nuxt-link>
+
+					<nuxt-link
+						:to="$localePath({ name: 'cgu' })"
+						variant="text"
+						class="ui-link mb-2 d-block"
+					>
+						{{ $t("components.footer.items.ressources.tou") }}
+					</nuxt-link>
+
+					<nuxt-link
+						:to="$localePath({ name: 'privacy' })"
+						variant="text"
+						class="ui-link mb-2 d-block"
+					>
+						{{ $t("components.footer.items.ressources.privacy") }}
+					</nuxt-link>
 				</div>
 			</v-col>
 

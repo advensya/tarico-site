@@ -2,7 +2,7 @@
 import { VBtn, VCard, VCol, VContainer, VRow } from "vuetify/components";
 import UiFrame from "./frame.vue";
 import UiT from "./t.vue";
-import UiPlan from "./plan.vue";
+import UiPlan from "./plan/index.vue";
 import type { ContentCollectionItem } from "@nuxt/content";
 
 const props = defineProps({

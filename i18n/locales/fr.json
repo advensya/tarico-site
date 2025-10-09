@@ -25,7 +25,9 @@
 		"sendMail": "Envoyer un email",
 		"company": "Entreprise",
 		"products": "Solutions",
-		"allProducts": "Tous nos services"
+		"allProducts": "Tous nos services",
+		"users": "Utilisateurs",
+		"pricing": "Tarifs"
 	},
 
 	"tou": "Conditions d'utilisation",
@@ -804,7 +806,32 @@
 			"user": "par mois et par utilisateur"
 		},
 		"tosafe": "économisez {reduction}% avec un abonnement annuel",
-		"btn": { "contactUs": "Nous contacter", "start": "Commencer" }
+		"btn": { "contactUs": "Nous contacter", "start": "Commencer" },
+		"freeMaxUsers": "{n} utilisateurs",
+		"unlimitedUser": "Utilisateurs illimités",
+
+		"FREE": {
+			"title": "Free",
+			"description": "Idéal pour les petites équipes ou projets ponctuels. L'essentiel pour créer, publier et suivre vos formulaires <b>sans frais et sans engagement</b>.",
+			"stockage": "2 Go de stockage",
+			"support": "Support communautaire"
+		},
+		"DECLIC": {
+			"title": "Déclic",
+			"description": "La solution idéale pour débuter et gagner du temps sur vos processus. Simplifiez la gestion de vos formulaires sans effort.",
+			"stockage": "5 Go par utilisateur",
+			"support": "Support standard"
+		},
+		"PREMIUM": {
+			"title": "Premium",
+			"description": "L’offre avancée pour optimiser votre activité. Accédez à des fonctionnalités étendues pour un gain de temps et une gestion améliorée.",
+			"stockage": "Stockage illimité",
+			"support": "Support prioritaire (SLA garanti)"
+		},
+		"ENTERPRISE": {
+			"title": "Entreprise",
+			"description": "La solution complète pour les entreprises ambitieuses. Accédez à des services illimités et à un support dédié pour maximiser votre efficacité."
+		}
 	},
 
 	"products": {

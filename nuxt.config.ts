@@ -42,8 +42,8 @@ export default defineNuxtConfig({
 			meta: [{ property: "og:image", content: "/og-image.png" }],
 		},
 
-		baseURL: "/",
-		buildAssetsDir: "/_nuxt",
+		// baseURL: "/",
+		// buildAssetsDir: "/_nuxt",
 	},
 
 	site: {
