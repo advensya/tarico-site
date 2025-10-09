@@ -64,7 +64,10 @@ jobs:
             git clone --depth 1 --branch ${{ github.ref_name }} git@github.com:${{ github.repository }}.git $DEPLOY_DIR
           else
             cd $DEPLOY_DIR
-            git reset --hard ${{ github.ref_name }}
+            echo ${{ github.ref_name }}
+            echo '*******************************'
+            git fetch origin
+            git reset --hard origin/${{ github.ref_name }}
           fi
           # git@github.com:actions/checkout.git
 
