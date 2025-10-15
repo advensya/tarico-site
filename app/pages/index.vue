@@ -100,26 +100,6 @@ const readMoreAboutTarico = ref(false);
 				</nuxt-link>
 			</div>
 		</v-col>
-
-		<v-col cols="12" class="frame bg-">
-			<v-btn
-				block
-				variant="text"
-				color="dark"
-				size="large"
-				:to="$localePath({ name: 'hr' })"
-			>
-				{{ $t("pages.index.products.discoverRhSolutions") }}
-
-				<template #append>
-					<i class="fi fi-rr-arrow-right"></i>
-				</template>
-			</v-btn>
-		</v-col>
-
-		<v-col cols="12" class="frame">
-			<ui-card-id />
-		</v-col>
 	</ui-frame>
 
 	<section class="position-relative overflow-hidden py-10">
@@ -271,7 +251,6 @@ const readMoreAboutTarico = ref(false);
 					<template #activator="{ props }">
 						<v-btn
 							v-bind="props"
-							color="background"
 							rounded="0"
 							class="border"
 							:aria-label="$t('words.bookDemo')"
@@ -281,18 +260,6 @@ const readMoreAboutTarico = ref(false);
 						</v-btn>
 					</template>
 				</ui-book-demo>
-
-				<v-btn
-					color="background"
-					rounded="0"
-					class="border"
-					prefetch
-					:to="$localePath({ name: 'id' })"
-					:aria-label="$t('pages.index.cta.actions.id')"
-					data-gtm="cta_tarico_id"
-				>
-					{{ $t("pages.index.cta.actions.id") }}
-				</v-btn>
 			</div>
 		</div>
 	</v-container>

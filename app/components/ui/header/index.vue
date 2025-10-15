@@ -184,14 +184,6 @@ function destroy() {
 							{{ $t("plan.title") }}
 						</nuxt-link>
 
-						<nuxt-link
-							variant="text"
-							class="ui-link"
-							:to="$localePath({ name: 'id' })"
-						>
-							Tarico <b>ID</b>
-						</nuxt-link>
-
 						<nuxt-link class="ui-link" :to="$localePath({ name: 'contact' })">
 							{{ $t("words.contactUs") }}
 						</nuxt-link>

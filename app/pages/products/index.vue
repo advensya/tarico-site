@@ -56,215 +56,87 @@ const readMoreAboutTarico = ref(false);
 		</v-container>
 	</div>
 
-	<ui-frame class="m-0" role="region" aria-labelledby="products-main-title">
-		<v-col
-			cols="12"
-			class="frame"
-			style="
-				background-color: rgba(var(--v-theme-surface), 0.03);
-				text-wrap: pretty;
-			"
-		>
-			<div
-				class="pa-5"
+	<section style="">
+		<ui-frame class="my-0" role="region" aria-labelledby="products-main-title">
+			<v-col
+				cols="12"
+				class="frame"
 				style="
-					background-color: rgba(var(--v-theme-surface), 0.3);
+					background-color: rgba(var(--v-theme-surface), 0.03);
 					text-wrap: pretty;
 				"
 			>
-				<p
-					style="max-width: 882px; text-wrap: pretty; hyphens: auto"
-					v-html="$t('pages.products.index.text')"
-				></p>
-
-				<template v-if="readMoreAboutTarico">
-					<div class="mt-10">
-						<div class="d-flex flex-column ga-3">
-							<!-- <ui-svg name="growth" size="48" /> -->
-							<h3
-								class="text-h4 font-weight-bold"
-								style="line-height: 1; text-wrap: balance"
-							>
-								Une suite logicielle pour l’efficacité et la croissance
-							</h3>
-						</div>
-
-						<p class="mt-5" style="text-wrap: pretty; hyphens: auto">
-							Chaque solution Tarico est issue d'une écoute attentive des
-							réalités du terrain, permettant de concevoir des outils
-							opérationnels. Tarico offre une transformation digitale adaptée au
-							contexte africain, en fournissant des outils conçus pour anticiper
-							les besoins et soutenir une croissance durable.
-						</p>
-					</div>
-
-					<div class="mt-10">
-						<div class="d-flex flex-column ga-3">
-							<!-- <ui-svg name="company-people" size="48" /> -->
-							<h3
-								class="text-h4 font-weight-bold"
-								style="line-height: 1; text-wrap: balance"
-							>
-								Flexibilité et adaptation <br />
-								aux besoins uniques
-							</h3>
-						</div>
-
-						<p class="mt-5" style="text-wrap: pretty; hyphens: auto">
-							Les logiciels Tarico sont conçus pour s’adapter et évoluer avec
-							vos outils existants. Cette flexibilité, associée à une volonté de
-							simplifier, soutient la croissance des entreprises partenaires.
-							<br />
-							Tarico ne se limite pas à la vente de logiciels, mais établit des
-							partenariats technologiques durables, avec un interlocuteur dédié
-							et une équipe à l'écoute.
-						</p>
-					</div>
-
-					<div class="mt-10">
-						<div class="d-flex flex-column ga-3">
-							<!-- <ui-svg name="helping-hang" size="48" /> -->
-							<h3
-								class="text-h4 font-weight-bold"
-								style="line-height: 1; text-wrap: balance"
-							>
-								Accompagnement client : <br />
-								un facteur clé de succès
-							</h3>
-						</div>
-
-						<h3
-							class="text-h4 font-weight-bold"
-							style="line-height: 1; max-width: 442px; text-wrap: balance"
-						></h3>
-
-						<p class="mt-5" style="text-wrap: pretty; hyphens: auto">
-							Un support réactif et attentif est au cœur de Tarico. Une équipe
-							compétente accompagne chaque client à chaque étape, garantissant
-							des solutions concrètes et adaptées aux défis rencontrés.
-						</p>
-					</div>
-				</template>
-
-				<v-btn
-					v-else
-					color="dark"
-					variant="text"
-					class="border mt-3"
-					size="small"
-					@click="readMoreAboutTarico = true"
-					:aria-expanded="false"
-					aria-controls="products-title"
-					aria-label="Afficher plus d’informations sur les produits Tarico"
-				>
-					{{ $t("pages.products.index.readMore") }}
-
-					<template #append>
-						<i class="fi fi-rr-angle-small-down" aria-hidden="true"></i>
-					</template>
-				</v-btn>
-			</div>
-
-			<!-- <div class="pa-5 text-center">
-				{{ $t("pages.products.index.moreTools") }}
-			</div> -->
-		</v-col>
-	</ui-frame>
-
-	<ui-frame class="my-0" role="region" aria-labelledby="products-main-title">
-		<template #prepend>
-			<div
-				style="width: 772px; max-width: 90%"
-				class="text-center mx-auto mb-10"
-			>
-				<h2
-					class="font-weight-bold mb-5"
+				<div
+					class="pa-5"
 					style="
-						line-height: 1;
-						font-size: clamp(1.5rem, 4.2352941176vw, 4rem);
-						text-wrap: balance;
+						background-color: rgba(var(--v-theme-surface), 0.3);
+						text-wrap: pretty;
 					"
 				>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				</h2>
+					<p
+						style="text-wrap: pretty; hyphens: auto"
+						v-html="$t('pages.products.index.text')"
+					></p>
+				</div>
+			</v-col>
+			<v-col cols="12" md="4" class="frame">
+				<div class="pa-7" style="text-wrap: pretty">
+					<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
+						Une suite logicielle pour l’efficacité et la croissance
+					</h3>
+					<p style="text-wrap: pretty; hyphens: auto">
+						Chaque solution Tarico est issue d'une écoute attentive des réalités
+						du terrain, permettant de concevoir des outils opérationnels.
+						<br /><br />
+						Tarico offre une transformation digitale adaptée au contexte
+						africain, en fournissant des outils conçus pour anticiper les
+						besoins et soutenir une croissance durable.
+					</p>
+				</div>
 
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nobis
-					molestiae laboriosam animi, minima magnam assumenda architecto placeat
-					voluptates cum dolor reprehenderit tempore quisquam, tempora
-					voluptatem praesentium maiores dolore tenetur?
-				</p>
-			</div>
-		</template>
-
-		<v-col cols="12" md="4" class="frame">
-			<div class="pa-7" style="text-wrap: pretty">
-				<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
-					Lorem ipsum dolor sit amet consectetur adipisicing
-				</h3>
-				<p style="max-width: 882px; text-wrap: pretty; hyphens: auto">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-					accusamus dicta voluptate aliquid sed dolores tenetur perspiciatis
-					consequatur, magnam, totam placeat in aliquam aspernatur at impedit
-					reprehenderit neque perferendis atque?
-
-					<br />
-					<br />
-
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-					accusamus, asperiores, harum repellendus dolorem eos aliquid optio
-				</p>
-			</div>
-
-			<!-- <div class="pa-5 text-center">
+				<!-- <div class="pa-5 text-center">
 				{{ $t("pages.products.index.moreTools") }}
 			</div> -->
-		</v-col>
-		<v-col cols="12" md="4" class="frame">
-			<div class="pa-7" style="text-wrap: pretty">
-				<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam sequi
-				</h3>
-				<p style="max-width: 882px; text-wrap: pretty; hyphens: auto">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-					accusamus, asperiores, harum repellendus dolorem eos aliquid optio
-					<br />
-					<br />
+			</v-col>
+			<v-col cols="12" md="4" class="frame">
+				<div class="pa-7" style="text-wrap: pretty">
+					<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
+						Flexibilité et adaptation aux besoins uniques
+					</h3>
+					<p style="text-wrap: pretty; hyphens: auto">
+						Les logiciels Tarico sont conçus pour s’adapter et évoluer avec vos
+						outils existants. Cette flexibilité, associée à une volonté de
+						simplifier, soutient la croissance des entreprises partenaires.
+						<br />
+						<br />
+						Tarico ne se limite pas à la vente de logiciels, mais établit des
+						partenariats technologiques durables, avec un interlocuteur dédié et
+						une équipe à l'écoute.
+					</p>
+				</div>
 
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-					accusamus dicta voluptate aliquid sed dolores tenetur perspiciatis
-					reprehenderit neque perferendis atque?
-				</p>
-			</div>
-
-			<!-- <div class="pa-5 text-center">
+				<!-- <div class="pa-5 text-center">
 				{{ $t("pages.products.index.moreTools") }}
 			</div> -->
-		</v-col>
-		<v-col cols="12" md="4" class="frame">
-			<div class="pa-7" style="text-wrap: pretty">
-				<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
-					Lorem, ipsum dolor sit amet
-				</h3>
-				<p style="max-width: 882px; text-wrap: pretty; hyphens: auto">
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-					accusamus, asperiores, harum repellendus dolorem eos aliquid optio
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
-					accusamus dicta voluptate aliquid sed dolores tenetur perspiciatis
-					reprehenderit neque perferendis atque?
+			</v-col>
+			<v-col cols="12" md="4" class="frame">
+				<div class="pa-7" style="text-wrap: pretty">
+					<h3 class="text-h6 mb-5 font-weight-bold" style="line-height: 1.2">
+						Accompagnement client : un facteur clé de succès
+					</h3>
+					<p style="text-wrap: pretty; hyphens: auto">
+						Un support réactif et attentif est au cœur de Tarico. Une équipe
+						compétente accompagne chaque client à chaque étape, garantissant des
+						solutions concrètes et adaptées aux défis rencontrés.
+					</p>
+				</div>
 
-					<br />
-					<br />
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-					aliquid placeat accusantium omnis iste mollitia officiis minus, porro
-				</p>
-			</div>
-
-			<!-- <div class="pa-5 text-center">
+				<!-- <div class="pa-5 text-center">
 				{{ $t("pages.products.index.moreTools") }}
 			</div> -->
-		</v-col>
-	</ui-frame>
+			</v-col>
+		</ui-frame>
+	</section>
 
 	<div class="mt-16 d-flex flex-wrap ga-2 justify-center align">
 		<v-btn color="dark" variant="flat" :to="$localePath({ name: 'app' })">

@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-const products = ["id", "pay", "database", "heavy", "onboarding", "hiring"];
+const products = ["team", "pay", "database", "heavy", "onboarding", "hiring"];
 </script>
 
 <template>

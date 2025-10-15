@@ -19,7 +19,13 @@
 					</div>
 
 					<nuxt-link
-						v-for="code in ['hr', 'id', 'onboarding', 'database', 'heavy']"
+						v-for="code in [
+							'team',
+							'hiring',
+							'onboarding',
+							'database',
+							'heavy',
+						]"
 						:key="code"
 						variant="text"
 						class="ui-link mb-2 d-block"

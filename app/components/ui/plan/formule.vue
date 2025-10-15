@@ -69,9 +69,7 @@ function reduction(price: number) {
 
 				<v-select
 					v-if="!modules"
-					:items="
-						Object.keys(Products).filter((p) => !['id', 'hr'].includes(p))
-					"
+					:items="Object.keys(Products).filter((p) => !['hr'].includes(p))"
 					label="Modules"
 					multiple
 					chips

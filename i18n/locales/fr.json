@@ -58,7 +58,7 @@
 	"hero": {
 		"one": {
 			"title": "Innover. Connecter. Transformer.",
-			"text": "La Tranformation digitale c'est maintenant.",
+			"text": "Tarico est une plateforme RH tout-en-un qui aide les petites et moyennes entreprises à digitaliser la gestion de leurs équipes.<br /> Activez uniquement les modules dont vous avez besoin : recrutement, paie, congés, rapports, suivi d’activité… Tout simplement",
 			"cta": "Découvrir Tarico HR",
 			"all": "Explorer la suite Tarico"
 		}
@@ -100,10 +100,10 @@
 			},
 			"header": {
 				"title": "L’ambition de transformer l’Afrique par la digitalisation",
-				"description": "Chez Codia, nous simplifions la gestion des données pour les entreprises, en leur offrant des solutions digitales innovantes qui facilitent l'accès, l'analyse et l'utilisation efficace de leurs informations."
+				"description": "Chez Advensya, nous simplifions la gestion des données pour les entreprises, en leur offrant des solutions digitales innovantes qui facilitent l'accès, l'analyse et l'utilisation efficace de leurs informations."
 			},
 			"summary": {
-				"text": "Chez Codia, nous transformons la manière dont les entreprises interagissent avec leurs clients.</b> Spécialistes des solutions digitales sur mesure, nous réinventons les processus traditionnels pour créer des outils puissants, intuitifs et efficaces.<br><br> Notre objectif est clair : <b>connecter plus intelligemment les entreprises à leur clientèle</b>, en misant sur des technologies modernes et une expérience utilisateur sans faille. <b>Codia, c’est l’alliance de l’innovation et de la simplicité au service de la performance."
+				"text": "Chez Advensya, nous transformons la manière dont les entreprises interagissent avec leurs clients.</br> Spécialistes des solutions digitales sur mesure, nous réinventons les processus traditionnels pour créer des outils puissants, intuitifs et efficaces.<br><br> Notre objectif est clair : <b>connecter plus intelligemment les entreprises à leur clientèle</b>, en misant sur des technologies modernes et une expérience utilisateur sans faille. <b>Advensya, c’est l’alliance de l’innovation et de la simplicité au service de la performance."
 			},
 			"contactUs": "Nous contacter",
 
@@ -1023,7 +1023,7 @@
 		}
 	},
 
-	"values": [
+	"values0": [
 		{
 			"title": "Innover",
 			"intro": "Des solutions simples et adaptées",
@@ -1043,16 +1043,36 @@
 		}
 	],
 
+	"values": [
+		{
+			"title": "Innover",
+			"intro": "Des solutions simples et adaptées",
+			"text": "C’est offrir aux entreprises une alternative aux fichiers Excel, aux papiers et aux processus manuels. Tarico HR propose une suite modulaire — recrutement, onboarding, gestion des équipes, congés, paie, rapports d’activité, fichiers — conçue pour digitaliser chaque étape du cycle RH."
+		},
+
+		{
+			"title": "Connecter",
+			"intro": "Relier équipes et services",
+			"text": "C’est centraliser toutes les données du personnel sur une seule plateforme. Avec Tarico, chaque collaborateur, document, contrat ou demande devient accessible en quelques clics, favorisant une meilleure coordination interne et un suivi fiable."
+		},
+
+		{
+			"title": "Transformer",
+			"intro": "Passer au digital en toute confiance",
+			"text": "C’est permettre aux PME et organisations africaines de gagner en productivité et en transparence. Que ce soit pour automatiser la paie, valider des demandes de congé ou suivre les performances, Tarico HR aide chaque entreprise à franchir le cap du digital, sans complexité technique."
+		}
+	],
+
 	"leadership": {
 		"domutala": {
 			"name": "Mamadou DIA",
-			"function": "CEO, CTO",
-			"text": "Fondateur et CEO de Codia, expert en SIRH, Mamadou apporte une véritable valeur ajoutée aux clients grâce à son expertise dans le développement de solutions adaptées aux besoins spécifiques des entreprises. Il s'assure que chaque solution réponde aux exigences de performance et d'innovation."
+			"function": "CEO, Chef de produit",
+			"text": "Fondateur et CEO d'Advensya, expert en SIRH, Mamadou apporte une véritable valeur ajoutée aux clients grâce à son expertise dans le développement de solutions adaptées aux besoins spécifiques des entreprises. Il s'assure que chaque solution réponde aux exigences de performance et d'innovation."
 		},
 		"speedy": {
 			"name": "Saliou DIOP",
 			"function": "cofondateur, Directeur marketing et commercial",
-			"text": "Saliou dirige l'équipe marketing de Codia, notamment le marketing produit, le marketing d'entreprise, la génération de demande et la croissance. Il a été Directeur Exécutif de African Management Service."
+			"text": "Saliou dirige l'équipe marketing d'Advensya, notamment le marketing produit, le marketing d'entreprise, la génération de demande et la croissance. Il a été Directeur Exécutif de African Management Service."
 		},
 		"saer": {
 			"name": "Saër",

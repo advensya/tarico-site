@@ -123,13 +123,13 @@ const products: { [key: string]: IProduct } = {
 		sections: ["hr"],
 		prices: { FREE: 0, DECLIC: 600, PREMIUM: 1200 },
 	},
-	id: {
-		code: "id",
-		name: "Tarico <b>ID</b>",
-		namePlain: "Tarico ID",
-		to: { name: "id" },
-		sections: [],
-	},
+	// id: {
+	// 	code: "id",
+	// 	name: "Tarico <b>ID</b>",
+	// 	namePlain: "Tarico ID",
+	// 	to: { name: "id" },
+	// 	sections: [],
+	// },
 	onboarding: {
 		code: "onboarding",
 		name: "Onboarding",
