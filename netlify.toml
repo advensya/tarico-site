@@ -1,3 +1,3 @@
 [build.environment]
-  SECRETS_SCAN_OMIT_KEYS = "NUXT_PUBLIC_URL", "dist/**, .netlify/functions-internal/**"
+  SECRETS_SCAN_OMIT_KEYS = "dist/**, .netlify/functions-internal/**"
 
