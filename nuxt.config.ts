@@ -3,7 +3,16 @@ import vuetify, { transformAssetUrls } from "vite-plugin-vuetify";
 export default defineNuxtConfig({
 	devtools: { enabled: true },
 
-	runtimeConfig: {},
+	runtimeConfig: {
+		mailerHost: "",
+		mailerPort: "",
+		mailerSecure: "",
+		mailerUser: "",
+		mailerPass: "",
+		mailerName: "",
+
+		public: {},
+	},
 
 	build: { transpile: ["vuetify", "dayjs-nuxt"] },
 

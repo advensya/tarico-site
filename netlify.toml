@@ -1,3 +1,3 @@
 [build.environment]
-  SECRETS_SCAN_OMIT_PATHS = "dist/**, .netlify/functions-internal/**"
+  SECRETS_SCAN_OMIT_PATHS = "pnpm-lock.yaml, dist/**, .netlify/functions-internal/**"
 
