@@ -112,7 +112,7 @@ export default defineNuxtConfig({
 	},
 
 	nitro: {
-		preset: "node",
+		preset: "netlify",
 
 		// alias: {
 		// 	crypto: "node:crypto",
