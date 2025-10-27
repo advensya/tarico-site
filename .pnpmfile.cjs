@@ -2,6 +2,8 @@ const org = "advensya";
 const githubToken = process.env.GITHUB_TOKEN; // à définir en CI/CD
 const useToken = Boolean(githubToken);
 
+console.log("🔍 [pnpmfile] GITHUB_TOKEN detected:", useToken);
+
 module.exports = {
   hooks: {
     readPackage(pkg) {
@@ -25,9 +27,9 @@ module.exports = {
             if (useToken) {
               // Mode HTTPS avec token
               // deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}.git${ref}`;
-              // deps[depName] = `git+https://github.com/${org}/${repoName}.git${ref}`;
+              deps[depName] = `git+https://github.com/${org}/${repoName}.git${ref}`;
 
-              deps[depName] = `git+https://oauth2:${githubToken}@github.com/${org}/${repoName}.git${ref}`;
+              // deps[depName] = `git+https://oauth2:${githubToken}@github.com/${org}/${repoName}.git${ref}`;
 
               console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
               console.log(`✅ Using HTTPS for ${depName}`);
