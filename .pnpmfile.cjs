@@ -29,9 +29,8 @@ module.exports = {
 
               deps[depName] = `git+https://oauth2:${githubToken}@github.com/${org}/${repoName}.git${ref}`;
 
-
               console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
-              console.log(deps[depName]);
+              console.log(`✅ Using HTTPS for ${depName}`);
 
             } else {
               // Mode SSH (local dev)
