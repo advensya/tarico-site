@@ -25,6 +25,9 @@ module.exports = {
             if (useToken) {
               // Mode HTTPS avec token
               // deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}.git${ref}`;
+              console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+              console.log(ref);
+
               deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}/tree/${ref.replace('#', '')}`;
 
             } else {
