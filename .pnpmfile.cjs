@@ -13,17 +13,11 @@ module.exports = {
             let ref = ''
 
             if (version && version !== '*') {
-              const [repo, branch] = version.split(':')
-              ref = `#${branch}`
-
-              if (repo) repoName = repo
-
-              // if (version.split(':').length === 2) {
-              //   const [repo, branch] = version.split(':')
-              //   ref = `#${branch}`
-              //   repoName = repo
-              // }
-              // else ref = `#${version}`
+              if (version.split(':').length > 1) {
+                const [repo, branch] = version.split(':')
+                ref = `#${branch}`
+                repoName = repo
+              } else ref = `#${version}`.replace(':', '')
             }
 
             // const ref = version && version !== "*" ? `#${version}` : '#main';
