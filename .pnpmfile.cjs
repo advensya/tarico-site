@@ -39,6 +39,10 @@ module.exports = {
               deps[depName] = `git+ssh://git@github.com/${org}/${repoName}.git${ref}`;
             }
           }
+
+          console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
+          console.log(`✅ Using HTTPS for ${depName}`);
+          console.log(deps[depName]);
         }
       };
 
