@@ -1,0 +1,14 @@
+[build]
+  command = "pnpm run build"
+  publish = ".output/public"
+  node_version = "18"
+
+# --- Important : forcer l’installation via pnpm ---
+[build.lifecycle]
+  onPreBuild = "pnpm install --frozen-lockfile"
+
+[build.environment]
+  NODE_VERSION = "22"
+  PNPM_VERSION = "10"
+  NUXT_TELEMETRY_DISABLED = "1"
+  NITRO_PRESET = "netlify"
