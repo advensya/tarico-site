@@ -17,7 +17,7 @@ module.exports = {
                 const [repo, branch] = version.split(':')
                 ref = `#${branch}`
                 repoName = repo
-              } else ref = `#${version}`.replace(':', '')
+              } else ref = `#${version}`.replaceAll(':', '')
             }
 
             // const ref = version && version !== "*" ? `#${version}` : '#main';
