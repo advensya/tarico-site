@@ -24,7 +24,9 @@ module.exports = {
 
             if (useToken) {
               // Mode HTTPS avec token
-              deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}.git${ref}`;
+              // deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}.git${ref}`;
+              deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}/tree/${ref.replace('#', '')}`;
+
             } else {
               // Mode SSH (local dev)
               deps[depName] = `git+ssh://git@github.com/${org}/${repoName}.git${ref}`;
