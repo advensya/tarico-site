@@ -17,7 +17,7 @@ module.exports = {
                 const [repo, branch] = version.split(':')
                 ref = `#${branch}`
                 repoName = repo
-              } else ref = `#${version}`.replaceAll(':', '')
+              } else ref = `#${version}`
             }
 
             // const ref = version && version !== "*" ? `#${version}` : '#main';
@@ -25,9 +25,9 @@ module.exports = {
             if (useToken) {
               // Mode HTTPS avec token
               // deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}.git${ref}`;
+              deps[depName] = `git+https:/github.com/${org}/${repoName}.git${ref}`;
 
-
-              deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}/tree/${ref.replace('#', '')}`;
+              // deps[depName] = `https://${githubToken}@github.com/${org}/${repoName}/tree/${ref.replace('#', '')}`;
 
               console.log('+++++++++++++++++++++++++++++++++++++++++++++++++++++++++');
               console.log(deps[depName]);
