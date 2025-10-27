@@ -34,10 +34,10 @@ module.exports = {
         }
       };
 
-      // rewriteDeps(pkg.dependencies);
       if (pkg.dependencies) rewriteDeps(pkg.dependencies);
       if (pkg.devDependencies) rewriteDeps(pkg.devDependencies);
       if (pkg.optionalDependencies) rewriteDeps(pkg.optionalDependencies);
+      if (pkg.peerDependencies) rewriteDeps(pkg.peerDependencies);
 
       return pkg;
     },
