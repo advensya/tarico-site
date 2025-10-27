@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 	build: { transpile: ["vuetify", "dayjs-nuxt"] },
 
 	alias: {
-		dayjs: "dayjs",
+		// dayjs: "dayjs",
 	},
 
 	modules: [
@@ -48,7 +48,7 @@ export default defineNuxtConfig({
 
 	site: {
 		name: "Tarico",
-		url: "https://tarico.io",
+		url: process.env.NUXT_PUBLIC_URL,
 		indexable: process.env.NUXT_PUBLIC_INDEXABLE,
 	},
 
@@ -113,21 +113,5 @@ export default defineNuxtConfig({
 
 	nitro: {
 		preset: "netlify",
-
-		// alias: {
-		// 	crypto: "node:crypto",
-		// },
-
-		// externals: {
-		// 	inline: [
-		// 		"node-forge",
-		// 		"h3",
-		// 		"nanoid",
-		// 		"ws",
-		// 		"engine.io-client",
-		// 		"dotenv",
-		// 		"better-sqlite3",
-		// 	],
-		// },
 	},
 });
