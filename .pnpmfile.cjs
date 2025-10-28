@@ -2,6 +2,8 @@ const org = "advensya";
 const githubToken = process.env.GITHUB_TOKEN; // à définir en CI/CD
 const useToken = Boolean(githubToken);
 
+console.log("🔍 [pnpmfile] GITHUB_TOKEN detected:", useToken);
+
 module.exports = {
   hooks: {
     readPackage(pkg) {
