@@ -5,7 +5,7 @@ RUN apk add --no-cache git openssh-client bash curl
 
 WORKDIR /app
 ADD package.json .pnpmfile.cjs ./
-RUN pnpm i --frozen-lockfile
+RUN pnpm i
 ADD . .
 RUN pnpm build
 
