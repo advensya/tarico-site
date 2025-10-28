@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: self-hosted #ovh-b2-7-uk1 # ton runner self-hosted
+    runs-on: ovh-b2-7-uk1 # ton runner self-hosted
 
     steps:
       - name: Checkout code
