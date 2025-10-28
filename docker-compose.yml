@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    container_name: tarico-site
+    ports:
+      - "${PORT}:${PORT}"
+    env_file:
+      - ./.env
+
+    restart: unless-stopped
