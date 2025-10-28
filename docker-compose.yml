@@ -6,5 +6,17 @@ services:
       - "${PORT}:${PORT}"
     env_file:
       - ./.env
+    environment:
+      - PORT=${PORT}
+      - NUXT_PUBLIC_INDEXABLE=${NUXT_PUBLIC_INDEXABLE}
+      - NUXT_PUBLIC_URL=${NUXT_PUBLIC_URL}
+      - NUXT_MAILER_HOST=${NUXT_MAILER_HOST}
+      - NUXT_MAILER_PORT=${NUXT_MAILER_PORT}
+      - NUXT_MAILER_SECURE=${NUXT_MAILER_SECURE}
+      - NUXT_MAILER_USER=${NUXT_MAILER_USER}
+      - NUXT_MAILER_PASS=${NUXT_MAILER_PASS}
+      - NUXT_MAILER_NAME=${NUXT_MAILER_NAME}
+      - NODE_ENV=${NODE_ENV}
+      - GITHUB_TOKEN=${GITHUB_TOKEN}
 
     restart: unless-stopped
