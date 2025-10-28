@@ -35,7 +35,7 @@ ENV NODE_ENV=${NODE_ENV}
 
 ADD . .
 # ADD package.json .npmrc .pnpmfile.cjs ./
-RUN pnpm i
+RUN pnpm i --prod
 RUN pnpm build
 
 EXPOSE ${PORT}
