@@ -4,7 +4,7 @@ RUN corepack enable pnpm
 RUN apk add --no-cache git openssh-client bash curl
 
 WORKDIR /app
-ADD package.json .pnpmfile.cjs ./
+ADD package.json .npmrc .pnpmfile.cjs ./
 RUN pnpm i
 ADD . .
 RUN pnpm build
