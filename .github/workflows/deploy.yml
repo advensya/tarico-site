@@ -21,6 +21,7 @@ jobs:
           DOT_ENV: ${{ secrets.DOT_ENV }}
         run: |
           echo "$DOT_ENV" > .env
+          cat .env
 
       - name: Pull latest containers and restart stack
         run: |
