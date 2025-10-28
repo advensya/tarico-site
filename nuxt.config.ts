@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 	build: { transpile: ["vuetify", "dayjs-nuxt"] },
 
 	alias: {
-		dayjs: "dayjs",
+		// dayjs: "dayjs",
 	},
 
 	modules: [
