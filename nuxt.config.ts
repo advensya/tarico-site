@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 	build: { transpile: ["vuetify", "dayjs-nuxt"] },
 
 	alias: {
-		// dayjs: "dayjs",
+		dayjs: "dayjs",
 	},
 
 	modules: [
@@ -122,9 +122,5 @@ export default defineNuxtConfig({
 
 	nitro: {
 		preset: "netlify",
-
-		externals: {
-			inline: ["@tarico/form", "@tarico/form-ui", "@tarico/utils"],
-		},
 	},
 });

@@ -33,16 +33,9 @@ ENV NUXT_MAILER_PASS=${NUXT_MAILER_PASS}
 ENV NUXT_MAILER_NAME=${NUXT_MAILER_NAME}
 ENV NODE_ENV=${NODE_ENV}
 
-# # ✅ Convertis-les en variables d’environnement pour le runtime si besoin
-
-# ENV GITHUB_TOKEN=${GITHUB_TOKEN}
-# ENV NODE_ENV=${NODE_ENV}
-# ENV PORT=${PORT}
-
-ADD package.json .npmrc .pnpmfile.cjs ./
-RUN pnpm i
-
 ADD . .
+# ADD package.json .npmrc .pnpmfile.cjs ./
+RUN pnpm i
 RUN pnpm build
 
 EXPOSE ${PORT}
