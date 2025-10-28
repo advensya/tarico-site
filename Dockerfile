@@ -40,6 +40,6 @@ RUN pnpm build
 
 EXPOSE ${PORT}
 
-CMD ["node", "./server.js"]
+CMD ["node", "./server.mjs"]
 
 
