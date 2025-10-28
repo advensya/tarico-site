@@ -6,6 +6,7 @@ RUN apk add --no-cache git openssh-client bash curl
 WORKDIR /app
 
 # ✅ Déclare les arguments build-time
+ARG GITHUB_TOKEN
 ARG NODE_ENV
 ARG PORT
 ARG NUXT_PUBLIC_INDEXABLE
@@ -17,7 +18,6 @@ ARG NUXT_MAILER_USER
 ARG NUXT_MAILER_PASS
 ARG NUXT_MAILER_NAME
 ARG NODE_ENV
-ARG GITHUB_TOKEN
 
 # # ✅ Convertis-les en variables d’environnement pour le runtime si besoin
 # ENV GITHUB_TOKEN=${GITHUB_TOKEN}
