@@ -22,8 +22,6 @@ module.exports = {
               } else ref = `#${version}`
             }
 
-            // const ref = version && version !== "*" ? `#${version}` : '#main';
-
             if (useToken) {
               // Mode HTTPS avec token
               deps[depName] = `git+https://oauth2:${githubToken}@github.com/${org}/${repoName}.git${ref}`;
@@ -31,6 +29,9 @@ module.exports = {
               // Mode SSH (local dev)
               deps[depName] = `git+ssh://git@github.com/${org}/${repoName}.git${ref}`;
             }
+
+            console.log(deps[depName]);
+
           }
 
 
