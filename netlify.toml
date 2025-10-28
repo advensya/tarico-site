@@ -1,4 +1,4 @@
 [build.environment]
-  SECRETS_SCAN_OMIT_PATHS = "pnpm-lock.yaml, .nuxt/**, dist/**, .netlify/functions-internal/**"
-   SECRETS_SCAN_OMIT_KEYS = "MAILER_USER"
+    SECRETS_SCAN_OMIT_PATHS = "pnpm-lock.yaml, .nuxt/**, dist/**, .netlify/functions-internal/**"
+    SECRETS_SCAN_OMIT_KEYS = "MAILER_USER"
 

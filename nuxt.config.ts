@@ -122,5 +122,9 @@ export default defineNuxtConfig({
 
 	nitro: {
 		preset: "netlify",
+
+		externals: {
+			inline: ["@tarico/form", "@tarico/form-ui", "@tarico/utils"],
+		},
 	},
 });
