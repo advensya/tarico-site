@@ -121,6 +121,6 @@ export default defineNuxtConfig({
 	},
 
 	nitro: {
-		preset: "node",
+		preset: "cloudflare-pages",
 	},
 });
