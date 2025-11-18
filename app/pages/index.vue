@@ -232,37 +232,7 @@ const readMoreAboutTarico = ref(false);
 		</v-col>
 	</ui-frame>
 
-	<v-container
-		style="z-index: 1; position: relative"
-		class="pb-16"
-		role="region"
-		:aria-label="`${$t('words.contactUs')} / ${$t('words.bookDemo')}`"
-	>
-		<div class="d-flex justify-center align-center flex-column text-center">
-			<h2>
-				{{ $t("pages.index.cta.title") }}
-			</h2>
-			<div
-				class="d-flex align-center justify-center flex-wrap ga-2 flex-wrap mt-5"
-				role="group"
-				:aria-label="`${$t('words.contactUs')} + ${$t('words.bookDemo')}`"
-			>
-				<ui-book-demo>
-					<template #activator="{ props }">
-						<v-btn
-							v-bind="props"
-							rounded="0"
-							class="border"
-							:aria-label="$t('words.bookDemo')"
-							data-gtm="cta_book_demo"
-						>
-							{{ $t("words.bookDemo") }}
-						</v-btn>
-					</template>
-				</ui-book-demo>
-			</div>
-		</div>
-	</v-container>
+	<div class="py-16"></div>
 </template>
 
 <style lang="scss">

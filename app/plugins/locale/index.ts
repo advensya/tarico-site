@@ -9,8 +9,6 @@ import pay from "./products/pay.json";
 import report from "./products/report.json";
 import team from "./products/team.json";
 
-import { UseModel } from "@tarico/form";
-
 export default defineNuxtPlugin((app) => {
 	const { $i18n } = useNuxtApp();
 
@@ -28,9 +26,6 @@ export default defineNuxtPlugin((app) => {
 			team: team.fr,
 		},
 	});
-
-	$i18n.mergeLocaleMessage("fr", { form: UseModel.locale.fr });
-	$i18n.mergeLocaleMessage("en", { form: UseModel.locale.en });
 
 	if (typeof window !== "undefined") {
 		// @ts-ignore

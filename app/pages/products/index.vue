@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 defineI18nRoute({
 	paths: {
-		en: "/products",
 		fr: "/solutions",
 	},
 });
@@ -40,7 +39,7 @@ const readMoreAboutTarico = ref(false);
 					{{ $t("words.start") }}
 				</v-btn>
 
-				<ui-book-demo product="hr">
+				<ui-call-me product="hr">
 					<template #activator="{ props }">
 						<v-btn
 							v-bind="props"
@@ -51,7 +50,7 @@ const readMoreAboutTarico = ref(false);
 							{{ $t("words.bookDemo") }}
 						</v-btn>
 					</template>
-				</ui-book-demo>
+				</ui-call-me>
 			</div>
 		</v-container>
 	</div>
@@ -207,7 +206,7 @@ const readMoreAboutTarico = ref(false);
 			<div
 				class="pa-10 mt-10 d-flex align-center flex-wrap justify-center ga-2"
 			>
-				<UiBookDemo />
+				<ui-call-me />
 				<v-btn
 					rounded="0"
 					class="border"

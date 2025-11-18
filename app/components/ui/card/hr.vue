@@ -47,7 +47,7 @@
 					:aria-label="$t('hero.one.cta')"
 					:aria-describedby="'prod-intro-hr'"
 				>
-					<ui-book-demo
+					<ui-call-me
 						product="hr"
 						:aria-label="$t('products.hr.cards.one.bookDemo')"
 					>
@@ -60,7 +60,7 @@
 								{{ $t("products.hr.cards.one.bookDemo") }}
 							</v-btn>
 						</template>
-					</ui-book-demo>
+					</ui-call-me>
 
 					<v-btn
 						color="background"

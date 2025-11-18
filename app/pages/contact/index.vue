@@ -1,10 +1,9 @@
 <script lang="ts" setup>
 import { VForm } from "vuetify/components";
-import type { Options } from "@tarico/form";
+import * as v from "valibot";
 
 defineI18nRoute({
 	paths: {
-		en: "/contact-us",
 		fr: "/nous-contacter",
 	},
 });
@@ -13,148 +12,87 @@ const { $i18n } = useNuxtApp();
 const i18n = useI18n();
 const submiting = ref(false);
 
+const state = ref<{ [key: string]: string }>({});
+const errors = ref<{ [key: string]: string }>({});
+
+const schema = v.object({
+	firstName: v.pipe(v.string("form.errors.fieldRequired")),
+	lastName: v.pipe(v.string("form.errors.fieldRequired")),
+	workEmail: v.pipe(
+		v.string("form.errors.fieldRequired"),
+		v.email("form.errors.invaliEmail")
+	),
+	phone: v.pipe(v.string("form.errors.fieldRequired")),
+
+	companyName: v.pipe(v.string("form.errors.fieldRequired")),
+	companySize: v.pipe(v.string("form.errors.fieldRequired")),
+
+	message: v.pipe(v.string("form.errors.fieldRequired")),
+});
+
+const validateForm = () => {
+	const result = v.safeParse(schema, state.value);
+	errors.value = {};
+
+	if (result.issues) {
+		result.issues.forEach((issue) => {
+			if (!issue.path) return;
+
+			const key = issue.path[0].key as string;
+			errors.value[key] = issue.message;
+		});
+
+		return false;
+	}
+
+	return true;
+};
+
+const handleSubmit = async () => {
+	if (validateForm()) {
+		submiting.value = false;
+
+		const content = [];
+
+		for (const key of Object.keys(state.value)) {
+			const row = `${key}: ${state.value[key]}`;
+			content.push(row);
+		}
+
+		try {
+			const { data: res } = await useFetch("/api/book-demo", {
+				method: "POST",
+				body: { content: content.join("\n") },
+			});
+
+			if (res.value?.success) {
+				messages.value.push({
+					text: i18n.t("callMe.successMessage"),
+					color: "background",
+				});
+			} else {
+				messages.value.push({
+					text: $i18n.t("pages.contact.messages.error"),
+					color: "red",
+				});
+			}
+		} catch (error) {
+			messages.value.push({
+				text: $i18n.t("pages.contact.messages.error"),
+				color: "red",
+			});
+		} finally {
+			submiting.value = false;
+		}
+	}
+};
+
 useSeoMeta({
 	title: i18n.t("pages.contact.meta.title"),
 	description: i18n.t("pages.contact.meta.description"),
 });
 
-const options: Options = {
-	title: "Modifier",
-	schemaOptions: [
-		{
-			interface: {
-				type: "text",
-				label: $i18n.t("words.firstName"),
-			},
-			key: "firstName",
-			validators: { required: true },
-		},
-		{
-			interface: {
-				type: "text",
-				label: $i18n.t("words.lastName"),
-			},
-			key: "lastName",
-			validators: { required: true },
-		},
-		{
-			interface: {
-				type: "email",
-				label: $i18n.t("words.workEmail"),
-			},
-			key: "email",
-			validators: { required: true },
-		},
-		{
-			interface: {
-				type: "phone",
-				label: $i18n.t("words.phone"),
-			},
-			key: "phone",
-			validators: {},
-		},
-		{
-			interface: { type: "spacing", size: 20 },
-			key: "145856",
-		},
-		{
-			interface: {
-				type: "text",
-				label: $i18n.t("words.companyName"),
-			},
-			key: "companyName",
-			validators: {},
-		},
-		{
-			interface: {
-				type: "select",
-				label: $i18n.t("words.companySize"),
-			},
-			key: "companySize",
-			validators: {
-				options: {
-					args: [
-						{
-							value: "1-20",
-							title: `1-20 ${$i18n.t("words.persons")}`,
-						},
-						{
-							value: "21-200",
-							title: `21-200 ${$i18n.t("words.persons")}`,
-						},
-						{
-							value: "200-500",
-							title: `200-500 ${$i18n.t("words.persons")}`,
-						},
-						{
-							value: "501-2000",
-							title: `501-2000 ${$i18n.t("words.persons")}`,
-						},
-						{
-							value: "+2000",
-							title: `+2000 ${$i18n.t("words.persons")}`,
-						},
-					],
-				},
-			},
-		},
-		{
-			interface: { type: "spacing", size: 20 },
-			key: "145856",
-		},
-		{
-			key: "message",
-			interface: {
-				type: "longtext",
-				label: $i18n.t("pages.contact.form.message"),
-			},
-			validators: { required: true },
-		},
-	],
-	interfaces: {},
-};
-
 const messages = ref<Array<{ text: string; color: string }>>([]);
-
-async function submit(value: { values: Record<string, any> }) {
-	submiting.value = false;
-
-	const content = [];
-
-	for (const key of Object.keys(value.values)) {
-		const i = options.schemaOptions!.findIndex((s) => s.key === key);
-		const row = `${options.schemaOptions![i].interface!.label}: ${
-			value.values[key]
-		}`;
-		content.push(row);
-	}
-
-	try {
-		const { data: res } = await useFetch("/api/book-demo", {
-			method: "POST",
-			body: { content: content.join("\n") },
-		});
-
-		if (res.value?.success) {
-			messages.value.push({
-				text: i18n.t("callMe.successMessage"),
-				color: "background",
-			});
-		} else {
-			messages.value.push({
-				text: $i18n.t("pages.contact.messages.error"),
-				color: "red",
-			});
-		}
-	} catch (error) {
-		messages.value.push({
-			text: $i18n.t("pages.contact.messages.error"),
-			color: "red",
-		});
-	} finally {
-		submiting.value = false;
-	}
-}
 </script>
 
 <template>
@@ -183,7 +121,7 @@ async function submit(value: { values: Record<string, any> }) {
 	</section>
 
 	<ui-frame class="my-0">
-		<v-col cols="12" sm="6" md="3" class="frame">
+		<v-col cols="12" sm="6" md="4" class="frame">
 			<ui-call-me>
 				<template #activator="{ props }">
 					<v-btn
@@ -210,12 +148,12 @@ async function submit(value: { values: Record<string, any> }) {
 				</template>
 			</ui-call-me>
 		</v-col>
-		<v-col cols="12" sm="6" md="3" class="frame">
+		<v-col cols="12" sm="6" md="4" class="frame">
 			<v-btn
 				size="x-large"
 				variant="text"
 				color="dark"
-				href="mailto:commercial@tarico.io"
+				href="mailto:saliou.diop@tarico.space"
 				block
 			>
 				<template #prepend>
@@ -233,35 +171,12 @@ async function submit(value: { values: Record<string, any> }) {
 				</div>
 			</v-btn>
 		</v-col>
-		<v-col cols="12" sm="6" md="3" class="frame">
+		<v-col cols="12" sm="6" md="4" class="frame">
 			<v-btn
 				size="x-large"
 				variant="text"
 				color="dark"
-				:to="$localePath({ name: 'contact-support' })"
-				block
-			>
-				<template #prepend>
-					<i class="fi fi-ss-user-headset"></i>
-				</template>
-				<div
-					style="
-						white-space: normal;
-						text-align: left;
-						line-height: 1.1;
-						font-size: 14px;
-					"
-				>
-					{{ $t("components.footer.items.ressources.support") }}
-				</div>
-			</v-btn>
-		</v-col>
-		<v-col cols="12" sm="6" md="3" class="frame">
-			<v-btn
-				size="x-large"
-				variant="text"
-				color="dark"
-				href="mailto:contact@tarico.io"
+				href="mailto:contact@tarico.space"
 				block
 			>
 				<template #prepend>
@@ -284,36 +199,82 @@ async function submit(value: { values: Record<string, any> }) {
 	<v-container class="pb-16" style="margin-top: 80px">
 		<v-row>
 			<v-col cols="12" sm="10" md="8">
-				<form-model :options="options" @submit="submit">
-					<template #submit-btn>
-						<div class="w-100">
-							<i18n-t
-								keypath="bookDemo.privacy"
-								tag="p"
-								class="text-body-2 my-4"
-								style="max-width: 350px"
-							>
-								<NuxtLink :to="$localePath({ name: 'privacy' })">
-									{{ $t("privacy") }}
-								</NuxtLink>
-							</i18n-t>
+				<v-form @submit.prevent="handleSubmit">
+					<v-text-field
+						:label="$t('words.firstName')"
+						v-model="state.firstName"
+						:error-messages="errors.firstName"
+					/>
 
-							<div>
-								<v-btn
-									color="primary"
-									class="mt-5"
-									type="submit"
-									:loading="submiting"
-								>
-									<template #append>
-										<i class="fi fi-sr-paper-plane"></i>
-									</template>
-									{{ $t("pages.contact.form.submit") }}
-								</v-btn>
-							</div>
-						</div>
-					</template>
-				</form-model>
+					<v-text-field
+						:label="$t('words.lastName')"
+						v-model="state.lastName"
+						:error-messages="errors.firstName"
+					/>
+
+					<v-text-field
+						:label="$t('words.workEmail')"
+						type="email"
+						v-model="state.workEmail"
+						:error-messages="errors.workEmail"
+					/>
+
+					<v-text-field
+						:label="$t('words.phone')"
+						type="phone"
+						v-model="state.phone"
+						:error-messages="errors.phone"
+					/>
+
+					<!-- spacing -->
+
+					<v-text-field
+						:label="$t('words.companyName')"
+						type="text"
+						v-model="state.companyName"
+						:error-messages="errors.companyName"
+					/>
+
+					<v-select
+						:label="$t('words.companySize')"
+						type="text"
+						v-model="state.companySize"
+						:error-messages="errors.companySize"
+						:items="[
+							{
+								value: '1-20',
+								title: `1-20 ${$t('words.persons')}`,
+							},
+							{
+								value: '21-200',
+								title: `21-200 ${$t('words.persons')}`,
+							},
+							{
+								value: '200-500',
+								title: `200-500 ${$t('words.persons')}`,
+							},
+							{
+								value: '501-2000',
+								title: `501-2000 ${$t('words.persons')}`,
+							},
+							{
+								value: '+2000',
+								title: `+2000 ${$t('words.persons')}`,
+							},
+						]"
+					/>
+
+					<!-- spacing -->
+
+					<v-textarea
+						:label="$t('pages.contact.form.message')"
+						type="text"
+						v-model="state.message"
+						:error-messages="errors.message"
+					/>
+
+					<v-btn type="submit">submit</v-btn>
+				</v-form>
 			</v-col>
 		</v-row>
 	</v-container>

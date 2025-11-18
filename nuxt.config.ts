@@ -17,7 +17,7 @@ export default defineNuxtConfig({
 	build: { transpile: ["vuetify", "dayjs-nuxt"] },
 
 	alias: {
-		// dayjs: "dayjs",
+		dayjs: "dayjs",
 	},
 
 	modules: [
@@ -25,7 +25,6 @@ export default defineNuxtConfig({
 		"@nuxtjs/i18n",
 		"@nuxtjs/mdc",
 		"@nuxt/content",
-		"@tarico/form-ui",
 		"@nuxtjs/seo",
 		"dayjs-nuxt",
 		"@nuxtjs/color-mode",
@@ -120,7 +119,5 @@ export default defineNuxtConfig({
 		},
 	},
 
-	nitro: {
-		preset: "cloudflare-pages",
-	},
+	nitro: {},
 });

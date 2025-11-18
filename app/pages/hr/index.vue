@@ -55,7 +55,7 @@ function destroy() {
 						{{ $t("words.start") }}
 					</v-btn>
 
-					<ui-book-demo product="hr">
+					<ui-call-me product="hr">
 						<template #activator="{ props }">
 							<v-btn
 								v-bind="props"
@@ -66,7 +66,7 @@ function destroy() {
 								{{ $t("words.bookDemo") }}
 							</v-btn>
 						</template>
-					</ui-book-demo>
+					</ui-call-me>
 				</div>
 			</div>
 		</v-container>
@@ -365,13 +365,13 @@ function destroy() {
 			</div>
 
 			<div class="border-t pa-5 position-relative w-100 d-flex justify-center">
-				<ui-book-demo product="hr">
+				<ui-call-me product="hr">
 					<template #activator="{ props }">
 						<v-btn v-bind="props" color="primary" variant="flat" class="mt-3">
 							{{ $t("pages.form.createForm") }}
 						</v-btn>
 					</template>
-				</ui-book-demo>
+				</ui-call-me>
 			</div>
 		</div>
 	</section>

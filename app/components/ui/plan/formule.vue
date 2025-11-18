@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { format } from "@tarico/utils";
-
 const props = defineProps({ modules: { type: Array as PropType<string[]> } });
 
 const yearlReduction = 20;
@@ -95,15 +93,15 @@ function reduction(price: number) {
 						<v-list-item v-bind="itemProps">
 							<template #append v-if="Products[item.raw].prices">
 								<div style="width: 100px">
-									{{ format.currency(Products[item.raw].prices.FREE) }}
+									{{ Format.currency(Products[item.raw].prices.FREE) }}
 									{{ $t(`plan.currency.${currency}`) }}
 								</div>
 								<div style="width: 100px">
-									{{ format.currency(Products[item.raw].prices.DECLIC) }}
+									{{ Format.currency(Products[item.raw].prices.DECLIC) }}
 									{{ $t(`plan.currency.${currency}`) }}
 								</div>
 								<div style="width: 100px">
-									{{ format.currency(Products[item.raw].prices.PREMIUM) }}
+									{{ Format.currency(Products[item.raw].prices.PREMIUM) }}
 									{{ $t(`plan.currency.${currency}`) }}
 								</div>
 							</template>
@@ -139,7 +137,7 @@ function reduction(price: number) {
 						class="text-h4"
 						style="white-space: nowrap"
 					>
-						{{ format.currency(reduction(prices[plan])) }}
+						{{ Format.currency(reduction(prices[plan])) }}
 					</div>
 					<div style="line-height: 1; font-size: 12px">
 						<div>

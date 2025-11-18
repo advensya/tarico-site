@@ -232,7 +232,7 @@ useSeoMeta({
 					class="d-flex align-center flex-wrap justify-center mt-16 ga-2 flex-wrap mt-5"
 					role="group"
 				>
-					<ui-book-demo>
+					<ui-call-me>
 						<template #activator="{ props }">
 							<v-btn
 								v-bind="props"
@@ -243,7 +243,7 @@ useSeoMeta({
 								{{ $t("words.bookDemo") }}
 							</v-btn>
 						</template>
-					</ui-book-demo>
+					</ui-call-me>
 
 					<v-btn
 						color="background"

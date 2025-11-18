@@ -33,7 +33,7 @@ const products = ["team", "pay", "database", "heavy", "onboarding", "hiring"];
 							role="group"
 							aria-label="call to action"
 						>
-							<ui-book-demo />
+							<ui-call-me />
 
 							<!-- <v-btn
                 size="large"
