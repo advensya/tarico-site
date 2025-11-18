@@ -119,5 +119,9 @@ export default defineNuxtConfig({
 		},
 	},
 
-	nitro: {},
+	nitro: {
+		routeRules: {
+			"/openx": { redirect: "/api/openx" },
+		},
+	},
 });
